@@ -1,58 +1,60 @@
 import type { Metadata } from 'next';
-import { Inspector } from 'react-dev-inspector';
+import { Inter } from 'next/font/google';
 import './globals.css';
 
+const inter = Inter({ subsets: ['latin'] });
+
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.COZE_PROJECT_DOMAIN_DEFAULT || 'https://example.com'),
   title: {
-    default: '新应用 | 扣子编程',
-    template: '%s | 扣子编程',
+    default: 'Shanghai Jinling | Professional Electronic Components & Network Solutions',
+    template: '%s | Shanghai Jinling',
   },
-  description:
-    '扣子编程是一款一站式云端 Vibe Coding 开发平台。通过对话轻松构建智能体、工作流和网站，实现从创意到上线的无缝衔接。',
+  description: 'Shanghai Jinling specializes in high-quality electronic components, network cables, communication equipment, and comprehensive network solutions for global markets. ISO 9001 certified manufacturer with 20+ years experience.',
   keywords: [
-    '扣子编程',
-    'Coze Code',
-    'Vibe Coding',
-    'AI 编程',
-    '智能体搭建',
-    '工作流搭建',
-    '网站搭建',
-    '网站部署',
-    '全栈开发',
-    'AI 工程师',
+    'electronic components',
+    'network cables',
+    'communication equipment',
+    'network solutions',
+    'Ethernet cables',
+    'fiber optic cables',
+    'network switches',
+    'wireless solutions',
+    'structured cabling',
+    'data center solutions',
+    'Shanghai Jinling',
+    'electronics manufacturer',
+    'wholesale electronics',
+    'B2B electronics',
   ],
-  authors: [{ name: 'Coze Code Team', url: 'https://code.coze.cn' }],
-  generator: 'Coze Code',
-  // icons: {
-  //   icon: '',
-  // },
+  authors: [{ name: 'Shanghai Jinling Electronics Co., Ltd.', url: 'https://www.shjinling.com' }],
+  generator: 'Next.js',
   openGraph: {
-    title: '扣子编程 | 你的 AI 工程师已就位',
-    description:
-      '我正在使用扣子编程 Vibe Coding，让创意瞬间上线。告别拖拽，拥抱心流。',
-    url: 'https://code.coze.cn',
-    siteName: '扣子编程',
-    locale: 'zh_CN',
+    title: 'Shanghai Jinling | Leading Electronic Components Manufacturer',
+    description: 'Professional manufacturer of electronic components, network cables, and communication equipment. Serving global markets with quality products and reliable service.',
+    url: 'https://www.shjinling.com',
+    siteName: 'Shanghai Jinling',
+    locale: 'en_US',
     type: 'website',
-    // images: [
-    //   {
-    //     url: '',
-    //     width: 1200,
-    //     height: 630,
-    //     alt: '扣子编程 - 你的 AI 工程师',
-    //   },
-    // ],
   },
-  // twitter: {
-  //   card: 'summary_large_image',
-  //   title: 'Coze Code | Your AI Engineer is Here',
-  //   description:
-  //     'Build and deploy full-stack applications through AI conversation. No env setup, just flow.',
-  //   // images: [''],
-  // },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Shanghai Jinling | Electronic Components & Network Solutions',
+    description: 'ISO 9001 certified manufacturer specializing in electronic components, network cables, and communication equipment.',
+  },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  alternates: {
+    canonical: 'https://www.shjinling.com',
   },
 };
 
@@ -61,14 +63,18 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const isDev = process.env.COZE_PROJECT_ENV === 'DEV';
-
   return (
     <html lang="en">
-      <body className={`antialiased`}>
-        {isDev && <Inspector />}
-        {children}
-      </body>
+      <head>
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="geo.region" content="CN-31" />
+        <meta name="geo.placename" content="Shanghai" />
+        <meta name="author" content="Shanghai Jinling Electronics Co., Ltd." />
+        <meta name="rating" content="general" />
+        <meta name="distribution" content="global" />
+        <meta name="revisit-after" content="7 days" />
+      </head>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }
