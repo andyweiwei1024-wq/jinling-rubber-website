@@ -14,7 +14,7 @@ import {
   getCategoryName,
   getLocalizedSpecs
 } from '@/lib/products-i18n';
-import { Language, defaultLanguage } from '@/lib/i18n/config';
+import { Language, defaultLanguage, languageList } from '@/lib/i18n/config';
 import { getAllTranslations, getTranslation } from '@/lib/i18n/server';
 import { LanguageSwitcher } from '@/components/LanguageSwitcher';
 import { 
@@ -38,9 +38,8 @@ interface PageProps {
 // Generate static params
 export function generateStaticParams() {
   const params = [];
-  const languages = ['en', 'de', 'es', 'ru', 'el', 'ja', 'it', 'pt', 'zh'];
   
-  for (const lang of languages) {
+  for (const lang of languageList) {
     for (const product of products) {
       params.push({ lang, id: product.id });
     }
