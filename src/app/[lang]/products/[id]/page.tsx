@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { ProductImageGallery } from '@/components/ProductImageGallery';
 import { 
   products, 
   getProductById, 
@@ -126,51 +127,12 @@ export default async function ProductDetailPage({ params }: PageProps) {
         <div className="container px-4 py-12 mx-auto">
           <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 items-start">
             {/* Product Images */}
-            <div className="space-y-4">
-              {/* 主图 - 使用 object-contain 保持图片完整显示 */}
-              <div className="relative bg-gray-50 rounded-xl overflow-hidden border">
-                <div className="aspect-square sm:aspect-[4/3] lg:aspect-square max-h-[500px] mx-auto">
-                  <img 
-                    src={product.images.main} 
-                    alt={productName}
-                    className="w-full h-full object-contain p-4"
-                  />
-                </div>
-              </div>
-              {/* 侧面图 */}
-              {product.images.side && (
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="aspect-square bg-gray-50 rounded-lg overflow-hidden border">
-                    <img 
-                      src={product.images.main} 
-                      alt={productName}
-                      className="w-full h-full object-contain p-2"
-                    />
-                  </div>
-                  <div className="aspect-square bg-gray-50 rounded-lg overflow-hidden border">
-                    <img 
-                      src={product.images.side} 
-                      alt={`${productName} side view`}
-                      className="w-full h-full object-contain p-2"
-                    />
-                  </div>
-                </div>
-              )}
-              {/* 附加图片 */}
-              {product.images.additional && product.images.additional.length > 0 && (
-                <div className="grid grid-cols-3 gap-3">
-                  {product.images.additional.slice(0, 3).map((img: string, idx: number) => (
-                    <div key={idx} className="aspect-square bg-gray-50 rounded-lg overflow-hidden border">
-                      <img 
-                        src={img} 
-                        alt={`${productName} detail ${idx + 1}`} 
-                        className="w-full h-full object-contain p-2 hover:scale-105 transition-transform cursor-pointer" 
-                      />
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
+            <ProductImageGallery 
+              mainImage={product.images.main}
+              sideImage={product.images.side}
+              additionalImages={product.images.additional || []}
+              productName={productName}
+            />
 
             {/* Product Info */}
             <div>
