@@ -7,13 +7,14 @@ export function OrganizationSchema() {
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'Shanghai Jinling Electronics Co., Ltd.',
+    name: '上海金铃橡胶制品有限公司',
+    alternateName: 'Shanghai Jinling Rubber Products Co., Ltd.',
     url: 'https://www.shjinling.com',
     logo: 'https://www.shjinling.com/logo.png',
-    description: 'Leading manufacturer and exporter of electronic components, network cables, and communication equipment. ISO 9001 certified with 20+ years experience.',
+    description: '专业生产防护服、雨衣、工装等橡胶制品的企业。ISO 9001认证，产品出口全球50+国家。',
     address: {
       '@type': 'PostalAddress',
-      addressLocality: 'Shanghai',
+      addressLocality: '上海',
       addressCountry: 'CN',
     },
     contactPoint: {
@@ -21,7 +22,7 @@ export function OrganizationSchema() {
       telephone: '+86-21-XXXXXXXX',
       contactType: 'sales',
       email: 'sales@shjinling.com',
-      availableLanguage: ['English', 'Chinese'],
+      availableLanguage: ['中文', 'English'],
     },
     sameAs: [],
   };
@@ -40,9 +41,9 @@ export function WebsiteSchema() {
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'Shanghai Jinling Electronics',
+    name: '上海金铃橡胶制品',
     url: 'https://www.shjinling.com',
-    description: 'Professional manufacturer of electronic components and network solutions',
+    description: '专业防护服和橡胶制品制造商',
     potentialAction: {
       '@type': 'SearchAction',
       target: 'https://www.shjinling.com/products?search={search_term_string}',
@@ -68,7 +69,7 @@ interface ProductSchemaProps {
   brand?: string;
 }
 
-export function ProductSchema({ name, description, image, category, brand = 'Shanghai Jinling' }: ProductSchemaProps) {
+export function ProductSchema({ name, description, image, category, brand = '上海金铃' }: ProductSchemaProps) {
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'Product',
@@ -82,15 +83,15 @@ export function ProductSchema({ name, description, image, category, brand = 'Sha
     },
     manufacturer: {
       '@type': 'Organization',
-      name: 'Shanghai Jinling Electronics Co., Ltd.',
+      name: '上海金铃橡胶制品有限公司',
     },
     offers: {
       '@type': 'Offer',
       availability: 'https://schema.org/InStock',
-      priceCurrency: 'USD',
+      priceCurrency: 'CNY',
       seller: {
         '@type': 'Organization',
-        name: 'Shanghai Jinling Electronics Co., Ltd.',
+        name: '上海金铃橡胶制品有限公司',
       },
     },
   };
@@ -141,14 +142,14 @@ export function LocalBusinessSchema() {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     '@id': 'https://www.shjinling.com',
-    name: 'Shanghai Jinling Electronics Co., Ltd.',
-    description: 'Professional manufacturer and exporter of electronic components and network solutions',
+    name: '上海金铃橡胶制品有限公司',
+    description: '专业生产防护服、雨衣、工装等橡胶制品的企业',
     url: 'https://www.shjinling.com',
     telephone: '+86-21-XXXXXXXX',
     email: 'sales@shjinling.com',
     address: {
       '@type': 'PostalAddress',
-      addressLocality: 'Shanghai',
+      addressLocality: '上海',
       addressCountry: 'CN',
     },
     geo: {
@@ -165,7 +166,7 @@ export function LocalBusinessSchema() {
       },
     ],
     priceRange: '$$',
-    currenciesAccepted: 'USD, EUR, CNY',
+    currenciesAccepted: 'CNY, USD, EUR',
     paymentAccepted: 'T/T, L/C, PayPal',
   };
 

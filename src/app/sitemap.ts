@@ -1,24 +1,9 @@
 import { MetadataRoute } from 'next';
+import { products } from '@/lib/products';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://www.shjinling.com';
+  const baseUrl = process.env.COZE_PROJECT_DOMAIN_DEFAULT || 'https://www.shjinling.com';
   
-  // Product IDs from the products page
-  const productIds = [
-    'cat6-ethernet-cable',
-    'cat6a-ethernet-cable',
-    'fiber-optic-cable',
-    'patch-cable',
-    'managed-switch',
-    'unmanaged-switch',
-    'wireless-access-point',
-    'ic-connectors',
-    'terminal-blocks',
-    'wire-harness',
-    'cable-manager',
-    'patch-panel',
-  ];
-
   // Main pages
   const mainPages = [
     {
@@ -48,8 +33,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   // Product detail pages
-  const productPages = productIds.map((id) => ({
-    url: `${baseUrl}/products/${id}`,
+  const productPages = products.map((product) => ({
+    url: `${baseUrl}/products/${product.id}`,
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
     priority: 0.8,

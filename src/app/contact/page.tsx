@@ -23,44 +23,35 @@ import {
   Send,
   CheckCircle2,
   MessageSquare,
-  Building2,
   Globe2
 } from 'lucide-react';
+import { productCategories } from '@/lib/products';
 
 const contactInfo = [
   {
     icon: MapPin,
-    title: 'Address',
-    content: 'Shanghai, China',
-    description: 'Visit our headquarters',
+    title: '公司地址',
+    content: '上海市',
+    description: '欢迎来访考察',
   },
   {
     icon: Phone,
-    title: 'Phone',
+    title: '联系电话',
     content: '+86-21-XXXXXXXX',
-    description: 'Mon-Fri, 9:00-18:00 (GMT+8)',
+    description: '工作日 9:00-18:00',
   },
   {
     icon: Mail,
-    title: 'Email',
+    title: '电子邮箱',
     content: 'sales@shjinling.com',
-    description: 'General inquiries',
+    description: '24小时内回复',
   },
   {
     icon: Clock,
-    title: 'Business Hours',
-    content: 'Mon - Fri: 9:00 - 18:00',
-    description: 'GMT+8 Shanghai Time',
+    title: '工作时间',
+    content: '周一至周五 9:00-18:00',
+    description: '北京时间 (GMT+8)',
   },
-];
-
-const productCategories = [
-  'Network Cables',
-  'Communication Equipment',
-  'Electronic Components',
-  'Accessories',
-  'Custom Solutions',
-  'Other',
 ];
 
 export default function ContactPage() {
@@ -71,7 +62,7 @@ export default function ContactPage() {
     e.preventDefault();
     setIsLoading(true);
     
-    // Simulate form submission
+    // 模拟表单提交
     await new Promise(resolve => setTimeout(resolve, 1500));
     
     setIsLoading(false);
@@ -85,24 +76,24 @@ export default function ContactPage() {
         <div className="container flex h-16 items-center justify-between px-4 mx-auto">
           <Link href="/" className="flex items-center space-x-2">
             <div className="flex items-center justify-center w-10 h-10 bg-blue-600 rounded-lg">
-              <span className="text-xl font-bold text-white">JL</span>
+              <span className="text-xl font-bold text-white">金铃</span>
             </div>
             <div className="flex flex-col">
-              <span className="font-bold text-lg leading-tight">Shanghai Jinling</span>
-              <span className="text-xs text-muted-foreground">Electronics Co., Ltd.</span>
+              <span className="font-bold text-lg leading-tight">上海金铃橡胶</span>
+              <span className="text-xs text-muted-foreground">Shanghai Jinling Rubber</span>
             </div>
           </Link>
           
           <nav className="hidden md:flex items-center space-x-6">
-            <Link href="/" className="text-sm font-medium text-muted-foreground hover:text-blue-600 transition-colors">Home</Link>
-            <Link href="/about" className="text-sm font-medium text-muted-foreground hover:text-blue-600 transition-colors">About Us</Link>
-            <Link href="/products" className="text-sm font-medium text-muted-foreground hover:text-blue-600 transition-colors">Products</Link>
-            <Link href="/contact" className="text-sm font-medium hover:text-blue-600 transition-colors">Contact</Link>
+            <Link href="/" className="text-sm font-medium text-muted-foreground hover:text-blue-600 transition-colors">首页</Link>
+            <Link href="/about" className="text-sm font-medium text-muted-foreground hover:text-blue-600 transition-colors">关于我们</Link>
+            <Link href="/products" className="text-sm font-medium text-muted-foreground hover:text-blue-600 transition-colors">产品中心</Link>
+            <Link href="/contact" className="text-sm font-medium hover:text-blue-600 transition-colors">联系我们</Link>
           </nav>
 
           <div className="flex items-center space-x-4">
             <Link href="/contact" className="hidden sm:inline-flex">
-              <Button>Get Quote</Button>
+              <Button>获取报价</Button>
             </Link>
           </div>
         </div>
@@ -113,10 +104,10 @@ export default function ContactPage() {
         <div className="container px-4 mx-auto">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">
-              Contact Us
+              联系我们
             </h1>
             <p className="mt-4 text-xl text-muted-foreground">
-              Get in touch with our team for product inquiries, quotations, and technical support
+              获取产品报价、技术支持或合作咨询
             </p>
           </div>
         </div>
@@ -130,9 +121,9 @@ export default function ContactPage() {
             <div className="lg:col-span-1">
               <div className="space-y-6">
                 <div>
-                  <h2 className="text-2xl font-bold mb-2">Get in Touch</h2>
+                  <h2 className="text-2xl font-bold mb-2">联系方式</h2>
                   <p className="text-muted-foreground">
-                    We'd love to hear from you. Reach out through any of the following channels.
+                    期待与您的合作，请通过以下方式联系我们。
                   </p>
                 </div>
 
@@ -159,11 +150,11 @@ export default function ContactPage() {
                       <Globe2 className="h-5 w-5" />
                     </div>
                     <div>
-                      <h3 className="font-semibold mb-2">Global Export Services</h3>
+                      <h3 className="font-semibold mb-2">全球出口服务</h3>
                       <p className="text-sm text-muted-foreground mb-3">
-                        We provide comprehensive export services including customs clearance, documentation, and logistics support.
+                        我们提供完善的出口服务，包括报关、物流、单证等一站式解决方案。
                       </p>
-                      <Badge>50+ Countries Served</Badge>
+                      <Badge>服务50+国家客户</Badge>
                     </div>
                   </div>
                 </Card>
@@ -174,9 +165,9 @@ export default function ContactPage() {
             <div className="lg:col-span-2">
               <Card>
                 <CardHeader>
-                  <CardTitle>Send Us a Message</CardTitle>
+                  <CardTitle>发送询价</CardTitle>
                   <CardDescription>
-                    Fill out the form below and we'll get back to you within 24 hours.
+                    填写以下表单，我们将在24小时内回复您。
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -185,31 +176,31 @@ export default function ContactPage() {
                       <div className="flex items-center justify-center w-16 h-16 bg-green-100 text-green-600 rounded-full mx-auto mb-4">
                         <CheckCircle2 className="h-8 w-8" />
                       </div>
-                      <h3 className="text-xl font-semibold mb-2">Message Sent!</h3>
+                      <h3 className="text-xl font-semibold mb-2">提交成功！</h3>
                       <p className="text-muted-foreground mb-6">
-                        Thank you for contacting us. We'll get back to you within 24 hours.
+                        感谢您的咨询，我们将在24小时内回复您。
                       </p>
                       <Button onClick={() => setIsSubmitted(false)}>
-                        Send Another Message
+                        继续询价
                       </Button>
                     </div>
                   ) : (
                     <form onSubmit={handleSubmit} className="space-y-6">
                       <div className="grid gap-4 sm:grid-cols-2">
                         <div className="space-y-2">
-                          <Label htmlFor="name">Full Name *</Label>
+                          <Label htmlFor="name">姓名 *</Label>
                           <Input 
                             id="name" 
-                            placeholder="John Smith" 
+                            placeholder="请输入您的姓名" 
                             required 
                             disabled={isLoading}
                           />
                         </div>
                         <div className="space-y-2">
-                          <Label htmlFor="company">Company Name</Label>
+                          <Label htmlFor="company">公司名称</Label>
                           <Input 
                             id="company" 
-                            placeholder="ABC Electronics Inc." 
+                            placeholder="请输入公司名称" 
                             disabled={isLoading}
                           />
                         </div>
@@ -217,21 +208,21 @@ export default function ContactPage() {
 
                       <div className="grid gap-4 sm:grid-cols-2">
                         <div className="space-y-2">
-                          <Label htmlFor="email">Email Address *</Label>
+                          <Label htmlFor="email">电子邮箱 *</Label>
                           <Input 
                             id="email" 
                             type="email" 
-                            placeholder="john@example.com" 
+                            placeholder="your@email.com" 
                             required 
                             disabled={isLoading}
                           />
                         </div>
                         <div className="space-y-2">
-                          <Label htmlFor="phone">Phone Number</Label>
+                          <Label htmlFor="phone">电话号码</Label>
                           <Input 
                             id="phone" 
                             type="tel" 
-                            placeholder="+1 234 567 8900" 
+                            placeholder="+86 xxx xxxx xxxx" 
                             disabled={isLoading}
                           />
                         </div>
@@ -239,46 +230,47 @@ export default function ContactPage() {
 
                       <div className="grid gap-4 sm:grid-cols-2">
                         <div className="space-y-2">
-                          <Label htmlFor="country">Country *</Label>
+                          <Label htmlFor="country">国家/地区 *</Label>
                           <Input 
                             id="country" 
-                            placeholder="United States" 
+                            placeholder="请输入国家/地区" 
                             required 
                             disabled={isLoading}
                           />
                         </div>
                         <div className="space-y-2">
-                          <Label htmlFor="product">Product Interest</Label>
+                          <Label htmlFor="product">感兴趣的产品</Label>
                           <Select disabled={isLoading}>
                             <SelectTrigger>
-                              <SelectValue placeholder="Select a category" />
+                              <SelectValue placeholder="请选择产品类别" />
                             </SelectTrigger>
                             <SelectContent>
-                              {productCategories.map((category) => (
-                                <SelectItem key={category} value={category.toLowerCase()}>
-                                  {category}
+                              {productCategories.map((cat) => (
+                                <SelectItem key={cat.id} value={cat.id}>
+                                  {cat.name}
                                 </SelectItem>
                               ))}
+                              <SelectItem value="other">其他</SelectItem>
                             </SelectContent>
                           </Select>
                         </div>
                       </div>
 
                       <div className="space-y-2">
-                        <Label htmlFor="subject">Subject *</Label>
+                        <Label htmlFor="subject">主题 *</Label>
                         <Input 
                           id="subject" 
-                          placeholder="Product Inquiry / Quote Request" 
+                          placeholder="产品询价 / 技术咨询 / 合作洽谈" 
                           required 
                           disabled={isLoading}
                         />
                       </div>
 
                       <div className="space-y-2">
-                        <Label htmlFor="message">Message *</Label>
+                        <Label htmlFor="message">详细内容 *</Label>
                         <Textarea 
                           id="message" 
-                          placeholder="Please describe your requirements, including product specifications, quantity, and any other details..."
+                          placeholder="请描述您的需求，包括产品型号、数量、规格等详细信息..."
                           rows={6}
                           required 
                           disabled={isLoading}
@@ -288,19 +280,17 @@ export default function ContactPage() {
                       <div className="flex items-start gap-2 text-sm text-muted-foreground">
                         <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5" />
                         <span>
-                          We typically respond within 24 hours on business days. For urgent inquiries, please call us directly.
+                          我们通常会在24小时内回复工作日的询价。如有紧急需求，请直接电话联系。
                         </span>
                       </div>
 
                       <Button type="submit" size="lg" className="w-full" disabled={isLoading}>
                         {isLoading ? (
-                          <>
-                            Sending...
-                          </>
+                          '提交中...'
                         ) : (
                           <>
                             <Send className="mr-2 h-5 w-5" />
-                            Send Message
+                            提交询价
                           </>
                         )}
                       </Button>
@@ -317,9 +307,9 @@ export default function ContactPage() {
       <section className="py-16 bg-gray-50">
         <div className="container px-4 mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold tracking-tight">Frequently Asked Questions</h2>
+            <h2 className="text-3xl font-bold tracking-tight">常见问题</h2>
             <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">
-              Quick answers to common questions about our products and services
+              关于产品和服务的常见问题解答
             </p>
           </div>
 
@@ -328,9 +318,9 @@ export default function ContactPage() {
               <div className="flex items-start gap-4">
                 <MessageSquare className="h-6 w-6 text-blue-600 flex-shrink-0" />
                 <div>
-                  <h3 className="font-semibold mb-2">What is the minimum order quantity?</h3>
+                  <h3 className="font-semibold mb-2">最小起订量是多少？</h3>
                   <p className="text-sm text-muted-foreground">
-                    MOQ varies by product. For standard products, we can accommodate small trial orders. For custom items, please contact our sales team for specific requirements.
+                    不同产品的起订量有所不同，一般为100件起。具体请咨询我们的销售团队。
                   </p>
                 </div>
               </div>
@@ -340,9 +330,9 @@ export default function ContactPage() {
               <div className="flex items-start gap-4">
                 <MessageSquare className="h-6 w-6 text-blue-600 flex-shrink-0" />
                 <div>
-                  <h3 className="font-semibold mb-2">Do you offer samples?</h3>
+                  <h3 className="font-semibold mb-2">可以提供样品吗？</h3>
                   <p className="text-sm text-muted-foreground">
-                    Yes, we provide samples for quality evaluation. Sample costs and shipping fees may apply. Contact us for details.
+                    可以提供样品供质量评估，样品费用和运费另计。请联系我们了解详情。
                   </p>
                 </div>
               </div>
@@ -352,9 +342,9 @@ export default function ContactPage() {
               <div className="flex items-start gap-4">
                 <MessageSquare className="h-6 w-6 text-blue-600 flex-shrink-0" />
                 <div>
-                  <h3 className="font-semibold mb-2">What are your payment terms?</h3>
+                  <h3 className="font-semibold mb-2">付款方式有哪些？</h3>
                   <p className="text-sm text-muted-foreground">
-                    We accept T/T, L/C, and PayPal. Standard terms are 30% deposit, 70% before shipment. Terms can be negotiated for established customers.
+                    支持T/T、L/C、PayPal等多种付款方式。标准条款为30%定金，70%发货前付款。
                   </p>
                 </div>
               </div>
@@ -364,9 +354,9 @@ export default function ContactPage() {
               <div className="flex items-start gap-4">
                 <MessageSquare className="h-6 w-6 text-blue-600 flex-shrink-0" />
                 <div>
-                  <h3 className="font-semibold mb-2">Do you provide custom solutions?</h3>
+                  <h3 className="font-semibold mb-2">支持定制吗？</h3>
                   <p className="text-sm text-muted-foreground">
-                    Yes! We offer OEM/ODM services for custom cables, wire harnesses, and other products. Our engineering team can assist with design and development.
+                    是的！我们提供OEM/ODM定制服务，可根据您的需求设计和生产专属产品。
                   </p>
                 </div>
               </div>
@@ -376,9 +366,9 @@ export default function ContactPage() {
               <div className="flex items-start gap-4">
                 <MessageSquare className="h-6 w-6 text-blue-600 flex-shrink-0" />
                 <div>
-                  <h3 className="font-semibold mb-2">What certifications do you have?</h3>
+                  <h3 className="font-semibold mb-2">交货期需要多久？</h3>
                   <p className="text-sm text-muted-foreground">
-                    We are ISO 9001:2015 certified. Products carry relevant certifications including UL, CE, FCC, and RoHS compliance.
+                    标准产品一般为7-15天，定制产品根据复杂程度需15-30天。具体交期以报价为准。
                   </p>
                 </div>
               </div>
@@ -388,9 +378,9 @@ export default function ContactPage() {
               <div className="flex items-start gap-4">
                 <MessageSquare className="h-6 w-6 text-blue-600 flex-shrink-0" />
                 <div>
-                  <h3 className="font-semibold mb-2">What is the lead time for orders?</h3>
+                  <h3 className="font-semibold mb-2">产品有哪些认证？</h3>
                   <p className="text-sm text-muted-foreground">
-                    Standard products: 7-15 days. Custom products: 15-30 days depending on complexity. We'll provide accurate lead times with your quotation.
+                    公司通过ISO 9001:2015认证，产品符合CE、RoHS等相关国际标准。
                   </p>
                 </div>
               </div>
@@ -402,22 +392,21 @@ export default function ContactPage() {
       {/* CTA Section */}
       <section className="py-16 bg-blue-600 text-white">
         <div className="container px-4 mx-auto text-center">
-          <h2 className="text-3xl font-bold tracking-tight mb-4">Ready to Start Your Project?</h2>
+          <h2 className="text-3xl font-bold tracking-tight mb-4">准备开始合作？</h2>
           <p className="text-blue-100 max-w-2xl mx-auto mb-8">
-            Whether you need standard products or custom solutions, our team is ready to help. 
-            Get in touch today for a quick response.
+            无论您需要标准产品还是定制解决方案，我们的团队随时准备为您提供专业服务。
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="mailto:sales@shjinling.com">
               <Button size="lg" className="bg-white text-blue-700 hover:bg-blue-50">
                 <Mail className="mr-2 h-5 w-5" />
-                Email: sales@shjinling.com
+                发送邮件：sales@shjinling.com
               </Button>
             </a>
             <a href="tel:+8621XXXXXXXX">
               <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
                 <Phone className="mr-2 h-5 w-5" />
-                Call Us Now
+                电话咨询
               </Button>
             </a>
           </div>
@@ -431,37 +420,37 @@ export default function ContactPage() {
             <div className="md:col-span-2">
               <div className="flex items-center space-x-2 mb-4">
                 <div className="flex items-center justify-center w-10 h-10 bg-blue-600 rounded-lg">
-                  <span className="text-xl font-bold text-white">JL</span>
+                  <span className="text-lg font-bold text-white">金铃</span>
                 </div>
                 <div className="flex flex-col">
-                  <span className="font-bold text-white">Shanghai Jinling</span>
-                  <span className="text-xs text-gray-400">Electronics Co., Ltd.</span>
+                  <span className="font-bold text-white">上海金铃橡胶制品</span>
+                  <span className="text-xs text-gray-400">Shanghai Jinling Rubber</span>
                 </div>
               </div>
               <p className="text-sm text-gray-400 max-w-md">
-                Leading manufacturer and exporter of electronic components, network cables, and communication equipment. Serving global markets since 2003.
+                上海金铃橡胶制品有限公司是一家专业生产防护服、雨衣、工装等橡胶制品的企业。拥有20余年生产经验，产品出口全球50+国家。
               </p>
             </div>
             <div>
-              <h3 className="font-semibold text-white mb-4">Quick Links</h3>
+              <h3 className="font-semibold text-white mb-4">快速链接</h3>
               <ul className="space-y-2 text-sm">
-                <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
-                <li><Link href="/about" className="hover:text-white transition-colors">About Us</Link></li>
-                <li><Link href="/products" className="hover:text-white transition-colors">Products</Link></li>
-                <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
+                <li><Link href="/" className="hover:text-white transition-colors">首页</Link></li>
+                <li><Link href="/about" className="hover:text-white transition-colors">关于我们</Link></li>
+                <li><Link href="/products" className="hover:text-white transition-colors">产品中心</Link></li>
+                <li><Link href="/contact" className="hover:text-white transition-colors">联系我们</Link></li>
               </ul>
             </div>
             <div>
-              <h3 className="font-semibold text-white mb-4">Contact Info</h3>
+              <h3 className="font-semibold text-white mb-4">联系方式</h3>
               <ul className="space-y-3 text-sm">
-                <li>Shanghai, China</li>
+                <li>上海市</li>
                 <li>+86-21-XXXXXXXX</li>
                 <li>sales@shjinling.com</li>
               </ul>
             </div>
           </div>
           <div className="mt-8 pt-8 border-t border-gray-800 text-center text-sm">
-            <p>© {new Date().getFullYear()} Shanghai Jinling Electronics Co., Ltd. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} 上海金铃橡胶制品有限公司 版权所有</p>
           </div>
         </div>
       </footer>

@@ -5,42 +5,43 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.COZE_PROJECT_DOMAIN_DEFAULT || 'https://example.com'),
+  metadataBase: new URL(process.env.COZE_PROJECT_DOMAIN_DEFAULT || 'https://www.shjinling.com'),
   title: {
-    default: 'Shanghai Jinling | Professional Electronic Components & Network Solutions',
-    template: '%s | Shanghai Jinling',
+    default: '上海金铃橡胶制品有限公司 | 专业防护服与橡胶制品制造商',
+    template: '%s | 上海金铃橡胶制品',
   },
-  description: 'Shanghai Jinling specializes in high-quality electronic components, network cables, communication equipment, and comprehensive network solutions for global markets. ISO 9001 certified manufacturer with 20+ years experience.',
+  description: '上海金铃橡胶制品有限公司专业生产防护服、雨衣、工装等橡胶制品。产品包括连体防护服、隔热防护服、防化服、雨衣套装等，广泛应用于化工、冶金、户外作业等行业。ISO 9001认证企业，产品出口全球50+国家。',
   keywords: [
-    'electronic components',
-    'network cables',
-    'communication equipment',
-    'network solutions',
-    'Ethernet cables',
-    'fiber optic cables',
-    'network switches',
-    'wireless solutions',
-    'structured cabling',
-    'data center solutions',
-    'Shanghai Jinling',
-    'electronics manufacturer',
-    'wholesale electronics',
-    'B2B electronics',
+    '上海金铃橡胶',
+    '防护服',
+    '隔热防护服',
+    '防化防护服',
+    '雨衣',
+    '工装',
+    '橡胶制品',
+    '连体防护服',
+    '防雨服',
+    '防护工装',
+    'PVC防护服',
+    '化工防护服',
+    '专业防护装备',
+    '工装裤',
+    '围裙袖套',
   ],
-  authors: [{ name: 'Shanghai Jinling Electronics Co., Ltd.', url: 'https://www.shjinling.com' }],
+  authors: [{ name: '上海金铃橡胶制品有限公司', url: 'https://www.shjinling.com' }],
   generator: 'Next.js',
   openGraph: {
-    title: 'Shanghai Jinling | Leading Electronic Components Manufacturer',
-    description: 'Professional manufacturer of electronic components, network cables, and communication equipment. Serving global markets with quality products and reliable service.',
+    title: '上海金铃橡胶制品有限公司 | 专业防护服与橡胶制品制造商',
+    description: '专业生产防护服、雨衣、工装等橡胶制品。ISO 9001认证企业，服务全球50+国家。',
     url: 'https://www.shjinling.com',
-    siteName: 'Shanghai Jinling',
-    locale: 'en_US',
+    siteName: '上海金铃橡胶制品',
+    locale: 'zh_CN',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Shanghai Jinling | Electronic Components & Network Solutions',
-    description: 'ISO 9001 certified manufacturer specializing in electronic components, network cables, and communication equipment.',
+    title: '上海金铃橡胶制品 | 专业防护服制造商',
+    description: 'ISO 9001认证企业，专业生产防护服、雨衣、工装等橡胶制品。',
   },
   robots: {
     index: true,
@@ -64,12 +65,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="zh-CN">
       <head>
         <link rel="icon" href="/favicon.ico" />
         <meta name="geo.region" content="CN-31" />
         <meta name="geo.placename" content="Shanghai" />
-        <meta name="author" content="Shanghai Jinling Electronics Co., Ltd." />
+        <meta name="author" content="上海金铃橡胶制品有限公司" />
         <meta name="rating" content="general" />
         <meta name="distribution" content="global" />
         <meta name="revisit-after" content="7 days" />
