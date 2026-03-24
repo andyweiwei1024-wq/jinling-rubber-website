@@ -124,21 +124,48 @@ export default async function ProductDetailPage({ params }: PageProps) {
       {/* Product Detail */}
       <main className="flex-1">
         <div className="container px-4 py-12 mx-auto">
-          <div className="grid gap-12 lg:grid-cols-2">
+          <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 items-start">
             {/* Product Images */}
             <div className="space-y-4">
-              <div className="aspect-[4/3] relative bg-gray-100 rounded-lg overflow-hidden">
-                <img 
-                  src={product.images.main} 
-                  alt={productName}
-                  className="object-cover w-full h-full"
-                />
+              {/* 主图 - 使用 object-contain 保持图片完整显示 */}
+              <div className="relative bg-gray-50 rounded-xl overflow-hidden border">
+                <div className="aspect-square sm:aspect-[4/3] lg:aspect-square max-h-[500px] mx-auto">
+                  <img 
+                    src={product.images.main} 
+                    alt={productName}
+                    className="w-full h-full object-contain p-4"
+                  />
+                </div>
               </div>
-              {product.images.additional && product.images.additional.length > 0 && (
+              {/* 侧面图 */}
+              {product.images.side && (
                 <div className="grid grid-cols-2 gap-4">
-                  {product.images.additional.slice(0, 4).map((img: string, idx: number) => (
-                    <div key={idx} className="aspect-square bg-gray-100 rounded-lg overflow-hidden">
-                      <img src={img} alt={`${productName} detail ${idx + 1}`} className="object-cover w-full h-full" />
+                  <div className="aspect-square bg-gray-50 rounded-lg overflow-hidden border">
+                    <img 
+                      src={product.images.main} 
+                      alt={productName}
+                      className="w-full h-full object-contain p-2"
+                    />
+                  </div>
+                  <div className="aspect-square bg-gray-50 rounded-lg overflow-hidden border">
+                    <img 
+                      src={product.images.side} 
+                      alt={`${productName} side view`}
+                      className="w-full h-full object-contain p-2"
+                    />
+                  </div>
+                </div>
+              )}
+              {/* 附加图片 */}
+              {product.images.additional && product.images.additional.length > 0 && (
+                <div className="grid grid-cols-3 gap-3">
+                  {product.images.additional.slice(0, 3).map((img: string, idx: number) => (
+                    <div key={idx} className="aspect-square bg-gray-50 rounded-lg overflow-hidden border">
+                      <img 
+                        src={img} 
+                        alt={`${productName} detail ${idx + 1}`} 
+                        className="w-full h-full object-contain p-2 hover:scale-105 transition-transform cursor-pointer" 
+                      />
                     </div>
                   ))}
                 </div>
