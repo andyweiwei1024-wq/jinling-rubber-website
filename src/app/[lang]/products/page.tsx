@@ -8,7 +8,15 @@ import {
   TabsTrigger,
   TabsContent 
 } from '@/components/ui/tabs';
-import { products, productCategories, getProductsByCategory } from '@/lib/products';
+import { 
+  products, 
+  productCategories, 
+  getProductsByCategory,
+  getProductName,
+  getProductDescription,
+  getProductFeatures,
+  getCategoryName
+} from '@/lib/products-i18n';
 import { Language, defaultLanguage } from '@/lib/i18n/config';
 import { getAllTranslations, getTranslation } from '@/lib/i18n/server';
 import { LanguageSwitcher } from '@/components/LanguageSwitcher';
@@ -25,12 +33,6 @@ export default async function ProductsPage({ params }: PageProps) {
   
   const t = (key: string, fallback?: string) => getTranslation(lang, key, fallback);
   const navPath = (path: string) => lang === defaultLanguage ? path : `/${lang}${path}`;
-  
-  // Get category name with translation
-  const getCategoryName = (categoryId: string) => {
-    const categoryName = t(`categories.${categoryId}`);
-    return categoryName !== categoryId ? categoryName : productCategories.find(c => c.id === categoryId)?.name || categoryId;
-  };
 
   return (
     <div className="flex min-h-screen flex-col">
@@ -86,7 +88,7 @@ export default async function ProductsPage({ params }: PageProps) {
                 <TabsTrigger value="all">{t('products.allProducts', 'All Products')}</TabsTrigger>
                 {productCategories.map((cat) => (
                   <TabsTrigger key={cat.id} value={cat.id} className="hidden sm:inline-flex">
-                    {getCategoryName(cat.id)}
+                    {getCategoryName(cat.id, lang)}
                   </TabsTrigger>
                 ))}
               </TabsList>
@@ -100,21 +102,20 @@ export default async function ProductsPage({ params }: PageProps) {
                     <div className="aspect-[4/3] relative bg-gray-200">
                       <img 
                         src={product.images.main} 
-                        alt={product.name}
+                        alt={getProductName(product, lang)}
                         className="object-cover w-full h-full"
                       />
                     </div>
                     <CardHeader className="pb-2">
                       <Badge variant="secondary" className="w-fit mb-2">
-                        {getCategoryName(product.category)}
+                        {getCategoryName(product.category, lang)}
                       </Badge>
-                      <CardTitle className="text-lg">{product.name}</CardTitle>
-                      <span className="text-xs text-muted-foreground">{product.nameEn}</span>
+                      <CardTitle className="text-lg">{getProductName(product, lang)}</CardTitle>
                     </CardHeader>
                     <CardContent className="flex-1">
-                      <p className="text-sm text-muted-foreground line-clamp-2">{product.description}</p>
+                      <p className="text-sm text-muted-foreground line-clamp-2">{getProductDescription(product, lang)}</p>
                       <div className="mt-4 flex flex-wrap gap-1">
-                        {product.features.slice(0, 3).map((feature, idx) => (
+                        {getProductFeatures(product, lang).slice(0, 3).map((feature, idx) => (
                           <Badge key={idx} variant="outline" className="text-xs">
                             {feature}
                           </Badge>
@@ -143,21 +144,20 @@ export default async function ProductsPage({ params }: PageProps) {
                       <div className="aspect-[4/3] relative bg-gray-200">
                         <img 
                           src={product.images.main} 
-                          alt={product.name}
+                          alt={getProductName(product, lang)}
                           className="object-cover w-full h-full"
                         />
                       </div>
                       <CardHeader className="pb-2">
                         <Badge variant="secondary" className="w-fit mb-2">
-                          {getCategoryName(product.category)}
+                          {getCategoryName(product.category, lang)}
                         </Badge>
-                        <CardTitle className="text-lg">{product.name}</CardTitle>
-                        <span className="text-xs text-muted-foreground">{product.nameEn}</span>
+                        <CardTitle className="text-lg">{getProductName(product, lang)}</CardTitle>
                       </CardHeader>
                       <CardContent className="flex-1">
-                        <p className="text-sm text-muted-foreground line-clamp-2">{product.description}</p>
+                        <p className="text-sm text-muted-foreground line-clamp-2">{getProductDescription(product, lang)}</p>
                         <div className="mt-4 flex flex-wrap gap-1">
-                          {product.features.slice(0, 3).map((feature, idx) => (
+                          {getProductFeatures(product, lang).slice(0, 3).map((feature, idx) => (
                             <Badge key={idx} variant="outline" className="text-xs">
                               {feature}
                             </Badge>

@@ -1,26 +1,34 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Separator } from '@/components/ui/separator';
-import { products, getProductById, getProductsByCategory } from '@/lib/products';
+import { 
+  products, 
+  getProductById, 
+  getProductsByCategory,
+  getProductName,
+  getProductDescription,
+  getProductFeatures,
+  getProductApplications,
+  getCategoryName,
+  getLocalizedSpecs
+} from '@/lib/products-i18n';
 import { Language, defaultLanguage } from '@/lib/i18n/config';
 import { getAllTranslations, getTranslation } from '@/lib/i18n/server';
 import { LanguageSwitcher } from '@/components/LanguageSwitcher';
 import { 
   ArrowLeft, 
   Mail, 
-  Phone, 
-  MessageSquare,
-  CheckCircle2,
+  Phone,
   Shield,
   Layers,
   Thermometer,
   Droplets,
   Wind,
   Zap,
-  Leaf
+  Leaf,
+  ArrowRight
 } from 'lucide-react';
 
 interface PageProps {
@@ -36,11 +44,6 @@ export function generateStaticParams() {
     for (const product of products) {
       params.push({ lang, id: product.id });
     }
-  }
-  
-  // Also add default language (English) without prefix
-  for (const product of products) {
-    params.push({ lang: 'en', id: product.id });
   }
   
   return params;
@@ -59,13 +62,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
   const t = (key: string, fallback?: string) => getTranslation(lang, key, fallback);
   const navPath = (path: string) => lang === defaultLanguage ? path : `/${lang}${path}`;
   
-  // Get category name with translation
-  const getCategoryName = (categoryId: string) => {
-    const categoryName = t(`categories.${categoryId}`);
-    return categoryName !== categoryId ? categoryName : categoryId;
-  };
-  
-  // Related products
+  // Get related products
   const relatedProducts = getProductsByCategory(product.category)
     .filter(p => p.id !== product.id)
     .slice(0, 3);
@@ -75,6 +72,14 @@ export default async function ProductDetailPage({ params }: PageProps) {
     const icons = [Shield, Layers, Thermometer, Droplets, Wind, Zap, Leaf];
     return icons[index % icons.length];
   };
+  
+  // Get localized product data
+  const productName = getProductName(product, lang);
+  const productDesc = getProductDescription(product, lang);
+  const productFeatures = getProductFeatures(product, lang);
+  const productApplications = getProductApplications(product, lang);
+  const categoryName = getCategoryName(product.category, lang);
+  const specs = getLocalizedSpecs(product.specifications, lang);
 
   return (
     <div className="flex min-h-screen flex-col">
@@ -126,7 +131,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
               <div className="aspect-[4/3] relative bg-gray-100 rounded-lg overflow-hidden">
                 <img 
                   src={product.images.main} 
-                  alt={product.name}
+                  alt={productName}
                   className="object-cover w-full h-full"
                 />
               </div>
@@ -134,7 +139,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
                 <div className="grid grid-cols-2 gap-4">
                   {product.images.additional.slice(0, 4).map((img: string, idx: number) => (
                     <div key={idx} className="aspect-square bg-gray-100 rounded-lg overflow-hidden">
-                      <img src={img} alt={`${product.name} detail ${idx + 1}`} className="object-cover w-full h-full" />
+                      <img src={img} alt={`${productName} detail ${idx + 1}`} className="object-cover w-full h-full" />
                     </div>
                   ))}
                 </div>
@@ -144,18 +149,17 @@ export default async function ProductDetailPage({ params }: PageProps) {
             {/* Product Info */}
             <div>
               <Badge variant="secondary" className="mb-4">
-                {getCategoryName(product.category)}
+                {categoryName}
               </Badge>
-              <h1 className="text-3xl font-bold tracking-tight mb-2">{product.name}</h1>
-              <p className="text-lg text-muted-foreground mb-6">{product.nameEn}</p>
+              <h1 className="text-3xl font-bold tracking-tight mb-2">{productName}</h1>
               
-              <p className="text-muted-foreground mb-8">{product.description}</p>
+              <p className="text-muted-foreground mb-8">{productDesc}</p>
 
               {/* Features */}
               <div className="mb-8">
                 <h3 className="text-lg font-semibold mb-4">{t('productDetails.features', 'Key Features')}</h3>
                 <div className="grid gap-3">
-                  {product.features.map((feature, index) => {
+                  {productFeatures.map((feature, index) => {
                     const Icon = getFeatureIcon(index);
                     return (
                       <div key={index} className="flex items-start gap-3">
@@ -173,7 +177,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
               <div className="mb-8">
                 <h3 className="text-lg font-semibold mb-4">{t('productDetails.applications', 'Applications')}</h3>
                 <div className="flex flex-wrap gap-2">
-                  {product.applications.map((app, index) => (
+                  {productApplications.map((app, index) => (
                     <Badge key={index} variant="outline">
                       {app}
                     </Badge>
@@ -182,16 +186,16 @@ export default async function ProductDetailPage({ params }: PageProps) {
               </div>
 
               {/* Specifications */}
-              {product.specifications && (
+              {specs.length > 0 && (
                 <div className="mb-8">
                   <h3 className="text-lg font-semibold mb-4">{t('productDetails.specifications', 'Product Specifications')}</h3>
                   <Card>
                     <CardContent className="pt-6">
                       <dl className="space-y-3">
-                        {Object.entries(product.specifications).map(([key, value]) => (
-                          <div key={key} className="flex justify-between">
-                            <dt className="text-muted-foreground">{key}</dt>
-                            <dd className="font-medium">{value}</dd>
+                        {specs.map((spec, index) => (
+                          <div key={index} className="flex justify-between">
+                            <dt className="text-muted-foreground">{spec.label}</dt>
+                            <dd className="font-medium">{spec.value}</dd>
                           </div>
                         ))}
                       </dl>
@@ -220,18 +224,18 @@ export default async function ProductDetailPage({ params }: PageProps) {
           {/* Related Products */}
           {relatedProducts.length > 0 && (
             <div className="mt-20">
-              <h2 className="text-2xl font-bold mb-6">Related Products</h2>
+              <h2 className="text-2xl font-bold mb-6">{t('products.relatedProducts', 'Related Products')}</h2>
               <div className="grid gap-6 md:grid-cols-3">
                 {relatedProducts.map((p) => (
                   <Link key={p.id} href={navPath(`/products/${p.id}`)}>
                     <Card className="overflow-hidden hover:shadow-lg transition-shadow">
                       <div className="aspect-[4/3] relative bg-gray-200">
-                        <img src={p.images.main} alt={p.name} className="object-cover w-full h-full" />
+                        <img src={p.images.main} alt={getProductName(p, lang)} className="object-cover w-full h-full" />
                       </div>
                       <CardContent className="p-4">
-                        <Badge variant="secondary" className="mb-2">{getCategoryName(p.category)}</Badge>
-                        <h3 className="font-semibold">{p.name}</h3>
-                        <p className="text-sm text-muted-foreground">{p.nameEn}</p>
+                        <Badge variant="secondary" className="mb-2">{getCategoryName(p.category, lang)}</Badge>
+                        <h3 className="font-semibold">{getProductName(p, lang)}</h3>
+                        <p className="text-sm text-muted-foreground line-clamp-2 mt-1">{getProductDescription(p, lang)}</p>
                       </CardContent>
                     </Card>
                   </Link>
