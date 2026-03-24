@@ -110,7 +110,7 @@ export default async function ProductsPage({ params }: PageProps) {
                       <Badge variant="secondary" className="w-fit mb-2">
                         {getCategoryName(product.category, lang)}
                       </Badge>
-                      <CardTitle className="text-lg">{getProductName(product, lang)}</CardTitle>
+                      <CardTitle className="text-lg">{getProductName(product, lang)} <span className="text-sm font-normal text-muted-foreground">({product.id})</span></CardTitle>
                     </CardHeader>
                     <CardContent className="flex-1">
                       <p className="text-sm text-muted-foreground line-clamp-2">{getProductDescription(product, lang)}</p>
@@ -152,7 +152,7 @@ export default async function ProductsPage({ params }: PageProps) {
                         <Badge variant="secondary" className="w-fit mb-2">
                           {getCategoryName(product.category, lang)}
                         </Badge>
-                        <CardTitle className="text-lg">{getProductName(product, lang)}</CardTitle>
+                        <CardTitle className="text-lg">{getProductName(product, lang)} <span className="text-sm font-normal text-muted-foreground">({product.id})</span></CardTitle>
                       </CardHeader>
                       <CardContent className="flex-1">
                         <p className="text-sm text-muted-foreground line-clamp-2">{getProductDescription(product, lang)}</p>

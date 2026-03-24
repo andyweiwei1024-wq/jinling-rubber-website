@@ -222,7 +222,7 @@ export default async function Home({ params }: PageProps) {
                     <Badge variant="secondary" className="w-fit mb-2">
                       {getCategoryNameLocalized(product.category, lang)}
                     </Badge>
-                    <CardTitle className="text-lg">{getProductName(product, lang)}</CardTitle>
+                    <CardTitle className="text-lg">{getProductName(product, lang)} <span className="text-sm font-normal text-muted-foreground">({product.id})</span></CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-sm text-muted-foreground line-clamp-2">{getProductDescription(product, lang)}</p>

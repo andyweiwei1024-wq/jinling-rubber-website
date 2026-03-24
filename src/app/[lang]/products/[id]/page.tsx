@@ -177,7 +177,10 @@ export default async function ProductDetailPage({ params }: PageProps) {
               <Badge variant="secondary" className="mb-4">
                 {categoryName}
               </Badge>
-              <h1 className="text-3xl font-bold tracking-tight mb-2">{productName}</h1>
+              <div className="flex items-center gap-3 mb-2">
+                <h1 className="text-3xl font-bold tracking-tight">{productName}</h1>
+                <span className="text-lg text-muted-foreground">({product.id})</span>
+              </div>
               
               <p className="text-muted-foreground mb-8">{productDesc}</p>
 
@@ -260,7 +263,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
                       </div>
                       <CardContent className="p-4">
                         <Badge variant="secondary" className="mb-2">{getCategoryName(p.category, lang)}</Badge>
-                        <h3 className="font-semibold">{getProductName(p, lang)}</h3>
+                        <h3 className="font-semibold">{getProductName(p, lang)} <span className="text-sm font-normal text-muted-foreground">({p.id})</span></h3>
                         <p className="text-sm text-muted-foreground line-clamp-2 mt-1">{getProductDescription(p, lang)}</p>
                       </CardContent>
                     </Card>
