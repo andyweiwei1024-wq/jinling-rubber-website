@@ -3,8 +3,9 @@ import { products as productsData, productCategories as categoriesData, Product 
 
 // Get localized product name
 export function getProductName(product: Product, lang: Language): string {
-  if (lang === 'zh' || lang === defaultLanguage) {
-    return product.nameEn || product.name;
+  // 中文返回中文名称，其他语言返回英文名称
+  if (lang === 'zh') {
+    return product.name;
   }
   return product.nameEn || product.name;
 }
