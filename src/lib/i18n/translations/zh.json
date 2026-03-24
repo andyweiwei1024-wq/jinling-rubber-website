@@ -1,0 +1,271 @@
+{
+  "site": {
+    "name": "上海金凌橡胶",
+    "fullName": "上海金凌橡胶制品有限公司",
+    "description": "专业生产防护服、雨衣和橡胶制品的制造商。ISO 9001认证，服务全球50多个国家。"
+  },
+  "nav": {
+    "home": "首页",
+    "about": "关于我们",
+    "products": "产品中心",
+    "contact": "联系我们",
+    "getQuote": "获取报价"
+  },
+  "home": {
+    "badge": "ISO 9001认证制造商",
+    "title": "专业防护服与橡胶制品制造商",
+    "subtitle": "上海金凌橡胶制品有限公司拥有20多年防护装备制造经验，服务全球50多个国家的客户。",
+    "viewProducts": "查看产品",
+    "contactUs": "联系我们",
+    "stats": {
+      "years": "年行业经验",
+      "countries": "国家客户",
+      "products": "产品类型",
+      "certifications": "ISO 9001认证"
+    },
+    "productRange": "产品系列",
+    "productRangeSubtitle": "为各行业提供专业防护装备",
+    "featuredProducts": "热销产品",
+    "featuredProductsSubtitle": "探索全球客户信赖的热销产品",
+    "viewAllProducts": "查看全部产品",
+    "whyChooseUs": "为什么选择上海金凌？",
+    "reasons": {
+      "iso": "ISO 9001:2015质量管理体系认证",
+      "experience": "20多年制造与出口经验",
+      "pricing": "批量订单具有竞争力的批发价格",
+      "customization": "全面的产品系列，支持定制",
+      "delivery": "与可靠物流伙伴合作，全球快速配送",
+      "support": "专业的技术支持与售后服务"
+    },
+    "learnMore": "了解更多",
+    "features": {
+      "quality": {
+        "title": "品质保障",
+        "desc": "严格的质量控制流程确保每件产品符合国际标准。"
+      },
+      "partners": {
+        "title": "全球合作伙伴",
+        "desc": "获得50多个国家的经销商和企业信赖。"
+      },
+      "export": {
+        "title": "出口专家",
+        "desc": "专业出口团队处理报关、文件和物流。"
+      },
+      "response": {
+        "title": "快速响应",
+        "desc": "快速报价响应与专业的客户支持团队。"
+      }
+    },
+    "cta": {
+      "title": "准备开始您的项目？",
+      "subtitle": "联系我们的销售团队进行产品咨询、报价和技术支持。我们在24小时内回复。",
+      "requestQuote": "获取报价",
+      "emailUs": "发送邮件"
+    }
+  },
+  "categories": {
+    "protective-suits": "防护服系列",
+    "rainwear": "雨衣系列",
+    "workwear": "工装系列"
+  },
+  "products": {
+    "title": "产品中心",
+    "subtitle": "探索我们全面的防护装备和橡胶产品系列",
+    "allProducts": "全部产品",
+    "viewDetails": "查看详情",
+    "features": "产品特点",
+    "applications": "应用场景",
+    "specifications": "技术规格",
+    "requestQuote": "获取报价",
+    "emailUs": "发送邮件",
+    "customProducts": "需要定制产品？",
+    "customDesc": "我们提供OEM/ODM定制服务。请联系我们的团队了解详情。",
+    "requestCustom": "获取定制报价"
+  },
+  "about": {
+    "title": "关于我们",
+    "subtitle": "专业的防护服和橡胶制品制造商，致力于品质、创新和客户满意，始于2003年。",
+    "companyProfile": "公司简介",
+    "whoWeAre": "我们是谁",
+    "whoWeAreDesc": "上海金凌橡胶制品有限公司是一家专业从事防护服、雨衣和工装制造与出口的企业。位于中国经济中心上海，二十多年来我们以优质产品和可靠服务服务全球客户。",
+    "stats": {
+      "facility": "平方米厂房",
+      "team": "名团队成员",
+      "countries": "个国家客户",
+      "productTypes": "种产品类型"
+    },
+    "journey": "发展历程",
+    "journeySubtitle": "从本土制造商到全球供应商",
+    "timeline": {
+      "2003": {
+        "title": "公司成立",
+        "desc": "上海金凌橡胶制品有限公司在上海成立。"
+      },
+      "2008": {
+        "title": "防护服部门",
+        "desc": "产品线扩展，新增专业防护服产品。"
+      },
+      "2012": {
+        "title": "ISO 9001认证",
+        "desc": "获得ISO 9001质量管理体系认证。"
+      },
+      "2016": {
+        "title": "全球出口计划",
+        "desc": "开始为全球市场提供全面的出口服务。"
+      },
+      "2020": {
+        "title": "产品线扩展",
+        "desc": "扩展至多个品类超过100种产品。"
+      },
+      "2024": {
+        "title": "持续发展",
+        "desc": "服务全球50多个国家的客户，提供优质产品。"
+      }
+    },
+    "values": "核心价值观",
+    "valuesSubtitle": "指导我们经营的原则",
+    "coreValues": {
+      "quality": {
+        "title": "品质至上",
+        "desc": "整个生产过程中的严格质量控制标准。"
+      },
+      "customer": {
+        "title": "客户为本",
+        "desc": "客户是我们一切工作的中心。"
+      },
+      "innovation": {
+        "title": "创新发展",
+        "desc": "持续投入研发创新。"
+      },
+      "integrity": {
+        "title": "诚信经营",
+        "desc": "以诚信和透明的方式开展业务。"
+      },
+      "sustainability": {
+        "title": "可持续发展",
+        "desc": "通过绿色生产践行环保责任。"
+      },
+      "global": {
+        "title": "全球视野",
+        "desc": "致力于成为防护装备领域的全球领先供应商。"
+      }
+    },
+    "certifications": "资质认证",
+    "certificationsSubtitle": "国际认可的认证彰显我们对品质的承诺",
+    "cta": {
+      "title": "成为我们的合作伙伴",
+      "subtitle": "加入我们全球满意客户和经销商网络。",
+      "contactUs": "联系我们",
+      "viewProducts": "查看产品"
+    }
+  },
+  "contact": {
+    "title": "联系我们",
+    "subtitle": "联系我们的团队进行产品咨询、报价和技术支持",
+    "getInTouch": "联系方式",
+    "getInTouchDesc": "我们期待您的来信。请通过以下任一渠道联系我们。",
+    "info": {
+      "address": {
+        "title": "地址",
+        "value": "中国上海",
+        "desc": "访问我们的总部"
+      },
+      "phone": {
+        "title": "电话",
+        "value": "+86-21-XXXXXXXX",
+        "desc": "周一至周五，9:00-18:00（GMT+8）"
+      },
+      "email": {
+        "title": "邮箱",
+        "value": "sales@shjinling.com",
+        "desc": "一般咨询"
+      },
+      "hours": {
+        "title": "工作时间",
+        "value": "周一 - 周五: 9:00 - 18:00",
+        "desc": "GMT+8 上海时间"
+      }
+    },
+    "globalExport": "全球出口服务",
+    "globalExportDesc": "我们提供全面的出口服务，包括报关、单证和物流支持。",
+    "countriesServed": "服务50多个国家",
+    "form": {
+      "title": "给我们留言",
+      "subtitle": "填写表单，我们将在24小时内回复您。",
+      "name": "姓名",
+      "namePlaceholder": "张三",
+      "company": "公司名称",
+      "companyPlaceholder": "ABC电子有限公司",
+      "email": "电子邮箱",
+      "emailPlaceholder": "zhangsan@example.com",
+      "phone": "电话号码",
+      "phonePlaceholder": "+86 138 0000 0000",
+      "country": "国家",
+      "countryPlaceholder": "中国",
+      "productInterest": "产品兴趣",
+      "selectCategory": "选择类别",
+      "other": "其他",
+      "subject": "主题",
+      "subjectPlaceholder": "产品咨询/报价请求",
+      "message": "留言内容",
+      "messagePlaceholder": "请描述您的需求，包括产品规格、数量和其他详细信息...",
+      "submit": "发送留言",
+      "submitting": "发送中...",
+      "success": "留言已发送！",
+      "successDesc": "感谢您的联系，我们将在24小时内回复您。",
+      "sendAnother": "发送另一条留言",
+      "response": "我们通常在工作日24小时内回复。紧急咨询请直接致电。"
+    },
+    "faq": {
+      "title": "常见问题",
+      "subtitle": "关于我们产品和服务的常见问题解答",
+      "moq": {
+        "q": "最小起订量是多少？",
+        "a": "最小起订量因产品而异。对于标准产品，我们可以接受小批量试单。请联系我们的销售团队了解具体要求。"
+      },
+      "samples": {
+        "q": "提供样品吗？",
+        "a": "是的，我们提供样品用于质量评估。可能需要支付样品费和运费。"
+      },
+      "payment": {
+        "q": "付款条件是什么？",
+        "a": "我们接受T/T、L/C和PayPal。标准条款为30%定金，70%发货前支付。"
+      },
+      "custom": {
+        "q": "提供定制解决方案吗？",
+        "a": "是的！我们提供OEM/ODM服务。我们的工程团队可以协助设计和开发。"
+      },
+      "cert": {
+        "q": "有哪些认证？",
+        "a": "我们通过ISO 9001:2015认证。产品具有相关认证，包括CE、RoHS合规。"
+      },
+      "lead": {
+        "q": "订单交货期是多久？",
+        "a": "标准产品：7-15天。定制产品：15-30天，具体取决于复杂程度。"
+      }
+    },
+    "cta": {
+      "title": "准备开始您的项目？",
+      "subtitle": "无论您需要标准产品还是定制解决方案，我们的团队随时准备帮助您。",
+      "requestQuote": "获取报价",
+      "callUs": "立即致电"
+    }
+  },
+  "footer": {
+    "description": "防护服、雨衣和工装的领先制造商和出口商。自2003年起服务全球市场。",
+    "quickLinks": "快速链接",
+    "contactInfo": "联系信息",
+    "copyright": "上海金凌橡胶制品有限公司 版权所有。"
+  },
+  "productDetails": {
+    "backToList": "返回产品列表",
+    "features": "产品特点",
+    "applications": "应用场景",
+    "specifications": "产品规格",
+    "inquiry": "询价",
+    "phoneConsult": "电话咨询",
+    "emailContact": "邮件联系",
+    "onlineInquiry": "在线询价",
+    "inquiryForm": "填写询价表单 →"
+  }
+}

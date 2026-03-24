@@ -1,0 +1,271 @@
+{
+  "site": {
+    "name": "Shanghai Jinling Rubber",
+    "fullName": "Shanghai Jinling Rubber Products Co., Ltd.",
+    "description": "Professional manufacturer of protective suits, rainwear, and rubber products. ISO 9001 certified, serving 50+ countries worldwide."
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "products": "Products",
+    "contact": "Contact",
+    "getQuote": "Get Quote"
+  },
+  "home": {
+    "badge": "ISO 9001 Certified Manufacturer",
+    "title": "Professional Protective Suits & Rubber Products Manufacturer",
+    "subtitle": "Shanghai Jinling Rubber Products Co., Ltd. has over 20 years of experience in protective equipment, serving customers in 50+ countries worldwide.",
+    "viewProducts": "View Products",
+    "contactUs": "Contact Us",
+    "stats": {
+      "years": "Years Experience",
+      "countries": "Countries Served",
+      "products": "Product Types",
+      "certifications": "ISO 9001 Certified"
+    },
+    "productRange": "Product Range",
+    "productRangeSubtitle": "Professional protective equipment for various industries",
+    "featuredProducts": "Featured Products",
+    "featuredProductsSubtitle": "Explore our best-selling products trusted by customers worldwide",
+    "viewAllProducts": "View All Products",
+    "whyChooseUs": "Why Choose Shanghai Jinling?",
+    "reasons": {
+      "iso": "ISO 9001:2015 Quality Management System Certified",
+      "experience": "20+ years of manufacturing and export experience",
+      "pricing": "Competitive wholesale pricing for bulk orders",
+      "customization": "Comprehensive product range with customization options",
+      "delivery": "Fast delivery worldwide with reliable logistics partners",
+      "support": "Dedicated technical support and after-sales service"
+    },
+    "learnMore": "Learn More About Us",
+    "features": {
+      "quality": {
+        "title": "Quality Assured",
+        "desc": "Rigorous quality control processes ensure every product meets international standards."
+      },
+      "partners": {
+        "title": "Global Partners",
+        "desc": "Trusted by distributors and enterprises in over 50 countries worldwide."
+      },
+      "export": {
+        "title": "Export Expertise",
+        "desc": "Professional export team handles customs, documentation, and logistics."
+      },
+      "response": {
+        "title": "Fast Response",
+        "desc": "Quick quotation turnaround and responsive customer support team."
+      }
+    },
+    "cta": {
+      "title": "Ready to Start Your Project?",
+      "subtitle": "Contact our sales team for product inquiries, quotations, and technical support. We respond within 24 hours.",
+      "requestQuote": "Request a Quote",
+      "emailUs": "Email Us Directly"
+    }
+  },
+  "categories": {
+    "protective-suits": "Protective Suits",
+    "rainwear": "Rainwear Series",
+    "workwear": "Workwear Series"
+  },
+  "products": {
+    "title": "Products",
+    "subtitle": "Explore our comprehensive range of protective equipment and rubber products",
+    "allProducts": "All Products",
+    "viewDetails": "View Details",
+    "features": "Key Features",
+    "applications": "Applications",
+    "specifications": "Technical Specifications",
+    "requestQuote": "Request Quote",
+    "emailUs": "Email Us",
+    "customProducts": "Need Custom Solutions?",
+    "customDesc": "We offer OEM/ODM services for custom products. Contact our team for details.",
+    "requestCustom": "Request Custom Quote"
+  },
+  "about": {
+    "title": "About Us",
+    "subtitle": "A leading manufacturer of protective suits and rubber products, dedicated to quality, innovation, and customer satisfaction since 2003.",
+    "companyProfile": "Company Profile",
+    "whoWeAre": "Who We Are",
+    "whoWeAreDesc": "Shanghai Jinling Rubber Products Co., Ltd. is a professional manufacturer and exporter specializing in protective suits, rainwear, and workwear. Located in Shanghai, China's economic hub, we have been serving global customers with quality products and reliable services for over two decades.",
+    "stats": {
+      "facility": "Sq. Meters Facility",
+      "team": "Team Members",
+      "countries": "Countries Served",
+      "productTypes": "Product Types"
+    },
+    "journey": "Our Journey",
+    "journeySubtitle": "From a local manufacturer to a global supplier",
+    "timeline": {
+      "2003": {
+        "title": "Company Founded",
+        "desc": "Shanghai Jinling Rubber Products Co., Ltd. was established in Shanghai."
+      },
+      "2008": {
+        "title": "Protective Suits Division",
+        "desc": "Expanded product line to include professional protective suits."
+      },
+      "2012": {
+        "title": "ISO 9001 Certification",
+        "desc": "Achieved ISO 9001 quality management system certification."
+      },
+      "2016": {
+        "title": "Global Export Initiative",
+        "desc": "Started comprehensive export services to global markets."
+      },
+      "2020": {
+        "title": "Product Line Expansion",
+        "desc": "Expanded to over 100 product types across multiple categories."
+      },
+      "2024": {
+        "title": "Continued Growth",
+        "desc": "Serving customers in 50+ countries with quality products."
+      }
+    },
+    "values": "Our Core Values",
+    "valuesSubtitle": "The principles that guide our business",
+    "coreValues": {
+      "quality": {
+        "title": "Quality First",
+        "desc": "Rigorous quality control standards throughout our manufacturing process."
+      },
+      "customer": {
+        "title": "Customer Focus",
+        "desc": "Our customers are at the heart of everything we do."
+      },
+      "innovation": {
+        "title": "Innovation",
+        "desc": "Continuous investment in research and development."
+      },
+      "integrity": {
+        "title": "Integrity",
+        "desc": "Conducting business with honesty and transparency."
+      },
+      "sustainability": {
+        "title": "Sustainability",
+        "desc": "Committed to environmental responsibility through green manufacturing."
+      },
+      "global": {
+        "title": "Global Vision",
+        "desc": "Aiming to be a leading global supplier of protective equipment."
+      }
+    },
+    "certifications": "Certifications & Compliance",
+    "certificationsSubtitle": "Our commitment to quality backed by internationally recognized certifications",
+    "cta": {
+      "title": "Partner With Us",
+      "subtitle": "Join our global network of satisfied customers and distributors.",
+      "contactUs": "Contact Us Today",
+      "viewProducts": "View Our Products"
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Get in touch with our team for product inquiries, quotations, and technical support",
+    "getInTouch": "Get in Touch",
+    "getInTouchDesc": "We'd love to hear from you. Reach out through any of the following channels.",
+    "info": {
+      "address": {
+        "title": "Address",
+        "value": "Shanghai, China",
+        "desc": "Visit our headquarters"
+      },
+      "phone": {
+        "title": "Phone",
+        "value": "+86-21-XXXXXXXX",
+        "desc": "Mon-Fri, 9:00-18:00 (GMT+8)"
+      },
+      "email": {
+        "title": "Email",
+        "value": "sales@shjinling.com",
+        "desc": "General inquiries"
+      },
+      "hours": {
+        "title": "Business Hours",
+        "value": "Mon - Fri: 9:00 - 18:00",
+        "desc": "GMT+8 Shanghai Time"
+      }
+    },
+    "globalExport": "Global Export Services",
+    "globalExportDesc": "We provide comprehensive export services including customs clearance, documentation, and logistics support.",
+    "countriesServed": "50+ Countries Served",
+    "form": {
+      "title": "Send Us a Message",
+      "subtitle": "Fill out the form below and we'll get back to you within 24 hours.",
+      "name": "Full Name",
+      "namePlaceholder": "John Smith",
+      "company": "Company Name",
+      "companyPlaceholder": "ABC Electronics Inc.",
+      "email": "Email Address",
+      "emailPlaceholder": "john@example.com",
+      "phone": "Phone Number",
+      "phonePlaceholder": "+1 234 567 8900",
+      "country": "Country",
+      "countryPlaceholder": "United States",
+      "productInterest": "Product Interest",
+      "selectCategory": "Select a category",
+      "other": "Other",
+      "subject": "Subject",
+      "subjectPlaceholder": "Product Inquiry / Quote Request",
+      "message": "Message",
+      "messagePlaceholder": "Please describe your requirements, including product specifications, quantity, and any other details...",
+      "submit": "Send Message",
+      "submitting": "Sending...",
+      "success": "Message Sent!",
+      "successDesc": "Thank you for contacting us. We'll get back to you within 24 hours.",
+      "sendAnother": "Send Another Message",
+      "response": "We typically respond within 24 hours on business days. For urgent inquiries, please call us directly."
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Quick answers to common questions about our products and services",
+      "moq": {
+        "q": "What is the minimum order quantity?",
+        "a": "MOQ varies by product. For standard products, we can accommodate small trial orders. Contact our sales team for specific requirements."
+      },
+      "samples": {
+        "q": "Do you offer samples?",
+        "a": "Yes, we provide samples for quality evaluation. Sample costs and shipping fees may apply."
+      },
+      "payment": {
+        "q": "What are your payment terms?",
+        "a": "We accept T/T, L/C, and PayPal. Standard terms are 30% deposit, 70% before shipment."
+      },
+      "custom": {
+        "q": "Do you provide custom solutions?",
+        "a": "Yes! We offer OEM/ODM services for custom products. Our engineering team can assist with design and development."
+      },
+      "cert": {
+        "q": "What certifications do you have?",
+        "a": "We are ISO 9001:2015 certified. Products carry relevant certifications including CE, RoHS compliance."
+      },
+      "lead": {
+        "q": "What is the lead time for orders?",
+        "a": "Standard products: 7-15 days. Custom products: 15-30 days depending on complexity."
+      }
+    },
+    "cta": {
+      "title": "Ready to Start Your Project?",
+      "subtitle": "Whether you need standard products or custom solutions, our team is ready to help.",
+      "requestQuote": "Request a Quote",
+      "callUs": "Call Us Now"
+    }
+  },
+  "footer": {
+    "description": "Leading manufacturer and exporter of protective suits, rainwear, and workwear. Serving global markets since 2003.",
+    "quickLinks": "Quick Links",
+    "contactInfo": "Contact Info",
+    "copyright": "Shanghai Jinling Rubber Products Co., Ltd. All rights reserved."
+  },
+  "productDetails": {
+    "backToList": "Back to Products",
+    "features": "Key Features",
+    "applications": "Applications",
+    "specifications": "Product Specifications",
+    "inquiry": "Inquiry",
+    "phoneConsult": "Phone Consultation",
+    "emailContact": "Email Contact",
+    "onlineInquiry": "Online Inquiry",
+    "inquiryForm": "Fill out inquiry form →"
+  }
+}

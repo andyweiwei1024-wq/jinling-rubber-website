@@ -1,0 +1,271 @@
+{
+  "site": {
+    "name": "Shanghai Jinling Gummi",
+    "fullName": "Shanghai Jinling Gummiprodukte GmbH",
+    "description": "Professioneller Hersteller von Schutanzügen, Regenkleidung und Gummiwaren. ISO 9001 zertifiziert, beliefert über 50 Länder weltweit."
+  },
+  "nav": {
+    "home": "Startseite",
+    "about": "Über uns",
+    "products": "Produkte",
+    "contact": "Kontakt",
+    "getQuote": "Anfrage"
+  },
+  "home": {
+    "badge": "ISO 9001 Zertifizierter Hersteller",
+    "title": "Professioneller Hersteller von Schutanzügen & Gummiwaren",
+    "subtitle": "Shanghai Jinling Gummiprodukte GmbH verfügt über mehr als 20 Jahre Erfahrung in Schutzausrüstung und bedient Kunden in über 50 Ländern weltweit.",
+    "viewProducts": "Produkte anzeigen",
+    "contactUs": "Kontaktieren Sie uns",
+    "stats": {
+      "years": "Jahre Erfahrung",
+      "countries": "Länder beliefert",
+      "products": "Produkttypen",
+      "certifications": "ISO 9001 Zertifiziert"
+    },
+    "productRange": "Produktpalette",
+    "productRangeSubtitle": "Professionelle Schutzausrüstung für verschiedene Branchen",
+    "featuredProducts": "Empfohlene Produkte",
+    "featuredProductsSubtitle": "Entdecken Sie unsere meistverkauften Produkte, denen Kunden weltweit vertrauen",
+    "viewAllProducts": "Alle Produkte anzeigen",
+    "whyChooseUs": "Warum Shanghai Jinling?",
+    "reasons": {
+      "iso": "ISO 9001:2015 Qualitätsmanagement-System zertifiziert",
+      "experience": "Über 20 Jahre Fertigungs- und Exporterfahrung",
+      "pricing": "Wettbewerbsfähige Großhandelspreise für Sammelbestellungen",
+      "customization": "Umfassende Produktpalette mit Anpassungsoptionen",
+      "delivery": "Schnelle weltweite Lieferung mit zuverlässigen Logistikpartnern",
+      "support": "Engagierter technischer Support und Kundendienst"
+    },
+    "learnMore": "Erfahren Sie mehr über uns",
+    "features": {
+      "quality": {
+        "title": "Qualität garantiert",
+        "desc": "Strenge Qualitätskontrollprozesse stellen sicher, dass jedes Produkt internationalen Standards entspricht."
+      },
+      "partners": {
+        "title": "Globale Partner",
+        "desc": "Vertrauen von Händlern und Unternehmen in über 50 Ländern weltweit."
+      },
+      "export": {
+        "title": "Export-Expertise",
+        "desc": "Professionelles Export-Team kümmert sich um Zoll, Dokumentation und Logistik."
+      },
+      "response": {
+        "title": "Schnelle Antwort",
+        "desc": "Schnelles Angebot und reaktionsschnelles Kundensupport-Team."
+      }
+    },
+    "cta": {
+      "title": "Bereit, Ihr Projekt zu starten?",
+      "subtitle": "Kontaktieren Sie unser Vertriebsteam für Produktanfragen, Angebote und technischen Support. Wir antworten innerhalb von 24 Stunden.",
+      "requestQuote": "Anfrage senden",
+      "emailUs": "E-Mail senden"
+    }
+  },
+  "categories": {
+    "protective-suits": "Schutanzüge",
+    "rainwear": "Regenkleidung",
+    "workwear": "Arbeitskleidung"
+  },
+  "products": {
+    "title": "Produkte",
+    "subtitle": "Entdecken Sie unsere umfassende Palette an Schutzausrüstung und Gummiwaren",
+    "allProducts": "Alle Produkte",
+    "viewDetails": "Details anzeigen",
+    "features": "Hauptmerkmale",
+    "applications": "Anwendungen",
+    "specifications": "Technische Spezifikationen",
+    "requestQuote": "Anfrage senden",
+    "emailUs": "E-Mail senden",
+    "customProducts": "Brauchen Sie kundenspezifische Lösungen?",
+    "customDesc": "Wir bieten OEM/ODM-Dienstleistungen für kundenspezifische Produkte an. Kontaktieren Sie unser Team für Details.",
+    "requestCustom": "Kundenspezifische Anfrage"
+  },
+  "about": {
+    "title": "Über uns",
+    "subtitle": "Ein führender Hersteller von Schutanzügen und Gummiwaren, engagiert für Qualität, Innovation und Kundenzufriedenheit seit 2003.",
+    "companyProfile": "Unternehmensprofil",
+    "whoWeAre": "Wer wir sind",
+    "whoWeAreDesc": "Shanghai Jinling Gummiprodukte GmbH ist ein professioneller Hersteller und Exporteur, spezialisiert auf Schutanzüge, Regenkleidung und Arbeitskleidung. Mit Sitz in Shanghai, Chinas Wirtschaftszentrum, bedienen wir seit über zwei Jahrzehnten globale Kunden mit Qualitätsprodukten und zuverlässigen Dienstleistungen.",
+    "stats": {
+      "facility": "m² Produktionsfläche",
+      "team": "Mitarbeiter",
+      "countries": "Länder beliefert",
+      "productTypes": "Produkttypen"
+    },
+    "journey": "Unsere Reise",
+    "journeySubtitle": "Vom lokalen Hersteller zum globalen Lieferanten",
+    "timeline": {
+      "2003": {
+        "title": "Unternehmensgründung",
+        "desc": "Shanghai Jinling Gummiprodukte GmbH wurde in Shanghai gegründet."
+      },
+      "2008": {
+        "title": "Schutanzug-Sparte",
+        "desc": "Erweiterung der Produktlinie um professionelle Schutanzüge."
+      },
+      "2012": {
+        "title": "ISO 9001 Zertifizierung",
+        "desc": "ISO 9001 Qualitätsmanagement-System Zertifizierung erhalten."
+      },
+      "2016": {
+        "title": "Globaler Export",
+        "desc": "Beginn umfassender Exportdienstleistungen für globale Märkte."
+      },
+      "2020": {
+        "title": "Produktpalette erweitert",
+        "desc": "Erweiterung auf über 100 Produkttypen in mehreren Kategorien."
+      },
+      "2024": {
+        "title": "Fortgesetztes Wachstum",
+        "desc": "Bedienung von Kunden in über 50 Ländern mit Qualitätsprodukten."
+      }
+    },
+    "values": "Unsere Kernwerte",
+    "valuesSubtitle": "Die Prinzipien, die unser Geschäft leiten",
+    "coreValues": {
+      "quality": {
+        "title": "Qualität zuerst",
+        "desc": "Strenge Qualitätskontrollstandards während unseres gesamten Fertigungsprozesses."
+      },
+      "customer": {
+        "title": "Kundenorientierung",
+        "desc": "Unsere Kunden stehen im Mittelpunkt alles dessen, was wir tun."
+      },
+      "innovation": {
+        "title": "Innovation",
+        "desc": "Kontinuierliche Investition in Forschung und Entwicklung."
+      },
+      "integrity": {
+        "title": "Integrität",
+        "desc": "Ehrliches und transparentes Geschäftsgebaren."
+      },
+      "sustainability": {
+        "title": "Nachhaltigkeit",
+        "desc": "Engagement für Umweltverantwortung durch grüne Produktion."
+      },
+      "global": {
+        "title": "Globale Vision",
+        "desc": "Ziel, ein führender globaler Lieferant von Schutzausrüstung zu sein."
+      }
+    },
+    "certifications": "Zertifizierungen & Compliance",
+    "certificationsSubtitle": "Unser Engagement für Qualität, untermauert durch international anerkannte Zertifizierungen",
+    "cta": {
+      "title": "Partnerschaft mit uns",
+      "subtitle": "Werden Sie Teil unseres globalen Netzwerks zufriedener Kunden und Händler.",
+      "contactUs": "Kontaktieren Sie uns",
+      "viewProducts": "Unsere Produkte ansehen"
+    }
+  },
+  "contact": {
+    "title": "Kontakt",
+    "subtitle": "Kontaktieren Sie unser Team für Produktanfragen, Angebote und technischen Support",
+    "getInTouch": "Kontakt aufnehmen",
+    "getInTouchDesc": "Wir freuen uns von Ihnen zu hören. Erreichen Sie uns über einen der folgenden Kanäle.",
+    "info": {
+      "address": {
+        "title": "Adresse",
+        "value": "Shanghai, China",
+        "desc": "Besuchen Sie unsere Zentrale"
+      },
+      "phone": {
+        "title": "Telefon",
+        "value": "+86-21-XXXXXXXX",
+        "desc": "Mo-Fr, 9:00-18:00 (GMT+8)"
+      },
+      "email": {
+        "title": "E-Mail",
+        "value": "sales@shjinling.com",
+        "desc": "Allgemeine Anfragen"
+      },
+      "hours": {
+        "title": "Geschäftszeiten",
+        "value": "Mo - Fr: 9:00 - 18:00",
+        "desc": "GMT+8 Shanghai Zeit"
+      }
+    },
+    "globalExport": "Globale Exportdienstleistungen",
+    "globalExportDesc": "Wir bieten umfassende Exportdienstleistungen einschließlich Zollabfertigung, Dokumentation und Logistikunterstützung.",
+    "countriesServed": "Über 50 Länder beliefert",
+    "form": {
+      "title": "Senden Sie uns eine Nachricht",
+      "subtitle": "Füllen Sie das Formular aus und wir melden uns innerhalb von 24 Stunden.",
+      "name": "Vollständiger Name",
+      "namePlaceholder": "Hans Müller",
+      "company": "Firmenname",
+      "companyPlaceholder": "ABC Electronics GmbH",
+      "email": "E-Mail-Adresse",
+      "emailPlaceholder": "hans@beispiel.de",
+      "phone": "Telefonnummer",
+      "phonePlaceholder": "+49 123 456789",
+      "country": "Land",
+      "countryPlaceholder": "Deutschland",
+      "productInterest": "Produktinteresse",
+      "selectCategory": "Kategorie auswählen",
+      "other": "Andere",
+      "subject": "Betreff",
+      "subjectPlaceholder": "Produktanfrage / Angebotsanfrage",
+      "message": "Nachricht",
+      "messagePlaceholder": "Bitte beschreiben Sie Ihre Anforderungen, einschließlich Produktspezifikationen, Menge und weitere Details...",
+      "submit": "Nachricht senden",
+      "submitting": "Wird gesendet...",
+      "success": "Nachricht gesendet!",
+      "successDesc": "Vielen Dank für Ihre Kontaktaufnahme. Wir antworten innerhalb von 24 Stunden.",
+      "sendAnother": "Weitere Nachricht senden",
+      "response": "Wir antworten normalerweise innerhalb von 24 Stunden an Werktagen. Für dringende Anfragen rufen Sie uns bitte direkt an."
+    },
+    "faq": {
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Schnelle Antworten auf häufige Fragen zu unseren Produkten und Dienstleistungen",
+      "moq": {
+        "q": "Was ist die Mindestbestellmenge?",
+        "a": "Die Mindestbestellmenge variiert je nach Produkt. Für Standardprodukte können wir kleine Testbestellungen akkommodieren. Kontaktieren Sie unser Vertriebsteam für spezifische Anforderungen."
+      },
+      "samples": {
+        "q": "Bieten Sie Muster an?",
+        "a": "Ja, wir stellen Muster zur Qualitätsbewertung zur Verfügung. Musterkosten und Versandgebühren können anfallen."
+      },
+      "payment": {
+        "q": "Was sind Ihre Zahlungsbedingungen?",
+        "a": "Wir akzeptieren T/T, L/C und PayPal. Standardbedingungen sind 30% Anzahlung, 70% vor Versand."
+      },
+      "custom": {
+        "q": "Bieten Sie kundenspezifische Lösungen an?",
+        "a": "Ja! Wir bieten OEM/ODM-Dienstleistungen für kundenspezifische Produkte an. Unser Ingenieurteam kann bei Design und Entwicklung unterstützen."
+      },
+      "cert": {
+        "q": "Welche Zertifizierungen haben Sie?",
+        "a": "Wir sind ISO 9001:2015 zertifiziert. Produkte tragen relevante Zertifizierungen einschließlich CE, RoHS-Konformität."
+      },
+      "lead": {
+        "q": "Wie lange ist die Lieferzeit für Bestellungen?",
+        "a": "Standardprodukte: 7-15 Tage. Kundenspezifische Produkte: 15-30 Tage je nach Komplexität."
+      }
+    },
+    "cta": {
+      "title": "Bereit, Ihr Projekt zu starten?",
+      "subtitle": "Ob Sie Standardprodukte oder kundenspezifische Lösungen benötigen, unser Team ist bereit zu helfen.",
+      "requestQuote": "Anfrage senden",
+      "callUs": "Jetzt anrufen"
+    }
+  },
+  "footer": {
+    "description": "Führender Hersteller und Exporteur von Schutanzügen, Regenkleidung und Arbeitskleidung. Bedient globale Märkte seit 2003.",
+    "quickLinks": "Schnelllinks",
+    "contactInfo": "Kontaktinformationen",
+    "copyright": "Shanghai Jinling Gummiprodukte GmbH. Alle Rechte vorbehalten."
+  },
+  "productDetails": {
+    "backToList": "Zurück zu Produkte",
+    "features": "Hauptmerkmale",
+    "applications": "Anwendungen",
+    "specifications": "Produktspezifikationen",
+    "inquiry": "Anfrage",
+    "phoneConsult": "Telefonische Beratung",
+    "emailContact": "E-Mail-Kontakt",
+    "onlineInquiry": "Online-Anfrage",
+    "inquiryForm": "Anfrageformular ausfüllen →"
+  }
+}

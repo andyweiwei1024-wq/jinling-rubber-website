@@ -1,0 +1,271 @@
+{
+  "site": {
+    "name": "Shanghai Jinling Gomma",
+    "fullName": "Shanghai Jinling Prodotti in Gomma S.r.l.",
+    "description": "Produttore professionale di tute protettive, impermeabili e prodotti in gomma. Certificato ISO 9001, serviamo oltre 50 paesi."
+  },
+  "nav": {
+    "home": "Home",
+    "about": "Chi Siamo",
+    "products": "Prodotti",
+    "contact": "Contatti",
+    "getQuote": "Preventivo"
+  },
+  "home": {
+    "badge": "Produttore Certificato ISO 9001",
+    "title": "Produttore Professionale di Tute Protettive e Prodotti in Gomma",
+    "subtitle": "Shanghai Jinling Prodotti in Gomma ha oltre 20 anni di esperienza nelle attrezzature protettive, servendo clienti in oltre 50 paesi.",
+    "viewProducts": "Vedi Prodotti",
+    "contactUs": "Contattaci",
+    "stats": {
+      "years": "Anni di Esperienza",
+      "countries": "Paesi Serviti",
+      "products": "Tipi di Prodotti",
+      "certifications": "Certificato ISO 9001"
+    },
+    "productRange": "Gamma di Prodotti",
+    "productRangeSubtitle": "Attrezzature protettive professionali per vari settori",
+    "featuredProducts": "Prodotti in Evidenza",
+    "featuredProductsSubtitle": "Scopri i nostri prodotti più venduti, scelti da clienti in tutto il mondo",
+    "viewAllProducts": "Vedi Tutti i Prodotti",
+    "whyChooseUs": "Perché Scegliere Shanghai Jinling?",
+    "reasons": {
+      "iso": "Certificato Sistema di Gestione Qualità ISO 9001:2015",
+      "experience": "Oltre 20 anni di esperienza nella produzione ed esportazione",
+      "pricing": "Prezzi all'ingrosso competitivi per ordini all'ingrosso",
+      "customization": "Ampia gamma di prodotti con opzioni di personalizzazione",
+      "delivery": "Consegna rapida in tutto il mondo con partner logistici affidabili",
+      "support": "Supporto tecnico dedicato e servizio post-vendita"
+    },
+    "learnMore": "Scopri di Più Su di Noi",
+    "features": {
+      "quality": {
+        "title": "Qualità Garantita",
+        "desc": "Rigidi processi di controllo qualità garantiscono che ogni prodotto soddisfi gli standard internazionali."
+      },
+      "partners": {
+        "title": "Partner Globali",
+        "desc": "Scelti da distributori e aziende in oltre 50 paesi."
+      },
+      "export": {
+        "title": "Competenza nell'Esportazione",
+        "desc": "Team professionale per l'esportazione gestisce dogane, documentazione e logistica."
+      },
+      "response": {
+        "title": "Risposta Rapida",
+        "desc": "Preventivi veloci e team di supporto clienti reattivo."
+      }
+    },
+    "cta": {
+      "title": "Pronto a Iniziare il Tuo Progetto?",
+      "subtitle": "Contatta il nostro team vendite per richieste di prodotti, preventivi e supporto tecnico. Rispondiamo entro 24 ore.",
+      "requestQuote": "Richiedi Preventivo",
+      "emailUs": "Inviaci un'Email"
+    }
+  },
+  "categories": {
+    "protective-suits": "Tute Protettive",
+    "rainwear": "Impermeabili",
+    "workwear": "Abbigliamento da Lavoro"
+  },
+  "products": {
+    "title": "Prodotti",
+    "subtitle": "Scopri la nostra gamma completa di attrezzature protettive e prodotti in gomma",
+    "allProducts": "Tutti i Prodotti",
+    "viewDetails": "Vedi Dettagli",
+    "features": "Caratteristiche Principali",
+    "applications": "Applicazioni",
+    "specifications": "Specifiche Tecniche",
+    "requestQuote": "Richiedi Preventivo",
+    "emailUs": "Inviaci un'Email",
+    "customProducts": "Hai Bisogno di Soluzioni Personalizzate?",
+    "customDesc": "Offriamo servizi OEM/ODM per prodotti personalizzati. Contatta il nostro team per i dettagli.",
+    "requestCustom": "Richiedi Preventivo Personalizzato"
+  },
+  "about": {
+    "title": "Chi Siamo",
+    "subtitle": "Un produttore leader di tute protettive e prodotti in gomma, dedicato alla qualità, innovazione e soddisfazione del cliente dal 2003.",
+    "companyProfile": "Profilo Aziendale",
+    "whoWeAre": "Chi Siamo",
+    "whoWeAreDesc": "Shanghai Jinling Prodotti in Gomma è un produttore ed esportatore professionale specializzato in tute protettive, impermeabili e abbigliamento da lavoro. Situata a Shanghai, il hub economico della Cina, serviamo clienti globali con prodotti di qualità e servizi affidabili da oltre due decenni.",
+    "stats": {
+      "facility": "mq di Stabilimento",
+      "team": "Membri del Team",
+      "countries": "Paesi Serviti",
+      "productTypes": "Tipi di Prodotti"
+    },
+    "journey": "Il Nostro Percorso",
+    "journeySubtitle": "Da produttore locale a fornitore globale",
+    "timeline": {
+      "2003": {
+        "title": "Fondazione Azienda",
+        "desc": "Shanghai Jinling Prodotti in Gomma è stata fondata a Shanghai."
+      },
+      "2008": {
+        "title": "Divisione Tute Protettive",
+        "desc": "Espansione della linea di prodotti per includere tute protettive professionali."
+      },
+      "2012": {
+        "title": "Certificazione ISO 9001",
+        "desc": "Ottenimento della certificazione del sistema di gestione qualità ISO 9001."
+      },
+      "2016": {
+        "title": "Iniziativa Esportazione Globale",
+        "desc": "Avvio di servizi completi di esportazione verso mercati globali."
+      },
+      "2020": {
+        "title": "Espansione Linea Prodotti",
+        "desc": "Espansione a oltre 100 tipi di prodotti in molteplici categorie."
+      },
+      "2024": {
+        "title": "Crescita Continua",
+        "desc": "Servizio a clienti in oltre 50 paesi con prodotti di qualità."
+      }
+    },
+    "values": "I Nostri Valori Fondamentali",
+    "valuesSubtitle": "I principi che guidano il nostro business",
+    "coreValues": {
+      "quality": {
+        "title": "Qualità Prima",
+        "desc": "Standard rigorosi di controllo qualità in tutto il nostro processo produttivo."
+      },
+      "customer": {
+        "title": "Focus sul Cliente",
+        "desc": "I nostri clienti sono al centro di tutto ciò che facciamo."
+      },
+      "innovation": {
+        "title": "Innovazione",
+        "desc": "Investimento continuo in ricerca e sviluppo."
+      },
+      "integrity": {
+        "title": "Integrità",
+        "desc": "Conduciamo il business con onestà e trasparenza."
+      },
+      "sustainability": {
+        "title": "Sostenibilità",
+        "desc": "Impegno per la responsabilità ambientale attraverso la produzione verde."
+      },
+      "global": {
+        "title": "Visione Globale",
+        "desc": "L'obiettivo di diventare un fornitore globale leader di attrezzature protettive."
+      }
+    },
+    "certifications": "Certificazioni e Conformità",
+    "certificationsSubtitle": "Il nostro impegno per la qualità supportato da certificazioni riconosciute a livello internazionale",
+    "cta": {
+      "title": "Diventa nostro Partner",
+      "subtitle": "Unisciti alla nostra rete globale di clienti e distributori soddisfatti.",
+      "contactUs": "Contattaci Oggi",
+      "viewProducts": "Vedi i Nostri Prodotti"
+    }
+  },
+  "contact": {
+    "title": "Contatti",
+    "subtitle": "Contatta il nostro team per richieste di prodotti, preventivi e supporto tecnico",
+    "getInTouch": "Mettiti in Contatto",
+    "getInTouchDesc": "Ci piacerebbe sentire da te. Contattaci attraverso uno dei seguenti canali.",
+    "info": {
+      "address": {
+        "title": "Indirizzo",
+        "value": "Shanghai, Cina",
+        "desc": "Visita la nostra sede"
+      },
+      "phone": {
+        "title": "Telefono",
+        "value": "+86-21-XXXXXXXX",
+        "desc": "Lun-Ven, 9:00-18:00 (GMT+8)"
+      },
+      "email": {
+        "title": "Email",
+        "value": "sales@shjinling.com",
+        "desc": "Richieste generali"
+      },
+      "hours": {
+        "title": "Orari Ufficio",
+        "value": "Lun - Ven: 9:00 - 18:00",
+        "desc": "GMT+8 Orario Shanghai"
+      }
+    },
+    "globalExport": "Servizi di Esportazione Globale",
+    "globalExportDesc": "Forniamo servizi completi di esportazione tra cui sdoganamento, documentazione e supporto logistico.",
+    "countriesServed": "Oltre 50 Paesi Serviti",
+    "form": {
+      "title": "Inviaci un Messaggio",
+      "subtitle": "Compila il modulo e ti risponderemo entro 24 ore.",
+      "name": "Nome Completo",
+      "namePlaceholder": "Marco Rossi",
+      "company": "Nome Azienda",
+      "companyPlaceholder": "ABC Elettronica S.r.l.",
+      "email": "Indirizzo Email",
+      "emailPlaceholder": "marco@esempio.it",
+      "phone": "Numero di Telefono",
+      "phonePlaceholder": "+39 02 1234567",
+      "country": "Paese",
+      "countryPlaceholder": "Italia",
+      "productInterest": "Interesse Prodotto",
+      "selectCategory": "Seleziona una categoria",
+      "other": "Altro",
+      "subject": "Oggetto",
+      "subjectPlaceholder": "Richiesta Prodotto / Richiesta Preventivo",
+      "message": "Messaggio",
+      "messagePlaceholder": "Descrivi le tue esigenze, incluse specifiche del prodotto, quantità e altri dettagli...",
+      "submit": "Invia Messaggio",
+      "submitting": "Invio in corso...",
+      "success": "Messaggio Inviato!",
+      "successDesc": "Grazie per averci contattato. Ti risponderemo entro 24 ore.",
+      "sendAnother": "Invia Altro Messaggio",
+      "response": "Solitamente rispondiamo entro 24 ore nei giorni lavorativi. Per richieste urgenti, chiamaci direttamente."
+    },
+    "faq": {
+      "title": "Domande Frequenti",
+      "subtitle": "Risposte rapide alle domande comuni sui nostri prodotti e servizi",
+      "moq": {
+        "q": "Qual è la quantità minima d'ordine?",
+        "a": "La quantità minima varia per prodotto. Per prodotti standard, possiamo accettare piccoli ordini di prova. Contatta il nostro team vendite per requisiti specifici."
+      },
+      "samples": {
+        "q": "Offrite campioni?",
+        "a": "Sì, forniamo campioni per la valutazione della qualità. Possono applicarsi costi del campione e spese di spedizione."
+      },
+      "payment": {
+        "q": "Quali sono i termini di pagamento?",
+        "a": "Accettiamo T/T, L/C e PayPal. I termini standard sono 30% di anticipo, 70% prima della spedizione."
+      },
+      "custom": {
+        "q": "Fornite soluzioni personalizzate?",
+        "a": "Sì! Offriamo servizi OEM/ODM per prodotti personalizzati. Il nostro team di ingegneria può assistere con design e sviluppo."
+      },
+      "cert": {
+        "q": "Quali certificazioni avete?",
+        "a": "Siamo certificati ISO 9001:2015. I prodotti portano le relative certificazioni inclusa conformità CE, RoHS."
+      },
+      "lead": {
+        "q": "Qual è il tempo di consegna per gli ordini?",
+        "a": "Prodotti standard: 7-15 giorni. Prodotti personalizzati: 15-30 giorni a seconda della complessità."
+      }
+    },
+    "cta": {
+      "title": "Pronto a Iniziare il Tuo Progetto?",
+      "subtitle": "Che tu abbia bisogno di prodotti standard o soluzioni personalizzate, il nostro team è pronto ad aiutare.",
+      "requestQuote": "Richiedi Preventivo",
+      "callUs": "Chiamaci Ora"
+    }
+  },
+  "footer": {
+    "description": "Produttore ed esportatore leader di tute protettive, impermeabili e abbigliamento da lavoro. Serviamo mercati globali dal 2003.",
+    "quickLinks": "Link Rapidi",
+    "contactInfo": "Informazioni di Contatto",
+    "copyright": "Shanghai Jinling Prodotti in Gomma S.r.l. Tutti i diritti riservati."
+  },
+  "productDetails": {
+    "backToList": "Torna ai Prodotti",
+    "features": "Caratteristiche Principali",
+    "applications": "Applicazioni",
+    "specifications": "Specifiche del Prodotto",
+    "inquiry": "Richiesta",
+    "phoneConsult": "Consultazione Telefonica",
+    "emailContact": "Contatto Email",
+    "onlineInquiry": "Richiesta Online",
+    "inquiryForm": "Compila il modulo di richiesta →"
+  }
+}
