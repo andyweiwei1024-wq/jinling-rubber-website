@@ -59,7 +59,7 @@ export function ProductImageGallery({
             alt={productName}
             className="w-full h-full object-contain p-4 transition-transform duration-200"
             style={{
-              transform: isHovering ? 'scale(1.5)' : 'scale(1)',
+              transform: isHovering ? 'scale(2)' : 'scale(1)',
               transformOrigin: `${mousePosition.x}% ${mousePosition.y}%`
             }}
           />
