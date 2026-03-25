@@ -29,7 +29,10 @@ import {
   MapPin,
   Factory,
   Truck,
-  Leaf
+  Leaf,
+  Twitter,
+  Linkedin,
+  MessageCircle
 } from 'lucide-react';
 
 // Generate static params for all languages
@@ -373,8 +376,12 @@ export default async function Home({ params }: PageProps) {
             <div className="grid gap-8 md:grid-cols-4">
               <div className="md:col-span-2">
                 <div className="flex items-center space-x-2 mb-4">
-                  <div className="flex items-center justify-center w-10 h-10 bg-blue-600 rounded-lg">
-                    <span className="text-lg font-bold text-white">金铃</span>
+                  <div className="flex items-center justify-center w-10 h-10 bg-blue-600 rounded-lg overflow-hidden">
+                    <img 
+                      src="/logo.png" 
+                      alt="Jinling Logo" 
+                      className="w-full h-full object-contain"
+                    />
                   </div>
                   <div className="flex flex-col">
                     <span className="font-bold text-white">{t('site.name', 'Shanghai Jinling Rubber')}</span>
@@ -384,6 +391,28 @@ export default async function Home({ params }: PageProps) {
                 <p className="text-sm text-gray-400 max-w-md">
                   {t('footer.description', 'Leading manufacturer and exporter of protective suits, rainwear, and workwear. Serving global markets since 2003.')}
                 </p>
+                {/* Social Media Links */}
+                <div className="flex items-center gap-3 mt-4">
+                  <a href="#" className="flex items-center justify-center w-9 h-9 bg-gray-800 hover:bg-blue-500 rounded-full transition-colors" title="Twitter">
+                    <Twitter className="h-4 w-4 text-gray-300 hover:text-white" />
+                  </a>
+                  <a href="#" className="flex items-center justify-center w-9 h-9 bg-gray-800 hover:bg-blue-600 rounded-full transition-colors" title="Facebook">
+                    <svg className="h-4 w-4 text-gray-300 hover:text-white" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    </svg>
+                  </a>
+                  <a href="#" className="flex items-center justify-center w-9 h-9 bg-gray-800 hover:bg-blue-700 rounded-full transition-colors" title="LinkedIn">
+                    <Linkedin className="h-4 w-4 text-gray-300 hover:text-white" />
+                  </a>
+                  <a href="#" className="flex items-center justify-center w-9 h-9 bg-gray-800 hover:bg-purple-600 rounded-full transition-colors" title="Microsoft Teams">
+                    <svg className="h-4 w-4 text-gray-300 hover:text-white" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M20.625 8.073h-5.27V5.073a1.5 1.5 0 0 0-1.5-1.5h-3.51a1.5 1.5 0 0 0-1.5 1.5v3h-5.47a1.5 1.5 0 0 0-1.5 1.5v8.354a1.5 1.5 0 0 0 1.5 1.5h15.25a1.5 1.5 0 0 0 1.5-1.5v-8.354a1.5 1.5 0 0 0-1.5-1.5zm-7.77-3v3h-1.71v-3h1.71zm-6.51 12.354v-8.354h5.97v9.854H6.845a.5.5 0 0 1-.5-.5zm13.75.5h-4.78v-9.854h5.28a.5.5 0 0 1 .5.5v8.354a.5.5 0 0 1-.5.5zm-10.47-7.104h2v2h-2zm0 3.5h2v2h-2z"/>
+                    </svg>
+                  </a>
+                  <a href="#" className="flex items-center justify-center w-9 h-9 bg-gray-800 hover:bg-green-500 rounded-full transition-colors" title="WhatsApp">
+                    <MessageCircle className="h-4 w-4 text-gray-300 hover:text-white" />
+                  </a>
+                </div>
               </div>
               <div>
                 <h3 className="font-semibold text-white mb-4">{t('footer.quickLinks', 'Quick Links')}</h3>
