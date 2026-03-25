@@ -81,12 +81,20 @@ export function I18nProvider({
     const currentPath = window.location.pathname;
     let newPath: string;
     
-    // Remove current language prefix
+    // Remove current language prefix (including /en for default language)
     let pathWithoutLang = currentPath;
-    for (const l of languageList) {
-      if (l !== defaultLanguage && currentPath.startsWith(`/${l}`)) {
-        pathWithoutLang = currentPath.slice(`/${l}`.length) || '/';
-        break;
+    
+    // Check for all language prefixes
+    if (currentPath.startsWith('/en/') || currentPath === '/en') {
+      // Remove /en prefix
+      pathWithoutLang = currentPath.slice(3) || '/';
+    } else {
+      // Check for other language prefixes
+      for (const l of languageList) {
+        if (l !== defaultLanguage && (currentPath.startsWith(`/${l}/`) || currentPath === `/${l}`)) {
+          pathWithoutLang = currentPath.slice(`/${l}`.length) || '/';
+          break;
+        }
       }
     }
     
