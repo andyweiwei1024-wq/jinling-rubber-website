@@ -342,10 +342,10 @@ export default async function AboutPage({ params }: PageProps) {
                   <span>{t('contact.info.address.value', 'Shanghai, China')}</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <span>+86-21-XXXXXXXX</span>
+                  <span>+86-21-65392338</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <span>sales@shjinling.com</span>
+                  <span>andyweiwei1024@gmail.com</span>
                 </li>
               </ul>
             </div>

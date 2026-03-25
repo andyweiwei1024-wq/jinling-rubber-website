@@ -324,7 +324,7 @@ export default async function Home({ params }: PageProps) {
                   {t('home.cta.requestQuote', 'Request a Quote')}
                 </Button>
               </Link>
-              <a href="mailto:sales@shjinling.com">
+              <a href="mailto:andyweiwei1024@gmail.com">
                 <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
                   <Mail className="mr-2 h-5 w-5" />
                   {t('home.cta.emailUs', 'Email Us Directly')}
@@ -370,11 +370,11 @@ export default async function Home({ params }: PageProps) {
                   </li>
                   <li className="flex items-center gap-2">
                     <Phone className="h-4 w-4 flex-shrink-0" />
-                    <span>+86-21-XXXXXXXX</span>
+                    <span>+86-21-65392338</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <Mail className="h-4 w-4 flex-shrink-0" />
-                    <span>sales@shjinling.com</span>
+                    <span>andyweiwei1024@gmail.com</span>
                   </li>
                 </ul>
               </div>

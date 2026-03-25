@@ -202,7 +202,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
                     {t('products.requestQuote', 'Request Quote')}
                   </Button>
                 </Link>
-                <a href="mailto:sales@shjinling.com" className="flex-1">
+                <a href="mailto:andyweiwei1024@gmail.com" className="flex-1">
                   <Button variant="outline" className="w-full" size="lg">
                     <Mail className="mr-2 h-4 w-4" />
                     {t('products.emailUs', 'Email Us')}
@@ -271,10 +271,10 @@ export default async function ProductDetailPage({ params }: PageProps) {
                   <span>{t('contact.info.address.value', 'Shanghai, China')}</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <span>+86-21-XXXXXXXX</span>
+                  <span>+86-21-65392338</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <span>sales@shjinling.com</span>
+                  <span>andyweiwei1024@gmail.com</span>
                 </li>
               </ul>
             </div>

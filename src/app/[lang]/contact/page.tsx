@@ -54,13 +54,13 @@ export default async function ContactPage({ params }: PageProps) {
     {
       icon: Phone,
       title: t('contact.info.phone.title', 'Phone'),
-      value: t('contact.info.phone.value', '+86-21-XXXXXXXX'),
+      value: t('contact.info.phone.value', '+86-21-65392338'),
       description: t('contact.info.phone.desc', 'Mon-Fri, 9:00-18:00 (GMT+8)'),
     },
     {
       icon: Mail,
       title: t('contact.info.email.title', 'Email'),
-      value: t('contact.info.email.value', 'sales@shjinling.com'),
+      value: t('contact.info.email.value', 'andyweiwei1024@gmail.com'),
       description: t('contact.info.email.desc', 'General inquiries'),
     },
     {
@@ -312,13 +312,13 @@ export default async function ContactPage({ params }: PageProps) {
             {t('contact.cta.subtitle', 'Whether you need standard products or custom solutions, our team is ready to help.')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="mailto:sales@shjinling.com">
+            <a href="mailto:andyweiwei1024@gmail.com">
               <Button size="lg" className="bg-white text-blue-700 hover:bg-blue-50">
                 <Mail className="mr-2 h-5 w-5" />
                 {t('contact.cta.requestQuote', 'Request a Quote')}
               </Button>
             </a>
-            <a href="tel:+86-21-XXXXXXXX">
+            <a href="tel:+86-21-65392338">
               <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
                 <Phone className="mr-2 h-5 w-5" />
                 {t('contact.cta.callUs', 'Call Us Now')}
@@ -362,10 +362,10 @@ export default async function ContactPage({ params }: PageProps) {
                   <span>{t('contact.info.address.value', 'Shanghai, China')}</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <span>+86-21-XXXXXXXX</span>
+                  <span>+86-21-65392338</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <span>sales@shjinling.com</span>
+                  <span>andyweiwei1024@gmail.com</span>
                 </li>
               </ul>
             </div>
