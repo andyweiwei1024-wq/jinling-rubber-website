@@ -149,7 +149,7 @@ export default async function Home({ params }: PageProps) {
                   </Button>
                 </Link>
                 <Link href={navPath('/contact')}>
-                  <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+                  <Button size="lg" className="bg-white text-blue-700 hover:bg-blue-50">
                     {t('home.contactUs', 'Contact Us')}
                   </Button>
                 </Link>
@@ -381,7 +381,7 @@ export default async function Home({ params }: PageProps) {
                 </Button>
               </Link>
               <a href="mailto:andyweiwei1024@gmail.com">
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+                <Button size="lg" className="bg-white text-blue-700 hover:bg-blue-50">
                   <Mail className="mr-2 h-5 w-5" />
                   {t('home.cta.emailUs', 'Email Us Directly')}
                 </Button>
