@@ -5,8 +5,10 @@ import { Language, defaultLanguage, languageList, languages } from './config';
 
 interface I18nContextType {
   language: Language;
+  lang: Language; // alias for language
   setLanguage: (lang: Language) => void;
   t: (key: string, fallback?: string) => string;
+  navPath: (path: string) => string;
   languages: typeof languages;
   languageList: Language[];
   defaultLanguage: Language;
@@ -98,14 +100,24 @@ export function I18nProvider({
     window.location.href = newPath;
   }, []);
   
+  // Navigation path builder - adds language prefix if needed
+  const navPath = useCallback((path: string): string => {
+    if (language === defaultLanguage) {
+      return path;
+    }
+    return `/${language}${path === '/' ? '' : path}`;
+  }, [language]);
+  
   const value = useMemo(() => ({
     language,
+    lang: language, // alias for convenience
     setLanguage,
     t,
+    navPath,
     languages,
     languageList,
     defaultLanguage,
-  }), [language, setLanguage, t]);
+  }), [language, setLanguage, t, navPath]);
   
   return (
     <I18nContext.Provider value={value}>
