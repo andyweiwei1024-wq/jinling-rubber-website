@@ -376,11 +376,13 @@ export default async function Home({ params }: PageProps) {
             <div className="grid gap-8 md:grid-cols-4">
               <div className="md:col-span-2">
                 <div className="flex items-center space-x-2 mb-4">
-                  <img 
-                    src="/logo.png" 
-                    alt="Jinling Logo" 
-                    className="h-9 w-auto object-contain"
-                  />
+                  <div className="flex items-center justify-center w-12 h-12 bg-white rounded-lg overflow-hidden shadow-sm">
+                    <img 
+                      src="/logo.png" 
+                      alt="Jinling Logo" 
+                      className="w-10 h-10 object-contain"
+                    />
+                  </div>
                   <div className="flex flex-col">
                     <span className="font-bold text-white">{t('site.name', 'Shanghai Jinling Rubber')}</span>
                     <span className="text-xs text-gray-400">Shanghai Jinling Rubber</span>

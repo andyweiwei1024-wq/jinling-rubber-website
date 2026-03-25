@@ -26,11 +26,13 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between px-4 mx-auto">
         <Link href={navPath('/')} className="flex items-center space-x-2">
-          <img 
-            src="/logo.png" 
-            alt="Jinling Logo" 
-            className="h-9 w-auto object-contain"
-          />
+          <div className="flex items-center justify-center w-12 h-12 bg-white rounded-lg overflow-hidden shadow-sm">
+            <img 
+              src="/logo.png" 
+              alt="Jinling Logo" 
+              className="w-10 h-10 object-contain"
+            />
+          </div>
           <div className="flex flex-col">
             <span className="font-bold text-lg leading-tight">{t('site.name', 'Shanghai Jinling Rubber')}</span>
             <span className="text-xs text-muted-foreground">Shanghai Jinling Rubber</span>
