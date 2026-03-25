@@ -7,6 +7,9 @@
   "nav": {
     "home": "首页",
     "about": "关于我们",
+    "certifications": "企业资质",
+    "isoCert": "ISO认证",
+    "nationalCert": "国家资质",
     "products": "产品中心",
     "contact": "联系我们",
     "getQuote": "获取报价"
@@ -93,6 +96,12 @@
       "trademark1Desc": "金铃商标 - 注册号 7759903",
       "trademark2Desc": "图形商标 - 注册号 11441119",
       "trustMessage": "所有证书均由权威认证机构颁发，可通过官方渠道验证真伪。我们致力于提供符合国际标准的产品和服务。"
+    }
+  },
+  "certifications": {
+    "cta": {
+      "title": "对我们的产品感兴趣？",
+      "subtitle": "联系我们进行产品咨询、报价和技术支持。我们在24小时内回复。"
     }
   },
   "categories": {

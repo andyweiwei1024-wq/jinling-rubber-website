@@ -14,3 +14,8 @@ export const hreflangMap: Record<Language, string> = {
   en: 'en',
   zh: 'zh-cn',
 };
+
+// Check if a string is a valid language code
+export function isValidLanguage(lang: string | undefined): lang is Language {
+  return lang !== undefined && lang in languages;
+}

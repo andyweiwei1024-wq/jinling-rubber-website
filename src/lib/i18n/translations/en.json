@@ -7,6 +7,9 @@
   "nav": {
     "home": "Home",
     "about": "About Us",
+    "certifications": "Certifications",
+    "isoCert": "ISO Certifications",
+    "nationalCert": "National Qualifications",
     "products": "Products",
     "contact": "Contact",
     "getQuote": "Get Quote"
@@ -93,6 +96,12 @@
       "trademark1Desc": "Jinling Brand - Reg. No. 7759903",
       "trademark2Desc": "Graphic Mark - Reg. No. 11441119",
       "trustMessage": "All certificates are issued by authoritative certification bodies and can be verified through official channels. We are committed to providing products and services that meet international standards."
+    }
+  },
+  "certifications": {
+    "cta": {
+      "title": "Interested in Our Products?",
+      "subtitle": "Contact us for product inquiries, quotations, and technical support. We respond within 24 hours."
     }
   },
   "categories": {

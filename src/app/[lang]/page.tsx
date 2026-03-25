@@ -1,3 +1,4 @@
+import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -12,9 +13,17 @@ import {
   getProductFeatures,
   getCategoryName as getCategoryNameLocalized
 } from '@/lib/products-i18n';
-import { Language, defaultLanguage, languageList, languages } from '@/lib/i18n/config';
+import { Language, defaultLanguage, languageList, languages, isValidLanguage } from '@/lib/i18n/config';
 import { getAllTranslations, getTranslation } from '@/lib/i18n/server';
 import { LanguageSwitcher } from '@/components/LanguageSwitcher';
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from '@/components/ui/navigation-menu';
 import { 
   Shield, 
   CloudRain, 
@@ -43,7 +52,14 @@ interface PageProps {
 
 export default async function Home({ params }: PageProps) {
   const resolvedParams = params ? await params : { lang: undefined };
-  const lang = (resolvedParams.lang as Language) || defaultLanguage;
+  const langParam = resolvedParams.lang;
+  
+  // If lang parameter exists but is not a valid language, return 404
+  if (langParam && !isValidLanguage(langParam)) {
+    notFound();
+  }
+  
+  const lang = (langParam as Language) || defaultLanguage;
   const translations = getAllTranslations(lang);
   
   // Get translations with fallback
@@ -114,6 +130,45 @@ export default async function Home({ params }: PageProps) {
             <nav className="hidden md:flex items-center space-x-6">
               <Link href={navPath('/')} className="text-sm font-medium hover:text-blue-600 transition-colors">{t('nav.home', 'Home')}</Link>
               <Link href={navPath('/about')} className="text-sm font-medium text-muted-foreground hover:text-blue-600 transition-colors">{t('nav.about', 'About')}</Link>
+              <NavigationMenu>
+                <NavigationMenuList>
+                  <NavigationMenuItem>
+                    <NavigationMenuTrigger className="text-sm font-medium text-muted-foreground hover:text-blue-600 transition-colors bg-transparent p-0">
+                      {t('nav.certifications', 'Certifications')}
+                    </NavigationMenuTrigger>
+                    <NavigationMenuContent>
+                      <ul className="grid w-[280px] gap-1 p-2">
+                        <li>
+                          <Link href={navPath('/certifications#iso')} className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                            <div className="flex items-center gap-2">
+                              <Award className="h-4 w-4 text-blue-600" />
+                              <span className="font-medium">{t('nav.isoCert', 'ISO Certifications')}</span>
+                            </div>
+                            <p className="line-clamp-2 text-sm text-muted-foreground mt-1">ISO 9001 · ISO 14001 · ISO 45001</p>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href={navPath('/certifications#national')} className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                            <div className="flex items-center gap-2">
+                              <CheckCircle2 className="h-4 w-4 text-green-600" />
+                              <span className="font-medium">{t('nav.nationalCert', 'National Qualifications')}</span>
+                            </div>
+                            <p className="line-clamp-2 text-sm text-muted-foreground mt-1">Production License · Trademarks</p>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href={navPath('/certifications')} className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                            <div className="flex items-center gap-2">
+                              <Shield className="h-4 w-4 text-orange-600" />
+                              <span className="font-medium">{t('nav.certifications', 'View All Certifications')}</span>
+                            </div>
+                          </Link>
+                        </li>
+                      </ul>
+                    </NavigationMenuContent>
+                  </NavigationMenuItem>
+                </NavigationMenuList>
+              </NavigationMenu>
               <Link href={navPath('/products')} className="text-sm font-medium text-muted-foreground hover:text-blue-600 transition-colors">{t('nav.products', 'Products')}</Link>
               <Link href={navPath('/contact')} className="text-sm font-medium text-muted-foreground hover:text-blue-600 transition-colors">{t('nav.contact', 'Contact')}</Link>
             </nav>
@@ -223,129 +278,6 @@ export default async function Home({ params }: PageProps) {
                     <p className="text-white text-sm font-medium">{t('home.companyOverview.factoryCaption', 'Shanghai Jinling Rubber Products Co., Ltd. Factory')}</p>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Certifications Section */}
-        <section className="py-20 bg-gray-50">
-          <div className="container px-4 mx-auto">
-            <div className="text-center mb-12">
-              <Badge className="mb-4 bg-blue-100 text-blue-700 hover:bg-blue-100">
-                {t('home.certifications.badge', 'Qualified Enterprise')}
-              </Badge>
-              <h2 className="text-3xl font-bold tracking-tight">{t('home.certifications.title', 'Enterprise Qualifications & Certifications')}</h2>
-              <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">
-                {t('home.certifications.subtitle', 'We hold multiple international certifications and national qualifications, ensuring product quality and enterprise reliability')}
-              </p>
-            </div>
-            
-            {/* ISO Certifications */}
-            <div className="mb-12">
-              <h3 className="text-xl font-semibold text-center mb-6">{t('home.certifications.isoTitle', 'International Management System Certifications')}</h3>
-              <div className="grid gap-6 md:grid-cols-3">
-                <Card className="overflow-hidden hover:shadow-lg transition-shadow">
-                  <div className="relative aspect-[1/1.4] bg-gray-100">
-                    <img 
-                      src={lang === 'zh' ? "/certifications/iso9001-zh.jpg" : "/certifications/iso9001-en.jpg"}
-                      alt="ISO 9001 Certificate"
-                      className="w-full h-full object-contain"
-                    />
-                  </div>
-                  <CardHeader className="text-center">
-                    <CardTitle className="text-lg flex items-center justify-center gap-2">
-                      <Award className="h-5 w-5 text-blue-600" />
-                      ISO 9001:2015
-                    </CardTitle>
-                    <CardDescription>{t('home.certifications.iso9001', 'Quality Management System')}</CardDescription>
-                  </CardHeader>
-                </Card>
-                <Card className="overflow-hidden hover:shadow-lg transition-shadow">
-                  <div className="relative aspect-[1/1.4] bg-gray-100">
-                    <img 
-                      src={lang === 'zh' ? "/certifications/iso14001-zh.jpg" : "/certifications/iso14001-en.jpg"}
-                      alt="ISO 14001 Certificate"
-                      className="w-full h-full object-contain"
-                    />
-                  </div>
-                  <CardHeader className="text-center">
-                    <CardTitle className="text-lg flex items-center justify-center gap-2">
-                      <Leaf className="h-5 w-5 text-green-600" />
-                      ISO 14001:2015
-                    </CardTitle>
-                    <CardDescription>{t('home.certifications.iso14001', 'Environmental Management System')}</CardDescription>
-                  </CardHeader>
-                </Card>
-                <Card className="overflow-hidden hover:shadow-lg transition-shadow">
-                  <div className="relative aspect-[1/1.4] bg-gray-100">
-                    <img 
-                      src={lang === 'zh' ? "/certifications/iso45001-zh.jpg" : "/certifications/iso45001-en.jpg"}
-                      alt="ISO 45001 Certificate"
-                      className="w-full h-full object-contain"
-                    />
-                  </div>
-                  <CardHeader className="text-center">
-                    <CardTitle className="text-lg flex items-center justify-center gap-2">
-                      <Shield className="h-5 w-5 text-orange-600" />
-                      ISO 45001:2018
-                    </CardTitle>
-                    <CardDescription>{t('home.certifications.iso45001', 'Occupational Health & Safety Management System')}</CardDescription>
-                  </CardHeader>
-                </Card>
-              </div>
-            </div>
-            
-            {/* Other Certifications */}
-            <div>
-              <h3 className="text-xl font-semibold text-center mb-6">{t('home.certifications.otherTitle', 'National Qualifications & Trademarks')}</h3>
-              <div className="grid gap-6 md:grid-cols-3">
-                <Card className="overflow-hidden hover:shadow-lg transition-shadow">
-                  <div className="relative aspect-[1/1.4] bg-gray-100">
-                    <img 
-                      src="/certifications/production-license.png"
-                      alt="Production License"
-                      className="w-full h-full object-contain"
-                    />
-                  </div>
-                  <CardHeader className="text-center">
-                    <CardTitle className="text-lg flex items-center justify-center gap-2">
-                      <CheckCircle2 className="h-5 w-5 text-green-600" />
-                      {t('home.certifications.productionLicense', 'National Industrial Product Production License')}
-                    </CardTitle>
-                    <CardDescription>{t('home.certifications.productionLicenseDesc', 'Special Labor Protection Products')}</CardDescription>
-                  </CardHeader>
-                </Card>
-                <Card className="overflow-hidden hover:shadow-lg transition-shadow">
-                  <div className="relative aspect-[1/1.4] bg-gray-100">
-                    <img 
-                      src="/certifications/trademark-1.png"
-                      alt="Jinling Trademark"
-                      className="w-full h-full object-contain"
-                    />
-                  </div>
-                  <CardHeader className="text-center">
-                    <CardTitle className="text-lg flex items-center justify-center gap-2">
-                      {t('home.certifications.trademark', 'Registered Trademark')}
-                    </CardTitle>
-                    <CardDescription>{t('home.certifications.trademark1Desc', 'Jinling Brand - Reg. No. 7759903')}</CardDescription>
-                  </CardHeader>
-                </Card>
-                <Card className="overflow-hidden hover:shadow-lg transition-shadow">
-                  <div className="relative aspect-[1/1.4] bg-gray-100">
-                    <img 
-                      src="/certifications/trademark-2.png"
-                      alt="Graphic Trademark"
-                      className="w-full h-full object-contain"
-                    />
-                  </div>
-                  <CardHeader className="text-center">
-                    <CardTitle className="text-lg flex items-center justify-center gap-2">
-                      {t('home.certifications.trademark', 'Registered Trademark')}
-                    </CardTitle>
-                    <CardDescription>{t('home.certifications.trademark2Desc', 'Graphic Mark - Reg. No. 11441119')}</CardDescription>
-                  </CardHeader>
-                </Card>
               </div>
             </div>
           </div>
