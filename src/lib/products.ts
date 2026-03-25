@@ -259,8 +259,8 @@ export const products: Product[] = [
     category: 'protective-suits',
     categoryEn: 'Protective Suits',
     images: {
-      main: 'https://code.coze.cn/api/sandbox/coze_coding/file/proxy?expire_time=-1&file_path=assets%2F3121%E6%AD%A3%E9%9D%A2.jpg&nonce=7d1b1c6c-c8b1-47bf-b24e-86e04759df5c&project_id=7620626575964323874&sign=a504380503ec52d9a0afe05e009a96426c7a5e4273f386a0c5eb448a194a03f3',
-      side: 'https://code.coze.cn/api/sandbox/coze_coding/file/proxy?expire_time=-1&file_path=assets%2F3121%E4%BE%A7%E9%9D%A2.jpg&nonce=c98f03e4-8859-4651-9a32-b49db536ef52&project_id=7620626575964323874&sign=7c143ed3f8185cee5b3d7e2d9a99e281af207c7679679d69bb9b9e17687b05d0',
+      main: 'https://code.coze.cn/api/sandbox/coze_coding/file/proxy?expire_time=-1&file_path=assets%2F3121%E6%AD%A3%E9%9D%A2.jpg&nonce=4ca6abf5-7795-47f3-b7ba-b9a06b65bca2&project_id=7620626575964323874&sign=92f1e7671778a3c42f85a77b2d8539eced8375592f6c92ede44af53fc575bb64',
+      side: 'https://code.coze.cn/api/sandbox/coze_coding/file/proxy?expire_time=-1&file_path=assets%2F3121%E4%BE%A7%E9%9D%A2.jpg&nonce=16048c1b-8af1-4784-8ad2-76c328b5b65a&project_id=7620626575964323874&sign=6b3e544f080bdd381fc5da5534971522e530c5e478f0c613cb1c75ec5822f2f7',
     },
     description: '采用亮面隔热材质的连体防护服，能有效反射热量，隔绝高温对人体的灼伤。配备送风软管，保障高温环境下的呼吸供氧。',
     descriptionEn: 'Full-body protective suit with reflective heat-resistant material. Effectively reflects heat and prevents burns. Equipped with air supply hose for respiratory protection in high-temperature environments.',
