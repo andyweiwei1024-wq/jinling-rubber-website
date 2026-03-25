@@ -4,6 +4,7 @@ import './globals.css';
 import { Language, defaultLanguage } from '@/lib/i18n/config';
 import { getAllTranslations } from '@/lib/i18n/server';
 import { I18nProvider } from '@/lib/i18n/client';
+import { SiteHeader } from '@/components/site-header';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -74,7 +75,12 @@ export default function RootLayout({ children }: LayoutProps) {
       </head>
       <body className={inter.className}>
         <I18nProvider initialLanguage={defaultLanguage} initialTranslations={translations}>
-          {children}
+          <div className="flex min-h-screen flex-col">
+            <SiteHeader />
+            <main className="flex-1">
+              {children}
+            </main>
+          </div>
         </I18nProvider>
       </body>
     </html>
