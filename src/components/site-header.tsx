@@ -30,7 +30,7 @@ export function SiteHeader() {
             <img 
               src="/logo.png" 
               alt="Jinling Logo" 
-              className="w-11 h-11 object-contain"
+              className="w-full h-full object-contain"
             />
           </div>
           <div className="flex flex-col">
