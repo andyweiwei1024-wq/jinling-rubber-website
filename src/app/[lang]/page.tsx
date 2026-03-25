@@ -172,6 +172,62 @@ export default async function Home({ params }: PageProps) {
           </div>
         </section>
 
+        {/* Company Overview Section */}
+        <section className="py-20">
+          <div className="container px-4 mx-auto">
+            <div className="grid gap-12 lg:grid-cols-2 items-center">
+              <div className="order-2 lg:order-1">
+                <Badge className="mb-4 bg-blue-100 text-blue-700 hover:bg-blue-100">
+                  {t('home.companyOverview.badge', 'Since 1990')}
+                </Badge>
+                <h2 className="text-3xl font-bold tracking-tight mb-6">{t('home.companyOverview.title', 'About Shanghai Jinling Rubber Products Co., Ltd.')}</h2>
+                <p className="text-muted-foreground mb-4 leading-relaxed">
+                  {t('home.companyOverview.desc1', 'Shanghai Jinling Rubber Products Co., Ltd. was awarded the title of Shanghai "Five-Star Integrity Enterprise" in February 2015. From the establishment of Shanghai Jinling Rainwear and Clothing Factory in 1990 to the founding of Shanghai Jinling Rubber Products Co., Ltd. in 1997, we have been specializing in the R&D and production of "Jinling" brand rubber waterproof, acid-alkali resistant, oil-proof, chemical-proof, and various protective clothing for decades.')}
+                </p>
+                <p className="text-muted-foreground mb-4 leading-relaxed">
+                  {t('home.companyOverview.desc2', 'Our products include rubber waterproof suits, rainwear made of nylon, oxford, spring yarn, PU, PVC coated fabrics, and special coated materials. In July 2001, "Jinling" brand protective clothing was certified as a National Quality Trusted Brand. In April 2002, China General Chamber of Commerce awarded the "Quality Excellence Certificate" for our rubber-bonded rainwear.')}
+                </p>
+                <div className="grid grid-cols-2 gap-4 mb-6">
+                  <div className="flex items-center gap-2 text-sm">
+                    <Award className="h-5 w-5 text-blue-600" />
+                    <span>{t('home.companyOverview.cert1', 'ISO 9001:2015')}</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-sm">
+                    <Leaf className="h-5 w-5 text-green-600" />
+                    <span>{t('home.companyOverview.cert2', 'ISO 14001:2015')}</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-sm">
+                    <Shield className="h-5 w-5 text-orange-600" />
+                    <span>{t('home.companyOverview.cert3', 'Safety Production License')}</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-sm">
+                    <CheckCircle2 className="h-5 w-5 text-green-600" />
+                    <span>{t('home.companyOverview.cert4', 'Five-Star Integrity')}</span>
+                  </div>
+                </div>
+                <div className="bg-blue-50 rounded-lg p-4">
+                  <p className="text-sm font-medium text-blue-800 mb-1">{t('home.companyOverview.philosophy', 'Company Philosophy')}</p>
+                  <p className="text-sm text-blue-600 mb-3">{t('home.companyOverview.philosophyText', 'Pursuing Excellence, Transcending the Ordinary')}</p>
+                  <p className="text-sm font-medium text-blue-800 mb-1">{t('home.companyOverview.mission', 'Company Mission')}</p>
+                  <p className="text-sm text-blue-600">{t('home.companyOverview.missionText', 'Practical Innovation, Customer First, Dedicated to Providing Quality Service')}</p>
+                </div>
+              </div>
+              <div className="order-1 lg:order-2">
+                <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                  <img 
+                    src="/factory-aerial.png" 
+                    alt={t('home.companyOverview.factoryAlt', 'Shanghai Jinling Factory Aerial View')}
+                    className="w-full h-auto object-cover"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
+                    <p className="text-white text-sm font-medium">{t('home.companyOverview.factoryCaption', 'Shanghai Jinling Rubber Products Co., Ltd. Factory')}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Features Section */}
         <section className="py-20">
           <div className="container px-4 mx-auto">
