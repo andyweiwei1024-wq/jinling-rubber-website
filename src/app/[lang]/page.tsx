@@ -376,11 +376,11 @@ export default async function Home({ params }: PageProps) {
             <div className="grid gap-8 md:grid-cols-4">
               <div className="md:col-span-2">
                 <div className="flex items-center space-x-2 mb-4">
-                  <div className="flex items-center justify-center w-12 h-12 bg-white rounded-lg overflow-hidden shadow-sm">
+                  <div className="w-12 h-12 bg-white rounded-lg overflow-hidden shadow-sm flex items-center justify-center">
                     <img 
                       src="/logo.png" 
                       alt="Jinling Logo" 
-                      className="w-[150%] h-[150%] object-contain"
+                      className="w-[150%] h-[150%] object-contain object-center"
                     />
                   </div>
                   <div className="flex flex-col">
