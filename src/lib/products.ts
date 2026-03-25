@@ -635,7 +635,8 @@ export const products: Product[] = [
     category: 'rainwear',
     categoryEn: 'Rainwear Series',
     images: {
-      main: 'https://code.coze.cn/api/sandbox/coze_coding/file/proxy?expire_time=-1&file_path=assets%2F2-41.jpeg&nonce=59e56256-0858-4d88-8656-64235b9b90a5&project_id=7620626575964323874&sign=c621e7496c575e7b730a6da05570d395ab58dd9ce9420f26670ec6ba59c45e78',
+      main: 'https://code.coze.cn/api/sandbox/coze_coding/file/proxy?expire_time=-1&file_path=assets%2F2-41%E6%AD%A3%E9%9D%A2.jpeg&nonce=d9e0cbad-0fa0-49ff-a8e4-d19ee09269be&project_id=7620626575964323874&sign=22abfe803375e52873758d8258f442ff514fca82f14d662244eb795a5d2c5ce2',
+      side: 'https://code.coze.cn/api/sandbox/coze_coding/file/proxy?expire_time=-1&file_path=assets%2F2-41%E4%BE%A7%E9%9D%A2.jpeg&nonce=a2dca722-8b02-4e5b-83cb-0b5dd3c0b6a6&project_id=7620626575964323874&sign=be12b7d50a1dd24783f565563de586d2df4996b698cbd89330efe4d5ab823a3d',
     },
     description: '军绿色分体式雨衣套装，上衣采用拉链+按扣的双重闭合设计，防水更严密。短款宽松版型，适合户外作业和雨天出行。',
     descriptionEn: 'Army green two-piece rain suit with dual zipper + snap button closure for enhanced waterproofing. Short loose-fit jacket design. Suitable for outdoor work and rainy day travel.',
