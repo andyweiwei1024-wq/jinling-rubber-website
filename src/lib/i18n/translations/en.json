@@ -77,6 +77,22 @@
       "missionText": "Practical Innovation, Customer First, Dedicated to Providing Quality Service",
       "factoryAlt": "Shanghai Jinling Factory Aerial View",
       "factoryCaption": "Shanghai Jinling Rubber Products Co., Ltd. Factory"
+    },
+    "certifications": {
+      "badge": "Qualified Enterprise",
+      "title": "Enterprise Qualifications & Certifications",
+      "subtitle": "We hold multiple international certifications and national qualifications, ensuring product quality and enterprise reliability",
+      "isoTitle": "International Management System Certifications",
+      "otherTitle": "National Qualifications & Trademarks",
+      "iso9001": "Quality Management System",
+      "iso14001": "Environmental Management System",
+      "iso45001": "Occupational Health & Safety Management System",
+      "productionLicense": "National Industrial Product Production License",
+      "productionLicenseDesc": "Special Labor Protection Products",
+      "trademark": "Registered Trademark",
+      "trademark1Desc": "Jinling Brand - Reg. No. 7759903",
+      "trademark2Desc": "Graphic Mark - Reg. No. 11441119",
+      "trustMessage": "All certificates are issued by authoritative certification bodies and can be verified through official channels. We are committed to providing products and services that meet international standards."
     }
   },
   "categories": {

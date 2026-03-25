@@ -77,6 +77,22 @@
       "missionText": "务实创新、用户至上，竭诚为客户提供优质高效的服务",
       "factoryAlt": "上海金铃工厂鸟瞰图",
       "factoryCaption": "上海金铃橡胶制品有限公司工厂"
+    },
+    "certifications": {
+      "badge": "资质齐全",
+      "title": "企业资质与认证证书",
+      "subtitle": "拥有多项国际认证和国家资质，确保产品质量和企业信誉",
+      "isoTitle": "国际管理体系认证",
+      "otherTitle": "国家资质与商标注册",
+      "iso9001": "质量管理体系认证",
+      "iso14001": "环境管理体系认证",
+      "iso45001": "职业健康安全管理体系认证",
+      "productionLicense": "全国工业产品生产许可证",
+      "productionLicenseDesc": "特种劳动防护用品",
+      "trademark": "注册商标",
+      "trademark1Desc": "金铃商标 - 注册号 7759903",
+      "trademark2Desc": "图形商标 - 注册号 11441119",
+      "trustMessage": "所有证书均由权威认证机构颁发，可通过官方渠道验证真伪。我们致力于提供符合国际标准的产品和服务。"
     }
   },
   "categories": {
