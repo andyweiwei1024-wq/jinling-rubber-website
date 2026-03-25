@@ -380,7 +380,7 @@ export default async function Home({ params }: PageProps) {
                     <img 
                       src="/logo.png" 
                       alt="Jinling Logo" 
-                      className="w-full h-full object-contain"
+                      className="w-[150%] h-[150%] object-contain"
                     />
                   </div>
                   <div className="flex flex-col">
