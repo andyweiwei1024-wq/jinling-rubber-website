@@ -1,4 +1,12 @@
-import ProductDetailPage from '../../[lang]/products/[id]/page';
+import { redirect } from 'next/navigation';
+import { defaultLanguage } from '@/lib/i18n/config';
 
-// Root product detail page serves default language (English) content
-export default ProductDetailPage;
+interface PageProps {
+  params: Promise<{ id: string }>;
+}
+
+// Redirect to default language path
+export default async function ProductDetailRedirectPage({ params }: PageProps) {
+  const { id } = await params;
+  redirect(`/${defaultLanguage}/products/${id}`);
+}

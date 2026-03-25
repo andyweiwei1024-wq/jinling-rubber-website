@@ -1,4 +1,7 @@
-import ProductsPage from '../[lang]/products/page';
+import { redirect } from 'next/navigation';
+import { defaultLanguage } from '@/lib/i18n/config';
 
-// Root products page serves default language (English) content
-export default ProductsPage;
+// Redirect to default language path
+export default function ProductsRedirectPage() {
+  redirect(`/${defaultLanguage}/products`);
+}

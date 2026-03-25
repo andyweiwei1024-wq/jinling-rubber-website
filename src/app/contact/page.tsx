@@ -1,4 +1,7 @@
-import ContactPage from '../[lang]/contact/page';
+import { redirect } from 'next/navigation';
+import { defaultLanguage } from '@/lib/i18n/config';
 
-// Root contact page serves default language (English) content
-export default ContactPage;
+// Redirect to default language path
+export default function ContactRedirectPage() {
+  redirect(`/${defaultLanguage}/contact`);
+}

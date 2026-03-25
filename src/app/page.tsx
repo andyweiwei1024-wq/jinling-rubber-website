@@ -1,4 +1,7 @@
-import Home from './[lang]/page';
+import { redirect } from 'next/navigation';
+import { defaultLanguage } from '@/lib/i18n/config';
 
-// Root page serves default language (English) content
-export default Home;
+// Redirect to default language path
+export default function HomeRedirectPage() {
+  redirect(`/${defaultLanguage}`);
+}

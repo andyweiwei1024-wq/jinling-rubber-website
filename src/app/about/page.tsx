@@ -1,4 +1,7 @@
-import AboutPage from '../[lang]/about/page';
+import { redirect } from 'next/navigation';
+import { defaultLanguage } from '@/lib/i18n/config';
 
-// Root about page serves default language (English) content
-export default AboutPage;
+// Redirect to default language path
+export default function AboutRedirectPage() {
+  redirect(`/${defaultLanguage}/about`);
+}
