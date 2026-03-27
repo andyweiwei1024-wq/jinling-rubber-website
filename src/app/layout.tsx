@@ -8,17 +8,9 @@ interface LayoutProps {
   children: React.ReactNode;
 }
 
-// Root layout - minimal HTML structure only
-// Child layouts ([lang]/layout.tsx) will provide the full structure
+// Root layout - only provides global styles and font
+// The [lang]/layout.tsx handles the actual HTML structure with proper lang/dir attributes
 export default function RootLayout({ children }: LayoutProps) {
-  return (
-    <html lang="en">
-      <head>
-        <link rel="icon" href="/favicon.ico" />
-      </head>
-      <body className={inter.className}>
-        {children}
-      </body>
-    </html>
-  );
+  // Return children directly - the [lang]/layout.tsx will wrap with proper html/body
+  return children;
 }
