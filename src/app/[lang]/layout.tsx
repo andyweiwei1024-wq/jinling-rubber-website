@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import { redirect } from 'next/navigation';
 import '../globals.css';
 import { Language, defaultLanguage, languageList, languages, hreflangMap } from '@/lib/i18n/config';
 import { getAllTranslations, getLanguageFromPath } from '@/lib/i18n/server';
@@ -21,6 +22,12 @@ interface LayoutProps {
 // Generate metadata based on language
 export async function generateMetadata({ params }: LayoutProps): Promise<Metadata> {
   const { lang: langParam } = await params;
+  
+  // If language is not valid, return minimal metadata (redirect will happen in layout)
+  if (langParam && !languageList.includes(langParam as Language)) {
+    return { title: 'Redirecting...' };
+  }
+  
   const lang = (langParam as Language) || defaultLanguage;
   const translations = getAllTranslations(lang);
   
@@ -94,6 +101,14 @@ export async function generateMetadata({ params }: LayoutProps): Promise<Metadat
 
 export default async function RootLayout({ children, params }: LayoutProps) {
   const { lang: langParam } = await params;
+  
+  // Validate language parameter - if not a valid language, redirect to default language path
+  if (langParam && !languageList.includes(langParam as Language)) {
+    // Redirect to the same path but with default language prefix
+    // e.g., /blog -> /en/blog
+    redirect(`/${defaultLanguage}/${langParam}`);
+  }
+  
   const lang = (langParam as Language) || defaultLanguage;
   const translations = getAllTranslations(lang);
   
