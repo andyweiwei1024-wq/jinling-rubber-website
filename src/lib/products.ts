@@ -2,6 +2,7 @@
 
 export interface Product {
   id: string;
+  slug: string; // SEO-friendly URL slug
   name: string;
   nameEn: string;
   category: string;
@@ -32,6 +33,7 @@ export const products: Product[] = [
   // ==================== 防护服系列 ====================
   {
     id: '3015',
+    slug: 'double-coated-acid-resistant-suit-3015',
     name: '双胶防酸分式工作服',
     nameEn: 'Double-Coated Acid-Resistant Suit',
     category: 'protective-suits',
@@ -72,6 +74,7 @@ export const products: Product[] = [
   },
   {
     id: '3019',
+    slug: 'double-coated-acid-resistant-long-suit-3019',
     name: '双胶防酸长式工作服',
     nameEn: 'Double-Coated Acid-Resistant Long Suit',
     category: 'protective-suits',
@@ -111,6 +114,7 @@ export const products: Product[] = [
   },
   {
     id: '3088',
+    slug: 'acid-resistant-two-piece-suit-3088',
     name: '耐酸分式工作服',
     nameEn: 'Acid-Resistant Two-Piece Suit',
     category: 'protective-suits',
@@ -150,6 +154,7 @@ export const products: Product[] = [
   },
   {
     id: '3112',
+    slug: 'one-piece-gas-protection-suit-3112',
     name: '连式防毒衣',
     nameEn: 'One-Piece Gas Protection Suit',
     category: 'protective-suits',
@@ -190,6 +195,7 @@ export const products: Product[] = [
   },
   {
     id: '3113',
+    slug: 'gas-protection-suit-with-gloves-boots-3113',
     name: '连式带手套靴防毒衣',
     nameEn: 'One-Piece Gas Protection Suit with Gloves and Boots',
     category: 'protective-suits',
@@ -230,6 +236,7 @@ export const products: Product[] = [
   },
   {
     id: '3116',
+    slug: 'fully-enclosed-gas-protection-suit-3116',
     name: '全封闭连式防毒衣',
     nameEn: 'Fully Enclosed Gas Protection Suit',
     category: 'protective-suits',
@@ -270,6 +277,7 @@ export const products: Product[] = [
   },
   {
     id: '3121',
+    slug: 'heat-resistant-gas-protection-suit-3121',
     name: '全封闭分式隔热防毒衣',
     nameEn: 'Fully Enclosed Heat-Resistant Gas Protection Suit',
     category: 'protective-suits',
@@ -309,6 +317,7 @@ export const products: Product[] = [
   },
   {
     id: '3218',
+    slug: 'chemical-resistant-flame-retardant-suit-3218',
     name: '双胶防化阻燃连式工作服带手套靴',
     nameEn: 'Double-Coated Chemical-Resistant Flame-Retardant Suit',
     category: 'protective-suits',
@@ -350,6 +359,7 @@ export const products: Product[] = [
   // ==================== 工装系列 ====================
   {
     id: '5061',
+    slug: 'double-coated-wading-pants-5061',
     name: '双胶下水裤',
     nameEn: 'Double-Coated Wading Pants',
     category: 'workwear',
@@ -389,6 +399,7 @@ export const products: Product[] = [
   },
   {
     id: '5-2',
+    slug: 'fluorescent-green-police-suit',
     name: '莹光绿警服',
     nameEn: 'Fluorescent Green Police Suit',
     category: 'workwear',
@@ -429,6 +440,7 @@ export const products: Product[] = [
   },
   {
     id: '5-5',
+    slug: 'spring-yarn-splicing-suit',
     name: '春亚纺相拼色套装',
     nameEn: 'Spring Yarn Splicing Suit',
     category: 'workwear',
@@ -469,6 +481,7 @@ export const products: Product[] = [
   },
   {
     id: '6016',
+    slug: 'split-apron-sleeve-set',
     name: '分体式围裙袖套套装',
     nameEn: 'Split Apron & Sleeve Set',
     category: 'workwear',
@@ -507,6 +520,7 @@ export const products: Product[] = [
   // ==================== 雨衣系列 ====================
   {
     id: '1-1',
+    slug: 'anti-static-work-suit',
     name: '抗静电工作套装',
     nameEn: 'Anti-Static Work Suit',
     category: 'rainwear',
@@ -549,6 +563,7 @@ export const products: Product[] = [
   },
   {
     id: '1-6',
+    slug: 'mine-waterproof-cotton-coat',
     name: '矿井防水棉衣',
     nameEn: 'Mine Waterproof Cotton Coat',
     category: 'rainwear',
@@ -590,6 +605,7 @@ export const products: Product[] = [
   },
   {
     id: '1-32',
+    slug: 'single-coated-long-raincoat',
     name: '单胶长雨衣',
     nameEn: 'Single-Coated Long Raincoat',
     category: 'rainwear',
@@ -628,6 +644,7 @@ export const products: Product[] = [
   },
   {
     id: '2-3',
+    slug: 'double-coated-mine-work-suit',
     name: '双胶矿井工作服',
     nameEn: 'Double-Coated Mine Work Suit',
     category: 'rainwear',
@@ -671,6 +688,7 @@ export const products: Product[] = [
   },
   {
     id: '2-41',
+    slug: 'single-coated-hooded-suit',
     name: '单胶连帽套装',
     nameEn: 'Single-Coated Hooded Suit',
     category: 'rainwear',
@@ -710,6 +728,7 @@ export const products: Product[] = [
   },
   {
     id: '1601',
+    slug: 'polyester-suit-set',
     name: '涤丝纺套装',
     nameEn: 'Polyester Taffeta Suit',
     category: 'rainwear',
@@ -751,6 +770,7 @@ export const products: Product[] = [
   },
   {
     id: '2-3a',
+    slug: 'two-piece-reflective-rain-suit-blue',
     name: '分体式反光雨衣套装（蓝色款）',
     nameEn: 'Two-Piece Reflective Rain Suit (Blue)',
     category: 'rainwear',
@@ -788,6 +808,7 @@ export const products: Product[] = [
   },
   {
     id: '4-2',
+    slug: 'two-piece-hooded-rain-suit',
     name: '分体式连帽雨衣套装',
     nameEn: 'Two-Piece Hooded Rain Suit',
     category: 'rainwear',
@@ -825,6 +846,7 @@ export const products: Product[] = [
   },
   {
     id: '4-18',
+    slug: 'two-piece-hooded-rain-suit-4-18',
     name: '分体式连帽雨衣套装',
     nameEn: 'Two-Piece Hooded Rain Suit',
     category: 'rainwear',
@@ -868,4 +890,13 @@ export function getProductsByCategory(categoryId: string): Product[] {
 
 export function getProductById(id: string): Product | undefined {
   return products.find(p => p.id === id);
+}
+
+export function getProductBySlug(slug: string): Product | undefined {
+  return products.find(p => p.slug === slug);
+}
+
+// Get product URL (SEO-friendly)
+export function getProductUrl(product: Product): string {
+  return `/products/${product.slug}`;
 }

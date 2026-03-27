@@ -1,13 +1,26 @@
 import Link from 'next/link';
-import { notFound } from 'next/navigation';
+import { notFound, redirect } from 'next/navigation';
+import { Metadata } from 'next';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { ProductImageGallery } from '@/components/ProductImageGallery';
-import { 
-  products, 
-  getProductById, 
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from '@/components/ui/breadcrumb';
+import {
+  products,
+  getProductBySlug,
+  getProductById,
   getProductsByCategory,
+  getProductUrl
+} from '@/lib/products';
+import {
   getProductName,
   getProductDescription,
   getProductFeatures,
@@ -17,9 +30,10 @@ import {
 } from '@/lib/products-i18n';
 import { Language, defaultLanguage, languageList } from '@/lib/i18n/config';
 import { getAllTranslations, getTranslation } from '@/lib/i18n/server';
-import { 
-  ArrowLeft, 
-  Mail, 
+import { ProductSchema, BreadcrumbSchema } from '@/components/structured-data';
+import {
+  ArrowLeft,
+  Mail,
   Phone,
   Shield,
   Layers,
@@ -28,39 +42,85 @@ import {
   Wind,
   Zap,
   Leaf,
-  ArrowRight
+  ArrowRight,
+  Home,
+  Package
 } from 'lucide-react';
 
 interface PageProps {
-  params?: Promise<{ lang?: string; id: string }>;
+  params: Promise<{ lang: string; slug: string }>;
 }
 
-// Generate static params
+// Generate static params for all products
 export function generateStaticParams() {
   const params = [];
-  
+
   for (const lang of languageList) {
     for (const product of products) {
-      params.push({ lang, id: product.id });
+      params.push({ lang, slug: product.slug });
     }
   }
-  
+
   return params;
 }
 
-export default async function ProductDetailPage({ params }: PageProps) {
-  const resolvedParams = params ? await params : { lang: undefined, id: '' };
-  const lang = (resolvedParams.lang as Language) || defaultLanguage;
-  const product = getProductById(resolvedParams.id);
-  
+// Generate metadata for SEO
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { lang, slug } = await params;
+  const product = getProductBySlug(slug);
+
   if (!product) {
+    return { title: 'Product Not Found' };
+  }
+
+  const productName = lang === 'zh' ? product.name : product.nameEn;
+  const productDesc = lang === 'zh' ? product.description : product.descriptionEn;
+  const categoryName = lang === 'zh'
+    ? (products.find(p => p.category === product.category)?.category || product.category)
+    : (products.find(p => p.category === product.category)?.categoryEn || product.category);
+
+  const title = `${productName} | ${categoryName} | Shanghai Jinling Rubber`;
+  const description = productDesc.slice(0, 160);
+
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      type: 'product',
+      images: [product.images.main],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [product.images.main],
+    },
+    alternates: {
+      canonical: `https://www.shjinling.com/products/${slug}`,
+    },
+  };
+}
+
+export default async function ProductDetailPage({ params }: PageProps) {
+  const { lang, slug } = await params;
+  const product = getProductBySlug(slug);
+
+  // If not found by slug, try to find by id (for backward compatibility)
+  if (!product) {
+    const productById = getProductById(slug);
+    if (productById) {
+      // Redirect to new slug URL
+      redirect(`/${lang}/products/${productById.slug}`);
+    }
     notFound();
   }
-  
+
   const translations = getAllTranslations(lang);
   const t = (key: string, fallback?: string) => getTranslation(lang, key, fallback);
   const navPath = (path: string) => lang === defaultLanguage ? path : `/${lang}${path}`;
-  
+
   // Get related products
   const relatedProducts = getProductsByCategory(product.category)
     .filter(p => p.id !== product.id)
@@ -71,7 +131,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
     const icons = [Shield, Layers, Thermometer, Droplets, Wind, Zap, Leaf];
     return icons[index % icons.length];
   };
-  
+
   // Get localized product data
   const productName = getProductName(product, lang);
   const productDesc = getProductDescription(product, lang);
@@ -80,15 +140,55 @@ export default async function ProductDetailPage({ params }: PageProps) {
   const categoryName = getCategoryName(product.category, lang);
   const specs = getLocalizedSpecs(product.specifications, lang);
 
+  // Breadcrumb items
+  const breadcrumbItems = [
+    { name: lang === 'zh' ? '首页' : 'Home', url: navPath('/') },
+    { name: lang === 'zh' ? '产品中心' : 'Products', url: navPath('/products') },
+    { name: categoryName, url: navPath(`/products?category=${product.category}`) },
+    { name: productName, url: navPath(`/products/${product.slug}`) },
+  ];
+
   return (
     <>
+      {/* Structured Data for SEO */}
+      <ProductSchema
+        name={productName}
+        description={productDesc}
+        image={product.images.main}
+        category={categoryName}
+        brand="Shanghai Jinling Rubber"
+      />
+      <BreadcrumbSchema items={breadcrumbItems} />
+
       {/* Breadcrumb */}
       <div className="bg-gray-50 py-4">
         <div className="container px-4 mx-auto">
-          <Link href={navPath('/products')} className="inline-flex items-center text-sm text-muted-foreground hover:text-blue-600">
-            <ArrowLeft className="h-4 w-4 mr-2" />
-            {t('productDetails.backToList', 'Back to Products')}
-          </Link>
+          <Breadcrumb>
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink href={navPath('/')}>
+                  <Home className="h-4 w-4" />
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbLink href={navPath('/products')}>
+                  <Package className="h-4 w-4 mr-1" />
+                  {t('nav.products', 'Products')}
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbLink href={navPath(`/products?category=${product.category}`)}>
+                  {categoryName}
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbPage>{productName}</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
         </div>
       </div>
 
@@ -97,7 +197,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
         <div className="container px-4 py-12 mx-auto">
           <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 items-start">
             {/* Product Images */}
-            <ProductImageGallery 
+            <ProductImageGallery
               mainImage={product.images.main}
               sideImage={product.images.side}
               additionalImages={product.images.additional || []}
@@ -113,7 +213,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
                 <h1 className="text-3xl font-bold tracking-tight">{productName}</h1>
                 <span className="text-lg text-muted-foreground">({product.id})</span>
               </div>
-              
+
               <p className="text-muted-foreground mb-8">{productDesc}</p>
 
               {/* Features */}
@@ -188,7 +288,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
               <h2 className="text-2xl font-bold mb-6">{t('products.relatedProducts', 'Related Products')}</h2>
               <div className="grid gap-6 md:grid-cols-3">
                 {relatedProducts.map((p) => (
-                  <Link key={p.id} href={navPath(`/products/${p.id}`)}>
+                  <Link key={p.id} href={navPath(`/products/${p.slug}`)}>
                     <Card className="overflow-hidden hover:shadow-lg transition-shadow">
                       <div className="aspect-[4/3] relative bg-gray-200">
                         <img src={p.images.main} alt={getProductName(p, lang)} className="object-cover w-full h-full" />

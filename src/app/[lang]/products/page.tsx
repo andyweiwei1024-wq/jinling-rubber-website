@@ -93,7 +93,7 @@ export default async function ProductsPage({ params }: PageProps) {
                       </div>
                     </CardContent>
                     <div className="p-6 pt-0 mt-auto">
-                      <Link href={navPath(`/products/${product.id}`)}>
+                      <Link href={navPath(`/products/${product.slug}`)}>
                         <Button className="w-full">
                           {t('products.viewDetails', 'View Details')}
                           <ArrowRight className="ml-2 h-4 w-4" />
@@ -135,7 +135,7 @@ export default async function ProductsPage({ params }: PageProps) {
                         </div>
                       </CardContent>
                       <div className="p-6 pt-0 mt-auto">
-                        <Link href={navPath(`/products/${product.id}`)}>
+                        <Link href={navPath(`/products/${product.slug}`)}>
                           <Button className="w-full">
                             {t('products.viewDetails', 'View Details')}
                             <ArrowRight className="ml-2 h-4 w-4" />
