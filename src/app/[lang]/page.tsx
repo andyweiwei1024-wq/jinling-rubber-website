@@ -420,6 +420,7 @@ export default async function Home({ params }: PageProps) {
                   <li><Link href={navPath('/')} className="hover:text-white transition-colors">{t('nav.home', 'Home')}</Link></li>
                   <li><Link href={navPath('/about')} className="hover:text-white transition-colors">{t('nav.about', 'About')}</Link></li>
                   <li><Link href={navPath('/products')} className="hover:text-white transition-colors">{t('nav.products', 'Products')}</Link></li>
+                  <li><Link href={navPath('/blog')} className="hover:text-white transition-colors">{t('nav.blog', 'Blog')}</Link></li>
                   <li><Link href={navPath('/contact')} className="hover:text-white transition-colors">{t('nav.contact', 'Contact')}</Link></li>
                 </ul>
               </div>
