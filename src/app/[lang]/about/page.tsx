@@ -265,12 +265,12 @@ export default async function AboutPage({ params }: PageProps) {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href={navPath('/contact')}>
-              <Button size="lg" className="bg-white text-blue-700 hover:bg-blue-50">
+              <Button size="lg" className="bg-white text-blue-700 hover:bg-blue-50 min-w-[180px]">
                 {t('about.cta.contactUs', 'Contact Us Today')}
               </Button>
             </Link>
             <Link href={navPath('/products')}>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+              <Button size="lg" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-700 min-w-[180px]">
                 {t('about.cta.viewProducts', 'View Our Products')}
               </Button>
             </Link>

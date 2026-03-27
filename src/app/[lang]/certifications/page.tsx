@@ -178,13 +178,13 @@ export default async function CertificationsPage({ params }: PageProps) {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href={navPath('/contact')}>
-              <Button size="lg" className="bg-white text-blue-700 hover:bg-blue-50">
+              <Button size="lg" className="bg-white text-blue-700 hover:bg-blue-50 min-w-[160px]">
                 {t('nav.contact', 'Contact Us')}
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
             <Link href={navPath('/products')}>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+              <Button size="lg" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-700 min-w-[160px]">
                 {t('nav.products', 'View Products')}
               </Button>
             </Link>
