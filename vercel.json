@@ -1,8 +1,5 @@
 {
-  "buildCommand": "pnpm install && pnpm run build:vercel",
-  "outputDirectory": ".next",
   "framework": "nextjs",
-  "regions": ["iad1", "hkg1", "sfo1", "fra1"],
   "headers": [
     {
       "source": "/(.*)",
@@ -20,12 +17,6 @@
           "value": "1; mode=block"
         }
       ]
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/sitemap.xml",
-      "destination": "/api/sitemap"
     }
   ]
 }
