@@ -113,7 +113,7 @@ export default async function RootLayout({ children, params }: LayoutProps) {
   const translations = getAllTranslations(lang);
   
   return (
-    <html lang={lang === 'zh' ? 'zh-CN' : lang}>
+    <html lang={lang === 'zh' ? 'zh-CN' : lang} dir={languages[lang].dir}>
       <head>
         <link rel="icon" href="/favicon.ico" />
         <meta name="geo.region" content="CN-31" />
@@ -124,14 +124,10 @@ export default async function RootLayout({ children, params }: LayoutProps) {
         <meta name="revisit-after" content="7 days" />
         {/* Hreflang tags for multilingual SEO */}
         <link rel="alternate" hrefLang="en" href="https://www.shjinling.com" />
+        <link rel="alternate" hrefLang="zh-cn" href="https://www.shjinling.com/zh" />
+        <link rel="alternate" hrefLang="ar" href="https://www.shjinling.com/ar" />
         <link rel="alternate" hrefLang="de" href="https://www.shjinling.com/de" />
         <link rel="alternate" hrefLang="es" href="https://www.shjinling.com/es" />
-        <link rel="alternate" hrefLang="ru" href="https://www.shjinling.com/ru" />
-        <link rel="alternate" hrefLang="el" href="https://www.shjinling.com/el" />
-        <link rel="alternate" hrefLang="ja" href="https://www.shjinling.com/ja" />
-        <link rel="alternate" hrefLang="it" href="https://www.shjinling.com/it" />
-        <link rel="alternate" hrefLang="pt" href="https://www.shjinling.com/pt" />
-        <link rel="alternate" hrefLang="zh-cn" href="https://www.shjinling.com/zh" />
         <link rel="alternate" hrefLang="x-default" href="https://www.shjinling.com" />
       </head>
       <body className={inter.className}>

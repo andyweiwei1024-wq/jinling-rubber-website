@@ -19,14 +19,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       alternates: {
         languages: {
           'en': `${baseUrl}${path}`,
+          'zh-cn': `${baseUrl}/zh${path}`,
+          'ar': `${baseUrl}/ar${path}`,
           'de': `${baseUrl}/de${path}`,
           'es': `${baseUrl}/es${path}`,
-          'ru': `${baseUrl}/ru${path}`,
-          'el': `${baseUrl}/el${path}`,
-          'ja': `${baseUrl}/ja${path}`,
-          'it': `${baseUrl}/it${path}`,
-          'pt': `${baseUrl}/pt${path}`,
-          'zh-cn': `${baseUrl}/zh${path}`,
         }
       }
     });
@@ -42,14 +38,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
           alternates: {
             languages: {
               'en': `${baseUrl}${path}`,
+              'zh-cn': `${baseUrl}/zh${path}`,
+              'ar': `${baseUrl}/ar${path}`,
               'de': `${baseUrl}/de${path}`,
               'es': `${baseUrl}/es${path}`,
-              'ru': `${baseUrl}/ru${path}`,
-              'el': `${baseUrl}/el${path}`,
-              'ja': `${baseUrl}/ja${path}`,
-              'it': `${baseUrl}/it${path}`,
-              'pt': `${baseUrl}/pt${path}`,
-              'zh-cn': `${baseUrl}/zh${path}`,
             }
           }
         });

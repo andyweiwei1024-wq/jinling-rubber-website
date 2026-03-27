@@ -47,17 +47,17 @@ export function getCategoryName(categoryId: string, lang: Language): string {
 
 // Get localized specifications
 export function getLocalizedSpecs(specs: Record<string, string>, lang: Language): { label: string; value: string }[] {
-  // 只保留英语和中文
+  // 支持多语言：英语、中文、阿拉伯语、德语、西班牙语
   const specLabels: Record<string, Record<string, string>> = {
-    '材质': { en: 'Material', zh: '材质' },
-    '颜色': { en: 'Color', zh: '颜色' },
-    '尺码': { en: 'Size', zh: '尺码' },
-    '认证': { en: 'Certification', zh: '认证' },
-    '耐温': { en: 'Temperature Resistance', zh: '耐温' },
-    '防水等级': { en: 'Waterproof Rating', zh: '防水等级' },
-    '包装': { en: 'Package', zh: '包装' },
-    '重量': { en: 'Weight', zh: '重量' },
-    '厚度': { en: 'Thickness', zh: '厚度' },
+    '材质': { en: 'Material', zh: '材质', ar: 'المادة', de: 'Material', es: 'Material' },
+    '颜色': { en: 'Color', zh: '颜色', ar: 'اللون', de: 'Farbe', es: 'Color' },
+    '尺码': { en: 'Size', zh: '尺码', ar: 'الحجم', de: 'Größe', es: 'Talla' },
+    '认证': { en: 'Certification', zh: '认证', ar: 'الشهادة', de: 'Zertifizierung', es: 'Certificación' },
+    '耐温': { en: 'Temperature Resistance', zh: '耐温', ar: 'مقاومة الحرارة', de: 'Temperaturbeständigkeit', es: 'Resistencia a la Temperatura' },
+    '防水等级': { en: 'Waterproof Rating', zh: '防水等级', ar: 'معدل مقاومة الماء', de: 'Wasserdichtigkeit', es: 'Clasificación Impermeable' },
+    '包装': { en: 'Package', zh: '包装', ar: 'التغليف', de: 'Verpackung', es: 'Embalaje' },
+    '重量': { en: 'Weight', zh: '重量', ar: 'الوزن', de: 'Gewicht', es: 'Peso' },
+    '厚度': { en: 'Thickness', zh: '厚度', ar: 'السمك', de: 'Dicke', es: 'Grosor' },
   };
   
   return Object.entries(specs).map(([key, value]) => ({

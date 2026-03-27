@@ -28,7 +28,7 @@ import {
   getCategoryName,
   getLocalizedSpecs
 } from '@/lib/products-i18n';
-import { Language, defaultLanguage, languageList } from '@/lib/i18n/config';
+import { Language, defaultLanguage, languageList, isValidLanguage } from '@/lib/i18n/config';
 import { getAllTranslations, getTranslation } from '@/lib/i18n/server';
 import { ProductSchema, BreadcrumbSchema } from '@/components/structured-data';
 import {
@@ -66,7 +66,8 @@ export function generateStaticParams() {
 
 // Generate metadata for SEO
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const { lang, slug } = await params;
+  const { lang: langParam, slug } = await params;
+  const lang = isValidLanguage(langParam) ? langParam : defaultLanguage;
   const product = getProductBySlug(slug);
 
   if (!product) {
@@ -88,7 +89,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     openGraph: {
       title,
       description,
-      type: 'product',
+      type: 'website',
       images: [product.images.main],
     },
     twitter: {
@@ -104,7 +105,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 export default async function ProductDetailPage({ params }: PageProps) {
-  const { lang, slug } = await params;
+  const { lang: langParam, slug } = await params;
+  const lang = isValidLanguage(langParam) ? langParam : defaultLanguage;
   const product = getProductBySlug(slug);
 
   // If not found by slug, try to find by id (for backward compatibility)

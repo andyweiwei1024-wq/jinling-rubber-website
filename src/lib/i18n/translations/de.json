@@ -1,0 +1,313 @@
+{
+  "site": {
+    "name": "Shanghai Jinling Rubber",
+    "fullName": "Shanghai Jinling Rubber Products Co., Ltd.",
+    "description": "Professioneller Hersteller von Schutzanzügen, Regenkleidung und Gummiwaren. ISO 9001 zertifiziert, weltweiter Service in über 50 Ländern."
+  },
+  "nav": {
+    "home": "Startseite",
+    "about": "Über uns",
+    "certifications": "Zertifizierungen",
+    "isoCert": "ISO-Zertifizierungen",
+    "nationalCert": "Nationale Qualifikationen",
+    "products": "Produkte",
+    "contact": "Kontakt",
+    "getQuote": "Angebot anfordern",
+    "blog": "Blog"
+  },
+  "home": {
+    "badge": "ISO 9001 Zertifizierter Hersteller",
+    "title": "Professioneller Hersteller von Schutzanzügen & Gummiwaren",
+    "subtitle": "Shanghai Jinling Rubber Products Co., Ltd. verfügt über mehr als 20 Jahre Erfahrung in Schutzausrüstung und bedient Kunden in über 50 Ländern weltweit.",
+    "viewProducts": "Produkte ansehen",
+    "contactUs": "Kontakt aufnehmen",
+    "stats": {
+      "years": "Jahre Erfahrung",
+      "countries": "Bediente Länder",
+      "products": "Produktarten",
+      "certifications": "ISO 9001 Zertifiziert"
+    },
+    "productRange": "Produktpalette",
+    "productRangeSubtitle": "Professionelle Schutzausrüstung für verschiedene Branchen",
+    "featuredProducts": "Ausgewählte Produkte",
+    "featuredProductsSubtitle": "Entdecken Sie unsere Bestseller, denen Kunden weltweit vertrauen",
+    "viewAllProducts": "Alle Produkte ansehen",
+    "whyChooseUs": "Warum Shanghai Jinling wählen?",
+    "reasons": {
+      "iso": "ISO 9001:2015 Qualitätsmanagementsystem zertifiziert",
+      "experience": "Über 20 Jahre Fertigungs- und Exporterfahrung",
+      "pricing": "Wettbewerbsfähige Großhandelspreise für Sammelbestellungen",
+      "customization": "Umfassende Produktpalette mit Anpassungsoptionen",
+      "delivery": "Schnelle weltweite Lieferung mit zuverlässigen Logistikpartnern",
+      "support": "Engagierter technischer Support und Kundendienst"
+    },
+    "learnMore": "Mehr erfahren",
+    "features": {
+      "quality": {
+        "title": "Qualität garantiert",
+        "desc": "Strenge Qualitätskontrollprozesse stellen sicher, dass jedes Produkt internationalen Standards entspricht."
+      },
+      "partners": {
+        "title": "Globale Partner",
+        "desc": "Vertrauen von Händlern und Unternehmen in über 50 Ländern weltweit."
+      },
+      "export": {
+        "title": "Export-Expertise",
+        "desc": "Professionelles Export-Team kümmert sich um Zoll, Dokumentation und Logistik."
+      },
+      "response": {
+        "title": "Schnelle Reaktion",
+        "desc": "Schnelle Angebotsbearbeitung und reaktionsschnelles Kundensupport-Team."
+      }
+    },
+    "cta": {
+      "title": "Bereit, Ihr Projekt zu starten?",
+      "subtitle": "Kontaktieren Sie unser Verkaufsteam für Produktanfragen, Angebote und technischen Support. Wir antworten innerhalb von 24 Stunden.",
+      "requestQuote": "Angebot anfordern",
+      "emailUs": "E-Mail senden"
+    },
+    "companyOverview": {
+      "badge": "Seit 1990",
+      "title": "Über Shanghai Jinling Rubber Products Co., Ltd.",
+      "desc1": "Shanghai Jinling Rubber Products Co., Ltd. erhielt im Februar 2015 den Titel \"Fünf-Sterne-Integritätsunternehmen\" von Shanghai. Von der Gründung der Shanghai Jinling Rainwear and Clothing Factory im Jahr 1990 bis zur Gründung der Shanghai Jinling Rubber Products Co., Ltd. im Jahr 1997 haben wir uns auf die Entwicklung und Produktion von \"Jinling\" Markenschutzkleidung spezialisiert.",
+      "desc2": "Unsere Produkte umfassen Gummischutzanzüge, Regenkleidung aus Nylon, Oxford, PU, PVC-beschichteten Stoffen und speziellen Beschichtungen. Im Juli 2001 wurde die \"Jinling\" Schutzausrüstung als nationale vertrauenswürdige Qualitätsmarke zertifiziert. Im April 2002 verlieh die China General Chamber of Commerce das \"Qualitätsauszeichnungszertifikat\" für unsere Gummiregenkleidung.",
+      "cert1": "ISO 9001:2015",
+      "cert2": "ISO 14001:2015",
+      "cert3": "Sicherheitsproduktionslizenz",
+      "cert4": "Fünf-Sterne-Integrität",
+      "philosophy": "Unternehmensphilosophie",
+      "philosophyText": "Exzellenz anstreben, das Gewöhnliche übertreffen",
+      "mission": "Unternehmensmission",
+      "missionText": "Praktische Innovation, Kunden zuerst, engagiert für qualitativ hochwertigen Service",
+      "factoryAlt": "Luftaufnahme der Shanghai Jinling Fabrik",
+      "factoryCaption": "Fabrik der Shanghai Jinling Rubber Products Co., Ltd."
+    },
+    "certifications": {
+      "badge": "Qualifiziertes Unternehmen",
+      "title": "Unternehmensqualifikationen & Zertifizierungen",
+      "subtitle": "Wir verfügen über mehrere internationale Zertifizierungen und nationale Qualifikationen, die Produktqualität und Unternehmenszuverlässigkeit gewährleisten",
+      "isoTitle": "Internationale Managementsystem-Zertifizierungen",
+      "otherTitle": "Nationale Qualifikationen & Marken",
+      "iso9001": "Qualitätsmanagementsystem",
+      "iso14001": "Umweltmanagementsystem",
+      "iso45001": "Arbeits- und Gesundheitsschutzmanagementsystem",
+      "productionLicense": "Nationale Industrieprodukt-Produktionslizenz",
+      "productionLicenseDesc": "Spezielle Arbeitsschutzprodukte",
+      "trademark": "Eingetragene Marke",
+      "trademark1Desc": "Jinling Marke - Reg. Nr. 7759903",
+      "trademark2Desc": "Grafische Marke - Reg. Nr. 11441119",
+      "trustMessage": "Alle Zertifikate werden von autorisierten Zertifizierungsstellen ausgestellt und können über offizielle Kanäle verifiziert werden. Wir verpflichten uns, Produkte und Dienstleistungen zu liefern, die internationalen Standards entsprechen."
+    }
+  },
+  "certifications": {
+    "cta": {
+      "title": "An unseren Produkten interessiert?",
+      "subtitle": "Kontaktieren Sie uns für Produktanfragen, Angebote und technischen Support. Wir antworten innerhalb von 24 Stunden."
+    }
+  },
+  "categories": {
+    "protective-suits": "Schutzanzüge",
+    "rainwear": "Regenkleidung",
+    "workwear": "Arbeitskleidung"
+  },
+  "products": {
+    "title": "Produkte",
+    "subtitle": "Entdecken Sie unser umfassendes Sortiment an Schutzausrüstung und Gummiwaren",
+    "allProducts": "Alle Produkte",
+    "viewDetails": "Details ansehen",
+    "features": "Hauptmerkmale",
+    "applications": "Anwendungen",
+    "specifications": "Technische Spezifikationen",
+    "requestQuote": "Angebot anfordern",
+    "emailUs": "E-Mail senden",
+    "customProducts": "Benötigen Sie maßgeschneiderte Lösungen?",
+    "customDesc": "Wir bieten OEM/ODM-Dienstleistungen für kundenspezifische Produkte an. Kontaktieren Sie unser Team für Details.",
+    "requestCustom": "Maßgeschneidertes Angebot anfordern"
+  },
+  "about": {
+    "title": "Über uns",
+    "subtitle": "Ein führender Hersteller von Schutzanzügen und Gummiwaren, engagiert für Qualität, Innovation und Kundenzufriedenheit seit 2003.",
+    "companyProfile": "Unternehmensprofil",
+    "whoWeAre": "Wer wir sind",
+    "whoWeAreDesc": "Shanghai Jinling Rubber Products Co., Ltd. ist ein professioneller Hersteller und Exporteur von Schutzanzügen, Regenkleidung und Arbeitskleidung. Mit Sitz in Shanghai, Chinas Wirtschaftszentrum, bedienen wir seit über zwei Jahrzehnten weltweite Kunden mit Qualitätsprodukten und zuverlässigen Dienstleistungen.",
+    "stats": {
+      "facility": "m² Produktionsfläche",
+      "team": "Teammitglieder",
+      "countries": "Bediente Länder",
+      "productTypes": "Produktarten"
+    },
+    "journey": "Unsere Reise",
+    "journeySubtitle": "Vom lokalen Hersteller zum globalen Lieferanten",
+    "timeline": {
+      "2003": {
+        "title": "Unternehmensgründung",
+        "desc": "Shanghai Jinling Rubber Products Co., Ltd. wurde in Shanghai gegründet."
+      },
+      "2008": {
+        "title": "Schutzanzug-Sparte",
+        "desc": "Erweiterung der Produktpalette um professionelle Schutzanzüge."
+      },
+      "2012": {
+        "title": "ISO 9001 Zertifizierung",
+        "desc": "Erlangung der ISO 9001 Qualitätsmanagementsystem-Zertifizierung."
+      },
+      "2016": {
+        "title": "Globale Export-Initiative",
+        "desc": "Beginn umfassender Exportdienstleistungen für globale Märkte."
+      },
+      "2020": {
+        "title": "Produktpalette-Erweiterung",
+        "desc": "Erweiterung auf über 100 Produktarten in mehreren Kategorien."
+      },
+      "2024": {
+        "title": "Fortgesetztes Wachstum",
+        "desc": "Bedienung von Kunden in über 50 Ländern mit Qualitätsprodukten."
+      }
+    },
+    "values": "Unsere Kernwerte",
+    "valuesSubtitle": "Die Prinzipien, die unser Geschäft leiten",
+    "coreValues": {
+      "quality": {
+        "title": "Qualität zuerst",
+        "desc": "Strenge Qualitätskontrollstandards während unseres gesamten Fertigungsprozesses."
+      },
+      "customer": {
+        "title": "Kundenorientierung",
+        "desc": "Unsere Kunden stehen im Mittelpunkt alles was wir tun."
+      },
+      "innovation": {
+        "title": "Innovation",
+        "desc": "Kontinuierliche Investition in Forschung und Entwicklung."
+      },
+      "integrity": {
+        "title": "Integrität",
+        "desc": "Ehrliche und transparente Geschäftsführung."
+      },
+      "sustainability": {
+        "title": "Nachhaltigkeit",
+        "desc": "Engagiert für Umweltverantwortung durch grüne Fertigung."
+      },
+      "global": {
+        "title": "Globale Vision",
+        "desc": "Bestrebt, ein führender globaler Lieferant von Schutzausrüstung zu sein."
+      }
+    },
+    "certifications": "Zertifizierungen & Compliance",
+    "certificationsSubtitle": "Unser Engagement für Qualität, untermauert durch international anerkannte Zertifizierungen",
+    "cta": {
+      "title": "Werden Sie unser Partner",
+      "subtitle": "Schließen Sie sich unserem globalen Netzwerk zufriedener Kunden und Händler an.",
+      "contactUs": "Kontaktieren Sie uns",
+      "viewProducts": "Unsere Produkte ansehen"
+    }
+  },
+  "contact": {
+    "title": "Kontakt",
+    "subtitle": "Nehmen Sie Kontakt mit unserem Team auf für Produktanfragen, Angebote und technischen Support",
+    "getInTouch": "Kontakt aufnehmen",
+    "getInTouchDesc": "Wir freuen uns von Ihnen zu hören. Kontaktieren Sie uns über einen der folgenden Kanäle.",
+    "info": {
+      "address": {
+        "title": "Adresse",
+        "value": "Room 603, Building 1, Lane 1550 Pingliang Road, Yangpu District, Shanghai, China",
+        "desc": "Besuchen Sie unsere Zentrale"
+      },
+      "phone": {
+        "title": "Telefon",
+        "value": "+86-21-65392338",
+        "desc": "Mo-Fr, 9:00-18:00 (GMT+8)"
+      },
+      "email": {
+        "title": "E-Mail",
+        "value": "andyweiwei1024@gmail.com",
+        "desc": "Allgemeine Anfragen"
+      },
+      "hours": {
+        "title": "Geschäftszeiten",
+        "value": "Mo - Fr: 9:00 - 18:00",
+        "desc": "GMT+8 Shanghai Zeit"
+      }
+    },
+    "globalExport": "Globale Exportdienstleistungen",
+    "globalExportDesc": "Wir bieten umfassende Exportdienstleistungen inklusive Zollabfertigung, Dokumentation und Logistikunterstützung.",
+    "countriesServed": "Über 50 bediente Länder",
+    "form": {
+      "title": "Senden Sie uns eine Nachricht",
+      "subtitle": "Füllen Sie das Formular aus und wir melden uns innerhalb von 24 Stunden.",
+      "name": "Vollständiger Name",
+      "namePlaceholder": "Max Mustermann",
+      "company": "Firmenname",
+      "companyPlaceholder": "Muster GmbH",
+      "email": "E-Mail-Adresse",
+      "emailPlaceholder": "max@beispiel.de",
+      "phone": "Telefonnummer",
+      "phonePlaceholder": "+49 123 456789",
+      "country": "Land",
+      "countryPlaceholder": "Deutschland",
+      "productInterest": "Produktinteresse",
+      "selectCategory": "Kategorie auswählen",
+      "other": "Andere",
+      "subject": "Betreff",
+      "subjectPlaceholder": "Produktanfrage / Angebotsanfrage",
+      "message": "Nachricht",
+      "messagePlaceholder": "Bitte beschreiben Sie Ihre Anforderungen, einschließlich Produktspezifikationen, Menge und weitere Details...",
+      "submit": "Nachricht senden",
+      "submitting": "Wird gesendet...",
+      "success": "Nachricht gesendet!",
+      "successDesc": "Vielen Dank für Ihre Kontaktaufnahme. Wir antworten innerhalb von 24 Stunden.",
+      "sendAnother": "Weitere Nachricht senden",
+      "response": "Wir antworten normalerweise innerhalb von 24 Stunden an Werktagen. Für dringende Anfragen rufen Sie uns bitte direkt an."
+    },
+    "faq": {
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Schnelle Antworten auf häufige Fragen zu unseren Produkten und Dienstleistungen",
+      "moq": {
+        "q": "Was ist die Mindestbestellmenge?",
+        "a": "Die Mindestbestellmenge variiert je nach Produkt. Für Standardprodukte können wir kleine Testbestellungen akkommodieren. Kontaktieren Sie unser Verkaufsteam für spezifische Anforderungen."
+      },
+      "samples": {
+        "q": "Bieten Sie Muster an?",
+        "a": "Ja, wir stellen Muster zur Qualitätsbewertung zur Verfügung. Musterkosten und Versandgebühren können anfallen."
+      },
+      "payment": {
+        "q": "Was sind Ihre Zahlungsbedingungen?",
+        "a": "Wir akzeptieren T/T, L/C und PayPal. Standardbedingungen sind 30% Anzahlung, 70% vor Versand."
+      },
+      "custom": {
+        "q": "Bieten Sie maßgeschneiderte Lösungen an?",
+        "a": "Ja! Wir bieten OEM/ODM-Dienstleistungen für kundenspezifische Produkte an. Unser Ingenieurteam kann bei Design und Entwicklung unterstützen."
+      },
+      "cert": {
+        "q": "Welche Zertifizierungen haben Sie?",
+        "a": "Wir sind ISO 9001:2015 zertifiziert. Produkte verfügen über relevante Zertifizierungen einschließlich CE, RoHS-Konformität."
+      },
+      "lead": {
+        "q": "Wie lange ist die Lieferzeit für Bestellungen?",
+        "a": "Standardprodukte: 7-15 Tage. Maßgeschneiderte Produkte: 15-30 Tage je nach Komplexität."
+      }
+    },
+    "cta": {
+      "title": "Bereit, Ihr Projekt zu starten?",
+      "subtitle": "Ob Sie Standardprodukte oder maßgeschneiderte Lösungen benötigen, unser Team ist bereit zu helfen.",
+      "requestQuote": "Angebot anfordern",
+      "callUs": "Jetzt anrufen"
+    }
+  },
+  "footer": {
+    "description": "Führender Hersteller und Exporteur von Schutzanzügen, Regenkleidung und Arbeitskleidung. Bedient globale Märkte seit 2003.",
+    "quickLinks": "Schnelllinks",
+    "contactInfo": "Kontaktinformationen",
+    "copyright": "Shanghai Jinling Rubber Products Co., Ltd. Alle Rechte vorbehalten."
+  },
+  "productDetails": {
+    "backToList": "Zurück zu Produkten",
+    "features": "Hauptmerkmale",
+    "applications": "Anwendungen",
+    "specifications": "Produktspezifikationen",
+    "inquiry": "Anfrage",
+    "phoneConsult": "Telefonberatung",
+    "emailContact": "E-Mail-Kontakt",
+    "onlineInquiry": "Online-Anfrage",
+    "inquiryForm": "Anfrageformular ausfüllen →"
+  }
+}
