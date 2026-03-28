@@ -88,6 +88,12 @@ export function SiteHeader() {
           <Link href={navPath('/products')} className="text-sm font-medium text-muted-foreground hover:text-blue-600 transition-colors">
             {t('nav.products', 'Products')}
           </Link>
+          <Link href={navPath('/faq')} className="text-sm font-medium text-muted-foreground hover:text-blue-600 transition-colors">
+            {t('nav.faq', 'FAQ')}
+          </Link>
+          <Link href={navPath('/cases')} className="text-sm font-medium text-muted-foreground hover:text-blue-600 transition-colors">
+            {t('nav.cases', 'Cases')}
+          </Link>
           <Link href={navPath('/blog')} className="text-sm font-medium text-muted-foreground hover:text-blue-600 transition-colors">
             {t('nav.blog', 'Blog')}
           </Link>

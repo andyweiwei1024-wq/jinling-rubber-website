@@ -8,6 +8,8 @@ import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 import { CommentSection } from '@/components/comment-section';
+import { RelatedProducts } from '@/components/RelatedProducts';
+import { Language } from '@/lib/i18n/config';
 
 interface PageProps {
   params: Promise<{ lang: string; slug: string }>;
@@ -179,6 +181,13 @@ export default async function ArticlePage({ params }: PageProps) {
                 </Badge>
               ))}
             </div>
+
+            {/* Related Products */}
+            <RelatedProducts 
+              category={article.category === 'products' ? 'protective-suits' : undefined}
+              lang={lang as Language}
+              maxItems={3}
+            />
 
             {/* Share Buttons */}
             <Card className="mb-8">

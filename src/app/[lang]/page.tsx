@@ -420,12 +420,19 @@ export default async function Home({ params }: PageProps) {
                   <li><Link href={navPath('/')} className="hover:text-white transition-colors">{t('nav.home', 'Home')}</Link></li>
                   <li><Link href={navPath('/about')} className="hover:text-white transition-colors">{t('nav.about', 'About')}</Link></li>
                   <li><Link href={navPath('/products')} className="hover:text-white transition-colors">{t('nav.products', 'Products')}</Link></li>
+                  <li><Link href={navPath('/cases')} className="hover:text-white transition-colors">{t('nav.cases', 'Case Studies')}</Link></li>
                   <li><Link href={navPath('/blog')} className="hover:text-white transition-colors">{t('nav.blog', 'Blog')}</Link></li>
+                  <li><Link href={navPath('/faq')} className="hover:text-white transition-colors">{t('nav.faq', 'FAQ')}</Link></li>
                   <li><Link href={navPath('/contact')} className="hover:text-white transition-colors">{t('nav.contact', 'Contact')}</Link></li>
                 </ul>
               </div>
               <div>
-                <h3 className="font-semibold text-white mb-4">{t('footer.contactInfo', 'Contact Info')}</h3>
+                <h3 className="font-semibold text-white mb-4">{t('footer.resources', 'Resources')}</h3>
+                <ul className="space-y-2 text-sm">
+                  <li><Link href={navPath('/certifications')} className="hover:text-white transition-colors">{t('nav.certifications', 'Certifications')}</Link></li>
+                  <li><Link href={navPath('/sitemap-page')} className="hover:text-white transition-colors">{t('nav.sitemap', 'Sitemap')}</Link></li>
+                </ul>
+                <h3 className="font-semibold text-white mb-4 mt-6">{t('footer.contactInfo', 'Contact Info')}</h3>
                 <ul className="space-y-3 text-sm">
                   <li className="flex items-center gap-2">
                     <MapPin className="h-4 w-4 flex-shrink-0" />
