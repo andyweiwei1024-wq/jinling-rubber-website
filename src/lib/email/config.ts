@@ -3,8 +3,8 @@ export const emailConfig = {
   // 接收询盘的邮箱（不会显示在网页上）
   toEmail: process.env.INQUIRY_EMAIL || 'andyweiwei1024@gmail.com',
   
-  // 发件人邮箱（用于发送通知）
-  fromEmail: process.env.SMTP_FROM || 'onboarding@resend.dev',
+  // 发件人邮箱（Resend 免费版只能用 onboarding@resend.dev）
+  fromEmail: 'onboarding@resend.dev',
   
   // 公司名称
   companyName: '上海金铃橡胶制品有限公司',

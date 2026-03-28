@@ -123,6 +123,9 @@ ${websiteUrl}
   try {
     // 方式1: 使用 Resend API（推荐）
     if (RESEND_API_KEY) {
+      console.log('📧 准备发送邮件到:', toEmail);
+      console.log('📧 发件人:', emailConfig.fromEmail);
+      
       const response = await fetch('https://api.resend.com/emails', {
         method: 'POST',
         headers: {
@@ -139,12 +142,14 @@ ${websiteUrl}
         }),
       });
 
+      const result = await response.text();
+      console.log('📧 Resend API 响应:', response.status, result);
+
       if (response.ok) {
         console.log('✅ 邮件发送成功 (Resend)');
         return true;
       } else {
-        const error = await response.text();
-        console.error('❌ Resend 发送失败:', error);
+        console.error('❌ Resend 发送失败:', result);
       }
     }
 
