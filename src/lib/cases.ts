@@ -65,7 +65,7 @@ export const caseStudies: CaseStudy[] = [
     clientNameEn: 'Manager Zhang',
     clientPosition: '安全环保部',
     clientPositionEn: 'Safety & Environment Department',
-    image: '/case-petrochemical.png',
+    image: 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/image/generate_image_98ab2df1-3605-4f1b-be80-9da91bf35382.jpeg?sign=1806221535-3b1bef030e-0-a3ac04e13653432b812db8245e464e91b026cd1ad343ea7400877f53cd4919b1',
   },
   {
     id: '2',
@@ -102,7 +102,7 @@ export const caseStudies: CaseStudy[] = [
     clientNameEn: 'Hans Mueller',
     clientPosition: '采购总监',
     clientPositionEn: 'Procurement Director',
-    image: '/case-rainwear.png',
+    image: 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/image/generate_image_c3265d30-dcd2-4d5c-ade4-18ebce271c78.jpeg?sign=1806221535-a0179bf305-0-fe89ae9fbda5e14037bfec58587911d222b681054b68781d7cd28ae7af84fdbe',
   },
   {
     id: '3',
@@ -139,7 +139,7 @@ export const caseStudies: CaseStudy[] = [
     clientNameEn: 'Department Head Tanaka',
     clientPosition: '安全部',
     clientPositionEn: 'Safety Department',
-    image: '/case-japan.png',
+    image: 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/image/generate_image_b4814cc8-917a-4633-957a-ef5bce4417f4.jpeg?sign=1806221536-960d1a69fb-0-74885f18aae9b6d5f1e6c6f9842537942e37d7da0e4505d8912ae1f62d7409c3',
   },
   {
     id: '4',
@@ -176,7 +176,7 @@ export const caseStudies: CaseStudy[] = [
     clientNameEn: 'Ahmed Al-Rahman',
     clientPosition: 'HSE Manager',
     clientPositionEn: 'HSE Manager',
-    image: '/case-saudi.png',
+    image: 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/image/generate_image_bbbec418-8730-4b7d-a2cc-404dd858f818.jpeg?sign=1806221534-542d2f3229-0-127bba013e0cab272f689ed74496f31b6dd3649b5ce767032b797cdd761edcdc',
   },
   {
     id: '5',
@@ -213,7 +213,7 @@ export const caseStudies: CaseStudy[] = [
     clientNameEn: 'Carlos Silva',
     clientPosition: '采购经理',
     clientPositionEn: 'Procurement Manager',
-    image: '/case-mining.png',
+    image: 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/image/generate_image_dc9b9f26-0e69-4b9e-8442-7e73ffc3bd87.jpeg?sign=1806221537-938359fa06-0-100e35bb805b4a103d7af6d291b61876fe90fc3bc1c7a1cdb32a353d19771480',
   },
 ];
 
