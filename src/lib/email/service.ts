@@ -1,5 +1,14 @@
 import { InquiryEmailData, emailConfig } from './config';
 
+// 确保环境变量加载（开发环境）
+if (typeof process !== 'undefined' && !process.env.RESEND_API_KEY) {
+  try {
+    require('dotenv').config({ path: '.env.local' });
+  } catch (e) {
+    // dotenv may not be available in all environments
+  }
+}
+
 // 发送询盘通知邮件
 export async function sendInquiryNotification(data: InquiryEmailData): Promise<boolean> {
   const { toEmail, companyName, companyNameEn, websiteUrl } = emailConfig;

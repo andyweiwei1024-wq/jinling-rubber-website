@@ -1,4 +1,19 @@
 import { NextRequest, NextResponse } from 'next/server';
+
+// 在服务端加载环境变量
+if (typeof process !== 'undefined') {
+  try {
+    // 尝试加载 dotenv
+    const dotenv = require('dotenv');
+    const path = require('path');
+    const envPath = path.join(process.cwd(), '.env.local');
+    dotenv.config({ path: envPath });
+    console.log('📧 环境变量加载状态:', process.env.RESEND_API_KEY ? 'RESEND_API_KEY 已设置' : 'RESEND_API_KEY 未设置');
+  } catch (e) {
+    console.log('📧 dotenv 加载失败，使用默认环境变量');
+  }
+}
+
 import { sendInquiryNotification, sendAutoReply } from '@/lib/email/service';
 
 // 询盘提交API
