@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { sendInquiryNotification, sendAutoReply } from '@/lib/email/service';
 
 // 询盘提交API
 export async function POST(request: NextRequest) {
@@ -14,6 +15,15 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    // 验证邮箱格式
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      return NextResponse.json(
+        { error: 'Invalid email format' },
+        { status: 400 }
+      );
+    }
+
     // 获取当前时间（北京时间）
     const now = new Date();
     const beijingTime = new Date(now.toLocaleString('en-US', { timeZone: 'Asia/Shanghai' }));
@@ -25,60 +35,32 @@ export async function POST(request: NextRequest) {
       minute: '2-digit',
     });
 
-    // 产品类别映射
-    const productMap: Record<string, { zh: string; en: string }> = {
-      'protective-suits': { zh: '防护服系列', en: 'Protective Suits' },
-      'rainwear': { zh: '雨衣系列', en: 'Rainwear' },
-      'workwear': { zh: '工装系列', en: 'Workwear' },
-      'custom': { zh: '定制订单', en: 'Custom Order' },
+    // 构建询盘数据
+    const inquiryData = {
+      name,
+      email,
+      company,
+      phone,
+      product,
+      message,
+      lang: lang || 'en',
+      submittedAt: timeStr,
     };
 
-    const productInfo = product ? (productMap[product] || { zh: product, en: product }) : { zh: '未选择', en: 'Not selected' };
+    // 发送通知邮件给您（不会显示在网页上）
+    const notificationSent = await sendInquiryNotification(inquiryData);
+    
+    // 发送自动回复邮件给客户
+    const autoReplySent = await sendAutoReply(inquiryData);
 
-    // 构建邮件内容
-    const emailContent = `
-========================================
-新询盘通知 - 上海金铃橡胶制品有限公司
-========================================
-
-【基本信息】
-提交时间：${timeStr} (北京时间)
-语言版本：${lang || 'en'}
-
-【客户信息】
-姓名：${name}
-邮箱：${email}
-公司：${company || '未填写'}
-电话/WhatsApp：${phone || '未填写'}
-
-【产品需求】
-${lang === 'zh' ? productInfo.zh : productInfo.en}
-
-【详细需求】
-${message}
-
-========================================
-请尽快回复客户（建议24小时内）
-========================================
-    `;
-
-    // 在生产环境中，这里应该发送邮件
-    // 可以使用 Resend、SendGrid、Nodemailer 等服务
-    // 示例：
-    // await sendEmail({
-    //   to: 'sales@jinling-rubber.com',
-    //   subject: `新询盘 - ${name} <${email}>`,
-    //   text: emailContent,
-    // });
-
-    // 开发环境：打印到控制台
     console.log('========================================');
-    console.log('📧 新询盘通知');
+    console.log('📧 询盘提交成功');
     console.log('========================================');
-    console.log(emailContent);
-
-    // 存储到数据库（可选）
-    // 可以使用 Supabase、MongoDB 等存储询盘记录
+    console.log('客户:', name, '<', email, '>');
+    console.log('时间:', timeStr);
+    console.log('通知邮件:', notificationSent ? '已发送' : '未配置邮件服务');
+    console.log('自动回复:', autoReplySent ? '已发送' : '未配置邮件服务');
+    console.log('========================================');
 
     // 返回成功响应
     return NextResponse.json({
@@ -88,6 +70,8 @@ ${message}
         name,
         email,
         submittedAt: timeStr,
+        notificationSent,
+        autoReplySent,
       }
     });
 
@@ -100,12 +84,10 @@ ${message}
   }
 }
 
-// 获取询盘列表（管理员用）
+// 获取询盘列表（管理员用）- 需要添加验证
 export async function GET(request: NextRequest) {
-  // 这里可以从数据库获取询盘列表
-  // 需要添加管理员验证
-  
   return NextResponse.json({
-    message: 'Admin endpoint - requires authentication'
+    message: 'Admin endpoint - requires authentication',
+    hint: '询盘记录可通过邮件通知接收，或配置数据库存储后查询'
   });
 }
