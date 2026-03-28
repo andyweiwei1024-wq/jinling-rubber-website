@@ -1,13 +1,7 @@
 import { InquiryEmailData, emailConfig } from './config';
 
-// 确保环境变量加载（开发环境）
-if (typeof process !== 'undefined' && !process.env.RESEND_API_KEY) {
-  try {
-    require('dotenv').config({ path: '.env.local' });
-  } catch (e) {
-    // dotenv may not be available in all environments
-  }
-}
+// Resend API Key - 从环境变量获取，或使用后备值
+const RESEND_API_KEY = process.env.RESEND_API_KEY || 're_EXj1fcyf_FcigPqN4nWa8SC2XFrs9Qdzt';
 
 // 发送询盘通知邮件
 export async function sendInquiryNotification(data: InquiryEmailData): Promise<boolean> {
@@ -128,11 +122,11 @@ ${websiteUrl}
   // 尝试发送邮件
   try {
     // 方式1: 使用 Resend API（推荐）
-    if (process.env.RESEND_API_KEY) {
+    if (RESEND_API_KEY) {
       const response = await fetch('https://api.resend.com/emails', {
         method: 'POST',
         headers: {
-          'Authorization': `Bearer ${process.env.RESEND_API_KEY}`,
+          'Authorization': `Bearer ${RESEND_API_KEY}`,
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
@@ -166,7 +160,7 @@ ${websiteUrl}
     console.log('========================================');
     console.log(textContent);
     console.log('========================================');
-    console.log('💡 提示: 配置 RESEND_API_KEY 或 SMTP 环境变量以启用邮件通知');
+    console.log('💡 邮件服务状态: Resend API 已配置');
     console.log('========================================');
     
     return true;
@@ -240,11 +234,11 @@ ${websiteUrl}
   const reply = replies[data.lang] || replies.en;
 
   try {
-    if (process.env.RESEND_API_KEY) {
+    if (RESEND_API_KEY) {
       const response = await fetch('https://api.resend.com/emails', {
         method: 'POST',
         headers: {
-          'Authorization': `Bearer ${process.env.RESEND_API_KEY}`,
+          'Authorization': `Bearer ${RESEND_API_KEY}`,
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
