@@ -6,6 +6,7 @@ import { Language, defaultLanguage, languageList, languages, hreflangMap } from 
 import { getAllTranslations, getLanguageFromPath } from '@/lib/i18n/server';
 import { I18nProvider } from '@/lib/i18n/client';
 import { SiteHeader } from '@/components/site-header';
+import { InquiryWidget } from '@/components/InquiryWidget';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -138,6 +139,8 @@ export default async function RootLayout({ children, params }: LayoutProps) {
               {children}
             </main>
           </div>
+          {/* 询盘悬浮按钮 */}
+          <InquiryWidget />
         </I18nProvider>
       </body>
     </html>
