@@ -59,7 +59,7 @@ export default async function ContactPage({ params }: PageProps) {
     {
       icon: Mail,
       title: t('contact.info.email.title', 'Email'),
-      value: t('contact.info.email.value', 'andyweiwei1024@gmail.com'),
+      value: t('contact.info.email.value', 'weiwei@jinlingrubber.com.cn'),
       description: t('contact.info.email.desc', 'General inquiries'),
     },
     {
@@ -282,7 +282,7 @@ export default async function ContactPage({ params }: PageProps) {
             {t('contact.cta.subtitle', 'Whether you need standard products or custom solutions, our team is ready to help.')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="mailto:andyweiwei1024@gmail.com">
+            <a href="mailto:weiwei@jinlingrubber.com.cn">
               <Button size="lg" className="bg-white text-blue-700 hover:bg-blue-50 min-w-[180px]">
                 <Mail className="mr-2 h-5 w-5" />
                 {t('contact.cta.requestQuote', 'Request a Quote')}

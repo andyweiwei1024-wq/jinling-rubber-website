@@ -334,7 +334,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
                     {t('products.requestQuote', 'Request Quote')}
                   </Button>
                 </Link>
-                <a href="mailto:andyweiwei1024@gmail.com" className="flex-1">
+                <a href="mailto:weiwei@jinlingrubber.com.cn" className="flex-1">
                   <Button variant="outline" className="w-full border-blue-600 text-blue-600 hover:bg-blue-50" size="lg">
                     <Mail className="mr-2 h-4 w-4" />
                     {t('products.emailUs', 'Email Us')}

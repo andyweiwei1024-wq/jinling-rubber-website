@@ -20,7 +20,7 @@ export function OrganizationSchema() {
       '@type': 'ContactPoint',
       telephone: '+86-21-65392338',
       contactType: 'sales',
-      email: 'andyweiwei1024@gmail.com',
+      email: 'weiwei@jinlingrubber.com.cn',
       availableLanguage: ['中文', 'English'],
     },
     sameAs: [],
@@ -145,7 +145,7 @@ export function LocalBusinessSchema() {
     description: '专业生产防护服、雨衣、工装等橡胶制品的企业',
     url: 'https://www.shjinling.com',
     telephone: '+86-21-65392338',
-    email: 'andyweiwei1024@gmail.com',
+    email: 'weiwei@jinlingrubber.com.cn',
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'Room 603, Building 1, Lane 1550 Pingliang Road',
