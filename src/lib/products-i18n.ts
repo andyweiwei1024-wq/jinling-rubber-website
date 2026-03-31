@@ -1,6 +1,871 @@
 import { Language, defaultLanguage } from './i18n/config';
 import { products as productsData, productCategories as categoriesData, Product } from './products';
 
+// Feature translations for all languages
+const featureTranslations: Record<string, Record<string, string>> = {
+  // Design features
+  'Double-coated design': {
+    en: 'Double-coated design',
+    zh: '双胶涂层',
+    ar: 'تصميم مزدوج الطلاء',
+    de: 'Doppelt beschichtetes Design',
+    es: 'Diseño de doble recubrimiento'
+  },
+  '双胶涂层': {
+    en: 'Double-coated design',
+    zh: '双胶涂层',
+    ar: 'تصميم مزدوج الطلاء',
+    de: 'Doppelt beschichtetes Design',
+    es: 'Diseño de doble recubrimiento'
+  },
+  'Two-piece design': {
+    en: 'Two-piece design',
+    zh: '分体式设计',
+    ar: 'تصميم قطعتين',
+    de: 'Zweiteiliges Design',
+    es: 'Diseño de dos piezas'
+  },
+  '分体式设计': {
+    en: 'Two-piece design',
+    zh: '分体式设计',
+    ar: 'تصميم قطعتين',
+    de: 'Zweiteiliges Design',
+    es: 'Diseño de dos piezas'
+  },
+  'One-piece design': {
+    en: 'One-piece design',
+    zh: '连体设计',
+    ar: 'تصميم قطعة واحدة',
+    de: 'Einteiliges Design',
+    es: 'Diseño de una pieza'
+  },
+  '连体设计': {
+    en: 'One-piece design',
+    zh: '连体设计',
+    ar: 'تصميم قطعة واحدة',
+    de: 'Einteiliges Design',
+    es: 'Diseño de una pieza'
+  },
+  'Long-style design': {
+    en: 'Long-style design',
+    zh: '长款设计',
+    ar: 'تصميم طويل',
+    de: 'Langes Design',
+    es: 'Diseño largo'
+  },
+  '长款设计': {
+    en: 'Long-style design',
+    zh: '长款设计',
+    ar: 'تصميم طويل',
+    de: 'Langes Design',
+    es: 'Diseño largo'
+  },
+  'Fully enclosed design': {
+    en: 'Fully enclosed design',
+    zh: '全封闭设计',
+    ar: 'تصميم مغلق بالكامل',
+    de: 'Vollständig geschlossenes Design',
+    es: 'Diseño totalmente cerrado'
+  },
+  '全封闭设计': {
+    en: 'Fully enclosed design',
+    zh: '全封闭设计',
+    ar: 'تصميم مغلق بالكامل',
+    de: 'Vollständig geschlossenes Design',
+    es: 'Diseño totalmente cerrado'
+  },
+  'Hooded design': {
+    en: 'Hooded design',
+    zh: '连帽设计',
+    ar: 'تصميم بغطاء رأس',
+    de: 'Design mit Kapuze',
+    es: 'Diseño con capucha'
+  },
+  '连帽设计': {
+    en: 'Hooded design',
+    zh: '连帽设计',
+    ar: 'تصميم بغطاء رأس',
+    de: 'Design mit Kapuze',
+    es: 'Diseño con capucha'
+  },
+  'Overall design': {
+    en: 'Overall design',
+    zh: '背带设计',
+    ar: 'تصميم أحمال',
+    de: 'Latzhosen-Design',
+    es: 'Diseño de tirantes'
+  },
+  '背带设计': {
+    en: 'Overall design',
+    zh: '背带设计',
+    ar: 'تصميم أحمال',
+    de: 'Latzhosen-Design',
+    es: 'Diseño de tirantes'
+  },
+  
+  // Protection features
+  'Acid and alkali splash resistant': {
+    en: 'Acid and alkali splash resistant',
+    zh: '防酸碱喷溅',
+    ar: 'مقاومة لرشاش الأحماض والقلويات',
+    de: 'Säure- und alkalibeständig',
+    es: 'Resistente a salpicaduras de ácidos y álcalis'
+  },
+  '防酸碱喷溅': {
+    en: 'Acid and alkali splash resistant',
+    zh: '防酸碱喷溅',
+    ar: 'مقاومة لرشاش الأحماض والقلويات',
+    de: 'Säure- und alkalibeständig',
+    es: 'Resistente a salpicaduras de ácidos y álcalis'
+  },
+  'Dust and toxin protection': {
+    en: 'Dust and toxin protection',
+    zh: '防尘毒',
+    ar: 'حماية من الغبار والسموم',
+    de: 'Schutz gegen Staub und Gifte',
+    es: 'Protección contra polvo y toxinas'
+  },
+  '防尘毒': {
+    en: 'Dust and toxin protection',
+    zh: '防尘毒',
+    ar: 'حماية من الغبار والسموم',
+    de: 'Schutz gegen Staub und Gifte',
+    es: 'Protección contra polvo y toxinas'
+  },
+  'Water and oil resistant': {
+    en: 'Water and oil resistant',
+    zh: '防水防油',
+    ar: 'مقاوم للماء والزيت',
+    de: 'Wasser- und ölabweisend',
+    es: 'Resistente al agua y al aceite'
+  },
+  '防水防油': {
+    en: 'Water and oil resistant',
+    zh: '防水防油',
+    ar: 'مقاوم للماء والزيت',
+    de: 'Wasser- und ölabweisend',
+    es: 'Resistente al agua y al aceite'
+  },
+  'Waterproof and warm': {
+    en: 'Waterproof and warm',
+    zh: '防水保暖',
+    ar: 'مقاوم للماء ودافئ',
+    de: 'Wasserdicht und warm',
+    es: 'Impermeable y cálido'
+  },
+  '防水保暖': {
+    en: 'Waterproof and warm',
+    zh: '防水保暖',
+    ar: 'مقاوم للماء ودافئ',
+    de: 'Wasserdicht und warm',
+    es: 'Impermeable y cálido'
+  },
+  'Heat insulation': {
+    en: 'Heat insulation',
+    zh: '隔热功能',
+    ar: 'عزل حراري',
+    de: 'Wärmeisolierung',
+    es: 'Aislamiento térmico'
+  },
+  '隔热功能': {
+    en: 'Heat insulation',
+    zh: '隔热功能',
+    ar: 'عزل حراري',
+    de: 'Wärmeisolierung',
+    es: 'Aislamiento térmico'
+  },
+  
+  // Material features
+  'Nylon filament lining': {
+    en: 'Nylon filament lining',
+    zh: '尼龙长丝内料',
+    ar: 'بطانة من خيوط النايلون',
+    de: 'Nylon-Filamentfutter',
+    es: 'Forro de filamento de nailon'
+  },
+  '尼龙长丝内料': {
+    en: 'Nylon filament lining',
+    zh: '尼龙长丝内料',
+    ar: 'بطانة من خيوط النايلون',
+    de: 'Nylon-Filamentfutter',
+    es: 'Forro de filamento de nailon'
+  },
+  'Cotton lining': {
+    en: 'Cotton lining',
+    zh: '全棉内料',
+    ar: 'بطانة قطنية',
+    de: 'Baumwollfutter',
+    es: 'Forro de algodón'
+  },
+  '全棉内料': {
+    en: 'Cotton lining',
+    zh: '全棉内料',
+    ar: 'بطانة قطنية',
+    de: 'Baumwollfutter',
+    es: 'Forro de algodón'
+  },
+  'Neoprene coating': {
+    en: 'Neoprene coating',
+    zh: '氯丁胶涂层',
+    ar: 'طلاء النيوبرين',
+    de: 'Neopren-Beschichtung',
+    es: 'Recubrimiento de neopreno'
+  },
+  '氯丁胶涂层': {
+    en: 'Neoprene coating',
+    zh: '氯丁胶涂层',
+    ar: 'طلاء النيوبرين',
+    de: 'Neopren-Beschichtung',
+    es: 'Recubrimiento de neopreno'
+  },
+  'Butyl rubber coating': {
+    en: 'Butyl rubber coating',
+    zh: '丁基胶涂层',
+    ar: 'طلاء مطاط البيوتيل',
+    de: 'Butylkautschuk-Beschichtung',
+    es: 'Recubrimiento de caucho de butilo'
+  },
+  '丁基胶涂层': {
+    en: 'Butyl rubber coating',
+    zh: '丁基胶涂层',
+    ar: 'طلاء مطاط البيوتيل',
+    de: 'Butylkautschuk-Beschichtung',
+    es: 'Recubrimiento de caucho de butilo'
+  },
+  'Double-sided coating': {
+    en: 'Double-sided coating',
+    zh: '双面涂层',
+    ar: 'طلاء مزدوج',
+    de: 'Doppelseitige Beschichtung',
+    es: 'Recubrimiento de doble cara'
+  },
+  '双面涂层': {
+    en: 'Double-sided coating',
+    zh: '双面涂层',
+    ar: 'طلاء مزدوج',
+    de: 'Doppelseitige Beschichtung',
+    es: 'Recubrimiento de doble cara'
+  },
+  
+  // Additional features
+  'Integrated gloves and boots': {
+    en: 'Integrated gloves and boots',
+    zh: '集成手套靴',
+    ar: 'قفازات وأحذية مدمجة',
+    de: 'Integrierte Handschuhe und Stiefel',
+    es: 'Guantes y botas integrados'
+  },
+  '集成手套靴': {
+    en: 'Integrated gloves and boots',
+    zh: '集成手套靴',
+    ar: 'قفازات وأحذية مدمجة',
+    de: 'Integrierte Handschuhe und Stiefel',
+    es: 'Guantes y botas integrados'
+  },
+  'Air-fed system': {
+    en: 'Air-fed system',
+    zh: '空气接入式',
+    ar: 'نظام تغذية هوائية',
+    de: 'Luftversorgungssystem',
+    es: 'Sistema de alimentación de aire'
+  },
+  '空气接入式': {
+    en: 'Air-fed system',
+    zh: '空气接入式',
+    ar: 'نظام تغذية هوائية',
+    de: 'Luftversorgungssystem',
+    es: 'Sistema de alimentación de aire'
+  },
+  'High hydrostatic pressure': {
+    en: 'High hydrostatic pressure',
+    zh: '高静水压',
+    ar: 'ضغط هيدروستاتيكي عالي',
+    de: 'Hoher hydrostatischer Druck',
+    es: 'Alta presión hidrostática'
+  },
+  '高静水压': {
+    en: 'High hydrostatic pressure',
+    zh: '高静水压',
+    ar: 'ضغط هيدروستاتيكي عالي',
+    de: 'Hoher hydrostatischer Druck',
+    es: 'Alta presión hidrostática'
+  },
+  'Custom mustard gas protection available': {
+    en: 'Custom mustard gas protection available',
+    zh: '可定制防介子气',
+    ar: 'حماية من غاز الخردل متاحة حسب الطلب',
+    de: 'Senfgas-Schutz auf Anfrage verfügbar',
+    es: 'Protección contra gas mostaza disponible bajo pedido'
+  },
+  '可定制防介子气': {
+    en: 'Custom mustard gas protection available',
+    zh: '可定制防介子气',
+    ar: 'حماية من غاز الخردل متاحة حسب الطلب',
+    de: 'Senfgas-Schutz auf Anfrage verfügbar',
+    es: 'Protección contra gas mostaza disponible bajo pedido'
+  },
+  'Anti-static function': {
+    en: 'Anti-static function',
+    zh: '抗静电功能',
+    ar: 'وظيفة مضادة للكهرباء الساكنة',
+    de: 'Antistatische Funktion',
+    es: 'Función antiestática'
+  },
+  '抗静电功能': {
+    en: 'Anti-static function',
+    zh: '抗静电功能',
+    ar: 'وظيفة مضادة للكهرباء الساكنة',
+    de: 'Antistatische Funktion',
+    es: 'Función antiestática'
+  },
+  'Conductive wire blended': {
+    en: 'Conductive wire blended',
+    zh: '导电丝混织',
+    ar: 'سلك موصل مختلط',
+    de: 'Leitfähigkeitsdraht gemischt',
+    es: 'Hilo conductor mezclado'
+  },
+  '导电丝混织': {
+    en: 'Conductive wire blended',
+    zh: '导电丝混织',
+    ar: 'سلك موصل مختلط',
+    de: 'Leitfähigkeitsdraht gemischt',
+    es: 'Hilo conductor mezclado'
+  },
+  'Anti-static lining': {
+    en: 'Anti-static lining',
+    zh: '静电布内里',
+    ar: 'بطانة مضادة للكهرباء الساكنة',
+    de: 'Antistatisches Futter',
+    es: 'Forro antiestático'
+  },
+  '静电布内里': {
+    en: 'Anti-static lining',
+    zh: '静电布内里',
+    ar: 'بطانة مضادة للكهرباء الساكنة',
+    de: 'Antistatisches Futter',
+    es: 'Forro antiestático'
+  },
+  'High-brightness reflective strips': {
+    en: 'High-brightness reflective strips',
+    zh: '高亮反光带',
+    ar: 'شرائط عاكسة عالية السطوع',
+    de: 'Hochreflektierende Streifen',
+    es: 'Tiras reflectantes de alto brillo'
+  },
+  '高亮反光带': {
+    en: 'High-brightness reflective strips',
+    zh: '高亮反光带',
+    ar: 'شرائط عاكسة عالية السطوع',
+    de: 'Hochreflektierende Streifen',
+    es: 'Tiras reflectantes de alto brillo'
+  },
+  '3M reflective strips': {
+    en: '3M reflective strips',
+    zh: '3M反光带',
+    ar: 'شرائط عاكسة 3M',
+    de: '3M-Reflektorstreifen',
+    es: 'Tiras reflectantes 3M'
+  },
+  '3M反光带': {
+    en: '3M reflective strips',
+    zh: '3M反光带',
+    ar: 'شرائط عاكسة 3M',
+    de: '3M-Reflektorstreifen',
+    es: 'Tiras reflectantes 3M'
+  },
+  'High-visibility fluorescent green': {
+    en: 'High-visibility fluorescent green',
+    zh: '莹光绿高可视',
+    ar: 'أخضر فلورسنت عالي الرؤية',
+    de: 'Hochsichtbares fluoreszierendes Grün',
+    es: 'Verde fluorescente de alta visibilidad'
+  },
+  '莹光绿高可视': {
+    en: 'High-visibility fluorescent green',
+    zh: '莹光绿高可视',
+    ar: 'أخضر فلورسنت عالي الرؤية',
+    de: 'Hochsichtbares fluoreszierendes Grün',
+    es: 'Verde fluorescente de alta visibilidad'
+  },
+  'Water-repellent treatment': {
+    en: 'Water-repellent treatment',
+    zh: '泼水处理',
+    ar: 'معالجة طاردة للماء',
+    de: 'Wasserabweisende Behandlung',
+    es: 'Tratamiento repelente al agua'
+  },
+  '泼水处理': {
+    en: 'Water-repellent treatment',
+    zh: '泼水处理',
+    ar: 'معالجة طاردة للماء',
+    de: 'Wasserabweisende Behandlung',
+    es: 'Tratamiento repelente al agua'
+  },
+  'Environmental PVC coating': {
+    en: 'Environmental PVC coating',
+    zh: '环保PVC涂层',
+    ar: 'طلاء PVC صديق للبيئة',
+    de: 'Umweltfreundliche PVC-Beschichtung',
+    es: 'Recubrimiento de PVC ecológico'
+  },
+  '环保PVC涂层': {
+    en: 'Environmental PVC coating',
+    zh: '环保PVC涂层',
+    ar: 'طلاء PVC صديق للبيئة',
+    de: 'Umweltfreundliche PVC-Beschichtung',
+    es: 'Recubrimiento de PVC ecológico'
+  },
+  'Environmental PU coating': {
+    en: 'Environmental PU coating',
+    zh: '环保PU涂层',
+    ar: 'طلاء PU صديق للبيئة',
+    de: 'Umweltfreundliche PU-Beschichtung',
+    es: 'Recubrimiento de PU ecológico'
+  },
+  '环保PU涂层': {
+    en: 'Environmental PU coating',
+    zh: '环保PU涂层',
+    ar: 'طلاء PU صديق للبيئة',
+    de: 'Umweltfreundliche PU-Beschichtung',
+    es: 'Recubrimiento de PU ecológico'
+  },
+  'Chemical and flame resistant': {
+    en: 'Chemical and flame resistant',
+    zh: '防化阻燃',
+    ar: 'مقاوم للمواد الكيميائية واللهب',
+    de: 'Chemikalien- und flammbeständig',
+    es: 'Resistente a químicos y llamas'
+  },
+  '防化阻燃': {
+    en: 'Chemical and flame resistant',
+    zh: '防化阻燃',
+    ar: 'مقاوم للمواد الكيميائية واللهب',
+    de: 'Chemikalien- und flammbeständig',
+    es: 'Resistente a químicos y llamas'
+  },
+  'Lightweight and comfortable': {
+    en: 'Lightweight and comfortable',
+    zh: '轻便舒适',
+    ar: 'خفيف ومريح',
+    de: 'Leicht und bequem',
+    es: 'Ligero y cómodo'
+  },
+  '轻便舒适': {
+    en: 'Lightweight and comfortable',
+    zh: '轻便舒适',
+    ar: 'خفيف ومريح',
+    de: 'Leicht und bequem',
+    es: 'Ligero y cómodo'
+  },
+  'Easy to wear and remove': {
+    en: 'Easy to wear and remove',
+    zh: '易于穿脱',
+    ar: 'سهل اللبس والخلع',
+    de: 'Leicht an- und auszuziehen',
+    es: 'Fácil de poner y quitar'
+  },
+  '易于穿脱': {
+    en: 'Easy to wear and remove',
+    zh: '易于穿脱',
+    ar: 'سهل اللبس والخلع',
+    de: 'Leicht an- und auszuziehen',
+    es: 'Fácil de poner y quitar'
+  },
+  'Comfortable and durable': {
+    en: 'Comfortable and durable',
+    zh: '舒适耐用',
+    ar: 'مريح ومتين',
+    de: 'Bequem und langlebig',
+    es: 'Cómodo y duradero'
+  },
+  '舒适耐用': {
+    en: 'Comfortable and durable',
+    zh: '舒适耐用',
+    ar: 'مريح ومتين',
+    de: 'Bequem und langlebig',
+    es: 'Cómodo y duradero'
+  },
+  'Long-length protection': {
+    en: 'Long-length protection',
+    zh: '长款保护',
+    ar: 'حماية بطول طويل',
+    de: 'Langschutz',
+    es: 'Protección de longitud larga'
+  },
+  '长款保护': {
+    en: 'Long-length protection',
+    zh: '长款保护',
+    ar: 'حماية بطول طويل',
+    de: 'Langschutz',
+    es: 'Protección de longitud larga'
+  },
+  'Neck-hanging apron': {
+    en: 'Neck-hanging apron',
+    zh: '挂脖式围裙',
+    ar: 'مئزر معلق على الرقبة',
+    de: 'Halsgetragene Schürze',
+    es: 'Delantal de cuello'
+  },
+  '挂脖式围裙': {
+    en: 'Neck-hanging apron',
+    zh: '挂脖式围裙',
+    ar: 'مئزر معلق على الرقبة',
+    de: 'Halsgetragene Schürze',
+    es: 'Delantal de cuello'
+  },
+  'Separate sleeve design': {
+    en: 'Separate sleeve design',
+    zh: '独立袖套设计',
+    ar: 'تصميم أكمام منفصلة',
+    de: 'Separates Ärmeldesign',
+    es: 'Diseño de mangas separadas'
+  },
+  '独立袖套设计': {
+    en: 'Separate sleeve design',
+    zh: '独立袖套设计',
+    ar: 'تصميم أكمام منفصلة',
+    de: 'Separates Ärmeldesign',
+    es: 'Diseño de mangas separadas'
+  },
+  'Double-sided natural rubber': {
+    en: 'Double-sided natural rubber',
+    zh: '双面天然橡胶',
+    ar: 'مطاط طبيعي مزدوج الوجه',
+    de: 'Doppelseitiger Naturkautschuk',
+    es: 'Caucho natural de doble cara'
+  },
+  '双面天然橡胶': {
+    en: 'Double-sided natural rubber',
+    zh: '双面天然橡胶',
+    ar: 'مطاط طبيعي مزدوج الوجه',
+    de: 'Doppelseitiger Naturkautschuk',
+    es: 'Caucho natural de doble cara'
+  },
+  'Natural rubber coating': {
+    en: 'Natural rubber coating',
+    zh: '天然橡胶涂层',
+    ar: 'طلاء مطاطي طبيعي',
+    de: 'Naturkautschuk-Beschichtung',
+    es: 'Recubrimiento de caucho natural'
+  },
+  '天然橡胶': {
+    en: 'Natural rubber',
+    zh: '天然橡胶',
+    ar: 'مطاط طبيعي',
+    de: 'Naturkautschuk',
+    es: 'Caucho natural'
+  },
+  'Double-sided neoprene mixed rubber': {
+    en: 'Double-sided neoprene mixed rubber',
+    zh: '双面氯丁混合胶',
+    ar: 'مطاط نيوبرين مختلط مزدوج الوجه',
+    de: 'Doppelseitiger Neopren-Mischkautschuk',
+    es: 'Caucho mezclado de neopreno de doble cara'
+  },
+  '双面氯丁混合胶': {
+    en: 'Double-sided neoprene mixed rubber',
+    zh: '双面氯丁混合胶',
+    ar: 'مطاط نيوبرين مختلط مزدوج الوجه',
+    de: 'Doppelseitiger Neopren-Mischkautschuk',
+    es: 'Caucho mezclado de neopreno de doble cara'
+  },
+  'Designed for mines': {
+    en: 'Designed for mines',
+    zh: '矿井专用',
+    ar: 'مصمم للمناجم',
+    de: 'Für Bergwerke entwickelt',
+    es: 'Diseñado para minas'
+  },
+  '矿井专用': {
+    en: 'Designed for mines',
+    zh: '矿井专用',
+    ar: 'مصمم للمناجم',
+    de: 'Für Bergwerke entwickelt',
+    es: 'Diseñado para minas'
+  },
+  'Waterproof and durable': {
+    en: 'Waterproof and durable',
+    zh: '防水耐磨',
+    ar: 'مقاوم للماء ومتين',
+    de: 'Wasserdicht und langlebig',
+    es: 'Impermeable y duradero'
+  },
+  '防水耐磨': {
+    en: 'Waterproof and durable',
+    zh: '防水耐磨',
+    ar: 'مقاوم للماء ومتين',
+    de: 'Wasserdicht und langlebig',
+    es: 'Impermeable y duradero'
+  },
+  'Nylon taffeta fabric': {
+    en: 'Nylon taffeta fabric',
+    zh: '尼龙塔丝绒面料',
+    ar: 'قماش تافتا النايلون',
+    de: 'Nylon-Taffeta-Stoff',
+    es: 'Tela de tafetán de nailon'
+  },
+  '尼龙塔丝绒面料': {
+    en: 'Nylon taffeta fabric',
+    zh: '尼龙塔丝绒面料',
+    ar: 'قماش تافتا النايلون',
+    de: 'Nylon-Taffeta-Stoff',
+    es: 'Tela de tafetán de nailon'
+  },
+  'Knitted mesh lining': {
+    en: 'Knitted mesh lining',
+    zh: '针织网布内里',
+    ar: 'بطانة شبكية محيكة',
+    de: 'Gestricktes Netz-Futter',
+    es: 'Forro de malla de punto'
+  },
+  '针织网布内里': {
+    en: 'Knitted mesh lining',
+    zh: '针织网布内里',
+    ar: 'بطانة شبكية محيكة',
+    de: 'Gestricktes Netz-Futter',
+    es: 'Forro de malla de punto'
+  },
+  'Splicing color design': {
+    en: 'Splicing color design',
+    zh: '相拼色设计',
+    ar: 'تصميم ألوان متقاطعة',
+    de: 'Farblich abgestimmtes Design',
+    es: 'Diseño de colores combinados'
+  },
+  '相拼色设计': {
+    en: 'Splicing color design',
+    zh: '相拼色设计',
+    ar: 'تصميم ألوان متقاطعة',
+    de: 'Farblich abgestimmtes Design',
+    es: 'Diseño de colores combinados'
+  },
+  'Stylish appearance': {
+    en: 'Stylish appearance',
+    zh: '时尚外观',
+    ar: 'مظهر عصري',
+    de: 'Stilvolles Aussehen',
+    es: 'Apariencia elegante'
+  },
+  '时尚外观': {
+    en: 'Stylish appearance',
+    zh: '时尚外观',
+    ar: 'مظهر عصري',
+    de: 'Stilvolles Aussehen',
+    es: 'Apariencia elegante'
+  },
+  'Simple and elegant': {
+    en: 'Simple and elegant',
+    zh: '简约大方',
+    ar: 'بسيط وأنيق',
+    de: 'Einfach und elegant',
+    es: 'Simple y elegante'
+  },
+  '简约大方': {
+    en: 'Simple and elegant',
+    zh: '简约大方',
+    ar: 'بسيط وأنيق',
+    de: 'Einfach und elegant',
+    es: 'Simple y elegante'
+  },
+  'Excellent waterproof': {
+    en: 'Excellent waterproof',
+    zh: '防水优异',
+    ar: 'مقاومة ممتازة للماء',
+    de: 'Ausgezeichnet wasserdicht',
+    es: 'Excelente impermeabilidad'
+  },
+  '防水优异': {
+    en: 'Excellent waterproof',
+    zh: '防水优异',
+    ar: 'مقاومة ممتازة للماء',
+    de: 'Ausgezeichnet wasserdicht',
+    es: 'Excelente impermeabilidad'
+  },
+  'Cuffed pants': {
+    en: 'Cuffed pants',
+    zh: '束脚长裤',
+    ar: 'بنطلون بأكواع مضغوطة',
+    de: 'Bundhose mit Bündchen',
+    es: 'Pantalones con puños'
+  },
+  '束脚长裤': {
+    en: 'Cuffed pants',
+    zh: '束脚长裤',
+    ar: 'بنطلون بأكواع مضغوطة',
+    de: 'Bundhose mit Bündchen',
+    es: 'Pantalones con puños'
+  },
+  'Reflective strip design': {
+    en: 'Reflective strip design',
+    zh: '反光条设计',
+    ar: 'تصميم شريط عاكس',
+    de: 'Reflektorstreifen-Design',
+    es: 'Diseño de tira reflectante'
+  },
+  '反光条设计': {
+    en: 'Reflective strip design',
+    zh: '反光条设计',
+    ar: 'تصميم شريط عاكس',
+    de: 'Reflektorstreifen-Design',
+    es: 'Diseño de tira reflectante'
+  },
+  'Two-piece set': {
+    en: 'Two-piece set',
+    zh: '分体式套装',
+    ar: 'طقم من قطعتين',
+    de: 'Zweiteiliges Set',
+    es: 'Conjunto de dos piezas'
+  },
+  '分体式套装': {
+    en: 'Two-piece set',
+    zh: '分体式套装',
+    ar: 'طقم من قطعتين',
+    de: 'Zweiteiliges Set',
+    es: 'Conjunto de dos piezas'
+  },
+  'Comfortable and breathable': {
+    en: 'Comfortable and breathable',
+    zh: '舒适透气',
+    ar: 'مريح ويسمح بالتنفس',
+    de: 'Bequem und atmungsaktiv',
+    es: 'Cómodo y transpirable'
+  },
+  '舒适透气': {
+    en: 'Comfortable and breathable',
+    zh: '舒适透气',
+    ar: 'مريح ويسمح بالتنفس',
+    de: 'Bequem und atmungsaktiv',
+    es: 'Cómodo y transpirable'
+  },
+  'Waterproof material': {
+    en: 'Waterproof material',
+    zh: '防水材质',
+    ar: 'مادة مقاومة للماء',
+    de: 'Wasserdichtes Material',
+    es: 'Material impermeable'
+  },
+  '防水材质': {
+    en: 'Waterproof material',
+    zh: '防水材质',
+    ar: 'مادة مقاومة للماء',
+    de: 'Wasserdichtes Material',
+    es: 'Material impermeable'
+  },
+  'Quilted cotton lining': {
+    en: 'Quilted cotton lining',
+    zh: '行缝棉内里',
+    ar: 'بطانة قطنية مبطنة',
+    de: 'Gesteppte Baumwollfütterung',
+    es: 'Forro de algodón acolchado'
+  },
+  '行缝棉内里': {
+    en: 'Quilted cotton lining',
+    zh: '行缝棉内里',
+    ar: 'بطانة قطنية مبطنة',
+    de: 'Gesteppte Baumwollfütterung',
+    es: 'Forro de algodón acolchado'
+  },
+  'Spring yarn fabric': {
+    en: 'Spring yarn fabric',
+    zh: '春亚纺面料',
+    ar: 'قماش خيط الربيع',
+    de: 'Frühjahrsgarn-Stoff',
+    es: 'Tela de hilo de primavera'
+  },
+  '春亚纺面料': {
+    en: 'Spring yarn fabric',
+    zh: '春亚纺面料',
+    ar: 'قماش خيط الربيع',
+    de: 'Frühjahrsgarn-Stoff',
+    es: 'Tela de hilo de primavera'
+  },
+  'Polyester taffeta fabric': {
+    en: 'Polyester taffeta fabric',
+    zh: '涤丝纺面料',
+    ar: 'قماش تافتا البوليستر',
+    de: 'Polyester-Taffeta-Stoff',
+    es: 'Tela de tafetán de poliéster'
+  },
+  '涤丝纺面料': {
+    en: 'Polyester taffeta fabric',
+    zh: '涤丝纺面料',
+    ar: 'قماش تافتا البوليستر',
+    de: 'Polyester-Taffeta-Stoff',
+    es: 'Tela de tafetán de poliéster'
+  },
+  'Reflective tape': {
+    en: 'Reflective tape',
+    zh: '反光织带',
+    ar: 'شريط عاكس',
+    de: 'Reflektorband',
+    es: 'Cinta reflectante'
+  },
+  '反光织带': {
+    en: 'Reflective tape',
+    zh: '反光织带',
+    ar: 'شريط عاكس',
+    de: 'Reflektorband',
+    es: 'Cinta reflectante'
+  },
+  'Single-coated design': {
+    en: 'Single-coated design',
+    zh: '单胶涂层',
+    ar: 'تصميم طلاء أحادي',
+    de: 'Einfach beschichtetes Design',
+    es: 'Diseño de recubrimiento simple'
+  },
+  '单胶涂层': {
+    en: 'Single-coated design',
+    zh: '单胶涂层',
+    ar: 'تصميم طلاء أحادي',
+    de: 'Einfach beschichtetes Design',
+    es: 'Diseño de recubrimiento simple'
+  },
+  'Cotton fabric': {
+    en: 'Cotton fabric',
+    zh: '全棉面料',
+    ar: 'قماش قطني',
+    de: 'Baumwollstoff',
+    es: 'Tela de algodón'
+  },
+  '全棉面料': {
+    en: 'Cotton fabric',
+    zh: '全棉面料',
+    ar: 'قماش قطني',
+    de: 'Baumwollstoff',
+    es: 'Tela de algodón'
+  },
+  'Two-piece structure': {
+    en: 'Two-piece structure',
+    zh: '分体式结构',
+    ar: 'هيكل من قطعتين',
+    de: 'Zweiteilige Struktur',
+    es: 'Estructura de dos piezas'
+  },
+  '分体式结构': {
+    en: 'Two-piece structure',
+    zh: '分体式结构',
+    ar: 'هيكل من قطعتين',
+    de: 'Zweiteilige Struktur',
+    es: 'Estructura de dos piezas'
+  },
+  'Anti-static option available': {
+    en: 'Anti-static option available',
+    zh: '可选抗静电功能',
+    ar: 'خيار مضاد للكهرباء الساكنة متاح',
+    de: 'Antistatik-Option verfügbar',
+    es: 'Opción antiestática disponible'
+  },
+  '可选抗静电功能': {
+    en: 'Anti-static option available',
+    zh: '可选抗静电功能',
+    ar: 'خيار مضاد للكهرباء الساكنة متاح',
+    de: 'Antistatik-Option verfügbar',
+    es: 'Opción antiestática disponible'
+  },
+};
+
 // Get localized product name
 export function getProductName(product: Product, lang: Language): string {
   // 中文返回中文名称，其他语言返回英文名称
@@ -15,21 +880,48 @@ export function getProductDescription(product: Product, lang: Language): string 
   if (lang === 'zh') {
     return product.description;
   }
+  if (lang === 'ar' && product.descriptionAr) {
+    return product.descriptionAr;
+  }
+  if (lang === 'de' && product.descriptionDe) {
+    return product.descriptionDe;
+  }
+  if (lang === 'es' && product.descriptionEs) {
+    return product.descriptionEs;
+  }
   return product.descriptionEn || product.description;
 }
 
 // Get localized product features
 export function getProductFeatures(product: Product, lang: Language): string[] {
+  // Get the appropriate feature list based on language
+  let features: string[];
   if (lang === 'zh') {
-    return product.features;
+    features = product.features;
+  } else {
+    features = product.featuresEn.length > 0 ? product.featuresEn : product.features;
   }
-  return product.featuresEn.length > 0 ? product.featuresEn : product.features;
+  
+  // Translate each feature if translation exists
+  return features.map(feature => {
+    const translation = featureTranslations[feature]?.[lang];
+    return translation || feature;
+  });
 }
 
 // Get localized product applications
 export function getProductApplications(product: Product, lang: Language): string[] {
   if (lang === 'zh') {
     return product.applications;
+  }
+  if (lang === 'ar' && product.applicationsAr) {
+    return product.applicationsAr;
+  }
+  if (lang === 'de' && product.applicationsDe) {
+    return product.applicationsDe;
+  }
+  if (lang === 'es' && product.applicationsEs) {
+    return product.applicationsEs;
   }
   return product.applicationsEn.length > 0 ? product.applicationsEn : product.applications;
 }
