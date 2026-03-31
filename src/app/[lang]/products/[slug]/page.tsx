@@ -151,7 +151,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
   const productFeatures = getProductFeatures(product, lang);
   const productApplications = getProductApplications(product, lang);
   const categoryName = getCategoryName(product.category, lang);
-  const specs = getLocalizedSpecs(product.specifications, lang);
+  const specs = getLocalizedSpecs(product, lang);
 
   // Breadcrumb items
   const breadcrumbItems = [
