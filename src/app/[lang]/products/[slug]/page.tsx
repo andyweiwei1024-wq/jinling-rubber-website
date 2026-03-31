@@ -155,8 +155,8 @@ export default async function ProductDetailPage({ params }: PageProps) {
 
   // Breadcrumb items
   const breadcrumbItems = [
-    { name: lang === 'zh' ? '首页' : 'Home', url: navPath('/') },
-    { name: lang === 'zh' ? '产品中心' : 'Products', url: navPath('/products') },
+    { name: t('nav.home', 'Home'), url: navPath('/') },
+    { name: t('nav.products', 'Products'), url: navPath('/products') },
     { name: categoryName, url: navPath(`/products?category=${product.category}`) },
     { name: productName, url: navPath(`/products/${product.slug}`) },
   ];
@@ -164,28 +164,20 @@ export default async function ProductDetailPage({ params }: PageProps) {
   // Product-specific FAQs
   const productFAQs = [
     {
-      question: lang === 'zh' ? `这款${productName}的材质是什么？` : `What material is this ${productName} made of?`,
-      answer: lang === 'zh' 
-        ? `${productName}采用优质${product.material}材质制造，具有优异的耐用性和防护性能。具体材质参数请查看产品规格表。`
-        : `The ${productName} is made of premium ${product.material}, offering excellent durability and protection. Please check the specifications for detailed material parameters.`,
+      question: t('productDetails.faqs.materialQuestion', `What material is this ${productName} made of?`),
+      answer: t('productDetails.faqs.materialAnswer', `The ${productName} is made of premium ${product.material}, offering excellent durability and protection. Please check the specifications for detailed material parameters.`),
     },
     {
-      question: lang === 'zh' ? '产品可以定制吗？' : 'Can this product be customized?',
-      answer: lang === 'zh'
-        ? '是的，我们提供定制服务，包括尺寸、颜色、Logo印刷等。定制产品一般50件起订，具体请联系我们详谈。'
-        : 'Yes, we offer customization services including size, color, and logo printing. Customized products generally require a minimum order of 50 pieces. Please contact us for details.',
+      question: t('productDetails.faqs.customQuestion', 'Can this product be customized?'),
+      answer: t('productDetails.faqs.customAnswer', 'Yes, we offer customization services including size, color, and logo printing. Customized products generally require a minimum order of 50 pieces. Please contact us for details.'),
     },
     {
-      question: lang === 'zh' ? '最小起订量是多少？' : 'What is the minimum order quantity?',
-      answer: lang === 'zh'
-        ? '标准产品10件起订，定制产品50件起订。我们支持小批量试单，欢迎新客户咨询洽谈。'
-        : 'Standard products have a minimum order of 10 pieces, and customized products require 50 pieces. We support small trial orders and welcome new customers.',
+      question: t('productDetails.faqs.moqQuestion', 'What is the minimum order quantity?'),
+      answer: t('productDetails.faqs.moqAnswer', 'Standard products have a minimum order of 10 pieces, and customized products require 50 pieces. We support small trial orders and welcome new customers.'),
     },
     {
-      question: lang === 'zh' ? '交货期需要多长时间？' : 'What is the lead time?',
-      answer: lang === 'zh'
-        ? '现货产品付款后3-5个工作日发货；标准产品生产周期7-20天；定制产品20-30天。具体交期请与我们的销售团队确认。'
-        : 'Stock products ship within 3-5 working days after payment. Standard production takes 7-20 days, and customized products take 20-30 days. Please confirm with our sales team.',
+      question: t('productDetails.faqs.leadTimeQuestion', 'What is the lead time?'),
+      answer: t('productDetails.faqs.leadTimeAnswer', 'Stock products ship within 3-5 working days after payment. Standard production takes 7-20 days, and customized products take 20-30 days. Please confirm with our sales team.'),
     },
   ];
 
@@ -193,23 +185,23 @@ export default async function ProductDetailPage({ params }: PageProps) {
   const applicationScenarios = [
     {
       icon: Factory,
-      title: lang === 'zh' ? '工业生产' : 'Industrial Production',
-      description: lang === 'zh' ? '适用于化工、冶金、电子等工业生产环境，提供专业防护。' : 'Suitable for chemical, metallurgical, and electronics production environments.',
+      title: t('productDetails.applicationScenarios.industrial.title', 'Industrial Production'),
+      description: t('productDetails.applicationScenarios.industrial.description', 'Suitable for chemical, metallurgical, and electronics production environments.'),
     },
     {
       icon: Shield,
-      title: lang === 'zh' ? '安全作业' : 'Safety Operations',
-      description: lang === 'zh' ? '符合安全标准，保护作业人员免受化学品、高温等危害。' : 'Meets safety standards to protect workers from chemicals, heat, and other hazards.',
+      title: t('productDetails.applicationScenarios.safety.title', 'Safety Operations'),
+      description: t('productDetails.applicationScenarios.safety.description', 'Meets safety standards to protect workers from chemicals, heat, and other hazards.'),
     },
     {
       icon: Users,
-      title: lang === 'zh' ? '团队防护' : 'Team Protection',
-      description: lang === 'zh' ? '为企业员工提供统一的防护装备，提升安全意识。' : 'Provides uniform protective equipment for enterprise employees.',
+      title: t('productDetails.applicationScenarios.team.title', 'Team Protection'),
+      description: t('productDetails.applicationScenarios.team.description', 'Provides uniform protective equipment for enterprise employees.'),
     },
     {
       icon: Globe2,
-      title: lang === 'zh' ? '全球认证' : 'Global Certification',
-      description: lang === 'zh' ? '产品通过CE、ISO等国际认证，满足出口要求。' : 'Products certified by CE, ISO, and other international standards.',
+      title: t('productDetails.applicationScenarios.global.title', 'Global Certification'),
+      description: t('productDetails.applicationScenarios.global.description', 'Products certified by CE, ISO, and other international standards.'),
     },
   ];
 

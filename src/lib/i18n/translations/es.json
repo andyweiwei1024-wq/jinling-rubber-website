@@ -304,10 +304,64 @@
     "features": "Características Principales",
     "applications": "Aplicaciones",
     "specifications": "Especificaciones del Producto",
+    "detailedSpecs": "Especificaciones Detalladas",
     "inquiry": "Consulta",
     "phoneConsult": "Consulta Telefónica",
     "emailContact": "Contacto por Correo",
     "onlineInquiry": "Consulta en Línea",
-    "inquiryForm": "Completar Formulario de Consulta →"
+    "inquiryForm": "Completar Formulario de Consulta →",
+    "isoCertified": "Certificado ISO 9001",
+    "qualityAssured": "Calidad Garantizada",
+    "fastDelivery": "Entrega Rápida",
+    "globalExport": "Exportación Global",
+    "securePayment": "Pago Seguro",
+    "worldwideShipping": "Envío Mundial",
+    "certifications": "Certificaciones",
+    "warranty": "Garantía",
+    "warrantyPeriod": "12 meses",
+    "moq": "Cantidad Mínima",
+    "pieces": "piezas",
+    "leadTime": "Tiempo de Entrega",
+    "days": "días",
+    "suitableIndustries": "Industrias Adecuadas",
+    "frequentlyAsked": "Preguntas Frecuentes",
+    "moreQuestions": "¿Tiene más preguntas?",
+    "viewAllFAQ": "Ver Todas las FAQ",
+    "productDocuments": "Documentos del Producto",
+    "productManual": "Manual del Producto",
+    "certificate": "Certificado de Calidad",
+    "testReport": "Informe de Prueba",
+    "download": "Descargar",
+    "documentsNote": "¿Necesita más documentos? Por favor contacte a nuestro equipo de ventas.",
+    "relatedProducts": "Productos Relacionados",
+    "viewAll": "Ver Todos",
+    "applicationScenarios": {
+      "industrial": {
+        "title": "Producción Industrial",
+        "description": "Adecuado para entornos de producción química, metalúrgica y electrónica."
+      },
+      "safety": {
+        "title": "Operaciones de Seguridad",
+        "description": "Cumple con estándares de seguridad para proteger a los trabajadores de productos químicos, calor y otros peligros."
+      },
+      "team": {
+        "title": "Protección de Equipo",
+        "description": "Proporciona equipo de protección uniforme para empleados de la empresa."
+      },
+      "global": {
+        "title": "Certificación Global",
+        "description": "Productos certificados por CE, ISO y otros estándares internacionales."
+      }
+    },
+    "faqs": {
+      "materialQuestion": "¿De qué material está hecho este producto?",
+      "materialAnswer": "Este producto está hecho de material de alta calidad, ofreciendo excelente durabilidad y protección. Por favor revise las especificaciones para parámetros detallados del material.",
+      "customQuestion": "¿Se puede personalizar este producto?",
+      "customAnswer": "Sí, ofrecemos servicios de personalización incluyendo tamaño, color e impresión de logo. Los productos personalizados generalmente requieren un pedido mínimo de 50 piezas. Por favor contáctenos para detalles.",
+      "moqQuestion": "¿Cuál es la cantidad mínima de pedido?",
+      "moqAnswer": "Los productos estándar tienen un pedido mínimo de 10 piezas, y los productos personalizados requieren 50 piezas. Apoyamos pedidos de prueba pequeños y damos la bienvenida a nuevos clientes.",
+      "leadTimeQuestion": "¿Cuál es el tiempo de entrega?",
+      "leadTimeAnswer": "Los productos en stock se envían dentro de 3-5 días hábiles después del pago. La producción estándar toma 7-20 días, y los productos personalizados toman 20-30 días. Por favor confirme con nuestro equipo de ventas."
+    }
   }
 }

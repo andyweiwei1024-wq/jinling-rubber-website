@@ -304,10 +304,64 @@
     "features": "Key Features",
     "applications": "Applications",
     "specifications": "Product Specifications",
+    "detailedSpecs": "Detailed Specifications",
     "inquiry": "Inquiry",
     "phoneConsult": "Phone Consultation",
     "emailContact": "Email Contact",
     "onlineInquiry": "Online Inquiry",
-    "inquiryForm": "Fill out inquiry form →"
+    "inquiryForm": "Fill out inquiry form →",
+    "isoCertified": "ISO 9001 Certified",
+    "qualityAssured": "Quality Assured",
+    "fastDelivery": "Fast Delivery",
+    "globalExport": "Global Export",
+    "securePayment": "Secure Payment",
+    "worldwideShipping": "Worldwide Shipping",
+    "certifications": "Certifications",
+    "warranty": "Warranty",
+    "warrantyPeriod": "12 months",
+    "moq": "MOQ",
+    "pieces": "pieces",
+    "leadTime": "Lead Time",
+    "days": "days",
+    "suitableIndustries": "Suitable Industries",
+    "frequentlyAsked": "Frequently Asked Questions",
+    "moreQuestions": "Have more questions?",
+    "viewAllFAQ": "View All FAQ",
+    "productDocuments": "Product Documents",
+    "productManual": "Product Manual",
+    "certificate": "Quality Certificate",
+    "testReport": "Test Report",
+    "download": "Download",
+    "documentsNote": "Need more documents? Please contact our sales team.",
+    "relatedProducts": "Related Products",
+    "viewAll": "View All",
+    "applicationScenarios": {
+      "industrial": {
+        "title": "Industrial Production",
+        "description": "Suitable for chemical, metallurgical, and electronics production environments."
+      },
+      "safety": {
+        "title": "Safety Operations",
+        "description": "Meets safety standards to protect workers from chemicals, heat, and other hazards."
+      },
+      "team": {
+        "title": "Team Protection",
+        "description": "Provides uniform protective equipment for enterprise employees."
+      },
+      "global": {
+        "title": "Global Certification",
+        "description": "Products certified by CE, ISO, and other international standards."
+      }
+    },
+    "faqs": {
+      "materialQuestion": "What material is this product made of?",
+      "materialAnswer": "This product is made of premium material, offering excellent durability and protection. Please check the specifications for detailed material parameters.",
+      "customQuestion": "Can this product be customized?",
+      "customAnswer": "Yes, we offer customization services including size, color, and logo printing. Customized products generally require a minimum order of 50 pieces. Please contact us for details.",
+      "moqQuestion": "What is the minimum order quantity?",
+      "moqAnswer": "Standard products have a minimum order of 10 pieces, and customized products require 50 pieces. We support small trial orders and welcome new customers.",
+      "leadTimeQuestion": "What is the lead time?",
+      "leadTimeAnswer": "Stock products ship within 3-5 working days after payment. Standard production takes 7-20 days, and customized products take 20-30 days. Please confirm with our sales team."
+    }
   }
 }

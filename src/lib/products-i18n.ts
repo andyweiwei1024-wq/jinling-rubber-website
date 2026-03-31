@@ -34,8 +34,39 @@ export function getProductApplications(product: Product, lang: Language): string
   return product.applicationsEn.length > 0 ? product.applicationsEn : product.applications;
 }
 
+// Category translations for all languages
+const categoryTranslations: Record<string, Record<string, string>> = {
+  'protective-suits': { 
+    en: 'Protective Suits', 
+    zh: '防护服系列', 
+    ar: 'بدلات الحماية', 
+    de: 'Schutzanzüge', 
+    es: 'Trajes de Protección' 
+  },
+  'rainwear': { 
+    en: 'Rainwear Series', 
+    zh: '雨衣系列', 
+    ar: 'سلسلة الملابس المقاومة للمطر', 
+    de: 'Regenkleidung', 
+    es: 'Ropa Impermeable' 
+  },
+  'workwear': { 
+    en: 'Workwear Series', 
+    zh: '工装系列', 
+    ar: 'سلسلة ملابس العمل', 
+    de: 'Arbeitskleidung', 
+    es: 'Ropa de Trabajo' 
+  },
+};
+
 // Get localized category name
 export function getCategoryName(categoryId: string, lang: Language): string {
+  // First check if we have a translation for this category
+  if (categoryTranslations[categoryId]?.[lang]) {
+    return categoryTranslations[categoryId][lang];
+  }
+  
+  // Fallback to product data
   const category = categoriesData.find(c => c.id === categoryId);
   if (!category) return categoryId;
   

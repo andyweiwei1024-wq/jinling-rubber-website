@@ -304,10 +304,64 @@
     "features": "产品特点",
     "applications": "应用场景",
     "specifications": "产品规格",
+    "detailedSpecs": "详细规格",
     "inquiry": "询价",
     "phoneConsult": "电话咨询",
     "emailContact": "邮件联系",
     "onlineInquiry": "在线询价",
-    "inquiryForm": "填写询价表单 →"
+    "inquiryForm": "填写询价表单 →",
+    "isoCertified": "ISO 9001认证",
+    "qualityAssured": "品质保证",
+    "fastDelivery": "快速交付",
+    "globalExport": "全球出口",
+    "securePayment": "安全支付",
+    "worldwideShipping": "全球配送",
+    "certifications": "认证",
+    "warranty": "质保期",
+    "warrantyPeriod": "12个月",
+    "moq": "最小起订量",
+    "pieces": "件",
+    "leadTime": "交货期",
+    "days": "天",
+    "suitableIndustries": "适用行业",
+    "frequentlyAsked": "常见问题",
+    "moreQuestions": "还有其他问题？",
+    "viewAllFAQ": "查看所有问题",
+    "productDocuments": "产品文档",
+    "productManual": "产品手册",
+    "certificate": "质量证书",
+    "testReport": "测试报告",
+    "download": "下载",
+    "documentsNote": "需要更多文档？请联系我们的销售团队。",
+    "relatedProducts": "相关产品",
+    "viewAll": "查看全部",
+    "applicationScenarios": {
+      "industrial": {
+        "title": "工业生产",
+        "description": "适用于化工、冶金、电子等工业生产环境，提供专业防护。"
+      },
+      "safety": {
+        "title": "安全作业",
+        "description": "符合安全标准，保护作业人员免受化学品、高温等危害。"
+      },
+      "team": {
+        "title": "团队防护",
+        "description": "为企业员工提供统一的防护装备，提升安全意识。"
+      },
+      "global": {
+        "title": "全球认证",
+        "description": "产品通过CE、ISO等国际认证，满足出口要求。"
+      }
+    },
+    "faqs": {
+      "materialQuestion": "这款产品的材质是什么？",
+      "materialAnswer": "本产品采用优质材质制造，具有优异的耐用性和防护性能。具体材质参数请查看产品规格表。",
+      "customQuestion": "产品可以定制吗？",
+      "customAnswer": "是的，我们提供定制服务，包括尺寸、颜色、Logo印刷等。定制产品一般50件起订，具体请联系我们详谈。",
+      "moqQuestion": "最小起订量是多少？",
+      "moqAnswer": "标准产品10件起订，定制产品50件起订。我们支持小批量试单，欢迎新客户咨询洽谈。",
+      "leadTimeQuestion": "交货期需要多长时间？",
+      "leadTimeAnswer": "现货产品付款后3-5个工作日发货；标准产品生产周期7-20天；定制产品20-30天。具体交期请与我们的销售团队确认。"
+    }
   }
 }

@@ -304,10 +304,64 @@
     "features": "Hauptmerkmale",
     "applications": "Anwendungen",
     "specifications": "Produktspezifikationen",
+    "detailedSpecs": "Detaillierte Spezifikationen",
     "inquiry": "Anfrage",
     "phoneConsult": "Telefonberatung",
     "emailContact": "E-Mail-Kontakt",
     "onlineInquiry": "Online-Anfrage",
-    "inquiryForm": "Anfrageformular ausfüllen →"
+    "inquiryForm": "Anfrageformular ausfüllen →",
+    "isoCertified": "ISO 9001 Zertifiziert",
+    "qualityAssured": "Qualität garantiert",
+    "fastDelivery": "Schnelle Lieferung",
+    "globalExport": "Globaler Export",
+    "securePayment": "Sichere Zahlung",
+    "worldwideShipping": "Weltweiter Versand",
+    "certifications": "Zertifizierungen",
+    "warranty": "Garantie",
+    "warrantyPeriod": "12 Monate",
+    "moq": "Mindestbestellmenge",
+    "pieces": "Stück",
+    "leadTime": "Lieferzeit",
+    "days": "Tage",
+    "suitableIndustries": "Geeignete Branchen",
+    "frequentlyAsked": "Häufig gestellte Fragen",
+    "moreQuestions": "Haben Sie weitere Fragen?",
+    "viewAllFAQ": "Alle FAQ anzeigen",
+    "productDocuments": "Produktdokumente",
+    "productManual": "Produkthandbuch",
+    "certificate": "Qualitätszertifikat",
+    "testReport": "Testbericht",
+    "download": "Herunterladen",
+    "documentsNote": "Benötigen Sie weitere Dokumente? Bitte kontaktieren Sie unser Verkaufsteam.",
+    "relatedProducts": "Verwandte Produkte",
+    "viewAll": "Alle anzeigen",
+    "applicationScenarios": {
+      "industrial": {
+        "title": "Industrielle Produktion",
+        "description": "Geeignet für chemische, metallurgische und Elektronik-Produktionsumgebungen."
+      },
+      "safety": {
+        "title": "Sicherheitsoperationen",
+        "description": "Erfüllt Sicherheitsstandards zum Schutz der Arbeitnehmer vor Chemikalien, Hitze und anderen Gefahren."
+      },
+      "team": {
+        "title": "Teamschutz",
+        "description": "Bietet einheitliche Schutzausrüstung für Unternehmensmitarbeiter."
+      },
+      "global": {
+        "title": "Globale Zertifizierung",
+        "description": "Produkte zertifiziert nach CE, ISO und anderen internationalen Standards."
+      }
+    },
+    "faqs": {
+      "materialQuestion": "Aus welchem Material besteht dieses Produkt?",
+      "materialAnswer": "Dieses Produkt besteht aus hochwertigem Material und bietet hervorragende Haltbarkeit und Schutz. Bitte überprüfen Sie die Spezifikationen für detaillierte Materialparameter.",
+      "customQuestion": "Kann dieses Produkt angepasst werden?",
+      "customAnswer": "Ja, wir bieten Anpassungsdienste an, einschließlich Größe, Farbe und Logodruck. Maßgeschneiderte Produkte erfordern in der Regel eine Mindestbestellung von 50 Stück. Bitte kontaktieren Sie uns für Details.",
+      "moqQuestion": "Was ist die Mindestbestellmenge?",
+      "moqAnswer": "Standardprodukte haben eine Mindestbestellung von 10 Stück, maßgeschneiderte Produkte erfordern 50 Stück. Wir unterstützen kleine Testbestellungen und begrüßen neue Kunden.",
+      "leadTimeQuestion": "Wie lange ist die Lieferzeit?",
+      "leadTimeAnswer": "Lagerprodukte werden innerhalb von 3-5 Werktagen nach Zahlungseingang versandt. Die Standardproduktion dauert 7-20 Tage, maßgeschneiderte Produkte 20-30 Tage. Bitte bestätigen Sie mit unserem Verkaufsteam."
+    }
   }
 }
