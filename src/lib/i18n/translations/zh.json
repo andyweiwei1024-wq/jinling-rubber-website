@@ -363,5 +363,19 @@
       "leadTimeQuestion": "交货期需要多长时间？",
       "leadTimeAnswer": "现货产品付款后3-5个工作日发货；标准产品生产周期7-20天；定制产品20-30天。具体交期请与我们的销售团队确认。"
     }
+  },
+  "blog": {
+    "title": "博客",
+    "subtitle": "行业动态与产品指南",
+    "readMore": "阅读全文",
+    "featured": "推荐",
+    "allArticles": "全部文章",
+    "filterByCategory": "按分类筛选",
+    "allCategories": "全部分类",
+    "publishedOn": "发布于",
+    "by": "作者",
+    "needProducts": "需要产品？",
+    "needProductsDesc": "联系我们获取专业防护装备解决方案。",
+    "contactUs": "联系我们"
   }
 }

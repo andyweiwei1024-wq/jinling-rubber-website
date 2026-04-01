@@ -363,5 +363,19 @@
       "leadTimeQuestion": "Wie lange ist die Lieferzeit?",
       "leadTimeAnswer": "Lagerprodukte werden innerhalb von 3-5 Werktagen nach Zahlungseingang versandt. Die Standardproduktion dauert 7-20 Tage, maßgeschneiderte Produkte 20-30 Tage. Bitte bestätigen Sie mit unserem Verkaufsteam."
     }
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Industrienachrichten & Produktleitfäden",
+    "readMore": "Weiterlesen",
+    "featured": "Empfohlen",
+    "allArticles": "Alle Artikel",
+    "filterByCategory": "Nach Kategorie filtern",
+    "allCategories": "Alle Kategorien",
+    "publishedOn": "Veröffentlicht am",
+    "by": "von",
+    "needProducts": "Produkte benötigt?",
+    "needProductsDesc": "Kontaktieren Sie uns für professionelle Schutzausrüstungslösungen.",
+    "contactUs": "Kontaktieren Sie uns"
   }
 }

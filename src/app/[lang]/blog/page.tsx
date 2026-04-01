@@ -5,6 +5,8 @@ import { articles, articleCategories, getArticleField } from '@/lib/articles';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
+import { getAllTranslations } from '@/lib/i18n/server';
+import type { Language } from '@/lib/i18n/config';
 
 interface PageProps {
   params: Promise<{ lang: string }>;
@@ -12,31 +14,34 @@ interface PageProps {
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { lang } = await params;
-  const isEn = lang === 'en';
+  const translations = getAllTranslations(lang as Language);
+  const blogTranslations = (translations.blog as Record<string, string>) || {};
   
   return {
-    title: isEn ? 'Blog - Industry News & Product Guides | Shanghai Jinling Rubber' : '博客 - 行业动态与产品指南 | 上海金铃橡胶',
-    description: isEn 
-      ? 'Explore our latest articles on industrial safety, product guides, and industry news. Expert insights from Shanghai Jinling Rubber Products Co., Ltd.'
-      : '探索我们的最新文章，包括行业动态、产品指南和安全知识。上海金铃橡胶制品有限公司专业分享。',
+    title: `${blogTranslations.title || 'Blog'} - ${blogTranslations.subtitle || 'Industry News & Product Guides'} | Shanghai Jinling Rubber`,
+    description: 'Explore our latest articles on industrial safety, product guides, and industry news. Expert insights from Shanghai Jinling Rubber Products Co., Ltd.',
   };
 }
 
 export default async function BlogPage({ params }: PageProps) {
   const { lang } = await params;
-  const isEn = lang === 'en';
+  const translations = getAllTranslations(lang as Language);
+  const blogTranslations = (translations.blog as Record<string, string>) || {};
   const prefix = `/${lang}`;
 
   const t = {
-    title: isEn ? 'Blog' : '博客',
-    subtitle: isEn ? 'Industry News & Product Guides' : '行业动态与产品指南',
-    readMore: isEn ? 'Read More' : '阅读全文',
-    featured: isEn ? 'Featured' : '推荐',
-    allArticles: isEn ? 'All Articles' : '全部文章',
-    filterByCategory: isEn ? 'Filter by Category' : '按分类筛选',
-    allCategories: isEn ? 'All Categories' : '全部分类',
-    publishedOn: isEn ? 'Published on' : '发布于',
-    by: isEn ? 'by' : '作者',
+    title: blogTranslations.title || 'Blog',
+    subtitle: blogTranslations.subtitle || 'Industry News & Product Guides',
+    readMore: blogTranslations.readMore || 'Read More',
+    featured: blogTranslations.featured || 'Featured',
+    allArticles: blogTranslations.allArticles || 'All Articles',
+    filterByCategory: blogTranslations.filterByCategory || 'Filter by Category',
+    allCategories: blogTranslations.allCategories || 'All Categories',
+    publishedOn: blogTranslations.publishedOn || 'Published on',
+    by: blogTranslations.by || 'by',
+    needProducts: blogTranslations.needProducts || 'Need Products?',
+    needProductsDesc: blogTranslations.needProductsDesc || 'Contact us for professional protective equipment solutions.',
+    contactUs: blogTranslations.contactUs || 'Contact Us',
   };
 
   const featuredArticles = articles.filter(a => a.featured);
@@ -86,7 +91,7 @@ export default async function BlogPage({ params }: PageProps) {
                               ? articleCategories.find(c => c.id === article.category)?.nameDe
                               : lang === 'es'
                               ? articleCategories.find(c => c.id === article.category)?.nameEs
-                              : isEn 
+                              : lang === 'en'
                               ? articleCategories.find(c => c.id === article.category)?.nameEn 
                               : articleCategories.find(c => c.id === article.category)?.name}
                           </Badge>
@@ -143,7 +148,7 @@ export default async function BlogPage({ params }: PageProps) {
                             ? articleCategories.find(c => c.id === article.category)?.nameDe
                             : lang === 'es'
                             ? articleCategories.find(c => c.id === article.category)?.nameEs
-                            : isEn 
+                            : lang === 'en'
                             ? articleCategories.find(c => c.id === article.category)?.nameEn 
                             : articleCategories.find(c => c.id === article.category)?.name}
                         </Badge>
@@ -202,7 +207,7 @@ export default async function BlogPage({ params }: PageProps) {
                         ? category.nameDe
                         : lang === 'es'
                         ? category.nameEs
-                        : isEn 
+                        : lang === 'en'
                         ? category.nameEn 
                         : category.name}
                     </Link>
@@ -214,18 +219,16 @@ export default async function BlogPage({ params }: PageProps) {
               <Card className="bg-blue-600 text-white">
                 <CardHeader>
                   <h3 className="font-semibold">
-                    {isEn ? 'Need Products?' : '需要产品？'}
+                    {t.needProducts}
                   </h3>
                 </CardHeader>
                 <CardContent>
                   <p className="text-blue-100 mb-4 text-sm">
-                    {isEn 
-                      ? 'Contact us for professional protective equipment solutions.'
-                      : '联系我们获取专业防护装备解决方案。'}
+                    {t.needProductsDesc}
                   </p>
                   <Link href={`${prefix}/contact`}>
                     <Button variant="secondary" className="w-full">
-                      {isEn ? 'Contact Us' : '联系我们'}
+                      {t.contactUs}
                     </Button>
                   </Link>
                 </CardContent>

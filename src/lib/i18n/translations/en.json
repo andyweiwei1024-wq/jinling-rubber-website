@@ -363,5 +363,19 @@
       "leadTimeQuestion": "What is the lead time?",
       "leadTimeAnswer": "Stock products ship within 3-5 working days after payment. Standard production takes 7-20 days, and customized products take 20-30 days. Please confirm with our sales team."
     }
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Industry News & Product Guides",
+    "readMore": "Read More",
+    "featured": "Featured",
+    "allArticles": "All Articles",
+    "filterByCategory": "Filter by Category",
+    "allCategories": "All Categories",
+    "publishedOn": "Published on",
+    "by": "by",
+    "needProducts": "Need Products?",
+    "needProductsDesc": "Contact us for professional protective equipment solutions.",
+    "contactUs": "Contact Us"
   }
 }
