@@ -1340,7 +1340,7 @@ Shanghai Jinling Rubber Products Co., Ltd. offers a variety of quality gas prote
     categoryEn: 'Product Guide',
     tags: ['防毒衣', '连体式', '分体式', '选购指南', '防护装备'],
     tagsEn: ['Gas protection suit', 'One-piece', 'Two-piece', 'Buying guide', 'Protective equipment'],
-    coverImage: 'https://images.unsplash.com/photo-1581093258731-1b285576ba89?w=800',
+    coverImage: 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/image/generate_image_63a49cf0-8245-4b20-8283-d75155f45fcd.jpeg?sign=1806543902-b098fb8680-0-445359523feee8de72b512b5577273c72e60508d8f4a5135e6aba4f46db2881e',
     publishedAt: '2024-02-05',
     updatedAt: '2024-02-05',
     featured: false,
