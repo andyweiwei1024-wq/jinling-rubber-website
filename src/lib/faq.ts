@@ -4,18 +4,33 @@ export interface FAQItem {
   id: string;
   question: string;
   questionEn: string;
+  questionAr?: string;
+  questionDe?: string;
+  questionEs?: string;
   answer: string;
   answerEn: string;
+  answerAr?: string;
+  answerDe?: string;
+  answerEs?: string;
   category: string;
   categoryEn: string;
 }
 
-export const faqCategories = [
-  { id: 'products', name: '产品相关', nameEn: 'Products' },
-  { id: 'ordering', name: '订单相关', nameEn: 'Ordering' },
-  { id: 'shipping', name: '物流相关', nameEn: 'Shipping' },
-  { id: 'customization', name: '定制服务', nameEn: 'Customization' },
-  { id: 'after-sales', name: '售后服务', nameEn: 'After-Sales' },
+export interface FAQCategory {
+  id: string;
+  name: string;
+  nameEn: string;
+  nameAr?: string;
+  nameDe?: string;
+  nameEs?: string;
+}
+
+export const faqCategories: FAQCategory[] = [
+  { id: 'products', name: '产品相关', nameEn: 'Products', nameAr: 'المنتجات', nameDe: 'Produkte', nameEs: 'Productos' },
+  { id: 'ordering', name: '订单相关', nameEn: 'Ordering', nameAr: 'الطلبات', nameDe: 'Bestellung', nameEs: 'Pedidos' },
+  { id: 'shipping', name: '物流相关', nameEn: 'Shipping', nameAr: 'الشحن', nameDe: 'Versand', nameEs: 'Envío' },
+  { id: 'customization', name: '定制服务', nameEn: 'Customization', nameAr: 'التخصيص', nameDe: 'Anpassung', nameEs: 'Personalización' },
+  { id: 'after-sales', name: '售后服务', nameEn: 'After-Sales', nameAr: 'خدمة ما بعد البيع', nameDe: 'Kundendienst', nameEs: 'Posventa' },
 ];
 
 export const faqItems: FAQItem[] = [
@@ -24,6 +39,9 @@ export const faqItems: FAQItem[] = [
     id: 'choose-protective-suit',
     question: '如何选择合适的防护服？',
     questionEn: 'How to choose the right protective suit?',
+    questionAr: 'كيف تختار بدلة الحماية المناسبة؟',
+    questionDe: 'Wie wählt man den richtigen Schutanzug?',
+    questionEs: '¿Cómo elegir el traje de protección adecuado?',
     answer: `选择防护服需要考虑以下因素：
 
 1. **作业环境风险等级**
@@ -66,6 +84,69 @@ export const faqItems: FAQItem[] = [
    - Export market: EN or NFPA standards
 
 We recommend contacting our technical team with your specific work environment details for the most suitable product recommendation.`,
+    answerAr: `ضع العوامل التالية في الاعتبار عند اختيار بدلات الحماية:
+
+1. **مستوى الخطر في بيئة العمل**
+   - خطر عالي (مواد كيميائية سامة): بدلات مطاط البوتيل المغلقة بالكامل
+   - خطر متوسط (مواد كيميائية عامة): بدلات مقاومة للأحماض من النيوبرين
+   - خطر منخفض (حماية خفيفة): مادة PVC كافية
+
+2. **نوع المواد الكيميائية المتلامسة**
+   - الأحماض/القلويات: النيوبرين أو PVC
+   - المذيبات العضوية: مطاط البوتيل
+   - الغازات السامة: بدلات حماية من الغازات مغلقة بالكامل
+
+3. **مدة العمل ودرجة الحرارة**
+   - مدة طويلة: تصميم قطعتين لتهوية أفضل
+   - درجة حرارة عالية: نماذج معزولة أو قابلة للتنفس
+
+4. **المعايير التنظيمية**
+   - السوق المحلي: معايير GB الوطنية
+   - سوق التصدير: معايير EN أو NFPA
+
+نوصي بالاتصال بفريقنا الفني مع تفاصيل بيئة عملك المحددة للحصول على توصية المنتج الأنسب.`,
+    answerDe: `Berücksichtigen Sie folgende Faktoren bei der Auswahl von Schutanzügen:
+
+1. **Risikostufe der Arbeitsumgebung**
+   - Hohes Risiko (giftige Chemikalien): Geschlossene Butylkautschuk-Anzüge
+   - Mittleres Risiko (allgemeine Chemikalien): Neopren säurebeständige Anzüge
+   - Niedriges Risiko (leichter Schutz): PVC-Material ausreichend
+
+2. **Art der kontaktierten Chemikalien**
+   - Säuren/Laugen: Neopren oder PVC
+   - Organische Lösungsmittel: Butylkautschuk
+   - Giftige Gase: Geschlossene Gasschutzanzüge
+
+3. **Arbeitsdauer und Temperatur**
+   - Lange Dauer: Zweiteiliges Design für bessere Belüftung
+   - Hohe Temperatur: Wärmeisolierte oder atmungsaktive Modelle
+
+4. **Regulatorische Standards**
+   - Inlandsmarkt: GB-Nationalstandards
+   - Exportmarkt: EN- oder NFPA-Standards
+
+Wir empfehlen, unser technisches Team mit Ihren spezifischen Arbeitsumgebungsdaten zu kontaktieren.`,
+    answerEs: `Considere los siguientes factores al elegir trajes de protección:
+
+1. **Nivel de Riesgo del Ambiente de Trabajo**
+   - Alto riesgo (químicos tóxicos): Trajes cerrados de caucho butílico
+   - Riesgo medio (químicos generales): Trajes resistentes al ácido de neopreno
+   - Bajo riesgo (protección ligera): Material PVC suficiente
+
+2. **Tipo de Químicos Contactados**
+   - Ácidos/álcalis: Neopreno o PVC
+   - Solventes orgánicos: Caucho butílico
+   - Gases tóxicos: Trajes de protección contra gases cerrados
+
+3. **Duración del Trabajo y Temperatura**
+   - Larga duración: Diseño de dos piezas para mejor ventilación
+   - Alta temperatura: Modelos aislados o transpirables
+
+4. **Estándares Regulatorios**
+   - Mercado nacional: Estándares nacionales GB
+   - Mercado de exportación: Estándares EN o NFPA
+
+Recomendamos contactar a nuestro equipo técnico con los detalles específicos de su ambiente de trabajo.`,
     category: 'products',
     categoryEn: 'Products',
   },
@@ -73,6 +154,9 @@ We recommend contacting our technical team with your specific work environment d
     id: 'material-difference',
     question: '氯丁胶、PVC和丁基胶有什么区别？',
     questionEn: 'What is the difference between Neoprene, PVC, and Butyl rubber?',
+    questionAr: 'ما الفرق بين النيوبرين وPVC ومطاط البوتيل؟',
+    questionDe: 'Was ist der Unterschied zwischen Neopren, PVC und Butylkautschuk?',
+    questionEs: '¿Cuál es la diferencia entre Neopreno, PVC y Caucho Butílico?',
     answer: `三种材质各有特点：
 
 **氯丁胶（Neoprene）**
@@ -115,6 +199,63 @@ We recommend contacting our technical team with your specific work environment d
 - Price: Highest
 
 Shanghai Jinling offers protective suits in various materials to meet your specific needs.`,
+    answerAr: `لكل مادة خصائصه الخاصة:
+
+**النيوبرين**
+- المزايا: مقاومة كيميائية جيدة، مرن، متين
+- العيوب: مقاومة محدودة لبعض المذيبات العضوية
+- التطبيقات: الإنتاج الكيميائي، المختبرات، الطلاء الكهربائي
+- السعر: متوسط
+
+**PVC (بولي فينيل كلوريد)**
+- المزايا: سعر معقول، مقاوم للماء، سهل التنظيف
+- العيوب: مقاومة كيميائية أضعف، يتصلب في البرد
+- التطبيقات: الاستزراع المائي، معالجة الأغذية، العمل الكيميائي الخفيف
+- السعر: الأقل
+
+**مطاط البوتيل**
+- المزايا: أقوى حماية، إحكام ممتاز للهواء، مقاوم للإشعاع
+- العيوب: سعر أعلى، وزن أثقل
+- التطبيقات: التعامل مع المواد الكيميائية الخطرة، الإنقاذ الطارئ
+- السعر: الأعلى`,
+    answerDe: `Jedes Material hat seine eigenen Eigenschaften:
+
+**Neopren**
+- Vorteile: Gute Chemikalienbeständigkeit, flexibel, langlebig
+- Nachteile: Begrenzte Beständigkeit gegen einige organische Lösungsmittel
+- Anwendungen: Chemische Produktion, Laboratorien, Galvanik
+- Preis: Mittel
+
+**PVC (Polyvinylchlorid)**
+- Vorteile: Erschwinglich, wasserdicht, leicht zu reinigen
+- Nachteile: Schwächere Chemikalienbeständigkeit, wird im Kalten hart
+- Anwendungen: Aquakultur, Lebensmittelverarbeitung, leichte Chemiearbeit
+- Preis: Niedrigste
+
+**Butylkautschuk**
+- Vorteile: Stärkster Schutz, hervorragende Luftdichtheit, strahlenbeständig
+- Nachteile: Höherer Preis, schwerer
+- Anwendungen: Gefahrgutumschlag, Notfallrettung, Hochrisikoarbeiten
+- Preis: Höchste`,
+    answerEs: `Cada material tiene sus propias características:
+
+**Neopreno**
+- Ventajas: Buena resistencia química, flexible, duradero
+- Desventajas: Resistencia limitada a algunos solventes orgánicos
+- Aplicaciones: Producción química, laboratorios, galvanoplastia
+- Precio: Medio
+
+**PVC (Policloruro de Vinilo)**
+- Ventajas: Asequible, impermeable, fácil de limpiar
+- Desventajas: Resistencia química más débil, se endurece en frío
+- Aplicaciones: Acuicultura, procesamiento de alimentos, trabajo químico ligero
+- Precio: Más bajo
+
+**Caucho Butílico**
+- Ventajas: La protección más fuerte, excelente hermeticidad, resistente a radiación
+- Desventajas: Precio más alto, más pesado
+- Aplicaciones: Manejo de químicos peligrosos, rescate de emergencia
+- Precio: Más alto`,
     category: 'products',
     categoryEn: 'Products',
   },
@@ -122,6 +263,9 @@ Shanghai Jinling offers protective suits in various materials to meet your speci
     id: 'anti-static-importance',
     question: '为什么石化行业必须使用抗静电工作服？',
     questionEn: 'Why must petrochemical industry use anti-static workwear?',
+    questionAr: 'لماذا يجب على صناعة البتروكيماويات استخدام ملابس عمل مضادة للكهرباء الساكنة؟',
+    questionDe: 'Warum muss die petrochemische Industrie antistatische Arbeitskleidung verwenden?',
+    questionEs: '¿Por qué la industria petroquímica debe usar ropa de trabajo antiestática?',
     answer: `静电是石化行业的隐形杀手：
 
 **危害风险：**
@@ -158,6 +302,54 @@ Shanghai Jinling offers protective suits in various materials to meet your speci
 - Grounding design safely releases charges
 
 Shanghai Jinling's anti-static workwear meets national standards and is ISO 9001 certified, widely used in oil extraction, chemical production, and oil/gas storage.`,
+    answerAr: `الكهرباء الساكنة خطر غير مرئي في صناعة البتروكيماويات:
+
+**مخاطر الخطر:**
+- بيئات البتروكيماويات تحتوي على غازات وسوائل قابلة للاشتعال
+- تفريغ الشحنات الساكنة يمكن أن يسبب حرائق أو انفجارات
+- الإحصائيات تظهر أن ~10٪ من حوادث البتروكيماويات مرتبطة بالكهرباء الساكنة
+
+**المتطلبات التنظيمية:**
+- قانون سلامة العمل يتطلب معدات حماية مؤهلة
+- معيار GB 12014 للملابس المضادة للكهرباء الساكنة إلزامي
+- لوائح سلامة الصناعة تتطلب ذلك صراحة
+
+**كيف تعمل ملابس العمل المضادة للكهرباء الساكنة:**
+- الألياف الموصلة تفرغ الكهرباء الساكنة
+- الطلاء المضاد للكهرباء الساكنة يقلل من تراكم الشحنات
+- تصميم التأريض يطلق الشحنات بأمان`,
+    answerDe: `Statistische Elektrizität ist eine unsichtbare Gefahr in der petrochemischen Industrie:
+
+**Risikogefahren:**
+- Petrochemische Umgebungen enthalten brennbare Gase und Flüssigkeiten
+- Statische Entladung kann Brände oder Explosionen verursachen
+- Statistiken zeigen, dass ~10% der petrochemischen Unfälle statisch bedingt sind
+
+**Regulatorische Anforderungen:**
+- Arbeitsschutzgesetz erfordert qualifizierte Schutzausrüstung
+- GB 12014 Antistatische Kleidung Pflichtstandard
+- Industriesicherheitsvorschriften schreiben dies ausdrücklich vor
+
+**Wie antistatische Arbeitskleidung funktioniert:**
+- Leitfähige Fasern entladen statische Elektrizität
+- Antistatische Beschichtung reduziert Ladungsansammlung
+- Erdungsdesign gibt Ladungen sicher ab`,
+    answerEs: `La electricidad estática es un peligro invisible en la industria petroquímica:
+
+**Peligros de Riesgo:**
+- Los ambientes petroquímicos contienen gases y líquidos inflamables
+- La descarga estática puede causar incendios o explosiones
+- Las estadísticas muestran que ~10% de los accidentes petroquímicos están relacionados con estática
+
+**Requisitos Regulatorios:**
+- La Ley de Seguridad Laboral requiere equipos de protección calificados
+- GB 12014 Ropa Anti-estática es estándar obligatorio
+- Los reglamentos de seguridad de la industria lo requieren explícitamente
+
+**Cómo funciona la ropa de trabajo anti-estática:**
+- Las fibras conductoras descargan la electricidad estática
+- El recubrimiento anti-estático reduce la acumulación de carga
+- El diseño de conexión a tierra libera cargas de forma segura`,
     category: 'products',
     categoryEn: 'Products',
   },
@@ -165,6 +357,9 @@ Shanghai Jinling's anti-static workwear meets national standards and is ISO 9001
     id: 'gas-suit-lifespan',
     question: '防毒衣的使用寿命是多久？',
     questionEn: 'What is the service life of gas protection suits?',
+    questionAr: 'ما هي مدة خدمة بدلات الحماية من الغازات؟',
+    questionDe: 'Was ist die Lebensdauer von Gasschutzanzügen?',
+    questionEs: '¿Cuál es la vida útil de los trajes de protección contra gases?',
     answer: `防毒衣的使用寿命受多种因素影响：
 
 **一般建议：**
@@ -217,6 +412,78 @@ Shanghai Jinling's anti-static workwear meets national standards and is ISO 9001
 - Failed testing
 
 Shanghai Jinling provides regular inspection services and maintenance guidance to ensure your protective equipment is always in optimal condition.`,
+    answerAr: `تعتمد مدة الخدمة على عوامل مختلفة:
+
+**التوصيات العامة:**
+- الاستخدام العادي: 2-3 سنوات
+- الاستخدام المتكرر أو الظروف القاسية: 1-2 سنة
+- غير مستخدم لكن مخزن لأكثر من 5 سنوات: اختبر قبل الاستخدام
+
+**العوامل المؤثرة على العمر الافتراضي:**
+1. تكرار الاستخدام
+2. ظروف التخزين (الحرارة، الرطوبة، الضوء)
+3. نوع وتركيز المواد الكيميائية المتلامسة
+4. حالة الصيانة
+5. الأضرار المادية
+
+**متطلبات الفحص المنتظم:**
+- قبل كل استخدام: فحص بصري
+- شهرياً: فحص الإحكام
+- سنوياً: فحص احترافي
+
+**معايير الاستبدال:**
+- تجاوز مدة الخدمة
+- تالف بما لا يمكن إصلاحه
+- انخفاض أداء الحماية
+- عدم اجتياز الفحص`,
+    answerDe: `Die Lebensdauer hängt von verschiedenen Faktoren ab:
+
+**Allgemeine Empfehlungen:**
+- Normale Nutzung: 2-3 Jahre
+- Häufige Nutzung oder raue Bedingungen: 1-2 Jahre
+- Ungenutzt aber über 5 Jahre gelagert: Vor Gebrauch testen
+
+**Einflussfaktoren auf die Lebensdauer:**
+1. Nutzungshäufigkeit
+2. Lagerungsbedingungen (Temperatur, Feuchtigkeit, Licht)
+3. Art und Konzentration der kontaktierten Chemikalien
+4. Wartungszustand
+5. Physische Schäden
+
+**Regelmäßige Inspektionsanforderungen:**
+- Vor jedem Gebrauch: Sichtprüfung
+- Monatlich: Dichtigkeitsprüfung
+- Jährlich: Professionelle Prüfung
+
+**Austauschkriterien:**
+- Lebensdauer überschritten
+- Unreparierbar beschädigt
+- Verminderte Schutzeistung
+- Durchgefallene Prüfung`,
+    answerEs: `La vida útil depende de varios factores:
+
+**Recomendaciones Generales:**
+- Uso regular: 2-3 años
+- Uso frecuente o condiciones adversas: 1-2 años
+- Sin usar pero almacenado más de 5 años: probar antes de usar
+
+**Factores que Afectan la Vida Útil:**
+1. Frecuencia de uso
+2. Condiciones de almacenamiento (temperatura, humedad, luz)
+3. Tipo y concentración de químicos contactados
+4. Condición de mantenimiento
+5. Daños físicos
+
+**Requisitos de Inspección Regular:**
+- Antes de cada uso: Inspección visual
+- Mensualmente: Inspección de hermeticidad
+- Anualmente: Prueba profesional
+
+**Criterios de Reemplazo:**
+- Vida útil excedida
+- Daño irreparable
+- Rendimiento de protección degradado
+- Prueba fallida`,
     category: 'products',
     categoryEn: 'Products',
   },
@@ -226,6 +493,9 @@ Shanghai Jinling provides regular inspection services and maintenance guidance t
     id: 'moq',
     question: '最小起订量是多少？',
     questionEn: 'What is the minimum order quantity (MOQ)?',
+    questionAr: 'ما هي الحد الأدنى لكمية الطلب (MOQ)؟',
+    questionDe: 'Was ist die Mindestbestellmenge (MOQ)?',
+    questionEs: '¿Cuál es la cantidad mínima de pedido (MOQ)?',
     answer: `我们的起订量灵活：
 
 **标准产品：**
@@ -258,6 +528,54 @@ Shanghai Jinling provides regular inspection services and maintenance guidance t
 - Sample cost can be deducted from formal orders
 
 We support small trial orders and welcome new customers to inquire.`,
+    answerAr: `الحد الأدنى لكمية الطلب لدينا مرن:
+
+**المنتجات القياسية:**
+- بدلات الحماية: 10 قطع كحد أدنى
+- ملابس المطر: 20 قطعة كحد أدنى
+- ملابس العمل: 10 قطع كحد أدنى
+
+**المنتجات المخصصة:**
+- تعتمد على متطلبات التخصيص المحددة
+- عادة 50 قطعة كحد أدنى
+
+**طلبات العينات:**
+- 1-3 عينات متاحة لفحص الجودة
+- يمكن خصم تكلفة العينة من الطلبات الرسمية
+
+ندعم الطلبات التجريبية الصغيرة ونرحب بالعملاء الجدد للاستفسار.`,
+    answerDe: `Unsere Mindestbestellmenge ist flexibel:
+
+**Standardprodukte:**
+- Schutzanzüge: Mindestens 10 Stück
+- Regenkleidung: Mindestens 20 Stück
+- Arbeitskleidung: Mindestens 10 Stück
+
+**Kundenspezifische Produkte:**
+- Hängt von den spezifischen Anpassungsanforderungen ab
+- Normalerweise mindestens 50 Stück
+
+**Musterbestellungen:**
+- 1-3 Muster für Qualitätsprüfung verfügbar
+- Musterkosten können von offiziellen Bestellungen abgezogen werden
+
+Wir unterstützen kleine Testbestellungen und begrüßen neue Kundenanfragen.`,
+    answerEs: `Nuestro MOQ es flexible:
+
+**Productos Estándar:**
+- Trajes de protección: mínimo 10 piezas
+- Impermeables: mínimo 20 piezas
+- Ropa de trabajo: mínimo 10 piezas
+
+**Productos Personalizados:**
+- Depende de los requisitos específicos de personalización
+- Generalmente mínimo 50 piezas
+
+**Pedidos de Muestras:**
+- 1-3 muestras disponibles para inspección de calidad
+- El costo de la muestra puede deducirse de pedidos formales
+
+Apoyamos pedidos de prueba pequeños y damos la bienvenida a consultas de nuevos clientes.`,
     category: 'ordering',
     categoryEn: 'Ordering',
   },
@@ -265,6 +583,9 @@ We support small trial orders and welcome new customers to inquire.`,
     id: 'lead-time',
     question: '交货期需要多长时间？',
     questionEn: 'What is the lead time?',
+    questionAr: 'ما هي مدة التسليم؟',
+    questionDe: 'Wie lange ist die Lieferzeit?',
+    questionEs: '¿Cuál es el tiempo de entrega?',
     answer: `交货期根据订单情况而定：
 
 **现货产品：**
@@ -303,6 +624,63 @@ We support small trial orders and welcome new customers to inquire.`,
 - Sea freight: 20-40 days (depending on destination)
 
 We have complete production lines and can expedite production based on customer needs.`,
+    answerAr: `تعتمد مدة التسليم على حالة الطلب:
+
+**المنتجات المتوفرة:**
+- الشحن خلال 3-5 أيام عمل بعد الدفع
+
+**الإنتاج القياسي:**
+- دفعة صغيرة (أقل من 50 قطعة): 7-10 أيام
+- دفعة متوسطة (50-200 قطعة): 15-20 يوم
+- دفعة كبيرة (أكثر من 200 قطعة): للتفاوض
+
+**المنتجات المخصصة:**
+- عادة 20-30 يوم حسب التعقيد
+- التخصيص الخاص للتفاوض بشكل منفصل
+
+**الشحن الدولي:**
+- الشحن الجوي: 5-7 أيام
+- الشحن البحري: 20-40 يوم (حسب الوجهة)
+
+لدينا خطوط إنتاج كاملة ويمكننا تسريع الإنتاج حسب احتياجات العميل.`,
+    answerDe: `Die Lieferzeit hängt von der Bestellungssituation ab:
+
+**Lagerware:**
+- Versand innerhalb von 3-5 Arbeitstagen nach Zahlungseingang
+
+**Standardproduktion:**
+- Kleine Charge (<50 Stück): 7-10 Tage
+- Mittlere Charge (50-200 Stück): 15-20 Tage
+- Große Charge (>200 Stück): Zu verhandeln
+
+**Kundenspezifische Produkte:**
+- Normalerweise 20-30 Tage je nach Komplexität
+- Sonderanfertigungen separat zu verhandeln
+
+**Internationaler Versand:**
+- Luftfracht: 5-7 Tage
+- Seefracht: 20-40 Tage (je nach Zielort)
+
+Wir haben vollständige Produktionslinien und können die Produktion nach Kundenwünschen beschleunigen.`,
+    answerEs: `El tiempo de entrega depende de la situación del pedido:
+
+**Productos en Stock:**
+- Enviados dentro de 3-5 días laborables después del pago
+
+**Producción Estándar:**
+- Lote pequeño (<50 piezas): 7-10 días
+- Lote mediano (50-200 piezas): 15-20 días
+- Lote grande (>200 piezas): A negociar
+
+**Productos Personalizados:**
+- Generalmente 20-30 días dependiendo de la complejidad
+- Personalización especial a negociar por separado
+
+**Envío Internacional:**
+- Carga aérea: 5-7 días
+- Carga marítima: 20-40 días (según destino)
+
+Tenemos líneas de producción completas y podemos acelerar la producción según las necesidades del cliente.`,
     category: 'ordering',
     categoryEn: 'Ordering',
   },
@@ -310,6 +688,9 @@ We have complete production lines and can expedite production based on customer 
     id: 'payment-methods',
     question: '接受哪些付款方式？',
     questionEn: 'What payment methods do you accept?',
+    questionAr: 'ما هي طرق الدفع المقبولة؟',
+    questionDe: 'Welche Zahlungsmethoden akzeptieren Sie?',
+    questionEs: '¿Qué métodos de pago aceptan?',
     answer: `我们接受多种付款方式：
 
 **国际贸易：**
@@ -342,6 +723,54 @@ We have complete production lines and can expedite production based on customer 
 - Regular customers: More flexible terms negotiable
 
 Specific payment methods can be negotiated in the contract.`,
+    answerAr: `نقبل طرق دفع متعددة:
+
+**التجارة الدولية:**
+- T/T (تحويل بنكي): 30% وديعة، الرصيد قبل الشحن
+- L/C (خطاب الاعتماد): مقبول للطلبات الكبيرة
+- PayPal: للطلبات الصغيرة ورسوم العينات
+
+**التجارة المحلية:**
+- تحويل بنكي
+- Alipay/WeChat Pay
+
+**شروط الدفع:**
+- العملاء الجدد: عادة مطلوب وديعة 30%
+- العملاء المنتظمون: شروط أكثر مرونة قابلة للتفاوض
+
+يمكن التفاوض على طرق الدفع المحددة في العقد.`,
+    answerDe: `Wir akzeptieren mehrere Zahlungsmethoden:
+
+**Internationaler Handel:**
+- T/T (Banküberweisung): 30% Anzahlung, Restbetrag vor Versand
+- L/C (Akkreditiv): Für große Bestellungen akzeptabel
+- PayPal: Für kleine Bestellungen und Mustergebühren
+
+**Inlandshandel:**
+- Banküberweisung
+- Alipay/WeChat Pay
+
+**Zahlungsbedingungen:**
+- Neukunden: Normalerweise 30% Anzahlung erforderlich
+- Stammkunden: Flexiblere Bedingungen verhandelbar
+
+Spezifische Zahlungsmethoden können im Vertrag verhandelt werden.`,
+    answerEs: `Aceptamos múltiples métodos de pago:
+
+**Comercio Internacional:**
+- T/T (Transferencia Bancaria): 30% de depósito, saldo antes del envío
+- L/C (Carta de Crédito): Aceptable para pedidos grandes
+- PayPal: Para pedidos pequeños y tarifas de muestras
+
+**Comercio Nacional:**
+- Transferencia bancaria
+- Alipay/WeChat Pay
+
+**Términos de Pago:**
+- Nuevos clientes: Generalmente se requiere 30% de depósito
+- Clientes regulares: Términos más flexibles negociables
+
+Los métodos de pago específicos pueden negociarse en el contrato.`,
     category: 'ordering',
     categoryEn: 'Ordering',
   },
@@ -351,6 +780,9 @@ Specific payment methods can be negotiated in the contract.`,
     id: 'shipping-options',
     question: '提供哪些物流方式？',
     questionEn: 'What shipping options are available?',
+    questionAr: 'ما هي خيارات الشحن المتاحة؟',
+    questionDe: 'Welche Versandoptionen sind verfügbar?',
+    questionEs: '¿Qué opciones de envío están disponibles?',
     answer: `我们提供多种物流方式：
 
 **国际运输：**
@@ -391,6 +823,66 @@ Specific payment methods can be negotiated in the contract.`,
 - Standard carton packaging
 - Wooden crate/case packaging (optional)
 - Compliant with international shipping standards`,
+    answerAr: `نقدم خيارات شحن متعددة:
+
+**الشحن الدولي:**
+- الشحن البحري (FCL/LCL): اقتصادي للكميات الكبيرة
+- الشحن الجوي: سريع، للطلبات العاجلة
+- البريد السريع (DHL/FEDEX/UPS): للدفعات الصغيرة/العينات
+
+**الشحن المحلي:**
+- توصيل عبر شركات اللوجستيات
+- توصيل سريع
+- استلام ذاتي
+
+**شروط التجارة:**
+- دعم FOB، CIF، DDP، إلخ.
+- ترتيب اللوجستيات حسب احتياجات العميل
+
+**التغليف:**
+- تغليف كرتون قياسي
+- تغليف صندوق خشبي (اختياري)
+- متوافق مع معايير الشحن الدولية`,
+    answerDe: `Wir bieten verschiedene Versandoptionen an:
+
+**Internationaler Versand:**
+- Seefracht (FCL/LCL): Kostengünstig für große Mengen
+- Luftfracht: Schnell, für dringende Bestellungen
+- Express (DHL/FEDEX/UPS): Für kleine Chargen/Muster
+
+**Inlandsversand:**
+- Lieferung durch Spediteure
+- Expresslieferung
+- Selbstabholung
+
+**Handelsbedingungen:**
+- Unterstützung von FOB, CIF, DDP usw.
+- Logistik nach Kundenwünschen arrangiert
+
+**Verpackung:**
+- Standard-Kartonverpackung
+- Holzkistenverpackung (optional)
+- Konform mit internationalen Versandstandards`,
+    answerEs: `Ofrecemos múltiples opciones de envío:
+
+**Envío Internacional:**
+- Carga marítima (FCL/LCL): Económico para grandes cantidades
+- Carga aérea: Rápido, para pedidos urgentes
+- Express (DHL/FEDEX/UPS): Para pequeños lotes/muestras
+
+**Envío Nacional:**
+- Entrega por empresa de logística
+- Entrega express
+- Autoservicio
+
+**Términos Comerciales:**
+- Soporte FOB, CIF, DDP, etc.
+- Logística organizada según necesidades del cliente
+
+**Embalaje:**
+- Embalaje de cartón estándar
+- Embalaje de caja de madera (opcional)
+- Conforme con estándares de envío internacional`,
     category: 'shipping',
     categoryEn: 'Shipping',
   },
@@ -398,6 +890,9 @@ Specific payment methods can be negotiated in the contract.`,
     id: 'export-countries',
     question: '产品出口到哪些国家？',
     questionEn: 'Which countries do you export to?',
+    questionAr: 'إلى أي دول تصدرون؟',
+    questionDe: 'In welche Länder exportieren Sie?',
+    questionEs: '¿A qué países exportan?',
     answer: `我们的产品已出口全球50+国家和地区：
 
 **亚洲：**
@@ -434,6 +929,60 @@ South Africa, Egypt, Nigeria, Kenya, etc.
 Australia, New Zealand
 
 We are familiar with import regulations and certification requirements of various countries and can assist customers with relevant procedures.`,
+    answerAr: `منتجاتنا مصدرة إلى أكثر من 50 دولة حول العالم:
+
+**آسيا:**
+اليابان، كوريا الجنوبية، سنغافورة، ماليزيا، تايلاند، إندونيسيا، الفلبين، فيتنام، الهند، باكستان، السعودية، الإمارات، إلخ.
+
+**أوروبا:**
+ألمانيا، بريطانيا، فرنسا، إيطاليا، إسبانيا، هولندا، بلجيكا، بولندا، روسيا، إلخ.
+
+**الأمريكتين:**
+أمريكا، كندا، البرازيل، المكسيك، الأرجنتين، تشيلي، إلخ.
+
+**أفريقيا:**
+جنوب أفريقيا، مصر، نيجيريا، كينيا، إلخ.
+
+**أوقيانوسيا:**
+أستراليا، نيوزيلندا
+
+نحن ملمون بلوائح الاستيراد ومتطلبات الشهادات لمختلف الدول ويمكننا مساعدة العملاء في الإجراءات ذات الصلة.`,
+    answerDe: `Unsere Produkte werden in über 50 Länder weltweit exportiert:
+
+**Asien:**
+Japan, Südkorea, Singapur, Malaysia, Thailand, Indonesien, Philippinen, Vietnam, Indien, Pakistan, Saudi-Arabien, UAE usw.
+
+**Europa:**
+Deutschland, Großbritannien, Frankreich, Italien, Spanien, Niederlande, Belgien, Polen, Russland usw.
+
+**Amerika:**
+USA, Kanada, Brasilien, Mexiko, Argentinien, Chile usw.
+
+**Afrika:**
+Südafrika, Ägypten, Nigeria, Kenia usw.
+
+**Ozeanien:**
+Australien, Neuseeland
+
+Wir sind mit den Importvorschriften und Zertifizierungsanforderungen verschiedener Länder vertraut und können Kunden bei entsprechenden Verfahren unterstützen.`,
+    answerEs: `Nuestros productos se exportan a más de 50 países en todo el mundo:
+
+**Asia:**
+Japón, Corea del Sur, Singapur, Malasia, Tailandia, Indonesia, Filipinas, Vietnam, India, Pakistán, Arabia Saudita, EAU, etc.
+
+**Europa:**
+Alemania, Reino Unido, Francia, Italia, España, Países Bajos, Bélgica, Polonia, Rusia, etc.
+
+**Américas:**
+EE.UU., Canadá, Brasil, México, Argentina, Chile, etc.
+
+**África:**
+Sudáfrica, Egipto, Nigeria, Kenia, etc.
+
+**Oceanía:**
+Australia, Nueva Zelanda
+
+Estamos familiarizados con las regulaciones de importación y requisitos de certificación de varios países y podemos asistir a los clientes con los procedimientos relevantes.`,
     category: 'shipping',
     categoryEn: 'Shipping',
   },
@@ -443,6 +992,9 @@ We are familiar with import regulations and certification requirements of variou
     id: 'customization-service',
     question: '可以定制产品吗？',
     questionEn: 'Can products be customized?',
+    questionAr: 'هل يمكن تخصيص المنتجات؟',
+    questionDe: 'Können Produkte maßgeschneidert werden?',
+    questionEs: '¿Se pueden personalizar los productos?',
     answer: `是的，我们提供全面的定制服务：
 
 **定制内容：**
@@ -485,6 +1037,69 @@ We are familiar with import regulations and certification requirements of variou
 - Complex customization to be negotiated case by case
 
 We have a professional R&D team to meet various special requirements.`,
+    answerAr: `نعم، نقدم خدمات تخصيص شاملة:
+
+**خيارات التخصيص:**
+- الحجم: معدل حسب متطلبات العميل
+- اللون: خيارات ألوان متعددة متاحة
+- الشعار: طباعة أو تطريز شعارات العملاء
+- الوظيفة: ميزات خاصة (مضاد للكهرباء الساكنة، عزل حراري، إلخ)
+- التغليف: تغليف ووسم مخصص
+
+**عملية التخصيص:**
+1. تقديم متطلبات التخصيص
+2. تأكيد التصميم والتسعير
+3. إنتاج عينة للموافقة
+4. توقيع العقد والإنتاج
+5. فحص الجودة والشحن
+
+**متطلبات التخصيص:**
+- عادة 50 قطعة كحد أدنى للمنتجات المخصصة
+- التخصيص المعقد للتفاوض حالة بحالة
+
+لدينا فريق تطوير مهني لتلبية المتطلبات الخاصة المختلفة.`,
+    answerDe: `Ja, wir bieten umfassende Anpassungsdienste an:
+
+**Anpassungsoptionen:**
+- Größe: An Kundenanforderungen angepasst
+- Farbe: Mehrere Farboptionen verfügbar
+- Logo: Druck oder Stickerei von Kundenlogos
+- Funktion: Sonderfunktionen (antistatisch, Wärmedämmung usw.)
+- Verpackung: Maßgeschneiderte Verpackung und Kennzeichnung
+
+**Anpassungsprozess:**
+1. Anpassungsanforderungen bereitstellen
+2. Design und Angebot bestätigen
+3. Musterproduktion zur Genehmigung
+4. Vertragsunterzeichnung und Produktion
+5. Qualitätsprüfung und Versand
+
+**Anpassungsanforderungen:**
+- Normalerweise mindestens 50 Stück für maßgeschneiderte Produkte
+- Komplexe Anpassungen fallweise zu verhandeln
+
+Wir haben ein professionelles F&E-Team, um verschiedene Sonderanforderungen zu erfüllen.`,
+    answerEs: `Sí, ofrecemos servicios de personalización integrales:
+
+**Opciones de Personalización:**
+- Tamaño: Ajustado a los requisitos del cliente
+- Color: Múltiples opciones de color disponibles
+- Logo: Impresión o bordado de logos del cliente
+- Función: Características especiales (anti-estático, aislamiento térmico, etc.)
+- Embalaje: Embalaje y etiquetado personalizado
+
+**Proceso de Personalización:**
+1. Proporcionar requisitos de personalización
+2. Confirmar diseño y cotización
+3. Producción de muestra para aprobación
+4. Firma de contrato y producción
+5. Inspección de calidad y envío
+
+**Requisitos de Personalización:**
+- Generalmente mínimo 50 piezas para productos personalizados
+- Personalización compleja a negociar caso por caso
+
+Tenemos un equipo profesional de I+D para satisfacer diversos requisitos especiales.`,
     category: 'customization',
     categoryEn: 'Customization',
   },
@@ -492,6 +1107,9 @@ We have a professional R&D team to meet various special requirements.`,
     id: 'odm-oem-service',
     question: '支持OEM/ODM服务吗？',
     questionEn: 'Do you support OEM/ODM services?',
+    questionAr: 'هل تدعمون خدمات OEM/ODM؟',
+    questionDe: 'Bieten Sie OEM/ODM-Dienste an?',
+    questionEs: '¿Ofrecen servicios OEM/ODM?',
     answer: `是的，我们提供OEM和ODM服务：
 
 **OEM服务（代工生产）：**
@@ -548,6 +1166,90 @@ We have a professional R&D team to meet various special requirements.`,
 6. After-sales support
 
 Welcome all enterprises to discuss cooperation!`,
+    answerAr: `نعم، نقدم خدمات OEM و ODM:
+
+**خدمة OEM (التصنيع التعاقدي):**
+- الإنتاج حسب عينات أو رسومات العميل
+- استخدام علامة العميل التجارية والتغليف
+- سرية تامة لتصاميم العميل
+
+**خدمة ODM (تصميم + إنتاج):**
+- تصميم المنتج حسب متطلبات العميل
+- خيارات تصميم متعددة متاحة
+- فريق محترف لتطوير المنتج
+
+**مزايا الخدمة:**
+- أكثر من 20 سنة خبرة في الصناعة
+- مصنع معتمد ISO 9001
+- نظام كامل لمراقبة الجودة
+- قدرة سريعة على إنتاج العينات
+- مرونة في حجم الإنتاج
+
+**عملية التعاون:**
+1. مناقشة المتطلبات
+2. تأكيد الحل
+3. إنتاج العينة
+4. توقيع العقد
+5. الإنتاج الكمي
+6. دعم ما بعد البيع
+
+نرحب بجميع المؤسسات لمناقشة التعاون!`,
+    answerDe: `Ja, wir bieten OEM- und ODM-Dienste an:
+
+**OEM-Service (Auftragsfertigung):**
+- Produktion nach Kundenmustern oder Zeichnungen
+- Verwendung von Kundenmarke und Verpackung
+- Strenge Vertraulichkeit der Kundendesigns
+
+**ODM-Service (Design + Produktion):**
+- Produktdesign nach Kundenanforderungen
+- Mehrere Designoptionen verfügbar
+- Professionelles Team für Produktentwicklung
+
+**Servicevorteile:**
+- Über 20 Jahre Industrieerfahrung
+- ISO 9001 zertifiziertes Werk
+- Vollständiges Qualitätskontrollsystem
+- Schnelle Musterfertigung
+- Flexible Produktionskapazität
+
+**Kooperationsprozess:**
+1. Anforderungsbesprechung
+2. Lösungsbestätigung
+3. Musterproduktion
+4. Vertragsunterzeichnung
+5. Serienproduktion
+6. Kundendienst
+
+Willkommen an alle Unternehmen zur Kooperationsbesprechung!`,
+    answerEs: `Sí, ofrecemos servicios OEM y ODM:
+
+**Servicio OEM (Fabricación por Contrato):**
+- Producción según muestras o dibujos del cliente
+- Uso de marca y embalaje del cliente
+- Estricta confidencialidad de los diseños del cliente
+
+**Servicio ODM (Diseño + Producción):**
+- Diseño de producto según requisitos del cliente
+- Múltiples opciones de diseño disponibles
+- Equipo profesional para desarrollo de productos
+
+**Ventajas del Servicio:**
+- Más de 20 años de experiencia en la industria
+- Fábrica certificada ISO 9001
+- Sistema completo de control de calidad
+- Capacidad rápida de producción de muestras
+- Escala de producción flexible
+
+**Proceso de Cooperación:**
+1. Discusión de requisitos
+2. Confirmación de solución
+3. Producción de muestra
+4. Firma de contrato
+5. Producción en masa
+6. Soporte posventa
+
+¡Bienvenidas todas las empresas para discutir cooperación!`,
     category: 'customization',
     categoryEn: 'Customization',
   },
@@ -557,6 +1259,9 @@ Welcome all enterprises to discuss cooperation!`,
     id: 'quality-guarantee',
     question: '产品质量有问题怎么办？',
     questionEn: 'What if there are quality problems?',
+    questionAr: 'ماذا لو كانت هناك مشاكل في الجودة؟',
+    questionDe: 'Was ist bei Qualitätsproblemen zu tun?',
+    questionEs: '¿Qué pasa si hay problemas de calidad?',
     answer: `我们提供完善的售后保障：
 
 **质量保证：**
@@ -605,6 +1310,78 @@ Welcome all enterprises to discuss cooperation!`,
 - Service first, customer satisfaction
 
 For any issues, please contact our after-sales team.`,
+    answerAr: `نقدم دعم ما بعد البيع شامل:
+
+**ضمان الجودة:**
+- جميع المنتجات تخضع لفحص جودة صارم قبل الشحن
+- تتوافق مع المعايير الوطنية ومتطلبات الشهادات
+- يتم توفير شهادات المنتج وتقارير الاختبار
+
+**سياسة ما بعد البيع:**
+- خلال 7 أيام من الاستلام: إرجاع/استبدال لمشاكل الجودة
+- تكاليف الشحن للإرجاع بسبب مشاكل الجودة تتحملها شركتنا
+- يتم توفير الدعم الفني والحلول
+
+**عملية المعالجة:**
+1. اتصل بنا فوراً بعد اكتشاف المشاكل
+2. قدم صوراً أو فيديوهات للمشكلة
+3. نتحقق ونقدم الحلول
+4. معالجة الإرجاع/الاستبدال أو الإصلاح
+
+**التزام الجودة:**
+- مواد أصلية، لا اختصارات
+- حرفية ممتازة، متين
+- الخدمة أولاً، رضا العميل
+
+لأي مشاكل، يرجى الاتصال بفريق ما بعد البيع لدينا.`,
+    answerDe: `Wir bieten umfassenden Kundendienst:
+
+**Qualitätssicherung:**
+- Alle Produkte werden vor dem Versand streng geprüft
+- Erfüllen nationale Standards und Zertifizierungsanforderungen
+- Produktzertifikate und Prüfberichte werden bereitgestellt
+
+**Kundendienstpolitik:**
+- Innerhalb von 7 Tagen nach Erhalt: Rückgabe/Umtausch bei Qualitätsmängeln
+- Versandkosten für Rücksendungen aufgrund von Qualitätsmängeln von uns getragen
+- Technische Unterstützung und Lösungen werden angeboten
+
+**Bearbeitungsprozess:**
+1. Kontaktieren Sie uns umgehend nach Entdeckung von Problemen
+2. Stellen Sie Fotos oder Videos des Problems bereit
+3. Wir überprüfen und bieten Lösungen an
+4. Rückgabe/Umtausch oder Reparaturabwicklung
+
+**Qualitätsverpflichtung:**
+- Echtes Material, keine Abkürzungen
+- Ausgezeichnete Handwerkskunst, langlebig
+- Service first, Kundenzufriedenheit
+
+Bei Problemen kontaktieren Sie bitte unser Kundendienstteam.`,
+    answerEs: `Ofrecemos soporte posventa integral:
+
+**Garantía de Calidad:**
+- Todos los productos pasan por estricta inspección de calidad antes del envío
+- Cumplen con estándares nacionales y requisitos de certificación
+- Se proporcionan certificados de producto e informes de prueba
+
+**Política Posventa:**
+- Dentro de 7 días de recepción: Devolución/cambio por problemas de calidad
+- Los costos de envío por devoluciones debido a problemas de calidad son cubiertos por nosotros
+- Se proporciona soporte técnico y soluciones
+
+**Proceso de Manejo:**
+1. Contáctenos promptly después de descubrir problemas
+2. Proporcione fotos o videos del problema
+3. Verificamos y proporcionamos soluciones
+4. Procesamiento de devolución/cambio o reparación
+
+**Compromiso de Calidad:**
+- Materiales genuinos, sin atajos
+- Excelente artesanía, duradero
+- Servicio primero, satisfacción del cliente
+
+Para cualquier problema, contacte a nuestro equipo posventa.`,
     category: 'after-sales',
     categoryEn: 'After-Sales',
   },
@@ -612,6 +1389,9 @@ For any issues, please contact our after-sales team.`,
     id: 'technical-support',
     question: '提供技术支持吗？',
     questionEn: 'Do you provide technical support?',
+    questionAr: 'هل تقدمون دعماً تقنياً؟',
+    questionDe: 'Bieten Sie technischen Support an?',
+    questionEs: '¿Ofrecen soporte técnico?',
     answer: `是的，我们提供全面的技术支持：
 
 **技术咨询服务：**
@@ -660,6 +1440,78 @@ For any issues, please contact our after-sales team.`,
 - Urgent technical issues: Immediate response
 
 Our technical team has rich industry experience and is always at your service.`,
+    answerAr: `نعم، نقدم دعماً تقنياً شاملاً:
+
+**الاستشارات الفنية:**
+- إرشادات اختيار المنتج
+- تدريب الاستخدام
+- إرشادات الصيانة
+- استشارات لوائح السلامة
+
+**الخدمات الميدانية:**
+- تدريب ميداني من فنيين (للعملاء الرئيسيين)
+- عرض استخدام المنتج
+- تشخيص وحل المشاكل
+
+**دعم الوثائق:**
+- أدلة مستخدم المنتج
+- أدلة الصيانة
+- إرشادات التشغيل الآمن
+- وثائق الشهادات
+
+**وقت الاستجابة:**
+- استفسارات الهاتف/البريد الإلكتروني: الرد خلال 24 ساعة
+- المشاكل التقنية العاجلة: استجابة فورية
+
+فريقنا التقني لديه خبرة صناعية غنية ودائماً في خدمتكم.`,
+    answerDe: `Ja, wir bieten umfassenden technischen Support:
+
+**Technische Beratung:**
+- Produktauswahlberatung
+- Nutzungsschulung
+- Wartungsberatung
+- Sicherheitsvorschriften-Beratung
+
+**Vor-Ort-Services:**
+- Vor-Ort-Schulung durch Techniker (für Hauptkunden)
+- Produktnutzungsdemonstration
+- Problemdiagnose und -lösung
+
+**Dokumentationsunterstützung:**
+- Produktbedienungsanleitungen
+- Wartungshandbücher
+- Sicherheitsrichtlinien
+- Zertifikatsdokumente
+
+**Reaktionszeit:**
+- Telefon/E-Mail-Anfragen: Antwort innerhalb von 24 Stunden
+- Dringende technische Probleme: Sofortige Reaktion
+
+Unser technisches Team hat umfangreiche Industrieerfahrung und steht Ihnen jederzeit zur Verfügung.`,
+    answerEs: `Sí, ofrecemos soporte técnico integral:
+
+**Consultoría Técnica:**
+- Orientación en selección de productos
+- Capacitación de uso
+- Orientación de mantenimiento
+- Consulta de normativas de seguridad
+
+**Servicios In Situ:**
+- Capacitación in situ por técnicos (para clientes clave)
+- Demostración de uso de productos
+- Diagnóstico y resolución de problemas
+
+**Soporte de Documentación:**
+- Manuales de usuario de productos
+- Guías de mantenimiento
+- Directrices de operación segura
+- Documentos de certificación
+
+**Tiempo de Respuesta:**
+- Consultas telefónicas/email: Respuesta dentro de 24 horas
+- Problemas técnicos urgentes: Respuesta inmediata
+
+Nuestro equipo técnico tiene amplia experiencia en la industria y siempre está a su servicio.`,
     category: 'after-sales',
     categoryEn: 'After-Sales',
   },

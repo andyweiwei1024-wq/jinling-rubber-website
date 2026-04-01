@@ -8,6 +8,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 import { Language, defaultLanguage, languages, isValidLanguage } from '@/lib/i18n/config';
 import { getAllTranslations, getTranslation } from '@/lib/i18n/server';
 import { faqItems, faqCategories, getFAQSchema, FAQItem } from '@/lib/faq';
+import { getLocalizedFAQ, getFAQCategoryName } from '@/lib/faq-i18n';
 import { 
   HelpCircle, 
   MessageCircle, 
@@ -75,21 +76,13 @@ export default async function FAQPage({ params }: PageProps) {
   // Build navigation path
   const navPath = (path: string) => lang === defaultLanguage ? path : `/${lang}${path}`;
   
-  // Get localized FAQ items
-  const getLocalizedFAQ = (item: FAQItem) => ({
-    id: item.id,
-    question: lang === 'zh' ? item.question : item.questionEn,
-    answer: lang === 'zh' ? item.answer : item.answerEn,
-    category: lang === 'zh' ? item.category : item.categoryEn,
-  });
-  
   // Group FAQ items by category
   const faqByCategory = faqCategories.map(category => ({
     ...category,
-    name: lang === 'zh' ? category.name : category.nameEn,
+    name: getFAQCategoryName(category, lang),
     items: faqItems
       .filter(item => item.category === category.id)
-      .map(getLocalizedFAQ),
+      .map(item => getLocalizedFAQ(item, lang)),
   })).filter(category => category.items.length > 0);
   
   // Get FAQ schema for structured data
