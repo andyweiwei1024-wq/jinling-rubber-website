@@ -13,7 +13,9 @@
     "products": "产品中心",
     "contact": "联系我们",
     "getQuote": "获取报价",
-    "blog": "博客"
+    "blog": "博客",
+    "faq": "常见问题",
+    "cases": "客户案例"
   },
   "home": {
     "badge": "ISO 9001认证制造商",
@@ -377,5 +379,54 @@
     "needProducts": "需要产品？",
     "needProductsDesc": "联系我们获取专业防护装备解决方案。",
     "contactUs": "联系我们"
+  },
+  "faq": {
+    "pageTitle": "常见问题 | 上海金铃橡胶",
+    "pageDescription": "查找关于防护服、雨衣、订购流程、发货和售后服务的常见问题解答。",
+    "badge": "帮助中心",
+    "title": "常见问题",
+    "subtitle": "查找关于产品、订购、发货等常见问题的答案。",
+    "searchPlaceholder": "搜索答案...",
+    "allCategories": "全部分类",
+    "stillHaveQuestions": "还有问题？",
+    "stillHaveQuestionsDesc": "找不到您想要的答案？我们的团队随时为您服务！",
+    "contactUs": "联系我们",
+    "callUs": "致电我们",
+    "responseTime": "我们通常在24小时内回复。",
+    "relatedResources": "相关资源",
+    "productsDesc": "浏览我们完整的防护服、雨衣和工装产品目录。",
+    "blogDesc": "阅读我们最新的产品指南、行业新闻和安全提示文章。",
+    "certificationsDesc": "查看我们的ISO认证和质量保证文件。"
+  },
+  "cases": {
+    "pageTitle": "客户成功案例 | 上海金铃橡胶",
+    "pageDescription": "了解全球领先企业如何信赖上海金铃满足其防护装备需求。来自石化、矿山、户外等行业的成功故事。",
+    "badge": "成功故事",
+    "title": "客户成功案例",
+    "subtitle": "看看全球领先企业如何信赖上海金铃满足其防护装备需求。",
+    "productsUsed": "使用产品",
+    "results": "成果",
+    "readMore": "阅读完整案例",
+    "challenge": "挑战",
+    "solution": "我们的解决方案",
+    "backToCases": "返回案例列表",
+    "startProject": "开始您的项目",
+    "relatedCases": "相关案例",
+    "stats": {
+      "clients": "全球客户",
+      "countries": "服务国家",
+      "satisfaction": "客户满意度",
+      "years": "行业经验"
+    },
+    "cta": {
+      "title": "准备加入我们的成功故事？",
+      "subtitle": "联系我们的团队，了解上海金铃如何帮助满足您的防护装备需求。",
+      "getInTouch": "联系我们",
+      "viewProducts": "查看产品"
+    },
+    "learnMore": "了解更多",
+    "productsDesc": "探索我们完整的防护服、雨衣和工装产品系列。",
+    "certificationsDesc": "查看我们的ISO认证和质量保证文件。",
+    "faqDesc": "查找关于我们产品和服务的常见问题解答。"
   }
 }

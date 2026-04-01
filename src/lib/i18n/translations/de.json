@@ -13,7 +13,9 @@
     "products": "Produkte",
     "contact": "Kontakt",
     "getQuote": "Angebot anfordern",
-    "blog": "Blog"
+    "blog": "Blog",
+    "faq": "FAQ",
+    "cases": "Fallstudien"
   },
   "home": {
     "badge": "ISO 9001 Zertifizierter Hersteller",
@@ -377,5 +379,54 @@
     "needProducts": "Produkte benötigt?",
     "needProductsDesc": "Kontaktieren Sie uns für professionelle Schutzausrüstungslösungen.",
     "contactUs": "Kontaktieren Sie uns"
+  },
+  "faq": {
+    "pageTitle": "Häufig gestellte Fragen | Shanghai Jinling Gummi",
+    "pageDescription": "Finden Sie Antworten auf häufige Fragen zu unseren Schutzanzügen, Regenkleidung, Bestellvorgang, Versand und Kundendienst.",
+    "badge": "Hilfezentrum",
+    "title": "Häufig gestellte Fragen",
+    "subtitle": "Finden Sie Antworten auf häufige Fragen zu unseren Produkten, Bestellungen, Versand und mehr.",
+    "searchPlaceholder": "Antworten suchen...",
+    "allCategories": "Alle Kategorien",
+    "stillHaveQuestions": "Noch Fragen?",
+    "stillHaveQuestionsDesc": "Finden Sie nicht die Antwort, die Sie suchen? Unser Team ist hier, um zu helfen!",
+    "contactUs": "Kontaktieren Sie uns",
+    "callUs": "Rufen Sie uns an",
+    "responseTime": "Wir antworten normalerweise innerhalb von 24 Stunden.",
+    "relatedResources": "Verwandte Ressourcen",
+    "productsDesc": "Durchsuchen Sie unseren vollständigen Produktkatalog für Schutzanzüge, Regenkleidung und Arbeitskleidung.",
+    "blogDesc": "Lesen Sie unsere neuesten Artikel zu Produktleitfäden, Branchennachrichten und Sicherheitstipps.",
+    "certificationsDesc": "Sehen Sie unsere ISO-Zertifizierungen und Qualitätssicherungsdokumente ein."
+  },
+  "cases": {
+    "pageTitle": "Kundenerfolgsgeschichten | Shanghai Jinling Gummi",
+    "pageDescription": "Lesen Sie, wie führende Unternehmen weltweit Shanghai Jinling für ihre Schutzausrüstungsbedürfnisse vertrauen. Erfolgsgeschichten aus Petrochemie, Bergbau und Outdoor-Industrien.",
+    "badge": "Erfolgsgeschichten",
+    "title": "Kundenerfolgsgeschichten",
+    "subtitle": "Sehen Sie, wie führende Unternehmen weltweit Shanghai Jinling für ihre Schutzausrüstungsbedürfnisse vertrauen.",
+    "productsUsed": "Verwendete Produkte",
+    "results": "Ergebnisse",
+    "readMore": "Ganze Geschichte lesen",
+    "challenge": "Die Herausforderung",
+    "solution": "Unsere Lösung",
+    "backToCases": "Zurück zu Fallstudien",
+    "startProject": "Starten Sie Ihr Projekt",
+    "relatedCases": "Verwandte Fallstudien",
+    "stats": {
+      "clients": "Globale Kunden",
+      "countries": "Bediente Länder",
+      "satisfaction": "Kundenzufriedenheit",
+      "years": "Jahre Erfahrung"
+    },
+    "cta": {
+      "title": "Bereit, Teil unserer Erfolgsgeschichten zu werden?",
+      "subtitle": "Kontaktieren Sie unser Team, um zu besprechen, wie Shanghai Jinling Ihre Schutzausrüstungsbedürfnisse erfüllen kann.",
+      "getInTouch": "Kontaktieren Sie uns",
+      "viewProducts": "Produkte ansehen"
+    },
+    "learnMore": "Mehr erfahren",
+    "productsDesc": "Entdecken Sie unsere vollständige Produktpalette an Schutzanzügen, Regenkleidung und Arbeitskleidung.",
+    "certificationsDesc": "Sehen Sie unsere ISO-Zertifizierungen und Qualitätssicherungsdokumente ein.",
+    "faqDesc": "Finden Sie Antworten auf häufige Fragen zu unseren Produkten und Dienstleistungen."
   }
 }

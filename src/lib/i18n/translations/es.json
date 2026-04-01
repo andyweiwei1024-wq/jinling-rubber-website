@@ -13,7 +13,9 @@
     "products": "Productos",
     "contact": "Contacto",
     "getQuote": "Solicitar Cotización",
-    "blog": "Blog"
+    "blog": "Blog",
+    "faq": "Preguntas Frecuentes",
+    "cases": "Casos de Éxito"
   },
   "home": {
     "badge": "Fabricante Certificado ISO 9001",
@@ -377,5 +379,54 @@
     "needProducts": "¿Necesita productos?",
     "needProductsDesc": "Contáctenos para soluciones profesionales de equipos de protección.",
     "contactUs": "Contáctenos"
+  },
+  "faq": {
+    "pageTitle": "Preguntas Frecuentes | Shanghai Jinling Rubber",
+    "pageDescription": "Encuentre respuestas a preguntas comunes sobre nuestros trajes de protección, impermeables, proceso de pedido, envío y servicio postventa.",
+    "badge": "Centro de Ayuda",
+    "title": "Preguntas Frecuentes",
+    "subtitle": "Encuentre respuestas a preguntas comunes sobre nuestros productos, pedidos, envío y más.",
+    "searchPlaceholder": "Buscar respuestas...",
+    "allCategories": "Todas las categorías",
+    "stillHaveQuestions": "¿Todavía tiene preguntas?",
+    "stillHaveQuestionsDesc": "¿No encuentra la respuesta que busca? ¡Nuestro equipo está aquí para ayudar!",
+    "contactUs": "Contáctenos",
+    "callUs": "Llámenos",
+    "responseTime": "Normalmente respondemos dentro de 24 horas.",
+    "relatedResources": "Recursos Relacionados",
+    "productsDesc": "Explore nuestro catálogo completo de trajes de protección, impermeables y ropa de trabajo.",
+    "blogDesc": "Lea nuestros últimos artículos sobre guías de productos, noticias de la industria y consejos de seguridad.",
+    "certificationsDesc": "Vea nuestras certificaciones ISO y documentación de garantía de calidad."
+  },
+  "cases": {
+    "pageTitle": "Historias de Éxito de Clientes | Shanghai Jinling Rubber",
+    "pageDescription": "Lea cómo empresas líderes en todo el mundo confían en Shanghai Jinling para sus necesidades de equipos de protección. Historias de éxito de industrias petroquímicas, mineras y exteriores.",
+    "badge": "Historias de Éxito",
+    "title": "Historias de Éxito de Clientes",
+    "subtitle": "Vea cómo empresas líderes en todo el mundo confían en Shanghai Jinling para sus necesidades de equipos de protección.",
+    "productsUsed": "Productos Utilizados",
+    "results": "Resultados",
+    "readMore": "Leer Historia Completa",
+    "challenge": "El Desafío",
+    "solution": "Nuestra Solución",
+    "backToCases": "Volver a Casos de Estudio",
+    "startProject": "Inicie Su Proyecto",
+    "relatedCases": "Casos de Estudio Relacionados",
+    "stats": {
+      "clients": "Clientes Globales",
+      "countries": "Países Atendidos",
+      "satisfaction": "Satisfacción del Cliente",
+      "years": "Años de Experiencia"
+    },
+    "cta": {
+      "title": "¿Listo para Unirse a Nuestras Historias de Éxito?",
+      "subtitle": "Contacte a nuestro equipo para discutir cómo Shanghai Jinling puede ayudar a satisfacer sus necesidades de equipos de protección.",
+      "getInTouch": "Contáctenos",
+      "viewProducts": "Ver Productos"
+    },
+    "learnMore": "Más Información",
+    "productsDesc": "Explore nuestra gama completa de trajes de protección, impermeables y ropa de trabajo.",
+    "certificationsDesc": "Vea nuestras certificaciones ISO y documentación de garantía de calidad.",
+    "faqDesc": "Encuentre respuestas a preguntas comunes sobre nuestros productos y servicios."
   }
 }

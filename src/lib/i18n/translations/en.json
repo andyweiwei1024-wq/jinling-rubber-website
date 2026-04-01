@@ -13,7 +13,9 @@
     "products": "Products",
     "contact": "Contact",
     "getQuote": "Get Quote",
-    "blog": "Blog"
+    "blog": "Blog",
+    "faq": "FAQ",
+    "cases": "Case Studies"
   },
   "home": {
     "badge": "ISO 9001 Certified Manufacturer",
@@ -377,5 +379,54 @@
     "needProducts": "Need Products?",
     "needProductsDesc": "Contact us for professional protective equipment solutions.",
     "contactUs": "Contact Us"
+  },
+  "faq": {
+    "pageTitle": "Frequently Asked Questions | Shanghai Jinling Rubber",
+    "pageDescription": "Find answers to common questions about our protective suits, rainwear, ordering process, shipping, and after-sales service.",
+    "badge": "Help Center",
+    "title": "Frequently Asked Questions",
+    "subtitle": "Find answers to common questions about our products, ordering, shipping, and more.",
+    "searchPlaceholder": "Search for answers...",
+    "allCategories": "All Categories",
+    "stillHaveQuestions": "Still Have Questions?",
+    "stillHaveQuestionsDesc": "Can't find the answer you're looking for? Our team is here to help!",
+    "contactUs": "Contact Us",
+    "callUs": "Call Us",
+    "responseTime": "We typically respond within 24 hours.",
+    "relatedResources": "Related Resources",
+    "productsDesc": "Browse our complete product catalog of protective suits, rainwear, and workwear.",
+    "blogDesc": "Read our latest articles on product guides, industry news, and safety tips.",
+    "certificationsDesc": "View our ISO certifications and quality assurance documentation."
+  },
+  "cases": {
+    "pageTitle": "Customer Success Stories | Shanghai Jinling Rubber",
+    "pageDescription": "Read how leading companies worldwide trust Shanghai Jinling for their protective equipment needs. Success stories from petrochemical, mining, and outdoor industries.",
+    "badge": "Success Stories",
+    "title": "Customer Success Stories",
+    "subtitle": "See how leading companies worldwide trust Shanghai Jinling for their protective equipment needs.",
+    "productsUsed": "Products Used",
+    "results": "Results",
+    "readMore": "Read Full Story",
+    "challenge": "The Challenge",
+    "solution": "Our Solution",
+    "backToCases": "Back to Case Studies",
+    "startProject": "Start Your Project",
+    "relatedCases": "Related Case Studies",
+    "stats": {
+      "clients": "Global Clients",
+      "countries": "Countries Served",
+      "satisfaction": "Client Satisfaction",
+      "years": "Years Experience"
+    },
+    "cta": {
+      "title": "Ready to Join Our Success Stories?",
+      "subtitle": "Contact our team to discuss how Shanghai Jinling can help meet your protective equipment needs.",
+      "getInTouch": "Get in Touch",
+      "viewProducts": "View Products"
+    },
+    "learnMore": "Learn More",
+    "productsDesc": "Explore our complete product range of protective suits, rainwear, and workwear.",
+    "certificationsDesc": "View our ISO certifications and quality assurance documentation.",
+    "faqDesc": "Find answers to common questions about our products and services."
   }
 }
