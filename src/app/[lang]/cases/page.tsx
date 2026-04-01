@@ -7,6 +7,7 @@ import { Badge } from '@/components/ui/badge';
 import { Language, defaultLanguage, languages, isValidLanguage } from '@/lib/i18n/config';
 import { getAllTranslations, getTranslation } from '@/lib/i18n/server';
 import { caseStudies, CaseStudy } from '@/lib/cases';
+import { getLocalizedCase } from '@/lib/cases-i18n';
 import { 
   ChevronRight,
   Building2,
@@ -72,25 +73,8 @@ export default async function CasesPage({ params }: PageProps) {
   // Build navigation path
   const navPath = (path: string) => lang === defaultLanguage ? path : `/${lang}${path}`;
   
-  // Get localized case study
-  const getLocalizedCase = (item: CaseStudy) => ({
-    id: item.id,
-    slug: item.slug,
-    title: lang === 'zh' ? item.title : item.titleEn,
-    summary: lang === 'zh' ? item.summary : item.summaryEn,
-    industry: lang === 'zh' ? item.industry : item.industryEn,
-    country: lang === 'zh' ? item.country : item.countryEn,
-    products: lang === 'zh' ? item.products : item.productsEn,
-    challenge: lang === 'zh' ? item.challenge : item.challengeEn,
-    solution: lang === 'zh' ? item.solution : item.solutionEn,
-    results: lang === 'zh' ? item.results : item.resultsEn,
-    testimonial: lang === 'zh' ? item.testimonial : item.testimonialEn,
-    clientName: lang === 'zh' ? item.clientName : item.clientNameEn,
-    clientPosition: lang === 'zh' ? item.clientPosition : item.clientPositionEn,
-    image: item.image,
-  });
-  
-  const localizedCases = caseStudies.map(getLocalizedCase);
+  // Get localized case studies
+  const localizedCases = caseStudies.map(item => getLocalizedCase(item, lang));
   
   // Stats
   const stats = [

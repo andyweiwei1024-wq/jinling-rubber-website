@@ -7,6 +7,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Language, defaultLanguage, languages, isValidLanguage } from '@/lib/i18n/config';
 import { getTranslation } from '@/lib/i18n/server';
 import { caseStudies, getCaseStudySchema } from '@/lib/cases';
+import { getLocalizedCase } from '@/lib/cases-i18n';
 import { 
   ChevronRight,
   ChevronLeft,
@@ -90,20 +91,7 @@ export default async function CaseDetailPage({ params }: PageProps) {
   }
   
   // Get localized content
-  const localizedCase = {
-    title: lang === 'zh' ? caseStudy.title : caseStudy.titleEn,
-    summary: lang === 'zh' ? caseStudy.summary : caseStudy.summaryEn,
-    industry: lang === 'zh' ? caseStudy.industry : caseStudy.industryEn,
-    country: lang === 'zh' ? caseStudy.country : caseStudy.countryEn,
-    products: lang === 'zh' ? caseStudy.products : caseStudy.productsEn,
-    challenge: lang === 'zh' ? caseStudy.challenge : caseStudy.challengeEn,
-    solution: lang === 'zh' ? caseStudy.solution : caseStudy.solutionEn,
-    results: lang === 'zh' ? caseStudy.results : caseStudy.resultsEn,
-    testimonial: lang === 'zh' ? caseStudy.testimonial : caseStudy.testimonialEn,
-    clientName: lang === 'zh' ? caseStudy.clientName : caseStudy.clientNameEn,
-    clientPosition: lang === 'zh' ? caseStudy.clientPosition : caseStudy.clientPositionEn,
-    image: caseStudy.image,
-  };
+  const localizedCase = getLocalizedCase(caseStudy, lang);
   
   // Get schema for structured data
   const caseSchema = getCaseStudySchema(caseStudy, lang);
