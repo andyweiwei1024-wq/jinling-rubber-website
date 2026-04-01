@@ -138,6 +138,20 @@
       "countries": "个国家客户",
       "productTypes": "种产品类型"
     },
+    "cards": {
+      "iso": {
+        "title": "ISO 9001:2015",
+        "desc": "质量管理体系认证"
+      },
+      "global": {
+        "title": "全球出口",
+        "desc": "全面的全球出口服务"
+      },
+      "advanced": {
+        "title": "先进制造",
+        "desc": "现代化生产设施和设备"
+      }
+    },
     "journey": "发展历程",
     "journeySubtitle": "从本土制造商到全球供应商",
     "timeline": {

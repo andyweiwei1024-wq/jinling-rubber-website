@@ -138,6 +138,20 @@
       "countries": "Países Atendidos",
       "productTypes": "Tipos de Productos"
     },
+    "cards": {
+      "iso": {
+        "title": "ISO 9001:2015",
+        "desc": "Sistema de Gestión de Calidad Certificado"
+      },
+      "global": {
+        "title": "Exportación Global",
+        "desc": "Servicios de exportación integrales en todo el mundo"
+      },
+      "advanced": {
+        "title": "Fabricación Avanzada",
+        "desc": "Instalaciones y equipos de producción modernos"
+      }
+    },
     "journey": "Nuestra Trayectoria",
     "journeySubtitle": "De fabricante local a proveedor global",
     "timeline": {

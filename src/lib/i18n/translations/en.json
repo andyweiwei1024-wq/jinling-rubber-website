@@ -138,6 +138,20 @@
       "countries": "Countries Served",
       "productTypes": "Product Types"
     },
+    "cards": {
+      "iso": {
+        "title": "ISO 9001:2015",
+        "desc": "Quality Management System Certified"
+      },
+      "global": {
+        "title": "Global Export",
+        "desc": "Comprehensive export services worldwide"
+      },
+      "advanced": {
+        "title": "Advanced Manufacturing",
+        "desc": "Modern production facilities and equipment"
+      }
+    },
     "journey": "Our Journey",
     "journeySubtitle": "From a local manufacturer to a global supplier",
     "timeline": {

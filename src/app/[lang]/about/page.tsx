@@ -158,8 +158,8 @@ export default async function AboutPage({ params }: PageProps) {
                     <Award className="h-6 w-6 text-blue-600" />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-1">ISO 9001:2015</h3>
-                    <p className="text-sm text-muted-foreground">Quality Management System Certified</p>
+                    <h3 className="font-semibold mb-1">{t('about.cards.iso.title', 'ISO 9001:2015')}</h3>
+                    <p className="text-sm text-muted-foreground">{t('about.cards.iso.desc', 'Quality Management System Certified')}</p>
                   </div>
                 </div>
               </Card>
@@ -169,8 +169,8 @@ export default async function AboutPage({ params }: PageProps) {
                     <Globe2 className="h-6 w-6 text-blue-600" />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-1">Global Export</h3>
-                    <p className="text-sm text-muted-foreground">Comprehensive export services worldwide</p>
+                    <h3 className="font-semibold mb-1">{t('about.cards.global.title', 'Global Export')}</h3>
+                    <p className="text-sm text-muted-foreground">{t('about.cards.global.desc', 'Comprehensive export services worldwide')}</p>
                   </div>
                 </div>
               </Card>
@@ -180,8 +180,8 @@ export default async function AboutPage({ params }: PageProps) {
                     <Factory className="h-6 w-6 text-blue-600" />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-1">Advanced Manufacturing</h3>
-                    <p className="text-sm text-muted-foreground">Modern production facilities and equipment</p>
+                    <h3 className="font-semibold mb-1">{t('about.cards.advanced.title', 'Advanced Manufacturing')}</h3>
+                    <p className="text-sm text-muted-foreground">{t('about.cards.advanced.desc', 'Modern production facilities and equipment')}</p>
                   </div>
                 </div>
               </Card>
