@@ -2,9 +2,8 @@ import type { NextConfig } from 'next';
 
 // Detect deployment platform
 // - VERCEL=1: Deploy to Vercel (use standalone for SSR/API support)
-// - DEPLOY_TARGET=cloudbase: Deploy to CloudBase (use export for static hosting)
+// - Default (no VERCEL env): Deploy to CloudBase (use export for static hosting)
 const isVercel = process.env.VERCEL === '1';
-const isCloudBase = process.env.DEPLOY_TARGET === 'cloudbase';
 
 // Base configuration
 const baseConfig: NextConfig = {
@@ -53,6 +52,7 @@ const vercelConfig: NextConfig = {
 };
 
 // CloudBase-specific configuration (static export)
+// This is the default when VERCEL env is not set
 const cloudBaseConfig: NextConfig = {
   ...baseConfig,
   output: 'export',
@@ -63,6 +63,7 @@ const cloudBaseConfig: NextConfig = {
 };
 
 // Export configuration based on deployment target
-const nextConfig = isCloudBase ? cloudBaseConfig : vercelConfig;
+// Default to CloudBase (static export), use Vercel config when VERCEL=1
+const nextConfig = isVercel ? vercelConfig : cloudBaseConfig;
 
 export default nextConfig;
