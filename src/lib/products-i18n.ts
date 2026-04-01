@@ -868,9 +868,17 @@ const featureTranslations: Record<string, Record<string, string>> = {
 
 // Get localized product name
 export function getProductName(product: Product, lang: Language): string {
-  // 中文返回中文名称，其他语言返回英文名称
   if (lang === 'zh') {
     return product.name;
+  }
+  if (lang === 'ar' && product.nameAr) {
+    return product.nameAr;
+  }
+  if (lang === 'de' && product.nameDe) {
+    return product.nameDe;
+  }
+  if (lang === 'es' && product.nameEs) {
+    return product.nameEs;
   }
   return product.nameEn || product.name;
 }

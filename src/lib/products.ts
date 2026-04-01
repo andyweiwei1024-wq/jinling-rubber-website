@@ -5,6 +5,9 @@ export interface Product {
   slug: string; // SEO-friendly URL slug
   name: string;
   nameEn: string;
+  nameAr?: string; // Arabic name
+  nameDe?: string; // German name
+  nameEs?: string; // Spanish name
   category: string;
   categoryEn: string;
   images: {
@@ -43,6 +46,9 @@ export const products: Product[] = [
     slug: 'double-coated-acid-resistant-suit-3015',
     name: '双胶防酸分式工作服',
     nameEn: 'Double-Coated Acid-Resistant Suit',
+    nameAr: 'بدلة مقاومة للأحماض مزدوجة الطلاء',
+    nameDe: 'Doppelt beschichteter Säureschutzanzug',
+    nameEs: 'Traje resistente a ácidos de doble recubrimiento',
     category: 'protective-suits',
     categoryEn: 'Protective Suits',
     images: {
@@ -99,6 +105,9 @@ export const products: Product[] = [
     slug: 'double-coated-acid-resistant-long-suit-3019',
     name: '双胶防酸长式工作服',
     nameEn: 'Double-Coated Acid-Resistant Long Suit',
+    nameAr: 'بدلة طويلة مقاومة للأحماض مزدوجة الطلاء',
+    nameDe: 'Langer doppelt beschichteter Säureschutzanzug',
+    nameEs: 'Traje largo resistente a ácidos de doble recubrimiento',
     category: 'protective-suits',
     categoryEn: 'Protective Suits',
     images: {
@@ -153,6 +162,9 @@ export const products: Product[] = [
     slug: 'acid-resistant-two-piece-suit-3088',
     name: '耐酸分式工作服',
     nameEn: 'Acid-Resistant Two-Piece Suit',
+    nameAr: 'بدلة مقاومة للأحماض بقطعتين',
+    nameDe: 'Säurebeständiger zweiteiliger Anzug',
+    nameEs: 'Traje resistente a ácidos de dos piezas',
     category: 'protective-suits',
     categoryEn: 'Protective Suits',
     images: {
@@ -207,6 +219,9 @@ export const products: Product[] = [
     slug: 'one-piece-gas-protection-suit-3112',
     name: '连式防毒衣',
     nameEn: 'One-Piece Gas Protection Suit',
+    nameAr: 'بدلة حماية من الغازات بقطعة واحدة',
+    nameDe: 'Einteiliger Gasschutzanzug',
+    nameEs: 'Traje de protección contra gases de una pieza',
     category: 'protective-suits',
     categoryEn: 'Protective Suits',
     images: {
@@ -263,6 +278,9 @@ export const products: Product[] = [
     slug: 'gas-protection-suit-with-gloves-boots-3113',
     name: '连式带手套靴防毒衣',
     nameEn: 'One-Piece Gas Protection Suit with Gloves and Boots',
+    nameAr: 'بدلة حماية من الغازات بقطعة واحدة مع قفازات وأحذية',
+    nameDe: 'Einteiliger Gasschutzanzug mit Handschuhen und Stiefeln',
+    nameEs: 'Traje de protección contra gases de una pieza con guantes y botas',
     category: 'protective-suits',
     categoryEn: 'Protective Suits',
     images: {
@@ -319,6 +337,9 @@ export const products: Product[] = [
     slug: 'fully-enclosed-gas-protection-suit-3116',
     name: '全封闭连式防毒衣',
     nameEn: 'Fully Enclosed Gas Protection Suit',
+    nameAr: 'بدلة حماية من الغازات مغلقة بالكامل',
+    nameDe: 'Vollständig geschlossener Gasschutzanzug',
+    nameEs: 'Traje de protección contra gases completamente cerrado',
     category: 'protective-suits',
     categoryEn: 'Protective Suits',
     images: {
@@ -375,6 +396,9 @@ export const products: Product[] = [
     slug: 'heat-resistant-gas-protection-suit-3121',
     name: '全封闭分式隔热防毒衣',
     nameEn: 'Fully Enclosed Heat-Resistant Gas Protection Suit',
+    nameAr: 'بدلة حماية من الغازات مقاومة للحرارة مغلقة بالكامل',
+    nameDe: 'Vollständig geschlossener hitzebeständiger Gasschutzanzug',
+    nameEs: 'Traje de protección contra gases resistente al calor completamente cerrado',
     category: 'protective-suits',
     categoryEn: 'Protective Suits',
     images: {
@@ -429,6 +453,9 @@ export const products: Product[] = [
     slug: 'chemical-resistant-flame-retardant-suit-3218',
     name: '双胶防化阻燃连式工作服带手套靴',
     nameEn: 'Double-Coated Chemical-Resistant Flame-Retardant Suit',
+    nameAr: 'بدلة مقاومة للكيماويات واللهب مزدوجة الطلاء',
+    nameDe: 'Doppelt beschichteter chemikalienbeständiger flammhemmender Anzug',
+    nameEs: 'Traje resistente a químicos y llamas de doble recubrimiento',
     category: 'protective-suits',
     categoryEn: 'Protective Suits',
     images: {
@@ -486,6 +513,9 @@ export const products: Product[] = [
     slug: 'double-coated-wading-pants-5061',
     name: '双胶下水裤',
     nameEn: 'Double-Coated Wading Pants',
+    nameAr: 'بنطلون خوض مزدوج الطلاء',
+    nameDe: 'Doppelt beschichtete Watthose',
+    nameEs: 'Pantalones de vadeo de doble recubrimiento',
     category: 'workwear',
     categoryEn: 'Workwear Series',
     images: {
@@ -540,6 +570,9 @@ export const products: Product[] = [
     slug: 'fluorescent-green-police-suit',
     name: '莹光绿警服',
     nameEn: 'Fluorescent Green Police Suit',
+    nameAr: 'بدلة شرطة خضراء فلورسنت',
+    nameDe: 'Fluoreszierender grüner Polizei-Anzug',
+    nameEs: 'Traje de policía verde fluorescente',
     category: 'workwear',
     categoryEn: 'Workwear Series',
     images: {
@@ -596,6 +629,9 @@ export const products: Product[] = [
     slug: 'spring-yarn-splicing-suit',
     name: '春亚纺相拼色套装',
     nameEn: 'Spring Yarn Splicing Suit',
+    nameAr: 'بدلة ألوان متجانبة من قماش الربيع',
+    nameDe: 'Frühlingsgarn-Farbmisch-Anzug',
+    nameEs: 'Traje de colores combinados de tejido de primavera',
     category: 'workwear',
     categoryEn: 'Workwear Series',
     images: {
@@ -652,6 +688,9 @@ export const products: Product[] = [
     slug: 'split-apron-sleeve-set',
     name: '分体式围裙袖套套装',
     nameEn: 'Split Apron & Sleeve Set',
+    nameAr: 'طقم مريولة وأكمام منفصل',
+    nameDe: 'Getrenntes Schürzen- und Ärmel-Set',
+    nameEs: 'Set de delantal y mangas separados',
     category: 'workwear',
     categoryEn: 'Workwear Series',
     images: {
@@ -703,6 +742,9 @@ export const products: Product[] = [
     slug: 'anti-static-work-suit',
     name: '抗静电工作套装',
     nameEn: 'Anti-Static Work Suit',
+    nameAr: 'بدلة عمل مضادة للكهرباء الساكنة',
+    nameDe: 'Antistatischer Arbeitsanzug',
+    nameEs: 'Traje de trabajo antiestático',
     category: 'rainwear',
     categoryEn: 'Rainwear Series',
     images: {
@@ -762,6 +804,9 @@ export const products: Product[] = [
     slug: 'mine-waterproof-cotton-coat',
     name: '矿井防水棉衣',
     nameEn: 'Mine Waterproof Cotton Coat',
+    nameAr: 'معطف قطني مقاوم للماء للمناجم',
+    nameDe: 'Minen-Wasserdichter Baumwollmantel',
+    nameEs: 'Abrigo de algodón impermeable para minas',
     category: 'rainwear',
     categoryEn: 'Rainwear Series',
     images: {
@@ -820,6 +865,9 @@ export const products: Product[] = [
     slug: 'single-coated-long-raincoat',
     name: '单胶长雨衣',
     nameEn: 'Single-Coated Long Raincoat',
+    nameAr: 'معطر مطري طويل أحادي الطلاء',
+    nameDe: 'Einfach beschichteter langer Regenmantel',
+    nameEs: 'Impermeable largo de un solo recubrimiento',
     category: 'rainwear',
     categoryEn: 'Rainwear Series',
     images: {
@@ -873,6 +921,9 @@ export const products: Product[] = [
     slug: 'double-coated-mine-work-suit',
     name: '双胶矿井工作服',
     nameEn: 'Double-Coated Mine Work Suit',
+    nameAr: 'بدلة عمل للمناجم مزدوجة الطلاء',
+    nameDe: 'Doppelt beschichteter Minenarbeitsanzug',
+    nameEs: 'Traje de trabajo para minas de doble recubrimiento',
     category: 'rainwear',
     categoryEn: 'Rainwear Series',
     images: {
@@ -931,6 +982,9 @@ export const products: Product[] = [
     slug: 'single-coated-hooded-suit',
     name: '单胶连帽套装',
     nameEn: 'Single-Coated Hooded Suit',
+    nameAr: 'بدلة بغطاء رأس أحادية الطلاء',
+    nameDe: 'Einfach beschichteter Anzug mit Kapuze',
+    nameEs: 'Traje con capucha de un solo recubrimiento',
     category: 'rainwear',
     categoryEn: 'Rainwear Series',
     images: {
@@ -985,6 +1039,9 @@ export const products: Product[] = [
     slug: 'polyester-suit-set',
     name: '涤丝纺套装',
     nameEn: 'Polyester Taffeta Suit',
+    nameAr: 'بدلة تافيتا بوليستر',
+    nameDe: 'Polyester-Taffeta-Anzug',
+    nameEs: 'Traje de tafetán de poliéster',
     category: 'rainwear',
     categoryEn: 'Rainwear Series',
     images: {
@@ -1043,6 +1100,9 @@ export const products: Product[] = [
     slug: 'two-piece-reflective-rain-suit-blue',
     name: '分体式反光雨衣套装（蓝色款）',
     nameEn: 'Two-Piece Reflective Rain Suit (Blue)',
+    nameAr: 'بدلة مطر زرقاء بقطعتين مع شرائط عاكسة',
+    nameDe: 'Blauer zweiteiliger Regenanzug mit Reflektorstreifen',
+    nameEs: 'Traje de lluvia azul de dos piezas con tiras reflectantes',
     category: 'rainwear',
     categoryEn: 'Rainwear Series',
     images: {
@@ -1093,6 +1153,9 @@ export const products: Product[] = [
     slug: 'two-piece-hooded-rain-suit',
     name: '分体式连帽雨衣套装',
     nameEn: 'Two-Piece Hooded Rain Suit',
+    nameAr: 'بدلة مطر بغطاء رأس بقطعتين',
+    nameDe: 'Zweiteiliger Regenanzug mit Kapuze',
+    nameEs: 'Traje de lluvia con capucha de dos piezas',
     category: 'rainwear',
     categoryEn: 'Rainwear Series',
     images: {
@@ -1143,6 +1206,9 @@ export const products: Product[] = [
     slug: 'two-piece-hooded-rain-suit-4-18',
     name: '分体式连帽雨衣套装',
     nameEn: 'Two-Piece Hooded Rain Suit',
+    nameAr: 'بدلة مطر بغطاء رأس بقطعتين',
+    nameDe: 'Zweiteiliger Regenanzug mit Kapuze',
+    nameEs: 'Traje de lluvia con capucha de dos piezas',
     category: 'rainwear',
     categoryEn: 'Rainwear Series',
     images: {
