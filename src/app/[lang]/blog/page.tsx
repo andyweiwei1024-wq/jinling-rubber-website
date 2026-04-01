@@ -80,7 +80,13 @@ export default async function BlogPage({ params }: PageProps) {
                       <CardHeader>
                         <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
                           <Badge variant="outline">
-                            {isEn 
+                            {lang === 'ar' 
+                              ? articleCategories.find(c => c.id === article.category)?.nameAr 
+                              : lang === 'de'
+                              ? articleCategories.find(c => c.id === article.category)?.nameDe
+                              : lang === 'es'
+                              ? articleCategories.find(c => c.id === article.category)?.nameEs
+                              : isEn 
                               ? articleCategories.find(c => c.id === article.category)?.nameEn 
                               : articleCategories.find(c => c.id === article.category)?.name}
                           </Badge>
@@ -131,7 +137,13 @@ export default async function BlogPage({ params }: PageProps) {
                     <div className="flex-1 p-6">
                       <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
                         <Badge variant="outline">
-                          {isEn 
+                          {lang === 'ar' 
+                            ? articleCategories.find(c => c.id === article.category)?.nameAr 
+                            : lang === 'de'
+                            ? articleCategories.find(c => c.id === article.category)?.nameDe
+                            : lang === 'es'
+                            ? articleCategories.find(c => c.id === article.category)?.nameEs
+                            : isEn 
                             ? articleCategories.find(c => c.id === article.category)?.nameEn 
                             : articleCategories.find(c => c.id === article.category)?.name}
                         </Badge>
@@ -184,7 +196,15 @@ export default async function BlogPage({ params }: PageProps) {
                       href={`${prefix}/blog?category=${category.id}`}
                       className="block py-2 px-3 rounded hover:bg-gray-100 transition-colors"
                     >
-                      {isEn ? category.nameEn : category.name}
+                      {lang === 'ar' 
+                        ? category.nameAr 
+                        : lang === 'de'
+                        ? category.nameDe
+                        : lang === 'es'
+                        ? category.nameEs
+                        : isEn 
+                        ? category.nameEn 
+                        : category.name}
                     </Link>
                   ))}
                 </CardContent>

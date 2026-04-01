@@ -5,24 +5,48 @@ export interface Article {
   slug: string;
   title: string;
   titleEn: string;
+  titleAr?: string;
+  titleDe?: string;
+  titleEs?: string;
   excerpt: string;
   excerptEn: string;
+  excerptAr?: string;
+  excerptDe?: string;
+  excerptEs?: string;
   content: string;
   contentEn: string;
+  contentAr?: string;
+  contentDe?: string;
+  contentEs?: string;
   author: string;
   authorEn: string;
+  authorAr?: string;
+  authorDe?: string;
+  authorEs?: string;
   category: string;
   categoryEn: string;
+  categoryAr?: string;
+  categoryDe?: string;
+  categoryEs?: string;
   tags: string[];
   tagsEn: string[];
+  tagsAr?: string[];
+  tagsDe?: string[];
+  tagsEs?: string[];
   coverImage: string;
   publishedAt: string;
   updatedAt: string;
   featured: boolean;
   metaTitle?: string;
   metaTitleEn?: string;
+  metaTitleAr?: string;
+  metaTitleDe?: string;
+  metaTitleEs?: string;
   metaDescription?: string;
   metaDescriptionEn?: string;
+  metaDescriptionAr?: string;
+  metaDescriptionDe?: string;
+  metaDescriptionEs?: string;
 }
 
 export interface Comment {
@@ -37,10 +61,10 @@ export interface Comment {
 }
 
 export const articleCategories = [
-  { id: 'industry-news', name: '行业动态', nameEn: 'Industry News' },
-  { id: 'product-guide', name: '产品指南', nameEn: 'Product Guide' },
-  { id: 'safety-knowledge', name: '安全知识', nameEn: 'Safety Knowledge' },
-  { id: 'company-news', name: '公司新闻', nameEn: 'Company News' },
+  { id: 'industry-news', name: '行业动态', nameEn: 'Industry News', nameAr: 'أخبار الصناعة', nameDe: 'Industrienachrichten', nameEs: 'Noticias de la industria' },
+  { id: 'product-guide', name: '产品指南', nameEn: 'Product Guide', nameAr: 'دليل المنتجات', nameDe: 'Produktleitfaden', nameEs: 'Guía de productos' },
+  { id: 'safety-knowledge', name: '安全知识', nameEn: 'Safety Knowledge', nameAr: 'معرفة السلامة', nameDe: 'Sicherheitswissen', nameEs: 'Conocimientos de seguridad' },
+  { id: 'company-news', name: '公司新闻', nameEn: 'Company News', nameAr: 'أخبار الشركة', nameDe: 'Firmennachrichten', nameEs: 'Noticias de la empresa' },
 ];
 
 // 示例文章数据
@@ -50,8 +74,14 @@ export const articles: Article[] = [
     slug: 'how-to-choose-acid-resistant-workwear',
     title: '如何选择防酸工作服：完整选购指南',
     titleEn: 'How to Choose Acid-Resistant Workwear: A Complete Guide',
+    titleAr: 'كيفية اختيار ملابس العمل المقاومة للأحماض: دليل شامل',
+    titleDe: 'Wie man säurebeständige Arbeitskleidung wählt: Ein vollständiger Leitfaden',
+    titleEs: 'Cómo elegir ropa de trabajo resistente a ácidos: Guía completa',
     excerpt: '本文详细介绍防酸工作服的选购要点，包括材质选择、防护等级、适用场景等关键因素，帮助您选择最适合的防护装备。',
     excerptEn: 'This article introduces the key points for selecting acid-resistant workwear, including material selection, protection levels, and applicable scenarios.',
+    excerptAr: 'تقدم هذه المقالة النقاط الرئيسية لاختيار ملابس العمل المقاومة للأحماض، بما في ذلك اختيار المواد ومستويات الحماية والسيناريوهات المطبقة.',
+    excerptDe: 'Dieser Artikel stellt die wichtigsten Punkte für die Auswahl säurebeständiger Arbeitskleidung vor, einschließlich Materialauswahl, Schutzniveaus und Anwendungsbereichen.',
+    excerptEs: 'Este artículo presenta los puntos clave para seleccionar ropa de trabajo resistente a ácidos, incluyendo selección de materiales, niveles de protección y escenarios de aplicación.',
     content: `
 ## 为什么需要防酸工作服？
 
@@ -152,6 +182,9 @@ Contact us for detailed product information and quotations.
     `,
     author: '金铃技术团队',
     authorEn: 'Jinling Technical Team',
+    authorAr: 'فريق جينلينغ التقني',
+    authorDe: 'Jinling Technik-Team',
+    authorEs: 'Equipo Técnico Jinling',
     category: 'product-guide',
     categoryEn: 'Product Guide',
     tags: ['防酸工作服', '选购指南', '防护装备', '化工安全'],
@@ -170,8 +203,14 @@ Contact us for detailed product information and quotations.
     slug: 'gas-protection-suit-maintenance-guide',
     title: '防毒衣的日常维护与保养指南',
     titleEn: 'Daily Maintenance and Care Guide for Gas Protection Suits',
+    titleAr: 'دليل الصيانة والرعاية اليومية لبدلات الحماية من الغازات',
+    titleDe: 'Täglicher Wartungs- und Pflegeleitfaden für Gasschutzanzüge',
+    titleEs: 'Guía de mantenimiento y cuidado diario de trajes de protección contra gases',
     excerpt: '正确的维护保养可以延长防毒衣的使用寿命，确保防护效果。本文介绍防毒衣的清洁、存储和检查方法。',
     excerptEn: 'Proper maintenance can extend the service life of gas protection suits and ensure protection effectiveness. This article covers cleaning, storage, and inspection methods.',
+    excerptAr: 'الصيانة الصحيحة يمكن أن تطيل عمر خدمة بدلات الحماية من الغازات وتضمن فعالية الحماية. تغطي هذه المقالة طرق التنظيف والتخزين والفحص.',
+    excerptDe: 'Richtige Wartung kann die Lebensdauer von Gasschutzanzügen verlängern und die Schutzwirkung sicherstellen. Dieser Artikel behandelt Reinigung, Lagerung und Inspektionsmethoden.',
+    excerptEs: 'El mantenimiento adecuado puede extender la vida útil de los trajes de protección contra gases y garantizar la eficacia de protección. Este artículo cubre métodos de limpieza, almacenamiento e inspección.',
     content: `
 ## 防毒衣维护的重要性
 
@@ -306,6 +345,9 @@ Contact us if you have any questions.
     `,
     author: '金铃技术团队',
     authorEn: 'Jinling Technical Team',
+    authorAr: 'فريق جينلينغ التقني',
+    authorDe: 'Jinling Technik-Team',
+    authorEs: 'Equipo Técnico Jinling',
     category: 'safety-knowledge',
     categoryEn: 'Safety Knowledge',
     tags: ['防毒衣', '维护保养', '安全知识', '防护装备'],
@@ -324,8 +366,14 @@ Contact us if you have any questions.
     slug: 'chemical-industry-safety-standards-2024',
     title: '2024年化工行业劳动防护用品最新标准解读',
     titleEn: '2024 Chemical Industry Labor Protection Equipment Standards Interpretation',
+    titleAr: 'تفسير معايير معدات الحماية العمالية في الصناعة الكيميائية 2024',
+    titleDe: 'Interpretation der Normen für Arbeitsschutzmittel in der chemischen Industrie 2024',
+    titleEs: 'Interpretación de normas de equipos de protección laboral en la industria química 2024',
     excerpt: '解读最新的化工行业劳动防护用品国家标准，了解合规要求，确保企业安全生产。',
     excerptEn: 'Interpretation of the latest national standards for labor protection equipment in the chemical industry.',
+    excerptAr: 'تفسير أحدث المعايير الوطنية لمعدات الحماية العمالية في الصناعة الكيميائية.',
+    excerptDe: 'Interpretation der neuesten nationalen Normen für Arbeitsschutzmittel in der chemischen Industrie.',
+    excerptEs: 'Interpretación de las últimas normas nacionales de equipos de protección laboral en la industria química.',
     content: `
 ## 概述
 
@@ -430,6 +478,9 @@ Contact us for more information or to obtain product certification documents.
     `,
     author: '金铃技术团队',
     authorEn: 'Jinling Technical Team',
+    authorAr: 'فريق جينلينغ التقني',
+    authorDe: 'Jinling Technik-Team',
+    authorEs: 'Equipo Técnico Jinling',
     category: 'industry-news',
     categoryEn: 'Industry News',
     tags: ['化工标准', '劳动防护', '国家标准', '企业合规'],
@@ -449,8 +500,14 @@ Contact us for more information or to obtain product certification documents.
     slug: 'protective-suit-materials-comparison-guide',
     title: '防护服材料对比：氯丁胶、PVC与丁基胶的优缺点分析',
     titleEn: 'Protective Suit Materials Comparison: Neoprene vs PVC vs Butyl Rubber',
+    titleAr: 'مقارنة مواد بدلات الحماية: النيوبرين مقابل PVC مقابل مطاط البيوتيل',
+    titleDe: 'Schutzanzug-Materialien im Vergleich: Neopren vs PVC vs Butylkautschuk',
+    titleEs: 'Comparación de materiales de trajes protectores: Neopreno vs PVC vs caucho de butilo',
     excerpt: '深入对比氯丁胶、PVC和丁基胶三种主流防护服材料的性能特点、适用场景和价格差异，帮助您选择最适合的防护装备。',
     excerptEn: 'In-depth comparison of neoprene, PVC, and butyl rubber protective suit materials, including performance characteristics, applications, and pricing differences.',
+    excerptAr: 'مقارنة متعمقة لمواد بدلات الحماية من النيوبرين وPVC ومطاط البيوتيل، بما في ذلك خصائص الأداء والتطبيقات وفروق الأسعار.',
+    excerptDe: 'Umfassender Vergleich von Schutzanzug-Materialien aus Neopren, PVC und Butylkautschuk mit Leistungseigenschaften, Anwendungen und Preisunterschieden.',
+    excerptEs: 'Comparación exhaustiva de materiales de trajes protectores de neopreno, PVC y caucho de butilo, incluyendo características de rendimiento, aplicaciones y diferencias de precios.',
     content: `
 ## 前言
 
@@ -691,6 +748,9 @@ Contact us for detailed product information and quotations!
     `,
     author: '金铃技术团队',
     authorEn: 'Jinling Technical Team',
+    authorAr: 'فريق جينلينغ التقني',
+    authorDe: 'Jinling Technik-Team',
+    authorEs: 'Equipo Técnico Jinling',
     category: 'product-guide',
     categoryEn: 'Product Guide',
     tags: ['防护服材料', '氯丁胶', 'PVC', '丁基胶', '材料对比'],
@@ -709,8 +769,14 @@ Contact us for detailed product information and quotations!
     slug: 'chemical-enterprise-safety-management-system',
     title: '化工企业防护用品管理体系建设完整指南',
     titleEn: 'Complete Guide to Building a PPE Management System for Chemical Enterprises',
+    titleAr: 'دليل كامل لبناء نظام إدارة معدات الحماية الشخصية للمؤسسات الكيميائية',
+    titleDe: 'Vollständiger Leitfaden zum Aufbau eines PSA-Verwaltungssystems für Chemieunternehmen',
+    titleEs: 'Guía completa para construir un sistema de gestión de EPP para empresas químicas',
     excerpt: '从选购、发放、使用到报废，详解化工企业如何建立完善的劳动防护用品管理体系，确保员工安全，满足法规要求。',
     excerptEn: 'From procurement to disposal, a detailed guide on how chemical enterprises can establish a comprehensive PPE management system to ensure employee safety and regulatory compliance.',
+    excerptAr: 'من المشتريات إلى التخلص، دليل مفصل حول كيفية إنشاء نظام شامل لإدارة معدات الحماية الشخصية لضمان سلامة الموظفين والامتثال التنظيمي.',
+    excerptDe: 'Von der Beschaffung bis zur Entsorgung: Ein detaillierter Leitfaden, wie Chemieunternehmen ein umfassendes PSA-Verwaltungssystem aufbauen können.',
+    excerptEs: 'Desde la adquisición hasta la eliminación, guía detallada sobre cómo las empresas químicas pueden establecer un sistema integral de gestión de EPP.',
     content: `
 ## 一、引言
 
@@ -1013,8 +1079,14 @@ Shanghai Jinling Rubber Products Co., Ltd. is ready to work with you to protect 
     slug: 'gas-protection-suit-buying-guide',
     title: '防毒衣选购指南：连体式与分体式的区别与选择',
     titleEn: 'Gas Protection Suit Buying Guide: One-Piece vs Two-Piece Design',
+    titleAr: 'دليل شراء بدلات الحماية من الغازات: تصميم قطعة واحدة مقابل قطعتين',
+    titleDe: 'Kaufberatung für Gasschutzanzüge: Einteilig vs. Zweiteilig',
+    titleEs: 'Guía de compra de trajes de protección contra gases: Diseño de una pieza vs dos piezas',
     excerpt: '详细对比连体式和分体式防毒衣的设计特点、防护性能、穿脱便利性等方面，帮助您根据实际需求选择最合适的防毒装备。',
     excerptEn: 'Detailed comparison of one-piece and two-piece gas protection suits in design features, protection performance, and ease of use to help you choose the most suitable equipment.',
+    excerptAr: 'مقارنة مفصلة لبدلات الحماية من الغازات القطعة الواحدة والقطعتين من حيث ميزات التصميم وأداء الحماية وسهولة الاستخدام.',
+    excerptDe: 'Detaillierter Vergleich von einteiligen und zweiteiligen Gasschutzanzügen in Bezug auf Designmerkmale, Schutzeistung und Benutzerfreundlichkeit.',
+    excerptEs: 'Comparación detallada de trajes de protección contra gases de una pieza y dos piezas en características de diseño, rendimiento de protección y facilidad de uso.',
     content: `
 ## 一、防毒衣的重要性
 
@@ -1261,6 +1333,9 @@ Shanghai Jinling Rubber Products Co., Ltd. offers a variety of quality gas prote
     `,
     author: '金铃技术团队',
     authorEn: 'Jinling Technical Team',
+    authorAr: 'فريق جينلينغ التقني',
+    authorDe: 'Jinling Technik-Team',
+    authorEs: 'Equipo Técnico Jinling',
     category: 'product-guide',
     categoryEn: 'Product Guide',
     tags: ['防毒衣', '连体式', '分体式', '选购指南', '防护装备'],
@@ -1279,8 +1354,14 @@ Shanghai Jinling Rubber Products Co., Ltd. offers a variety of quality gas prote
     slug: 'anti-static-workwear-importance-petrochemical',
     title: '抗静电工作服在石化行业的重要性及选购要点',
     titleEn: 'Importance of Anti-Static Workwear in Petrochemical Industry and Selection Guide',
+    titleAr: 'أهمية ملابس العمل المضادة للكهرباء الساكنة في صناعة البتروكيماويات ودليل الاختيار',
+    titleDe: 'Bedeutung antistatischer Arbeitskleidung in der Petrochemie und Auswahlleitfaden',
+    titleEs: 'Importancia de la ropa de trabajo antiestática en la industria petroquímica y guía de selección',
     excerpt: '静电是石化行业的隐形杀手。本文详解抗静电工作服的工作原理、重要性以及选购要点，帮助石化企业保障安全生产。',
     excerptEn: 'Static electricity is an invisible killer in the petrochemical industry. This article explains the working principle, importance, and selection points of anti-static workwear.',
+    excerptAr: 'الكهرباء الساكنة هي قاتل غير مرئي في صناعة البتروكيماويات. تشرح هذه المقالة مبدأ العمل وأهمية ونقاط اختيار ملابس العمل المضادة للكهرباء الساكنة.',
+    excerptDe: 'Statische Elektrizität ist ein unsichtbarer Killer in der Petrochemie. Dieser Artikel erklärt das Arbeitsprinzip, die Bedeutung und die Auswahlkriterien antistatischer Arbeitskleidung.',
+    excerptEs: 'La electricidad estática es un asesino invisible en la industria petroquímica. Este artículo explica el principio de funcionamiento, importancia y puntos de selección de ropa de trabajo antiestática.',
     content: `
 ## 一、静电的危害
 
@@ -1568,8 +1649,14 @@ Shanghai Jinling Rubber Products Co., Ltd. is committed to providing quality ant
     slug: 'fully-enclosed-chemical-suit-application-guide',
     title: '全封闭防化服的应用场景与选购要点详解',
     titleEn: 'Fully Enclosed Chemical Suit Application Guide and Selection Points',
+    titleAr: 'دليل تطبيق بدلات المواد الكيميائية المغلقة بالكامل ونقاط الاختيار',
+    titleDe: 'Anwendungsleitfaden für vollständig geschlossene Chemikalienschutzanzüge und Auswahlkriterien',
+    titleEs: 'Guía de aplicación de trajes químicos completamente cerrados y puntos de selección',
     excerpt: '全封闭防化服是最高等级的化学防护装备。本文详细介绍其应用场景、性能特点、选购要点及使用注意事项。',
     excerptEn: 'Fully enclosed chemical suits are the highest level of chemical protection equipment. This article details their applications, performance features, selection points, and usage precautions.',
+    excerptAr: 'بدلات المواد الكيميائية المغلقة بالكامل هي أعلى مستوى من معدات الحماية الكيميائية. توضح هذه المقالة بالتفصيل تطبيقاتها وميزات أدائها ونقاط اختيارها واحتياطات الاستخدام.',
+    excerptDe: 'Vollständig geschlossene Chemikalienschutzanzüge sind die höchste Stufe der chemischen Schutzausrüstung. Dieser Artikel beschreibt detailliert ihre Anwendungen, Leistungsmerkmale, Auswahlkriterien und Verwendungshinweise.',
+    excerptEs: 'Los trajes químicos completamente cerrados son el nivel más alto de equipo de protección química. Este artículo detalla sus aplicaciones, características de rendimiento, puntos de selección y precauciones de uso.',
     content: `
 ## 一、什么是全封闭防化服
 
@@ -1948,6 +2035,9 @@ Shanghai Jinling Rubber Products Co., Ltd. offers a variety of high-quality full
     `,
     author: '金铃技术团队',
     authorEn: 'Jinling Technical Team',
+    authorAr: 'فريق جينلينغ التقني',
+    authorDe: 'Jinling Technik-Team',
+    authorEs: 'Equipo Técnico Jinling',
     category: 'product-guide',
     categoryEn: 'Product Guide',
     tags: ['全封闭防化服', '化学防护', '应急救援', '选购指南'],
@@ -1990,6 +2080,22 @@ export function getArticleField(article: Article, field: keyof Article, lang: st
   if (lang === 'zh' || lang === 'zh-CN') {
     return String(article[field]);
   }
+  
+  // 根据语言获取对应字段后缀
+  let suffix = 'En';
+  if (lang === 'ar') suffix = 'Ar';
+  else if (lang === 'de') suffix = 'De';
+  else if (lang === 'es') suffix = 'Es';
+  
+  const localizedField = `${String(field)}${suffix}` as keyof Article;
+  const value = article[localizedField];
+  
+  // 如果有对应语言的字段值，返回它；否则回退到英文
+  if (value) {
+    return String(value);
+  }
+  
+  // 回退到英文
   const enField = `${String(field)}En` as keyof Article;
   return String(article[enField] || article[field]);
 }
