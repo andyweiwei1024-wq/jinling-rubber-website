@@ -1,11 +1,13 @@
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  // Enable standalone output for better Vercel compatibility
-  output: 'standalone',
+  // Enable static export for CloudBase hosting
+  output: 'export',
   
-  // Image optimization settings
+  // Disable Image Optimization API (not supported in static export)
+  // Use external image URLs or pre-optimized images
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',
@@ -18,29 +20,6 @@ const nextConfig: NextConfig = {
         pathname: '/**',
       },
     ],
-  },
-  
-  // Headers for security
-  async headers() {
-    return [
-      {
-        source: '/(.*)',
-        headers: [
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
-          },
-          {
-            key: 'X-Frame-Options',
-            value: 'DENY',
-          },
-          {
-            key: 'X-XSS-Protection',
-            value: '1; mode=block',
-          },
-        ],
-      },
-    ];
   },
 };
 
