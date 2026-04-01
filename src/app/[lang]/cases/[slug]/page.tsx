@@ -42,8 +42,10 @@ export async function generateMetadata({ params }: { params: Promise<{ lang?: st
     return { title: 'Case Study Not Found' };
   }
   
-  const title = lang === 'zh' ? caseStudy.title : caseStudy.titleEn;
-  const description = lang === 'zh' ? caseStudy.summary : caseStudy.summaryEn;
+  // Use localized content for metadata
+  const localizedCase = getLocalizedCase(caseStudy, lang);
+  const title = localizedCase.title;
+  const description = localizedCase.summary;
   
   return {
     title: `${title} | Shanghai Jinling Rubber`,
@@ -273,11 +275,7 @@ export default async function CaseDetailPage({ params }: PageProps) {
             <h2 className="text-2xl font-bold mb-8">{t('cases.relatedCases', 'Related Case Studies')}</h2>
             <div className="grid gap-6 md:grid-cols-2 max-w-4xl mx-auto">
               {relatedCases.map((related) => {
-                const relatedLocalized = {
-                  title: lang === 'zh' ? related.title : related.titleEn,
-                  summary: lang === 'zh' ? related.summary : related.summaryEn,
-                  country: lang === 'zh' ? related.country : related.countryEn,
-                };
+                const relatedLocalized = getLocalizedCase(related, lang);
                 return (
                   <Link key={related.id} href={navPath(`/cases/${related.slug}`)}>
                     <Card className="h-full hover:shadow-lg transition-shadow cursor-pointer">
