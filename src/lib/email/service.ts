@@ -1,7 +1,7 @@
 import { InquiryEmailData, emailConfig } from './config';
 
-// Resend API Key - 从环境变量获取，或使用后备值
-const RESEND_API_KEY = process.env.RESEND_API_KEY || 're_EXj1fcyf_FcigPqN4nWa8SC2XFrs9Qdzt';
+// Resend API Key - 从环境变量获取
+const RESEND_API_KEY = process.env.RESEND_API_KEY;
 
 // 发送询盘通知邮件
 export async function sendInquiryNotification(data: InquiryEmailData): Promise<boolean> {
