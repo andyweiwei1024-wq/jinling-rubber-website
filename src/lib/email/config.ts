@@ -3,8 +3,8 @@ export const emailConfig = {
   // 接收询盘的邮箱（不会显示在网页上）
   toEmail: process.env.INQUIRY_EMAIL || 'weiwei@jinlingrubber.com.cn',
   
-  // 发件人邮箱（域名验证后使用自定义域名）
-  fromEmail: process.env.FROM_EMAIL || 'noreply@send.jinlingrubber.com.cn',
+  // 发件人邮箱（使用已验证的主域名）
+  fromEmail: process.env.FROM_EMAIL || 'noreply@jinlingrubber.com.cn',
   
   // 公司名称
   companyName: '上海金铃橡胶制品有限公司',
