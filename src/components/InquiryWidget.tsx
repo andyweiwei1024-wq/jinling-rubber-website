@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useI18n } from '@/lib/i18n/client';
+import { event } from '@/lib/ga';
 
 export function InquiryWidget() {
   const [isOpen, setIsOpen] = useState(false);
@@ -52,6 +53,13 @@ export function InquiryWidget() {
       });
       
       if (response.ok) {
+        // Track successful inquiry submission
+        event({
+          action: 'submit_inquiry',
+          category: 'Inquiry',
+          label: formData.product || 'General',
+        });
+        
         setIsSubmitted(true);
         // 3秒后关闭
         setTimeout(() => {
@@ -59,9 +67,22 @@ export function InquiryWidget() {
           setIsSubmitted(false);
           setFormData({ name: '', email: '', company: '', phone: '', product: '', message: '' });
         }, 3000);
+      } else {
+        // Track failed inquiry submission
+        event({
+          action: 'submit_inquiry_failed',
+          category: 'Inquiry',
+          label: 'API Error',
+        });
       }
     } catch (error) {
       console.error('Submit error:', error);
+      // Track error
+      event({
+        action: 'submit_inquiry_failed',
+        category: 'Inquiry',
+        label: 'Network Error',
+      });
     } finally {
       setIsLoading(false);
     }

@@ -7,6 +7,8 @@ import { getAllTranslations, getLanguageFromPath } from '@/lib/i18n/server';
 import { I18nProvider } from '@/lib/i18n/client';
 import { SiteHeader } from '@/components/site-header';
 import { InquiryWidget } from '@/components/InquiryWidget';
+import { GoogleAnalytics } from '@/components/GoogleAnalytics';
+import { AnalyticsTracker } from '@/components/AnalyticsTracker';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -130,9 +132,12 @@ export default async function RootLayout({ children, params }: LayoutProps) {
         <link rel="alternate" hrefLang="de" href="https://www.shjinling.com/de" />
         <link rel="alternate" hrefLang="es" href="https://www.shjinling.com/es" />
         <link rel="alternate" hrefLang="x-default" href="https://www.shjinling.com" />
+        {/* Google Analytics */}
+        <GoogleAnalytics />
       </head>
       <body className={inter.className}>
         <I18nProvider initialLanguage={lang} initialTranslations={translations}>
+          <AnalyticsTracker />
           <div className="flex min-h-screen flex-col">
             <SiteHeader />
             <main className="flex-1">
