@@ -254,10 +254,14 @@ export default async function Home({ params }: PageProps) {
               {featuredProducts.map((product) => (
                 <Card key={product.id} className="overflow-hidden hover:shadow-lg transition-shadow">
                   <div className="aspect-[4/3] relative bg-gray-200">
-                    <img 
+                    <Image 
                       src={product.images.main} 
                       alt={getProductName(product, lang)}
+                      width={400}
+                      height={300}
                       className="object-cover w-full h-full"
+                      loading="lazy"
+                      quality={85}
                     />
                   </div>
                   <CardHeader className="pb-2">
@@ -382,11 +386,14 @@ export default async function Home({ params }: PageProps) {
             <div className="grid gap-8 md:grid-cols-4">
               <div className="md:col-span-2">
                 <div className="flex items-center space-x-2 mb-4">
-                  <div className="w-12 h-12 bg-white rounded-lg overflow-hidden shadow-sm flex items-center justify-center">
-                    <img 
+                  <div className="w-12 h-12 bg-white rounded-lg overflow-hidden shadow-sm flex items-center justify-center relative">
+                    <Image 
                       src="/logo.png" 
                       alt="Jinling Logo" 
-                      className="w-[150%] h-[150%] object-contain object-center -ml-[3mm] -mt-[2mm]"
+                      fill
+                      className="object-contain object-center"
+                      sizes="(max-width: 768px) 100vw, 48px"
+                      priority
                     />
                   </div>
                   <div className="flex flex-col">

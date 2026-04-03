@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { LanguageSwitcher } from '@/components/LanguageSwitcher';
@@ -26,11 +27,14 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between px-4 mx-auto">
         <Link href={navPath('/')} className="flex items-center space-x-2">
-          <div className="w-12 h-12 bg-white rounded-lg overflow-hidden shadow-sm flex items-center justify-center">
-            <img 
+          <div className="w-12 h-12 bg-white rounded-lg overflow-hidden shadow-sm flex items-center justify-center relative">
+            <Image 
               src="/logo.png" 
               alt="Jinling Logo" 
-              className="w-[150%] h-[150%] object-contain object-center -ml-[3mm] -mt-[2mm]"
+              fill
+              className="object-contain object-center"
+              sizes="48px"
+              priority
             />
           </div>
           <div className="flex flex-col">

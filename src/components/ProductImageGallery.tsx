@@ -54,14 +54,18 @@ export function ProductImageGallery({
       >
         {/* 主图片 */}
         <div className="aspect-square sm:aspect-[4/3] lg:aspect-square max-h-[500px] mx-auto relative">
-          <img 
+          <Image 
             src={currentImage} 
             alt={productName}
-            className="w-full h-full object-contain p-4 transition-transform duration-200"
+            fill
+            className="object-contain p-4 transition-transform duration-200"
             style={{
               transform: isHovering ? 'scale(3)' : 'scale(1)',
               transformOrigin: `${mousePosition.x}% ${mousePosition.y}%`
             }}
+            quality={90}
+            priority={selectedImage === 0}
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           />
         </div>
         
@@ -78,16 +82,20 @@ export function ProductImageGallery({
             <button
               key={index}
               onClick={() => setSelectedImage(index)}
-              className={`flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden border-2 transition-all ${
+              className={`flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden border-2 transition-all relative ${
                 selectedImage === index 
                   ? 'border-blue-500 ring-2 ring-blue-200' 
                   : 'border-gray-200 hover:border-gray-300'
               }`}
             >
-              <img 
+              <Image 
                 src={img} 
                 alt={`${productName} ${index + 1}`}
-                className="w-full h-full object-contain p-1"
+                fill
+                className="object-contain p-1"
+                quality={75}
+                loading="lazy"
+                sizes="80px"
               />
             </button>
           ))}

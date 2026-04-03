@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Metadata } from 'next';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
@@ -149,10 +150,14 @@ export default async function CasesPage({ params }: PageProps) {
               <Card key={caseStudy.id} className="overflow-hidden hover:shadow-lg transition-shadow">
                 {/* Case Image */}
                 <div className="aspect-[16/9] relative bg-gray-200">
-                  <img 
+                  <Image 
                     src={caseStudy.image}
                     alt={caseStudy.title}
+                    width={800}
+                    height={450}
                     className="object-cover w-full h-full"
+                    loading="lazy"
+                    quality={85}
                   />
                   <div className="absolute top-4 left-4">
                     <Badge className="bg-white/90 text-gray-900 hover:bg-white/90">
@@ -203,7 +208,7 @@ export default async function CasesPage({ params }: PageProps) {
                     <div className="bg-gray-50 rounded-lg p-4 mb-4">
                       <Quote className="h-4 w-4 text-blue-600 mb-2" />
                       <p className="text-sm text-muted-foreground italic line-clamp-3">
-                        "{caseStudy.testimonial}"
+                        &ldquo;{caseStudy.testimonial}&rdquo;
                       </p>
                       {caseStudy.clientName && (
                         <p className="text-sm font-medium mt-2">

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -70,10 +71,14 @@ export default async function ProductsPage({ params }: PageProps) {
                 {products.map((product) => (
                   <Card key={product.id} className="overflow-hidden hover:shadow-lg transition-shadow flex flex-col">
                     <div className="aspect-[4/3] relative bg-gray-200">
-                      <img 
+                      <Image 
                         src={product.images.main} 
                         alt={getProductName(product, lang)}
+                        width={400}
+                        height={300}
                         className="object-cover w-full h-full"
+                        loading="lazy"
+                        quality={85}
                       />
                     </div>
                     <CardHeader className="pb-2">
@@ -112,10 +117,14 @@ export default async function ProductsPage({ params }: PageProps) {
                   {getProductsByCategory(category.id).map((product) => (
                     <Card key={product.id} className="overflow-hidden hover:shadow-lg transition-shadow flex flex-col">
                       <div className="aspect-[4/3] relative bg-gray-200">
-                        <img 
+                        <Image 
                           src={product.images.main} 
                           alt={getProductName(product, lang)}
+                          width={400}
+                          height={300}
                           className="object-cover w-full h-full"
+                          loading="lazy"
+                          quality={85}
                         />
                       </div>
                       <CardHeader className="pb-2">

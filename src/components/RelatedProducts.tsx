@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -75,11 +76,14 @@ export function RelatedProducts({
           <Link key={product.id} href={navPath(`/products/${product.slug}`)}>
             <Card className="h-full hover:shadow-md transition-shadow cursor-pointer overflow-hidden">
               <div className="aspect-[4/3] relative bg-gray-100">
-                <img
+                <Image
                   src={product.images.main}
                   alt={getProductName(product, lang)}
+                  fill
                   className="object-cover w-full h-full"
                   loading="lazy"
+                  quality={85}
+                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
                 />
                 <Badge 
                   variant="secondary" 

@@ -235,7 +235,7 @@ export default async function CaseDetailPage({ params }: PageProps) {
                 <CardContent className="p-8">
                   <Quote className="h-8 w-8 text-blue-400 mb-4" />
                   <blockquote className="text-lg italic mb-4">
-                    "{localizedCase.testimonial}"
+                    &ldquo;{localizedCase.testimonial}&rdquo;
                   </blockquote>
                   {localizedCase.clientName && (
                     <div className="text-sm text-gray-400">
