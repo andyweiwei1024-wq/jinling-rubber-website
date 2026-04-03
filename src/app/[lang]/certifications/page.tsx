@@ -11,6 +11,7 @@ import {
 } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
+import Image from 'next/image';
 
 // Generate static params for all languages
 export function generateStaticParams() {
@@ -58,10 +59,14 @@ export default async function CertificationsPage({ params }: PageProps) {
             <div className="grid gap-6 md:grid-cols-3">
               <Card className="overflow-hidden hover:shadow-lg transition-shadow">
                 <div className="relative aspect-[1/1.4] bg-gray-100">
-                  <img 
+                  <Image 
                     src={lang === 'zh' ? "/certifications/iso9001-zh.jpg" : "/certifications/iso9001-en.jpg"}
                     alt="ISO 9001 Certificate"
+                    width={600}
+                    height={840}
                     className="w-full h-full object-contain"
+                    loading="lazy"
+                    quality={85}
                   />
                 </div>
                 <CardHeader className="text-center">
@@ -74,10 +79,14 @@ export default async function CertificationsPage({ params }: PageProps) {
               </Card>
               <Card className="overflow-hidden hover:shadow-lg transition-shadow">
                 <div className="relative aspect-[1/1.4] bg-gray-100">
-                  <img 
+                  <Image 
                     src={lang === 'zh' ? "/certifications/iso14001-zh.jpg" : "/certifications/iso14001-en.jpg"}
                     alt="ISO 14001 Certificate"
+                    width={600}
+                    height={840}
                     className="w-full h-full object-contain"
+                    loading="lazy"
+                    quality={85}
                   />
                 </div>
                 <CardHeader className="text-center">
@@ -90,10 +99,14 @@ export default async function CertificationsPage({ params }: PageProps) {
               </Card>
               <Card className="overflow-hidden hover:shadow-lg transition-shadow">
                 <div className="relative aspect-[1/1.4] bg-gray-100">
-                  <img 
+                  <Image 
                     src={lang === 'zh' ? "/certifications/iso45001-zh.jpg" : "/certifications/iso45001-en.jpg"}
                     alt="ISO 45001 Certificate"
+                    width={600}
+                    height={840}
                     className="w-full h-full object-contain"
+                    loading="lazy"
+                    quality={85}
                   />
                 </div>
                 <CardHeader className="text-center">
@@ -113,10 +126,14 @@ export default async function CertificationsPage({ params }: PageProps) {
             <div className="grid gap-6 md:grid-cols-3">
               <Card className="overflow-hidden hover:shadow-lg transition-shadow">
                 <div className="relative aspect-[1/1.4] bg-gray-100">
-                  <img 
+                  <Image 
                     src="/certifications/production-license.png"
                     alt="Production License"
+                    width={600}
+                    height={840}
                     className="w-full h-full object-contain"
+                    loading="lazy"
+                    quality={85}
                   />
                 </div>
                 <CardHeader className="text-center">
@@ -129,10 +146,14 @@ export default async function CertificationsPage({ params }: PageProps) {
               </Card>
               <Card className="overflow-hidden hover:shadow-lg transition-shadow">
                 <div className="relative aspect-[1/1.4] bg-gray-100">
-                  <img 
+                  <Image 
                     src="/certifications/trademark-1.png"
                     alt="Jinling Trademark"
+                    width={600}
+                    height={840}
                     className="w-full h-full object-contain"
+                    loading="lazy"
+                    quality={85}
                   />
                 </div>
                 <CardHeader className="text-center">
@@ -144,10 +165,14 @@ export default async function CertificationsPage({ params }: PageProps) {
               </Card>
               <Card className="overflow-hidden hover:shadow-lg transition-shadow">
                 <div className="relative aspect-[1/1.4] bg-gray-100">
-                  <img 
+                  <Image 
                     src="/certifications/trademark-2.png"
                     alt="Graphic Trademark"
+                    width={600}
+                    height={840}
                     className="w-full h-full object-contain"
+                    loading="lazy"
+                    quality={85}
                   />
                 </div>
                 <CardHeader className="text-center">

@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -194,10 +195,15 @@ export default async function Home({ params }: PageProps) {
               </div>
               <div className="order-1 lg:order-2">
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                  <img 
-                    src="/factory-aerial.png" 
+                  <Image 
+                    src="/factory-aerial.png"
                     alt={t('home.companyOverview.factoryAlt', 'Shanghai Jinling Factory Aerial View')}
+                    width={1200}
+                    height={800}
                     className="w-full h-auto object-cover"
+                    priority={false}
+                    loading="lazy"
+                    quality={85}
                   />
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
                     <p className="text-white text-sm font-medium">{t('home.companyOverview.factoryCaption', 'Shanghai Jinling Rubber Products Co., Ltd. Factory')}</p>
