@@ -132,6 +132,8 @@ export default async function RootLayout({ children, params }: LayoutProps) {
         <link rel="alternate" hrefLang="de" href="https://www.shjinling.com/de" />
         <link rel="alternate" hrefLang="es" href="https://www.shjinling.com/es" />
         <link rel="alternate" hrefLang="x-default" href="https://www.shjinling.com" />
+        {/* Google Search Console Verification */}
+        <meta name="google-site-verification" content="gQAeEc2kdSA9OvGIR6GKSbpTdU9yo7qiTdcJd-pxcmM" />
         {/* Google Analytics */}
         <GoogleAnalytics />
       </head>
