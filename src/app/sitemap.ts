@@ -4,7 +4,13 @@ import { articles } from '@/lib/articles';
 import { languageList, defaultLanguage } from '@/lib/i18n/config';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.COZE_PROJECT_DOMAIN_DEFAULT || 'https://www.shjinling.com';
+  // 优先使用 Vercel 环境变量，否则使用 COZE 环境变量，最后使用默认域名
+  const baseUrl =
+    process.env.NEXT_PUBLIC_VERCEL_URL
+      ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`
+      : process.env.COZE_PROJECT_DOMAIN_DEFAULT
+      ? process.env.COZE_PROJECT_DOMAIN_DEFAULT.replace(/^http:\/\//, 'https://')
+      : 'https://www.shjinling.com';
   
   const urls: MetadataRoute.Sitemap = [];
   
