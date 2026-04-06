@@ -5,13 +5,15 @@ import { languageList, defaultLanguage } from '@/lib/i18n/config';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   // 优先使用 Vercel 环境变量，否则使用 COZE 环境变量，最后使用默认域名
-  const baseUrl =
+  // 去除末尾空格，避免 URL 格式错误
+  const baseUrl = (
     process.env.NEXT_PUBLIC_VERCEL_URL
       ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`
       : process.env.COZE_PROJECT_DOMAIN_DEFAULT
       ? process.env.COZE_PROJECT_DOMAIN_DEFAULT.replace(/^http:\/\//, 'https://')
-      : 'https://www.shjinling.com';
-  
+      : 'https://www.shjinling.com'
+  ).trim().replace(/\/+$/, ''); // 去除首尾空格和末尾斜杠
+
   const urls: MetadataRoute.Sitemap = [];
   
   // Helper to add URL with all language alternates
