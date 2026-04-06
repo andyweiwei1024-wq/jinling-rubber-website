@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { redirect } from 'next/navigation';
+import { Suspense } from 'react';
 import '../globals.css';
 import { Language, defaultLanguage, languageList, languages, hreflangMap } from '@/lib/i18n/config';
 import { getAllTranslations, getLanguageFromPath } from '@/lib/i18n/server';
@@ -139,7 +140,9 @@ export default async function RootLayout({ children, params }: LayoutProps) {
       </head>
       <body className={inter.className}>
         <I18nProvider initialLanguage={lang} initialTranslations={translations}>
-          <AnalyticsTracker />
+          <Suspense fallback={null}>
+            <AnalyticsTracker />
+          </Suspense>
           <div className="flex min-h-screen flex-col">
             <SiteHeader />
             <main className="flex-1">
