@@ -27,14 +27,14 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between px-4 mx-auto">
         <Link href={navPath('/')} className="flex items-center space-x-2 -ml-2">
-          <div className="w-14 h-14 bg-white rounded-lg overflow-hidden shadow-sm flex items-center justify-center relative">
+          <div className="w-[50px] h-[50px] bg-white rounded-lg overflow-hidden shadow-sm flex items-center justify-center relative">
             <Image 
               src="/logo.png" 
               alt="Jinling Logo" 
               fill
               className="object-contain"
-              style={{ transform: 'translate(-1.5mm, -1.5mm)' }}
-              sizes="56px"
+              style={{ transform: 'translate(-1.34mm, -1.34mm)' }}
+              sizes="50px"
               priority
             />
           </div>
