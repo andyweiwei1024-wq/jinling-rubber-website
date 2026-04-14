@@ -44,6 +44,7 @@ export function LanguageSwitcher({
       }
       
       // Always add the new language prefix (including /en)
+      let newPath: string;
       if (pathWithoutLang === '/' || pathWithoutLang === '') {
         newPath = `/${lang}`;
       } else {
