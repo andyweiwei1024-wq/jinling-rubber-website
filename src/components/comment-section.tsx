@@ -23,25 +23,144 @@ export function CommentSection({ articleId, comments: initialComments, lang }: C
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState(false);
 
-  const isEn = lang === 'en';
-
-  const t = {
-    comments: isEn ? 'Comments' : '评论',
-    noComments: isEn ? 'No comments yet. Be the first to comment!' : '暂无评论，快来抢沙发吧！',
-    leaveComment: isEn ? 'Leave a Comment' : '发表评论',
-    yourName: isEn ? 'Your Name' : '您的姓名',
-    yourEmail: isEn ? 'Your Email' : '您的邮箱',
-    yourComment: isEn ? 'Your Comment' : '评论内容',
-    submit: isEn ? 'Submit Comment' : '提交评论',
-    submitting: isEn ? 'Submitting...' : '提交中...',
-    successMessage: isEn ? 'Comment submitted successfully! It will be visible after moderation.' : '评论提交成功！审核后将显示。',
-    errorMessage: isEn ? 'Failed to submit comment. Please try again.' : '提交失败，请重试。',
-    namePlaceholder: isEn ? 'Enter your name' : '请输入姓名',
-    emailPlaceholder: isEn ? 'Enter your email' : '请输入邮箱',
-    commentPlaceholder: isEn ? 'Write your comment here...' : '请输入评论内容...',
-    required: isEn ? 'Required' : '必填',
-    ago: isEn ? 'ago' : '前',
+  const getTranslations = (lang: string) => {
+    const translations: Record<string, {
+      comments: string;
+      noComments: string;
+      leaveComment: string;
+      yourName: string;
+      yourEmail: string;
+      yourComment: string;
+      submit: string;
+      submitting: string;
+      successMessage: string;
+      errorMessage: string;
+      namePlaceholder: string;
+      emailPlaceholder: string;
+      commentPlaceholder: string;
+      required: string;
+      ago: string;
+      minutes: string;
+      hours: string;
+      days: string;
+      pending: string;
+      fillAllFields: string;
+    }> = {
+      en: {
+        comments: 'Comments',
+        noComments: 'No comments yet. Be the first to comment!',
+        leaveComment: 'Leave a Comment',
+        yourName: 'Your Name',
+        yourEmail: 'Your Email',
+        yourComment: 'Your Comment',
+        submit: 'Submit Comment',
+        submitting: 'Submitting...',
+        successMessage: 'Comment submitted successfully! It will be visible after moderation.',
+        errorMessage: 'Failed to submit comment. Please try again.',
+        namePlaceholder: 'Enter your name',
+        emailPlaceholder: 'Enter your email',
+        commentPlaceholder: 'Write your comment here...',
+        required: 'Required',
+        ago: 'ago',
+        minutes: 'minutes',
+        hours: 'hours',
+        days: 'days',
+        pending: 'Pending',
+        fillAllFields: 'Please fill in all required fields.',
+      },
+      zh: {
+        comments: '评论',
+        noComments: '暂无评论，快来抢沙发吧！',
+        leaveComment: '发表评论',
+        yourName: '您的姓名',
+        yourEmail: '您的邮箱',
+        yourComment: '评论内容',
+        submit: '提交评论',
+        submitting: '提交中...',
+        successMessage: '评论提交成功！审核后将显示。',
+        errorMessage: '提交失败，请重试。',
+        namePlaceholder: '请输入姓名',
+        emailPlaceholder: '请输入邮箱',
+        commentPlaceholder: '请输入评论内容...',
+        required: '必填',
+        ago: '前',
+        minutes: '分钟',
+        hours: '小时',
+        days: '天',
+        pending: '待审核',
+        fillAllFields: '请填写所有必填项。',
+      },
+      ar: {
+        comments: 'التعليقات',
+        noComments: 'لا توجد تعليقات حتى الآن. كن أول من يعلق!',
+        leaveComment: 'ترك تعليق',
+        yourName: 'اسمك',
+        yourEmail: 'بريدك الإلكتروني',
+        yourComment: 'تعليقك',
+        submit: 'إرسال التعليق',
+        submitting: 'جارٍ الإرسال...',
+        successMessage: 'تم إرسال التعليق بنجاح! سيكون مرئياً بعد المراجعة.',
+        errorMessage: 'فشل إرسال التعليق. يرجى المحاولة مرة أخرى.',
+        namePlaceholder: 'أدخل اسمك',
+        emailPlaceholder: 'أدخل بريدك الإلكتروني',
+        commentPlaceholder: 'اكتب تعليقك هنا...',
+        required: 'مطلوب',
+        ago: 'منذ',
+        minutes: 'دقائق',
+        hours: 'ساعات',
+        days: 'أيام',
+        pending: 'قيد الانتظار',
+        fillAllFields: 'يرجى ملء جميع الحقول المطلوبة.',
+      },
+      de: {
+        comments: 'Kommentare',
+        noComments: 'Noch keine Kommentare. Sei der Erste, der kommentiert!',
+        leaveComment: 'Kommentar hinterlassen',
+        yourName: 'Ihr Name',
+        yourEmail: 'Ihre E-Mail',
+        yourComment: 'Ihr Kommentar',
+        submit: 'Kommentar absenden',
+        submitting: 'Wird gesendet...',
+        successMessage: 'Kommentar erfolgreich gesendet! Er wird nach der Überprüfung angezeigt.',
+        errorMessage: 'Kommentar konnte nicht gesendet werden. Bitte versuchen Sie es erneut.',
+        namePlaceholder: 'Namen eingeben',
+        emailPlaceholder: 'E-Mail eingeben',
+        commentPlaceholder: 'Schreiben Sie hier Ihren Kommentar...',
+        required: 'Erforderlich',
+        ago: 'vor',
+        minutes: 'Minuten',
+        hours: 'Stunden',
+        days: 'Tagen',
+        pending: 'Ausstehend',
+        fillAllFields: 'Bitte füllen Sie alle erforderlichen Felder aus.',
+      },
+      es: {
+        comments: 'Comentarios',
+        noComments: 'Aún no hay comentarios. ¡Sé el primero en comentar!',
+        leaveComment: 'Dejar un comentario',
+        yourName: 'Tu nombre',
+        yourEmail: 'Tu correo electrónico',
+        yourComment: 'Tu comentario',
+        submit: 'Enviar comentario',
+        submitting: 'Enviando...',
+        successMessage: '¡Comentario enviado con éxito! Será visible después de la moderación.',
+        errorMessage: 'Error al enviar el comentario. Por favor, inténtelo de nuevo.',
+        namePlaceholder: 'Ingresa tu nombre',
+        emailPlaceholder: 'Ingresa tu correo electrónico',
+        commentPlaceholder: 'Escribe tu comentario aquí...',
+        required: 'Requerido',
+        ago: 'hace',
+        minutes: 'minutos',
+        hours: 'horas',
+        days: 'días',
+        pending: 'Pendiente',
+        fillAllFields: 'Por favor, complete todos los campos requeridos.',
+      },
+    };
+    return translations[lang] || translations['en'];
   };
+
+  const t = getTranslations(lang);
 
   const formatTimeAgo = (dateString: string): string => {
     const date = new Date(dateString);
@@ -52,11 +171,11 @@ export function CommentSection({ articleId, comments: initialComments, lang }: C
     const diffDays = Math.floor(diffMs / 86400000);
 
     if (diffMins < 60) {
-      return `${diffMins} ${isEn ? 'minutes' : '分钟'}${t.ago}`;
+      return `${diffMins} ${t.minutes} ${t.ago}`;
     } else if (diffHours < 24) {
-      return `${diffHours} ${isEn ? 'hours' : '小时'}${t.ago}`;
+      return `${diffHours} ${t.hours} ${t.ago}`;
     } else {
-      return `${diffDays} ${isEn ? 'days' : '天'}${t.ago}`;
+      return `${diffDays} ${t.days} ${t.ago}`;
     }
   };
 
@@ -66,7 +185,7 @@ export function CommentSection({ articleId, comments: initialComments, lang }: C
     setSuccess(false);
 
     if (!name.trim() || !email.trim() || !content.trim()) {
-      setError(isEn ? 'Please fill in all required fields.' : '请填写所有必填项。');
+      setError(t.fillAllFields);
       return;
     }
 
@@ -132,7 +251,7 @@ export function CommentSection({ articleId, comments: initialComments, lang }: C
                       <span className="font-medium">{comment.name}</span>
                       {!comment.approved && (
                         <span className="text-xs bg-yellow-100 text-yellow-700 px-2 py-0.5 rounded">
-                          {isEn ? 'Pending' : '待审核'}
+                          {t.pending}
                         </span>
                       )}
                       <span className="text-xs text-muted-foreground flex items-center gap-1">

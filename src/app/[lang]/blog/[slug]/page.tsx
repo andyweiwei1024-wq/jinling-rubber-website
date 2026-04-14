@@ -68,19 +68,88 @@ export default async function ArticlePage({ params }: PageProps) {
     notFound();
   }
 
+  const getTranslations = (lang: string) => {
+    const translations: Record<string, {
+      publishedOn: string;
+      by: string;
+      share: string;
+      relatedArticles: string;
+      comments: string;
+      noComments: string;
+      backToBlog: string;
+      needProducts: string;
+      contactDescription: string;
+      contactUs: string;
+    }> = {
+      en: {
+        publishedOn: 'Published on',
+        by: 'by',
+        share: 'Share',
+        relatedArticles: 'Related Articles',
+        comments: 'Comments',
+        noComments: 'No comments yet. Be the first to comment!',
+        backToBlog: 'Back to Blog',
+        needProducts: 'Need Products?',
+        contactDescription: 'Contact us for professional protective equipment solutions.',
+        contactUs: 'Contact Us',
+      },
+      zh: {
+        publishedOn: '发布于',
+        by: '作者',
+        share: '分享',
+        relatedArticles: '相关文章',
+        comments: '评论',
+        noComments: '暂无评论，快来抢沙发吧！',
+        backToBlog: '返回博客',
+        needProducts: '需要产品？',
+        contactDescription: '联系我们获取专业防护装备解决方案。',
+        contactUs: '联系我们',
+      },
+      ar: {
+        publishedOn: 'تاريخ النشر',
+        by: 'بواسطة',
+        share: 'مشاركة',
+        relatedArticles: 'مقالات ذات صلة',
+        comments: 'التعليقات',
+        noComments: 'لا توجد تعليقات حتى الآن. كن أول من يعلق!',
+        backToBlog: 'العودة إلى المدونة',
+        needProducts: 'هل تحتاج منتجات؟',
+        contactDescription: 'تواصل معنا للحصول على حلول احترافية لمعدات الحماية.',
+        contactUs: 'اتصل بنا',
+      },
+      de: {
+        publishedOn: 'Veröffentlicht am',
+        by: 'von',
+        share: 'Teilen',
+        relatedArticles: 'Verwandte Artikel',
+        comments: 'Kommentare',
+        noComments: 'Noch keine Kommentare. Sei der Erste, der kommentiert!',
+        backToBlog: 'Zurück zum Blog',
+        needProducts: 'Produkte benötigt?',
+        contactDescription: 'Kontaktieren Sie uns für professionelle Schutzausrüstungslösungen.',
+        contactUs: 'Kontaktieren Sie uns',
+      },
+      es: {
+        publishedOn: 'Publicado el',
+        by: 'por',
+        share: 'Compartir',
+        relatedArticles: 'Artículos relacionados',
+        comments: 'Comentarios',
+        noComments: 'Aún no hay comentarios. ¡Sé el primero en comentar!',
+        backToBlog: 'Volver al blog',
+        needProducts: '¿Necesita productos?',
+        contactDescription: 'Contáctenos para obtener soluciones profesionales de equipos de protección.',
+        contactUs: 'Contáctenos',
+      },
+    };
+    return translations[lang] || translations['en'];
+  };
+
   const isEn = lang === 'en';
   const prefix = `/${lang}`;
   const articleComments = comments.filter(c => c.articleId === article.id && c.approved);
 
-  const t = {
-    publishedOn: isEn ? 'Published on' : '发布于',
-    by: isEn ? 'by' : '作者',
-    share: isEn ? 'Share' : '分享',
-    relatedArticles: isEn ? 'Related Articles' : '相关文章',
-    comments: isEn ? 'Comments' : '评论',
-    noComments: isEn ? 'No comments yet. Be the first to comment!' : '暂无评论，快来抢沙发吧！',
-    backToBlog: isEn ? 'Back to Blog' : '返回博客',
-  };
+  const t = getTranslations(lang);
 
   // Get related articles (same category)
   const relatedArticles = articles
@@ -294,18 +363,16 @@ export default async function ArticlePage({ params }: PageProps) {
               <Card className="bg-blue-600 text-white">
                 <CardHeader>
                   <h3 className="font-semibold">
-                    {isEn ? 'Need Products?' : '需要产品？'}
+                    {t.needProducts}
                   </h3>
                 </CardHeader>
                 <CardContent>
                   <p className="text-blue-100 mb-4 text-sm">
-                    {isEn 
-                      ? 'Contact us for professional protective equipment solutions.'
-                      : '联系我们获取专业防护装备解决方案。'}
+                    {t.contactDescription}
                   </p>
                   <Link href={`${prefix}/contact`}>
                     <Button variant="secondary" className="w-full">
-                      {isEn ? 'Contact Us' : '联系我们'}
+                      {t.contactUs}
                     </Button>
                   </Link>
                 </CardContent>
