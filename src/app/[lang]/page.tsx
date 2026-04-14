@@ -386,13 +386,14 @@ export default async function Home({ params }: PageProps) {
             <div className="grid gap-8 md:grid-cols-4">
               <div className="md:col-span-2">
                 <div className="flex items-center space-x-2 mb-4">
-                  <div className="w-12 h-12 bg-white rounded-lg overflow-hidden shadow-sm flex items-center justify-center relative">
+                  <div className="w-[45px] h-[45px] bg-white rounded-lg overflow-hidden shadow-sm flex items-center justify-center relative">
                     <Image 
                       src="/logo.png" 
                       alt="Jinling Logo" 
                       fill
-                      className="object-contain object-center"
-                      sizes="(max-width: 768px) 100vw, 48px"
+                      className="object-contain"
+                      style={{ transform: 'translate(-1.34mm, -1.34mm) scale(1.1)' }}
+                      sizes="45px"
                       priority
                     />
                   </div>
