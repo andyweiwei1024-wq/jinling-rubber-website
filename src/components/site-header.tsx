@@ -32,8 +32,8 @@ export function SiteHeader() {
               src="/logo.png" 
               alt="Jinling Logo" 
               fill
-              className="object-contain object-center"
-              sizes="48px"
+              className="object-contain"
+              sizes="56px"
               priority
             />
           </div>
