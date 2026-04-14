@@ -40,7 +40,7 @@ export function SiteHeader() {
           </div>
           <div className="flex flex-col">
             <span className="font-bold text-lg leading-tight">上海金铃橡胶制品有限公司</span>
-            <span className="text-xs text-muted-foreground">Shanghai Jinling Rubber</span>
+            <span className="text-xs text-muted-foreground">Shanghai Jinling Rubber Products Co., Ltd.</span>
           </div>
         </Link>
         

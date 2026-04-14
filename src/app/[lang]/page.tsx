@@ -399,7 +399,7 @@ export default async function Home({ params }: PageProps) {
                   </div>
                   <div className="flex flex-col">
                     <span className="font-bold text-white">上海金铃橡胶制品有限公司</span>
-                    <span className="text-xs text-gray-400">Shanghai Jinling Rubber</span>
+                    <span className="text-xs text-gray-400">Shanghai Jinling Rubber Products Co., Ltd.</span>
                   </div>
                 </div>
                 <p className="text-sm text-gray-400 max-w-md">
