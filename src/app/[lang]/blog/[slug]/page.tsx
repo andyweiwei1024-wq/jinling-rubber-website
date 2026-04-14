@@ -16,9 +16,15 @@ interface PageProps {
 }
 
 export async function generateStaticParams() {
-  return articles.map((article) => ({
-    slug: article.slug,
-  }));
+  const params: { lang: string; slug: string }[] = [];
+  
+  for (const lang of Object.keys(languages)) {
+    for (const article of articles) {
+      params.push({ lang, slug: article.slug });
+    }
+  }
+  
+  return params;
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
