@@ -33,6 +33,7 @@ export function SiteHeader() {
               alt="Jinling Logo" 
               fill
               className="object-contain"
+              style={{ transform: 'translateX(-1.5mm)' }}
               sizes="56px"
               priority
             />
