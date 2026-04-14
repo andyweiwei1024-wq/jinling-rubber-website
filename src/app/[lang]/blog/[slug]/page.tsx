@@ -35,12 +35,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     return { title: 'Article Not Found' };
   }
 
-  const title = lang === 'en' 
-    ? (article.metaTitleEn || article.titleEn)
-    : (article.metaTitle || article.title);
-  const description = lang === 'en'
-    ? (article.metaDescriptionEn || article.excerptEn)
-    : (article.metaDescription || article.excerpt);
+  const title = getArticleField(article, 'metaTitle', lang) || getArticleField(article, 'title', lang);
+  const description = getArticleField(article, 'metaDescription', lang) || getArticleField(article, 'excerpt', lang);
+  const author = getArticleField(article, 'author', lang);
 
   return {
     title,
@@ -51,7 +48,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       type: 'article',
       publishedTime: article.publishedAt,
       modifiedTime: article.updatedAt,
-      authors: [lang === 'en' ? article.authorEn : article.author],
+      authors: [author],
       images: [article.coverImage],
     },
     twitter: {
