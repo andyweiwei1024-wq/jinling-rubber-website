@@ -3298,3 +3298,27 @@ export function getArticleField(article: Article, field: keyof Article, lang: st
   const enField = `${String(field)}En` as keyof Article;
   return String(article[enField] || article[field]);
 }
+
+// 辅助函数：根据语言获取文章标签数组
+export function getArticleTags(article: Article, lang: string): string[] {
+  if (lang === 'zh' || lang === 'zh-CN') {
+    return article.tags;
+  }
+  
+  // 根据语言获取对应字段后缀
+  let suffix = 'En';
+  if (lang === 'ar') suffix = 'Ar';
+  else if (lang === 'de') suffix = 'De';
+  else if (lang === 'es') suffix = 'Es';
+  
+  const localizedField = `tags${suffix}` as keyof Article;
+  const value = article[localizedField];
+  
+  // 如果有对应语言的字段值，返回它；否则回退到英文
+  if (value && Array.isArray(value)) {
+    return value;
+  }
+  
+  // 回退到英文
+  return article.tagsEn;
+}

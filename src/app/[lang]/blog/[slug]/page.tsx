@@ -2,14 +2,14 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { Calendar, User, Tag, ArrowLeft, Share2, Facebook, Twitter, Linkedin } from 'lucide-react';
-import { articles, articleCategories, comments, getArticleField } from '@/lib/articles';
+import { articles, articleCategories, comments, getArticleField, getArticleTags } from '@/lib/articles';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 import { CommentSection } from '@/components/comment-section';
 import { RelatedProducts } from '@/components/RelatedProducts';
-import { Language } from '@/lib/i18n/config';
+import { Language, languages } from '@/lib/i18n/config';
 
 interface PageProps {
   params: Promise<{ lang: string; slug: string }>;
@@ -180,7 +180,7 @@ export default async function ArticlePage({ params }: PageProps) {
 
             {/* Tags */}
             <div className="flex flex-wrap gap-2 mb-8">
-              {getArticleField(article, 'tags', lang).map((tag: string, index: number) => (
+              {getArticleTags(article, lang).map((tag: string, index: number) => (
                 <Badge key={index} variant="outline" className="flex items-center gap-1">
                   <Tag className="w-3 h-3" />
                   {tag}
