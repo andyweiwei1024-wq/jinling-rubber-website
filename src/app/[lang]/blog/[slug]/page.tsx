@@ -166,7 +166,7 @@ export default async function ArticlePage({ params }: PageProps) {
               <CardContent className="prose prose-lg max-w-none py-8">
                 <div 
                   dangerouslySetInnerHTML={{ 
-                    __html: (isEn ? article.contentEn : article.content)
+                    __html: getArticleField(article, 'content', lang)
                       .replace(/\n/g, '<br/>')
                       .replace(/## /g, '<h2 class="text-2xl font-bold mt-8 mb-4">')
                       .replace(/### /g, '<h3 class="text-xl font-bold mt-6 mb-3">')
@@ -180,7 +180,7 @@ export default async function ArticlePage({ params }: PageProps) {
 
             {/* Tags */}
             <div className="flex flex-wrap gap-2 mb-8">
-              {(isEn ? article.tagsEn : article.tags).map((tag, index) => (
+              {getArticleField(article, 'tags', lang).map((tag: string, index: number) => (
                 <Badge key={index} variant="outline" className="flex items-center gap-1">
                   <Tag className="w-3 h-3" />
                   {tag}
