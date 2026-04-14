@@ -30,31 +30,24 @@ export function LanguageSwitcher({
     } else {
       // Default behavior: navigate to new URL
       const currentPath = window.location.pathname;
-      let newPath: string;
       
-      // Remove current language prefix (including /en for default language)
+      // Remove any existing language prefix
       let pathWithoutLang = currentPath;
       
-      // Check for all language prefixes
-      if (currentPath.startsWith('/en/') || currentPath === '/en') {
-        // Remove /en prefix
-        pathWithoutLang = currentPath.slice(3) || '/';
-      } else {
-        // Check for other language prefixes
-        const languageList = Object.keys(languages) as Language[];
-        for (const l of languageList) {
-          if (l !== 'en' && (currentPath.startsWith(`/${l}/`) || currentPath === `/${l}`)) {
-            pathWithoutLang = currentPath.slice(`/${l}`.length) || '/';
-            break;
-          }
+      // Check for all language prefixes and remove them
+      const languageList = Object.keys(languages) as Language[];
+      for (const l of languageList) {
+        if (currentPath.startsWith(`/${l}/`) || currentPath === `/${l}`) {
+          pathWithoutLang = currentPath.slice(`/${l}`.length) || '/';
+          break;
         }
       }
       
-      // Add new language prefix
-      if (lang === 'en') {
-        newPath = pathWithoutLang || '/';
+      // Always add the new language prefix (including /en)
+      if (pathWithoutLang === '/' || pathWithoutLang === '') {
+        newPath = `/${lang}`;
       } else {
-        newPath = `/${lang}${pathWithoutLang === '/' ? '' : pathWithoutLang}`;
+        newPath = `/${lang}${pathWithoutLang}`;
       }
       
       window.location.href = newPath;
