@@ -66,7 +66,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Product detail pages
   for (const product of products) {
-    addUrlWithLanguages(`/products/${product.slug}`, 0.8, 'monthly');
+    addUrlWithLanguages(`/products/${product.id}`, 0.8, 'monthly');
   }
 
   // Blog article pages

@@ -11,7 +11,12 @@ import { InquiryWidget } from '@/components/InquiryWidget';
 import { GoogleAnalytics } from '@/components/GoogleAnalytics';
 import { AnalyticsTracker } from '@/components/AnalyticsTracker';
 
-const inter = Inter({ subsets: ['latin'] });
+// Inter font configuration with fallback
+const inter = Inter({ 
+  subsets: ['latin'],
+  display: 'swap',
+  preload: false,
+});
 
 // Generate static params for all languages
 export function generateStaticParams() {

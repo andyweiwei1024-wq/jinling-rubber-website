@@ -71,7 +71,7 @@ export default async function SitemapPage({ params }: PageProps) {
         })),
         ...products.slice(0, 10).map(product => ({
           name: isEn ? product.nameEn : product.name,
-          href: navPath(`/products/${product.slug}`),
+          href: navPath(`/products/${product.id}`),
           isSubItem: true,
         })),
       ],

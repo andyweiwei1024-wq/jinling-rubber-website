@@ -68,7 +68,7 @@ export function generateStaticParams() {
 
   for (const lang of languageList) {
     for (const product of products) {
-      params.push({ lang, slug: product.slug });
+      params.push({ lang, slug: product.id });
     }
   }
 
@@ -125,7 +125,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
     const productById = getProductById(slug);
     if (productById) {
       // Redirect to new slug URL
-      redirect(`/${lang}/products/${productById.slug}`);
+      redirect(`/${lang}/products/${productById.id}`);
     }
     notFound();
   }
@@ -158,14 +158,14 @@ export default async function ProductDetailPage({ params }: PageProps) {
     { name: t('nav.home', 'Home'), url: navPath('/') },
     { name: t('nav.products', 'Products'), url: navPath('/products') },
     { name: categoryName, url: navPath(`/products?category=${product.category}`) },
-    { name: productName, url: navPath(`/products/${product.slug}`) },
+    { name: productName, url: navPath(`/products/${product.id}`) },
   ];
 
   // Product-specific FAQs
   const productFAQs = [
     {
       question: t('productDetails.faqs.materialQuestion', `What material is this ${productName} made of?`),
-      answer: t('productDetails.faqs.materialAnswer', `The ${productName} is made of premium ${product.material}, offering excellent durability and protection. Please check the specifications for detailed material parameters.`),
+      answer: t('productDetails.faqs.materialAnswer', `The ${productName} is made of premium materials, offering excellent durability and protection. Please check the specifications for detailed material parameters.`),
     },
     {
       question: t('productDetails.faqs.customQuestion', 'Can this product be customized?'),
@@ -545,7 +545,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
               </div>
               <div className="grid gap-6 md:grid-cols-3">
                 {relatedProducts.map((p) => (
-                  <Link key={p.id} href={navPath(`/products/${p.slug}`)}>
+                  <Link key={p.id} href={navPath(`/products/${p.id}`)}>
                     <Card className="overflow-hidden hover:shadow-lg transition-shadow h-full">
                       <div className="aspect-[4/3] relative bg-gray-200">
                         <img src={p.images.main} alt={getProductName(p, lang)} className="object-cover w-full h-full" />
