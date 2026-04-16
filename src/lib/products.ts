@@ -147,6 +147,34 @@ const USER_UPLOAD_IMAGES = {
   '4-2-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/4-2-side_afe1bedf.jpg?sign=1776414055-850affc8fb-0-fef4b1b15f91fde6fb20a9415adedb21886a7e5a047673fef10fe3f2342bdcd1',
   // JL-4-18 分体式连帽束脚雨衣套装 (只有侧面图)
   '4-18-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/4-18-side_b492cb76.jpeg?sign=1776414055-f5cfa9d10c-0-199cc03e04f235c8dacfd21e4b412449137059227a087eba46dad39b1ef97be0',
+  // JL-4-18 正面图
+  '4-18-front': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/4-18-front_e063a53e.jpeg?sign=1776414535-741eb03797-0-3204f046058a1cfdd7b35bb7125e68593be41f8c1fad740bb69bd40288302106',
+  // JL-5-2 莹光绿警服
+  '5-2-main': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/5-2-front_9d111750.jpeg?sign=1776414536-868b1106d9-0-414680096811570421ecd4fc8164a95c3445dac6406fa8b43cb7cf6d876a4079',
+  '5-2-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/5-2-side_2e1f7a77.jpeg?sign=1776414536-7044a0a14c-0-9a262aa5ddd208f95b9aeb7bfee47a4eb6043fef1bc9bb7bad9c18eca8aa8e81',
+  // JL-5-5 春亚纺相拼色套装
+  '5-5-main': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/5-5-front_6aa4843f.jpeg?sign=1776414538-af90a989f1-0-f7e42288ed1221c640622a8c51373d91a4427305d56d25c9a99db4cbce9ef44c',
+  '5-5-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/5-5-side_03e89ba1.jpg?sign=1776414537-4146b75f79-0-0fc9c3c880c30efb4775e6e466fd171ba220a154186c8fe4e97641869f52e71e',
+  // JL-1610 涤丝纺套装
+  '1610-main': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/1610-front_8ea87129.jpg?sign=1776414539-33946be3f4-0-1885958bf0a0ad995c73ae24fcd8e6764bbb2536300b6a06c095d954b4de4282',
+  '1610-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/1610-side_315fdfc1.jpg?sign=1776414539-45ed5063e3-0-238a8112aad101845a5290f09a8b4f9b294f44bb3f59b198847a7f50a0c3f6ed',
+  // JL-3015 双胶防酸分式工作服
+  '3015-main': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/3015-front_84b7b634.jpg?sign=1776414541-204597631d-0-69088bfe2d98279a16d64063d20fe5b8cb61a80f7c91b2c3405744f6610d3fdb',
+  '3015-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/3015-side_5999ab72.jpg?sign=1776414541-199ad19f35-0-dfb492f54bb20443ac6449533b3807703668389a1fff4089ce2955c301d17cf5',
+  // JL-3019 双胶防酸长式工作服
+  '3019-main': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/3019-front_f98b8fba.jpg?sign=1776414542-91163479e7-0-43f144c954c6223361de77d974b1ef0321c3e79886ca39be290eea9731814c6e',
+  '3019-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/3019-side_7202d153.jpg?sign=1776414542-0ab1025f3d-0-5bf8946f4485241f9d2bd2feea3f9339214e43a6c0b51febd1dc2e2365dd0843',
+  // JL-3088 耐酸分式工作服
+  '3088-main': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/3088-front_e722849f.jpg?sign=1776414543-8bcfef0e16-0-12bcbf9f4d18c329078c5d062b689f9a56fcce90b370c996d248889ddc14df79',
+  '3088-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/3088-side_b97f403a.jpg?sign=1776414543-857bd210ff-0-75b4297d8313056af2950d02102a2334b67940daa1bf498c64eebe67c8f7dab9',
+  // JL-3112 连式防毒衣
+  '3112-main': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/3112-front_af0599e8.jpg?sign=1776414544-d360f8ed3f-0-82eddd054daddc7f86fa34ff9a84a705f6eae11ff56479729c3b8caeccfe413c',
+  '3112-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/3112-side_cb4d9258.jpg?sign=1776414543-d6eb1743f6-0-bee4d309c3e56c463d99eb83fae6889d8d0500cbf8681197c936b6245050c1a9',
+  // JL-3113 连式带手套靴防毒衣
+  '3113-main': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/3113-front_31df9c36.jpg?sign=1776414545-736a152ef9-0-33e236650c785934474fdf2d710071331a00c9f5ed9a5b7f68d95f54d23c5e40',
+  '3113-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/3113-side_6e7ce953.jpg?sign=1776414544-df0bad1d4f-0-71d58790f5d3d68b561fad55495e63c93a99f2d1ce1448376c5d3415afdf553b',
+  // JL-3116 全封闭连式防毒衣 (只有侧面图)
+  '3116-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/3116-side_cd956a23.jpeg?sign=1776414545-1a8af4e3ab-0-4c08b38ec310d26886377f653e11afabfbd3a2403dbde891e58baeb452182ca9',
 };
 
 export const products: Product[] = [
@@ -164,8 +192,8 @@ export const products: Product[] = [
     categoryDe: 'Schutzanzüge',
     categoryEs: 'Trajes de Protección',
     images: {
-      main: PRODUCT_IMAGES.protective_1,
-      side: PRODUCT_IMAGES.protective_2,
+      main: USER_UPLOAD_IMAGES['3015-main'],
+      side: USER_UPLOAD_IMAGES['3015-side'],
     },
     description: '双胶防酸分式工作服，内料采用尼龙长丝布，涂层为氯丁胶主材，具有防酸碱类化学品溶剂喷溅功能。适合化工、实验室等作业环境。',
     descriptionEn: 'Double coated acid-resistant two-piece work suit, featuring nylon filament fabric with neoprene rubber coating, providing protection against acid, alkali, and chemical solvents. Suitable for chemical, laboratory environments.',
@@ -211,8 +239,8 @@ export const products: Product[] = [
     categoryDe: 'Schutzanzüge',
     categoryEs: 'Trajes de Protección',
     images: {
-      main: PRODUCT_IMAGES.protective_1,
-      side: PRODUCT_IMAGES.protective_2,
+      main: USER_UPLOAD_IMAGES['3019-main'],
+      side: USER_UPLOAD_IMAGES['3019-side'],
     },
     description: '双胶防酸长式工作服，内料采用尼龙长丝布，涂层为氯丁胶主材，具有防酸碱类化学品溶剂喷溅功能。适合化工、实验室等作业环境。',
     descriptionEn: 'Double coated acid-resistant long work suit, featuring nylon filament fabric with neoprene rubber coating, providing comprehensive protection against acid, alkali, and chemical solvents. Ideal for chemical and laboratory settings.',
@@ -258,8 +286,8 @@ export const products: Product[] = [
     categoryDe: 'Schutzanzüge',
     categoryEs: 'Trajes de Protección',
     images: {
-      main: PRODUCT_IMAGES.protective_3,
-      side: PRODUCT_IMAGES.protective_4,
+      main: USER_UPLOAD_IMAGES['3088-main'],
+      side: USER_UPLOAD_IMAGES['3088-side'],
     },
     description: '耐酸分式工作服，内料采用全棉，涂层为以氯丁胶为主双面涂层，具有防酸碱类化学品溶剂喷溅功能。分体式设计便于穿脱。',
     descriptionEn: 'Acid-resistant two-piece work suit with all-cotton inner fabric and double-sided neoprene coating, offering protection against acid, alkali, and chemical solvents. Two-piece design allows easy wearing and removal.',
@@ -305,8 +333,8 @@ export const products: Product[] = [
     categoryDe: 'Schutzanzüge',
     categoryEs: 'Trajes de Protección',
     images: {
-      main: PRODUCT_IMAGES.protective_3,
-      side: PRODUCT_IMAGES.protective_4,
+      main: USER_UPLOAD_IMAGES['3112-main'],
+      side: USER_UPLOAD_IMAGES['3112-side'],
     },
     description: '连式防毒衣，内料采用全棉，涂层为丁基胶，具有防空气中尘毒功能。可定制防介子气130分钟以上版本。适合化工、危险品处理等作业环境。',
     descriptionEn: 'One-piece gas protection suit with all-cotton inner and butyl rubber coating, providing protection against airborne toxins. Customizable for 130+ minutes mustard gas protection. Suitable for chemical and hazardous material handling.',
@@ -352,8 +380,8 @@ export const products: Product[] = [
     categoryDe: 'Schutzanzüge',
     categoryEs: 'Trajes de Protección',
     images: {
-      main: PRODUCT_IMAGES.protective_3,
-      side: PRODUCT_IMAGES.protective_4,
+      main: USER_UPLOAD_IMAGES['3113-main'],
+      side: USER_UPLOAD_IMAGES['3113-side'],
     },
     description: '连式带手套靴防毒衣，内料采用全棉，涂层为丁基胶，集成防护手套和靴子，具有防空气中尘毒功能。可定制防介子气130分钟以上版本。',
     descriptionEn: 'One-piece gas protection suit with integrated gloves and boots, featuring all-cotton inner and butyl rubber coating, providing protection against airborne toxins. Customizable for 130+ minutes mustard gas protection.',
@@ -399,8 +427,8 @@ export const products: Product[] = [
     categoryDe: 'Schutzanzüge',
     categoryEs: 'Trajes de Protección',
     images: {
-      main: PRODUCT_IMAGES.protective_1,
-      side: PRODUCT_IMAGES.protective_2,
+      main: PRODUCT_IMAGES.protective_1, // JL-3116 全封闭连式防毒衣 - 暂无正面图
+      side: USER_UPLOAD_IMAGES['3116-side'],
     },
     description: '全封闭连式防毒衣，内料采用涤棉，涂层为以氯丁胶为主双面涂层，采用空气接入式设计，具有防空气中尘毒功能。可定制防介子气130分钟以上版本。',
     descriptionEn: 'Fully enclosed one-piece gas protection suit with polyester-cotton inner and double-sided neoprene coating, featuring air supply interface design for respiratory protection against airborne toxins.',
@@ -587,8 +615,8 @@ export const products: Product[] = [
     categoryDe: 'Arbeitskleidung',
     categoryEs: 'Ropa de Trabajo',
     images: {
-      main: PRODUCT_IMAGES.workwear_3,
-      side: PRODUCT_IMAGES.workwear_4,
+      main: USER_UPLOAD_IMAGES['5-2-main'],
+      side: USER_UPLOAD_IMAGES['5-2-side'],
     },
     description: '莹光绿警服，面料采用240T尼龙塔丝绒表面泼水处理，涂层为环保PU，内里为针织网布。配备3M反光带，适合交警、安保等户外作业。',
     descriptionEn: 'Fluorescent green safety vest with 240T nylon taslon fabric, water-repellent finish, eco-friendly PU coating, and knitted mesh lining. Equipped with 3M reflective strips, suitable for traffic police and security outdoor work.',
@@ -634,8 +662,8 @@ export const products: Product[] = [
     categoryDe: 'Arbeitskleidung',
     categoryEs: 'Ropa de Trabajo',
     images: {
-      main: PRODUCT_IMAGES.workwear_1,
-      side: PRODUCT_IMAGES.workwear_2,
+      main: USER_UPLOAD_IMAGES['5-5-main'],
+      side: USER_UPLOAD_IMAGES['5-5-side'],
     },
     description: '春亚纺相拼色套装，面料采用240T春亚纺，涂层为环保PVC，内里为190T涤纶。时尚相拼色设计，适合户外作业。',
     descriptionEn: 'Polyester pongee color block workwear set with 240T pongee fabric, eco-friendly PVC coating, and 190T polyester lining. Stylish color block design, suitable for outdoor work.',
@@ -964,8 +992,8 @@ export const products: Product[] = [
     categoryDe: 'Regenkleidung',
     categoryEs: 'Ropa de Lluvia',
     images: {
-      main: PRODUCT_IMAGES.rainwear_3,
-      side: PRODUCT_IMAGES.rainwear_4,
+      main: USER_UPLOAD_IMAGES['1610-main'],
+      side: USER_UPLOAD_IMAGES['1610-side'],
     },
     description: '涤丝纺套装，面料采用190T涤纶表面泼水处理，涂层为PVC，内里为190T涤纶，静水压≥50kPa，织带反光带亮度≥300。适合户外作业和雨天出行。',
     descriptionEn: 'Polyester satin rainwear set with 190T polyester water-repellent fabric, PVC coating, 190T polyester lining, water resistance ≥50kPa, webbing reflective strip brightness ≥300. Suitable for outdoor work and rainy travel.',
@@ -1105,7 +1133,7 @@ export const products: Product[] = [
     categoryDe: 'Regenkleidung',
     categoryEs: 'Ropa de Lluvia',
     images: {
-      main: USER_UPLOAD_IMAGES['4-18-side'],
+      main: USER_UPLOAD_IMAGES['4-18-front'],
       side: USER_UPLOAD_IMAGES['4-18-side'],
     },
     description: '分体式连帽雨衣套装，设计简约大方，防水性能优异。上衣配有连帽，长裤为束脚款式，适合各类户外雨天作业场景。',
