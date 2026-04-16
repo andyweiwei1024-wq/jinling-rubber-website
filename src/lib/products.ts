@@ -122,6 +122,33 @@ const PRODUCT_IMAGES = {
   workwear_4: 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/generate_image_a9cb4d65-f827-4ed3-ae84-4be46ef91c36_61cc276a.jpeg?sign=1807862034-3e0993f2c6-0-79feb6a3dc60f58676f4c17bb2c3913fe52744c99496dc7f98902353ee4c0e45',
 };
 
+// 用户上传的真实产品图片
+const USER_UPLOAD_IMAGES = {
+  // JL-1-1 抗静电工作套装
+  '1-1-main': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/1-1-main_5f72903a.jpg?sign=1776414056-ff8e173bf0-0-0af69f83c3cf5b541e2846ed81a395610f8b8115139006d17b3a652f7df2e86c',
+  '1-1-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/1-1-side_bc4120ca.jpg?sign=1776414056-8eb4031831-0-18950364187334b41f163c9f4330bd6ab8975a58b50fd822108b39070b03c6b4',
+  // JL-1-6 矿井防水棉衣
+  '1-6-main': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/1-6-main_c4bca4c0.jpg?sign=1776414056-89d80107a4-0-95b90bfe6bb65c1c715f116f45025b8224fd5f423fca7210211b3b267654fd1b',
+  '1-6-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/1-6-side_ca61b493.jpg?sign=1776414056-498b387031-0-f4056a928da51f6909ed299013877eeac2f84b8444e44ed1d145e9bb7f5fc106',
+  // JL-1-23 单胶长雨衣
+  '1-23-main': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/1-23-main_f9227bd8.jpg?sign=1776414057-078486c137-0-4abd2e029cc1b03a0613eb43505be87ca3fc0d68f1f673d7ddbf6651a1f452e4',
+  '1-23-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/1-23-side_7d171bd0.jpg?sign=1776414057-76c9717d6d-0-5c2d340b3aff9bda8bb4f7bece09556c4c7c627d19e4e41c7e9049812eec991c',
+  // JL-2-3 单胶连帽套装
+  '2-3-main': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/2-3-main_de6499c9.jpg?sign=1776414058-8a6fa1f78c-0-9ea401f04cdd4d8a77dc90218b642ea198a872adaaf9689d6628d10876f74453',
+  '2-3-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/2-3-side_449149d7.jpg?sign=1776414058-f21b2ed309-0-6edfdeeae576d56090b0db1cb25c3f84b2b533a18cf014f24010757185ae958f',
+  // JL-2-41 单胶分体套装
+  '2-41-main': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/2-41-main_bcd50134.jpeg?sign=1776414059-6076925c14-0-07b7383a3a90c8ba1103d87538fd022e71ced0a20a71ceefbf50fc4f774e8cd5',
+  '2-41-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/2-41-side_b24e34fb.jpeg?sign=1776414058-0f0b186953-0-d231b6fc337b43580f08945871af771cd4e3406254390709e389ca1ee8bc782f',
+  // JL-2-3a 蓝色分体式雨衣套装
+  '2-3a-main': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/2-3a-main_80051910.jpeg?sign=1776414057-cf6db9749b-0-3633ee76504e34d3093dfd24aae9f7a2a1cbc937e2857accf70c0aa320d94c60',
+  '2-3a-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/2-3a-side_68908fe0.jpeg?sign=1776414057-c54af1d0c6-0-66ca6a744435447ed873e5cdb13524981d2c4a8a5051dac509604cc6902b8a90',
+  // JL-4-2 分体式连帽雨衣套装
+  '4-2-main': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/4-2-main_cce5c61f.jpg?sign=1776414055-a7d6c0a43d-0-f5745b01dfdb8dc2b4d23b215527c9766a787486f63affdb433628e3d9d1b3a4',
+  '4-2-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/4-2-side_afe1bedf.jpg?sign=1776414055-850affc8fb-0-fef4b1b15f91fde6fb20a9415adedb21886a7e5a047673fef10fe3f2342bdcd1',
+  // JL-4-18 分体式连帽束脚雨衣套装 (只有侧面图)
+  '4-18-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/4-18-side_b492cb76.jpeg?sign=1776414055-f5cfa9d10c-0-199cc03e04f235c8dacfd21e4b412449137059227a087eba46dad39b1ef97be0',
+};
+
 export const products: Product[] = [
   {
     id: '3015',
@@ -701,9 +728,9 @@ export const products: Product[] = [
     categoryDe: 'Regenkleidung',
     categoryEs: 'Ropa de Lluvia',
     images: {
-      main: PRODUCT_IMAGES.rainwear_1,
-      side: PRODUCT_IMAGES.rainwear_2,
-      additional: [PRODUCT_IMAGES.rainwear_1],
+      main: USER_UPLOAD_IMAGES['1-1-main'],
+      side: USER_UPLOAD_IMAGES['1-1-side'],
+      additional: [USER_UPLOAD_IMAGES['1-1-main']],
     },
     description: '抗静电工作套装，面料采用100D涤纶与进口导电丝混织表面泼水处理，涂层为环保PVC，内里为涤纶190T静电布。具有抗静电功能，适合电子、石化等对静电敏感的作业环境。',
     descriptionEn: 'Anti-static workwear set with 100D polyester and imported conductive fiber blended fabric, water-repellent finish, eco-friendly PVC coating, and 190T polyester static-free lining. Anti-static, suitable for electronics and petrochemical environments.',
@@ -749,8 +776,8 @@ export const products: Product[] = [
     categoryDe: 'Regenkleidung',
     categoryEs: 'Ropa de Lluvia',
     images: {
-      main: PRODUCT_IMAGES.rainwear_3,
-      side: PRODUCT_IMAGES.rainwear_4,
+      main: USER_UPLOAD_IMAGES['1-6-main'],
+      side: USER_UPLOAD_IMAGES['1-6-side'],
     },
     description: '矿井防水棉衣，面料采用210T春亚纺，涂层为环保PVC，内里为涤纶行缝棉，静水压≥50kPa，反光带亮度≥500(欧标)。适合矿井、隧道等潮湿寒冷作业环境。',
     descriptionEn: 'Waterproof insulated mining jacket with 210T pongee fabric, eco-friendly PVC coating, quilted polyester insulation, water resistance ≥50kPa, reflective strip brightness ≥500cd/m² (EU standard). Suitable for mines, tunnels, and wet/cold environments.',
@@ -796,8 +823,8 @@ export const products: Product[] = [
     categoryDe: 'Regenkleidung',
     categoryEs: 'Ropa de Lluvia',
     images: {
-      main: PRODUCT_IMAGES.rainwear_1,
-      side: PRODUCT_IMAGES.rainwear_2,
+      main: USER_UPLOAD_IMAGES['1-23-main'],
+      side: USER_UPLOAD_IMAGES['1-23-side'],
     },
     description: '单胶长雨衣，内料采用全棉32×6058，涂层为天然橡胶，静水压≥70kPa。长款设计提供更大面积的防雨保护，适合雨天户外作业。',
     descriptionEn: 'Single coated long raincoat with all-cotton 32×6058 inner and natural rubber coating, water resistance ≥70kPa. Long design provides greater rain protection coverage, suitable for rainy outdoor work.',
@@ -843,8 +870,8 @@ export const products: Product[] = [
     categoryDe: 'Regenkleidung',
     categoryEs: 'Ropa de Lluvia',
     images: {
-      main: PRODUCT_IMAGES.rainwear_3,
-      side: PRODUCT_IMAGES.rainwear_4,
+      main: USER_UPLOAD_IMAGES['2-3-main'],
+      side: USER_UPLOAD_IMAGES['2-3-side'],
     },
     description: '单胶连帽套装，面料采用全棉32×6058，涂层为天然橡胶，静水压≥70kPa。连帽设计提供更好的头部防护，适合雨天户外作业。',
     descriptionEn: 'Single coated hooded rainwear set with all-cotton 32×6058 fabric and natural rubber coating, water resistance ≥70kPa. Hooded design provides better head protection, suitable for rainy outdoor work.',
@@ -890,8 +917,8 @@ export const products: Product[] = [
     categoryDe: 'Regenkleidung',
     categoryEs: 'Ropa de Lluvia',
     images: {
-      main: PRODUCT_IMAGES.rainwear_1,
-      side: PRODUCT_IMAGES.rainwear_2,
+      main: USER_UPLOAD_IMAGES['2-41-main'],
+      side: USER_UPLOAD_IMAGES['2-41-side'],
     },
     description: '单胶分体套装，采用优质防水面料制作，适合各类户外雨天作业场景。分体式设计便于穿脱，提高作业效率。',
     descriptionEn: 'Single coated two-piece rainwear set made with premium waterproof fabric, suitable for various outdoor rainy work scenarios. Two-piece design for easy wear and removal, improving work efficiency.',
@@ -984,8 +1011,8 @@ export const products: Product[] = [
     categoryDe: 'Regenkleidung',
     categoryEs: 'Ropa de Lluvia',
     images: {
-      main: PRODUCT_IMAGES.rainwear_1,
-      side: PRODUCT_IMAGES.rainwear_2,
+      main: USER_UPLOAD_IMAGES['2-3a-main'],
+      side: USER_UPLOAD_IMAGES['2-3a-side'],
     },
     description: '蓝色分体式雨衣套装，上衣带有反光条设计，提升阴雨低能见度环境下的安全性。适合户外工作者和雨天出行使用。',
     descriptionEn: 'Blue two-piece rainwear set with reflective strip design on jacket, improving safety in low-visibility rainy conditions. Suitable for outdoor workers and rainy travel.',
@@ -1031,8 +1058,8 @@ export const products: Product[] = [
     categoryDe: 'Regenkleidung',
     categoryEs: 'Ropa de Lluvia',
     images: {
-      main: PRODUCT_IMAGES.rainwear_3,
-      side: PRODUCT_IMAGES.rainwear_4,
+      main: USER_UPLOAD_IMAGES['4-2-main'],
+      side: USER_UPLOAD_IMAGES['4-2-side'],
     },
     description: '分体式连帽雨衣套装，采用优质防水面料制作，上衣带有连帽设计，提供全面的防雨保护。适合户外作业和日常雨天出行。',
     descriptionEn: 'Two-piece hooded rainwear set made with premium waterproof fabric, jacket with hooded design providing comprehensive rain protection. Suitable for outdoor work and daily rainy travel.',
@@ -1078,8 +1105,8 @@ export const products: Product[] = [
     categoryDe: 'Regenkleidung',
     categoryEs: 'Ropa de Lluvia',
     images: {
-      main: PRODUCT_IMAGES.rainwear_1,
-      side: PRODUCT_IMAGES.rainwear_2,
+      main: USER_UPLOAD_IMAGES['4-18-side'],
+      side: USER_UPLOAD_IMAGES['4-18-side'],
     },
     description: '分体式连帽雨衣套装，设计简约大方，防水性能优异。上衣配有连帽，长裤为束脚款式，适合各类户外雨天作业场景。',
     descriptionEn: 'Two-piece hooded rainwear set with simple and elegant design, excellent waterproof performance. Jacket with hood, pants with elastic cuffs, suitable for various outdoor rainy work scenarios.',
