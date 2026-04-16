@@ -2975,7 +2975,7 @@ Elegir un traje de protección contra gases requiere consideración integral del
     categoryEn: 'Product Guide',
     tags: ['防毒衣', '连体式', '分体式', '选购指南', '防护装备'],
     tagsEn: ['Gas protection suit', 'One-piece', 'Two-piece', 'Buying guide', 'Protective equipment'],
-    coverImage: 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/image/generate_image_63a49cf0-8245-4b20-8283-d75155f45fcd.jpeg?sign=1806543902-b098fb8680-0-445359523feee8de72b512b5577273c72e60508d8f4a5135e6aba4f46db2881e',
+    coverImage: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800',
     publishedAt: '2025-01-12',
     updatedAt: '2025-01-12',
     featured: false,
