@@ -30,6 +30,16 @@ const nextConfig: NextConfig = {
         hostname: 'images.unsplash.com',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'coze-coding-project.tos.coze.site',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: '**.tos.coze.site',
+        pathname: '/**',
+      },
     ],
   },
 
