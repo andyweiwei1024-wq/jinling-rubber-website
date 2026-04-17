@@ -6539,7 +6539,7 @@ Contáctenos en cualquier momento para más información.
     tagsDe: ['Schutzanzugmaterialien', 'PVC', 'Neopren', 'Butylkautschuk', 'Materialvergleich'],
     tagsEs: ['Materiales de trajes de protección', 'PVC', 'Neopreno', 'Caucho butilo', 'Comparación de materiales'],
     coverImage: 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/blog/materials-comparison_a26b7e41.jpg?sign=2091760063-ab80e73faf-0-ffea372b3035f86fd8957098eddf58825ea478600c61f66c7c68f968595a6124',
-    detailImage: 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/blog/materials-comparison_a26b7e41.jpg?sign=2091760063-ab80e73faf-0-ffea372b3035f86fd8957098eddf58825ea478600c61f66c7c68f968595a6124',
+    detailImage: 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/blog/materials-detail_593a4571.jpg?sign=2091760350-e47230e15f-0-2e8584c8389caa5d9357f471983755f71efd7d7508b790cd0f9baee66af80d80',
     publishedAt: '2026-04-17',
     updatedAt: '2026-04-17',
     featured: true,
