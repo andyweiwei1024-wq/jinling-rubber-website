@@ -218,10 +218,10 @@ export default async function ArticlePage({ params }: PageProps) {
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Main Content */}
           <article className="flex-1">
-            {/* Cover Image */}
+            {/* Cover Image - 使用详情页专用图，备选封面图 */}
             <div className="mb-8 mt-4">
               <img
-                src={article.coverImage}
+                src={article.detailImage || article.coverImage}
                 alt={getArticleField(article, 'title', lang)}
                 className="w-full h-64 md:h-80 lg:h-96 object-contain bg-gray-50 rounded-lg"
               />

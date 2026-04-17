@@ -34,6 +34,7 @@ export interface Article {
   tagsDe?: string[];
   tagsEs?: string[];
   coverImage: string;
+  detailImage?: string; // 详情页专用大图，如不设置则使用 coverImage
   publishedAt: string;
   updatedAt: string;
   featured: boolean;
@@ -6538,6 +6539,7 @@ Contáctenos en cualquier momento para más información.
     tagsDe: ['Schutzanzugmaterialien', 'PVC', 'Neopren', 'Butylkautschuk', 'Materialvergleich'],
     tagsEs: ['Materiales de trajes de protección', 'PVC', 'Neopreno', 'Caucho butilo', 'Comparación de materiales'],
     coverImage: 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/image/generate_image_5288480d-b8b8-4a6f-9d6e-18737b6721ae.jpeg?sign=1807934422-4aad0a1b20-0-bad0486943198194ee4cb171a84cd9534ea92b9214fb86b31e9226e36af800bc',
+    detailImage: 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/image/generate_image_2f9bb22e-005a-472c-9278-fd4324b5d2a9.jpeg?sign=1807935309-2bd3990808-0-ed3a4e99106e8aae24eea9da50c2f43efad1c11cac8cda97e82ec86b4fc39fca',
     publishedAt: '2026-04-17',
     updatedAt: '2026-04-17',
     featured: true,
