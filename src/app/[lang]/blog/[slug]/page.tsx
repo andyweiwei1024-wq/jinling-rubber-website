@@ -223,7 +223,7 @@ export default async function ArticlePage({ params }: PageProps) {
               <img
                 src={article.coverImage}
                 alt={getArticleField(article, 'title', lang)}
-                className="w-full h-64 md:h-96 object-cover rounded-lg shadow-lg"
+                className="w-full h-64 md:h-80 lg:h-96 object-contain bg-gray-50 rounded-lg"
               />
             </div>
 

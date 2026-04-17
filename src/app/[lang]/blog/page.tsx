@@ -72,11 +72,11 @@ export default async function BlogPage({ params }: PageProps) {
                 <div className="grid md:grid-cols-2 gap-6">
                   {featuredArticles.map((article) => (
                     <Card key={article.id} className="overflow-hidden hover:shadow-lg transition-shadow">
-                      <div className="aspect-video relative">
+                      <div className="aspect-video relative bg-gray-50 flex items-center justify-center p-4">
                         <img
                           src={article.coverImage}
                           alt={getArticleField(article, 'title', lang)}
-                          className="w-full h-full object-cover"
+                          className="max-w-full max-h-full object-contain"
                         />
                         <Badge className="absolute top-3 left-3 bg-yellow-500">
                           {t.featured}
@@ -132,11 +132,11 @@ export default async function BlogPage({ params }: PageProps) {
               <div className="space-y-6">
                 {articles.map((article) => (
                   <Card key={article.id} className="flex flex-col md:flex-row overflow-hidden hover:shadow-lg transition-shadow">
-                    <div className="md:w-64 md:flex-shrink-0">
+                    <div className="md:w-64 md:flex-shrink-0 bg-gray-50 flex items-center justify-center p-4">
                       <img
                         src={article.coverImage}
                         alt={getArticleField(article, 'title', lang)}
-                        className="w-full h-48 md:h-full object-cover"
+                        className="max-w-full max-h-32 md:max-h-full object-contain"
                       />
                     </div>
                     <div className="flex-1 p-6">
