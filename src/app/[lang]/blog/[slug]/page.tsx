@@ -219,7 +219,7 @@ export default async function ArticlePage({ params }: PageProps) {
           {/* Main Content */}
           <article className="flex-1">
             {/* Cover Image */}
-            <div className="mb-8 -mt-16 relative z-20">
+            <div className="mb-8 mt-4">
               <img
                 src={article.coverImage}
                 alt={getArticleField(article, 'title', lang)}
