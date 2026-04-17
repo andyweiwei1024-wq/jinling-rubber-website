@@ -100,7 +100,7 @@ export function ProductImageGallery({
         )}
         
         {/* 主图片 */}
-        <div className="aspect-square sm:aspect-[4/3] lg:aspect-square max-h-[500px] mx-auto relative">
+        <div className="aspect-square max-h-[500px] mx-auto relative">
           <Image 
             src={currentImage} 
             alt={productName}

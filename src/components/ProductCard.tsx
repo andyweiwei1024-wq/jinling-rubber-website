@@ -24,7 +24,7 @@ export function ProductCard({ product, lang, viewDetailsText }: ProductCardProps
 
   return (
     <Card className="overflow-hidden hover:shadow-lg transition-shadow flex flex-col">
-      <div className="aspect-[4/3] relative bg-gray-200">
+      <div className="aspect-square relative bg-gray-200">
         {/* 加载状态 */}
         {isLoading && (
           <div className="absolute inset-0 flex items-center justify-center bg-gray-200 z-10">
@@ -57,7 +57,7 @@ export function ProductCard({ product, lang, viewDetailsText }: ProductCardProps
             src={product.images.main} 
             alt={getProductName(product, lang)}
             fill
-            className={`object-cover transition-opacity duration-300 ${isLoading ? 'opacity-0' : 'opacity-100'}`}
+            className="object-contain p-2 transition-opacity duration-300 ${isLoading ? 'opacity-0' : 'opacity-100'}"
             loading="lazy"
             quality={85}
             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"

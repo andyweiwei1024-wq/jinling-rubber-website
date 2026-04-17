@@ -253,13 +253,13 @@ export default async function Home({ params }: PageProps) {
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {featuredProducts.map((product) => (
                 <Card key={product.id} className="overflow-hidden hover:shadow-lg transition-shadow">
-                  <div className="aspect-[4/3] relative bg-gray-200">
+                  <div className="aspect-square relative bg-gray-200 flex items-center justify-center p-3">
                     <Image 
                       src={product.images.main} 
                       alt={getProductName(product, lang)}
                       width={400}
-                      height={300}
-                      className="object-cover w-full h-full"
+                      height={400}
+                      className="object-contain max-w-full max-h-full"
                       loading="lazy"
                       quality={85}
                     />

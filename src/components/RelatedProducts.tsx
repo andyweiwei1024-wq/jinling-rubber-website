@@ -75,12 +75,12 @@ export function RelatedProducts({
         {relatedProducts.map((product) => (
           <Link key={product.id} href={navPath(`/products/${product.id}`)}>
             <Card className="h-full hover:shadow-md transition-shadow cursor-pointer overflow-hidden">
-              <div className="aspect-[4/3] relative bg-gray-100">
+              <div className="aspect-square relative bg-gray-100 flex items-center justify-center p-3">
                 <Image
                   src={product.images.main}
                   alt={getProductName(product, lang)}
                   fill
-                  className="object-cover w-full h-full"
+                  className="object-contain max-w-full max-h-full"
                   loading="lazy"
                   quality={85}
                   sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
