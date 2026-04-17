@@ -547,7 +547,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
                 {relatedProducts.map((p) => (
                   <Link key={p.id} href={navPath(`/products/${p.id}`)}>
                     <Card className="overflow-hidden hover:shadow-lg transition-shadow h-full">
-                      <div className="aspect-square relative bg-gray-200 flex items-center justify-center p-2">
+                      <div className="aspect-square relative bg-white flex items-center justify-center p-2">
                         <img src={p.images.main} alt={getProductName(p, lang)} className="object-contain max-w-full max-h-full" />
                       </div>
                       <CardContent className="p-4">

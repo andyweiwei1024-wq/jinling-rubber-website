@@ -23,8 +23,8 @@ export function ProductCard({ product, lang, viewDetailsText }: ProductCardProps
   const navPath = (path: string) => lang === 'en' ? path : `/${lang}${path}`;
 
   return (
-    <Card className="overflow-hidden hover:shadow-lg transition-shadow flex flex-col">
-      <div className="aspect-square relative bg-gray-200">
+    <Card className="border-border/40 bg-white hover:shadow-md transition-shadow flex flex-col">
+      <div className="aspect-square relative bg-white">
         {/* 加载状态 */}
         {isLoading && (
           <div className="absolute inset-0 flex items-center justify-center bg-gray-200 z-10">

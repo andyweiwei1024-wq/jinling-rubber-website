@@ -87,7 +87,7 @@ export function ProductImageGallery({
       {/* 主图区域 - 带放大镜效果 */}
       <div 
         ref={containerRef}
-        className="relative bg-gray-50 rounded-xl overflow-hidden border cursor-zoom-in"
+        className="relative bg-white cursor-zoom-in"
         onMouseEnter={() => setIsHovering(true)}
         onMouseLeave={() => setIsHovering(false)}
         onMouseMove={handleMouseMove}

@@ -74,7 +74,7 @@ export function RelatedProducts({
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {relatedProducts.map((product) => (
           <Link key={product.id} href={navPath(`/products/${product.id}`)}>
-            <Card className="h-full hover:shadow-md transition-shadow cursor-pointer overflow-hidden">
+            <Card className="border-border/40 bg-white h-full hover:shadow-md transition-shadow cursor-pointer">
               <div className="aspect-square relative bg-gray-100 flex items-center justify-center p-3">
                 <Image
                   src={product.images.main}
