@@ -1,8 +1,5 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
 import { 
   Tabs, 
   TabsList, 
@@ -13,14 +10,12 @@ import {
   products, 
   productCategories, 
   getProductsByCategory,
-  getProductName,
-  getProductDescription,
-  getProductFeatures,
   getCategoryName
 } from '@/lib/products-i18n';
 import { Language, defaultLanguage } from '@/lib/i18n/config';
 import { getAllTranslations, getTranslation } from '@/lib/i18n/server';
 import { ArrowRight } from 'lucide-react';
+import { ProductCard } from '@/components/ProductCard';
 
 interface PageProps {
   params?: Promise<{ lang?: string }>;
@@ -69,43 +64,12 @@ export default async function ProductsPage({ params }: PageProps) {
             <TabsContent value="all" className="mt-0">
               <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                 {products.map((product) => (
-                  <Card key={product.id} className="overflow-hidden hover:shadow-lg transition-shadow flex flex-col">
-                    <div className="aspect-[4/3] relative bg-gray-200">
-                      <Image 
-                        src={product.images.main} 
-                        alt={getProductName(product, lang)}
-                        width={400}
-                        height={300}
-                        className="object-cover w-full h-full"
-                        loading="lazy"
-                        quality={85}
-                      />
-                    </div>
-                    <CardHeader className="pb-2">
-                      <Badge variant="secondary" className="w-fit mb-2">
-                        {getCategoryName(product.category, lang)}
-                      </Badge>
-                      <CardTitle className="text-lg">{getProductName(product, lang)} <span className="text-sm font-normal text-muted-foreground">({product.id})</span></CardTitle>
-                    </CardHeader>
-                    <CardContent className="flex-1">
-                      <p className="text-sm text-muted-foreground line-clamp-2">{getProductDescription(product, lang)}</p>
-                      <div className="mt-4 flex flex-wrap gap-1">
-                        {getProductFeatures(product, lang).slice(0, 3).map((feature, idx) => (
-                          <Badge key={idx} variant="outline" className="text-xs">
-                            {feature}
-                          </Badge>
-                        ))}
-                      </div>
-                    </CardContent>
-                    <div className="p-6 pt-0 mt-auto">
-                      <Link href={navPath(`/products/${product.id}`)}>
-                        <Button className="w-full">
-                          {t('products.viewDetails', 'View Details')}
-                          <ArrowRight className="ml-2 h-4 w-4" />
-                        </Button>
-                      </Link>
-                    </div>
-                  </Card>
+                  <ProductCard 
+                    key={product.id} 
+                    product={product} 
+                    lang={lang}
+                    viewDetailsText={t('products.viewDetails', 'View Details')}
+                  />
                 ))}
               </div>
             </TabsContent>
@@ -115,43 +79,12 @@ export default async function ProductsPage({ params }: PageProps) {
               <TabsContent key={category.id} value={category.id} className="mt-0">
                 <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                   {getProductsByCategory(category.id).map((product) => (
-                    <Card key={product.id} className="overflow-hidden hover:shadow-lg transition-shadow flex flex-col">
-                      <div className="aspect-[4/3] relative bg-gray-200">
-                        <Image 
-                          src={product.images.main} 
-                          alt={getProductName(product, lang)}
-                          width={400}
-                          height={300}
-                          className="object-cover w-full h-full"
-                          loading="lazy"
-                          quality={85}
-                        />
-                      </div>
-                      <CardHeader className="pb-2">
-                        <Badge variant="secondary" className="w-fit mb-2">
-                          {getCategoryName(product.category, lang)}
-                        </Badge>
-                        <CardTitle className="text-lg">{getProductName(product, lang)} <span className="text-sm font-normal text-muted-foreground">({product.id})</span></CardTitle>
-                      </CardHeader>
-                      <CardContent className="flex-1">
-                        <p className="text-sm text-muted-foreground line-clamp-2">{getProductDescription(product, lang)}</p>
-                        <div className="mt-4 flex flex-wrap gap-1">
-                          {getProductFeatures(product, lang).slice(0, 3).map((feature, idx) => (
-                            <Badge key={idx} variant="outline" className="text-xs">
-                              {feature}
-                            </Badge>
-                          ))}
-                        </div>
-                      </CardContent>
-                      <div className="p-6 pt-0 mt-auto">
-                        <Link href={navPath(`/products/${product.id}`)}>
-                          <Button className="w-full">
-                            {t('products.viewDetails', 'View Details')}
-                            <ArrowRight className="ml-2 h-4 w-4" />
-                          </Button>
-                        </Link>
-                      </div>
-                    </Card>
+                    <ProductCard 
+                      key={product.id} 
+                      product={product} 
+                      lang={lang}
+                      viewDetailsText={t('products.viewDetails', 'View Details')}
+                    />
                   ))}
                 </div>
               </TabsContent>

@@ -157,22 +157,22 @@ const USER_UPLOAD_IMAGES = {
   '5-5-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/5-5-side_03e89ba1.jpg?sign=1776414537-4146b75f79-0-0fc9c3c880c30efb4775e6e466fd171ba220a154186c8fe4e97641869f52e71e',
   // JL-1610 涤丝纺套装
   '1610-main': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/1610-front_8ea87129.jpg?sign=1776414539-33946be3f4-0-1885958bf0a0ad995c73ae24fcd8e6764bbb2536300b6a06c095d954b4de4282',
-  '1610-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/1610-side_315fdfc1.jpg?sign=1776414539-45ed5063e3-0-238a8112aad101845a5290f09a8b4f9b294f44bb3f59b198847a7f50a0c3f6ed',
+  '1610-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/1610-side_315fdfc1.jpg?sign=1778981220-27e45d1501-0-88aea4974d62ffbf7c5c0692d8b0753abbecf1d8f1b67cfc23733ee222183810',
   // JL-3015 双胶防酸分式工作服
   '3015-main': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/3015-front_84b7b634.jpg?sign=1776414541-204597631d-0-69088bfe2d98279a16d64063d20fe5b8cb61a80f7c91b2c3405744f6610d3fdb',
-  '3015-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/3015-side_5999ab72.jpg?sign=1776414541-199ad19f35-0-dfb492f54bb20443ac6449533b3807703668389a1fff4089ce2955c301d17cf5',
+  '3015-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/3015-side_5999ab72.jpg?sign=1778981220-86c01ca62d-0-601a64cebaccbea4cc35b769b60e997c06df37ecd8740fb7215e5943db7bb034',
   // JL-3019 双胶防酸长式工作服
   '3019-main': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/3019-front_f98b8fba.jpg?sign=1776414542-91163479e7-0-43f144c954c6223361de77d974b1ef0321c3e79886ca39be290eea9731814c6e',
-  '3019-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/3019-side_7202d153.jpg?sign=1776414542-0ab1025f3d-0-5bf8946f4485241f9d2bd2feea3f9339214e43a6c0b51febd1dc2e2365dd0843',
+  '3019-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/3019-side_7202d153.jpg?sign=1778981220-0a1e3d105e-0-2dce78d9c9cf8ab458a110056aaa7c32bd7a7239c39d443b29decfc06e84cd3c',
   // JL-3088 耐酸分式工作服
   '3088-main': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/3088-front_e722849f.jpg?sign=1776414543-8bcfef0e16-0-12bcbf9f4d18c329078c5d062b689f9a56fcce90b370c996d248889ddc14df79',
-  '3088-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/3088-side_b97f403a.jpg?sign=1776414543-857bd210ff-0-75b4297d8313056af2950d02102a2334b67940daa1bf498c64eebe67c8f7dab9',
+  '3088-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/3088-side_b97f403a.jpg?sign=1778981220-72cf3764c1-0-8c5039eaac6b984032d62941a612e2d9d1cdebb2d091483316e292e65c02aa8e',
   // JL-3112 连式防毒衣
   '3112-main': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/3112-front_af0599e8.jpg?sign=1776414544-d360f8ed3f-0-82eddd054daddc7f86fa34ff9a84a705f6eae11ff56479729c3b8caeccfe413c',
-  '3112-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/3112-side_cb4d9258.jpg?sign=1776414543-d6eb1743f6-0-bee4d309c3e56c463d99eb83fae6889d8d0500cbf8681197c936b6245050c1a9',
+  '3112-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/3112-side_cb4d9258.jpg?sign=1778981221-9f800fa337-0-c7dab3a4fd7c14b2773e3d441ff8f928bec782cb461789afed01b90da4514571',
   // JL-3113 连式带手套靴防毒衣
   '3113-main': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/3113-front_31df9c36.jpg?sign=1776414545-736a152ef9-0-33e236650c785934474fdf2d710071331a00c9f5ed9a5b7f68d95f54d23c5e40',
-  '3113-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/3113-side_6e7ce953.jpg?sign=1776414544-df0bad1d4f-0-71d58790f5d3d68b561fad55495e63c93a99f2d1ce1448376c5d3415afdf553b',
+  '3113-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/3113-side_6e7ce953.jpg?sign=1778981221-8a4714b121-0-890af35115049b7bf54c9728892f6e87c0d881ced7453f83bf716c3abd593382',
   // JL-3116 全封闭连式防毒衣 (新增正面图)
   '3116-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/3116-side_cd956a23.jpeg?sign=1776414545-1a8af4e3ab-0-4c08b38ec310d26886377f653e11afabfbd3a2403dbde891e58baeb452182ca9',
   '3116-main': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/3116-front_e063a53e.jpeg?sign=1776414545-1a8af4e3ab-0-4c08b38ec310d26886377f653e11afabfbd3a2403dbde891e58baeb452182ca9',
@@ -440,8 +440,8 @@ export const products: Product[] = [
     categoryDe: 'Schutzanzüge',
     categoryEs: 'Trajes de Protección',
     images: {
-      main: USER_UPLOAD_IMAGES['3116-main'],
-      side: USER_UPLOAD_IMAGES['3116-side'],
+      main: PRODUCT_IMAGES.protective_2,
+      side: PRODUCT_IMAGES.protective_2,
     },
     description: '全封闭连式防毒衣，内料采用涤棉，涂层为以氯丁胶为主双面涂层，采用空气接入式设计，具有防空气中尘毒功能。可定制防介子气130分钟以上版本。',
     descriptionEn: 'Fully enclosed one-piece gas protection suit with polyester-cotton inner and double-sided neoprene coating, featuring air supply interface design for respiratory protection against airborne toxins.',
@@ -487,8 +487,8 @@ export const products: Product[] = [
     categoryDe: 'Schutzanzüge',
     categoryEs: 'Trajes de Protección',
     images: {
-      main: USER_UPLOAD_IMAGES['3121-main'],
-      side: USER_UPLOAD_IMAGES['3121-side'],
+      main: PRODUCT_IMAGES.protective_3,
+      side: PRODUCT_IMAGES.protective_3,
     },
     description: '全封闭分式隔热防毒衣，内料采用全棉，涂层为丁基胶，采用空气接入式设计，具有隔热防空气中尘毒功能。适合高温有毒环境作业。',
     descriptionEn: 'Heat-resistant fully enclosed two-piece gas protection suit with all-cotton inner and butyl rubber coating, featuring air supply interface for protection against heat and airborne toxins. Suitable for high-temperature toxic environments.',
@@ -534,8 +534,8 @@ export const products: Product[] = [
     categoryDe: 'Schutzanzüge',
     categoryEs: 'Trajes de Protección',
     images: {
-      main: USER_UPLOAD_IMAGES['3218-main'],
-      side: USER_UPLOAD_IMAGES['3218-side'],
+      main: PRODUCT_IMAGES.protective_4,
+      side: PRODUCT_IMAGES.protective_4,
     },
     description: '双胶防化阻燃连式工作服带手套靴，内料采用尼龙长丝布，涂层为氯丁胶主材。防多种化学品酸类、油类和溶剂类，除手套外衣服靴阻燃，可增加抗静电功能。',
     descriptionEn: 'Flame retardant one-piece chemical protective work suit with gloves and boots, featuring nylon filament fabric with neoprene rubber coating. Protects against multiple chemicals, acids, oils, and solvents. Flame retardant (except gloves). Anti-static available.',
@@ -581,8 +581,8 @@ export const products: Product[] = [
     categoryDe: 'Arbeitskleidung',
     categoryEs: 'Ropa de Trabajo',
     images: {
-      main: USER_UPLOAD_IMAGES['5061-main'],
-      side: USER_UPLOAD_IMAGES['5061-side'],
+      main: PRODUCT_IMAGES.workwear_1,
+      side: PRODUCT_IMAGES.workwear_1,
     },
     description: '双胶下水裤，内料采用全棉，涂层为双面氯丁混合胶，静水压≥100kPa。适合水产养殖、河道作业、渔业捕捞等水下作业环境。',
     descriptionEn: 'Double coated waders with all-cotton inner and double-sided neoprene blend coating, water resistance ≥100kPa. Suitable for aquaculture, river operations, fishing, and underwater working environments.',
@@ -722,8 +722,8 @@ export const products: Product[] = [
     categoryDe: 'Arbeitskleidung',
     categoryEs: 'Ropa de Trabajo',
     images: {
-      main: USER_UPLOAD_IMAGES['6016-main'],
-      side: USER_UPLOAD_IMAGES['6016-side'],
+      main: PRODUCT_IMAGES.rainwear_4,
+      side: PRODUCT_IMAGES.rainwear_4,
     },
     description: '挂脖式长款围裙搭配独立挂肩式防护袖套，围裙长度覆盖到大腿下部。适合餐饮后厨、屠宰加工、机械油污清理等场景，方便穿脱，不限制上半身动作。',
     descriptionEn: 'Bib apron with independent over-shoulder protective sleeves, apron length covering to upper thigh. Suitable for kitchen, slaughter processing, and mechanical oil cleaning, easy to wear and remove without restricting upper body movement.',
