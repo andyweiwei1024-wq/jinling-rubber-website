@@ -128,7 +128,7 @@ export const caseStudies: CaseStudy[] = [
     clientNameEn: 'Manager Zhang',
     clientPosition: '安全环保部',
     clientPositionEn: 'Safety & Environment Department',
-    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800',
+    image: 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/image/generate_image_3737644c-a2a7-4927-9fad-ee022527c3eb.jpeg?sign=1807933984-4fd3e89fec-0-4f8754334e239f963b7924ef31a4089e96a2fd218d8daac0867f5c6bc3740c2a',
   },
   {
     id: '2',
@@ -198,7 +198,7 @@ export const caseStudies: CaseStudy[] = [
     clientNameEn: 'Hans Mueller',
     clientPosition: '采购总监',
     clientPositionEn: 'Procurement Director',
-    image: 'https://images.unsplash.com/photo-1494168039944-59f44c12358a?w=800',
+    image: 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/image/generate_image_9cb8872f-27d3-4f5f-a48b-c09a990e6dcc.jpeg?sign=1807933977-69b052396a-0-f8f542cf4ee85514ef5b03d387b7fe1805c21a48884287c3bc91186315fdb836',
   },
   {
     id: '3',
@@ -271,7 +271,7 @@ export const caseStudies: CaseStudy[] = [
     clientNameEn: 'Department Head Tanaka',
     clientPosition: '安全部',
     clientPositionEn: 'Safety Department',
-    image: 'https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?w=800',
+    image: 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/image/generate_image_691eebf7-1bdb-4527-844f-00c67a91f9e1.jpeg?sign=1807933977-ebd0468009-0-de1439eb17ce21d7d866f293370867f3e14481acf73e3e86fd3ac0fab815f223',
   },
   {
     id: '4',
@@ -341,7 +341,7 @@ export const caseStudies: CaseStudy[] = [
     clientNameEn: 'Ahmed Al-Rahman',
     clientPosition: 'HSE Manager',
     clientPositionEn: 'HSE Manager',
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800',
+    image: 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/image/generate_image_4719dfb4-4f7a-4f91-89a4-7fa13d191b45.jpeg?sign=1807933978-96ac5520f0-0-d84dd327f1af7965aca815c31199cc431bb81a1a0d8ed3f01680ca36c4771c33',
   },
   {
     id: '5',
@@ -414,7 +414,7 @@ export const caseStudies: CaseStudy[] = [
     clientNameEn: 'Carlos Silva',
     clientPosition: '采购经理',
     clientPositionEn: 'Procurement Manager',
-    image: 'https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=800',
+    image: 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/image/generate_image_54ce3290-3754-4d1d-a501-4172e945dd8d.jpeg?sign=1807933980-c8210ca172-0-fc188388e091994b068964674a1cedcb88ab474229556646fe7dccfc435a7526',
   },
 ];
 
