@@ -72,7 +72,7 @@ export function ProductCard({ product, lang, viewDetailsText }: ProductCardProps
         </Badge>
         <CardTitle className="text-lg">{getProductName(product, lang)} <span className="text-sm font-normal text-muted-foreground">({product.id})</span></CardTitle>
       </CardHeader>
-      <CardContent className="flex-1">
+      <CardContent className="flex-1 min-h-[120px]">
         <p className="text-sm text-muted-foreground line-clamp-2">{getProductDescription(product, lang)}</p>
         <div className="mt-4 flex flex-wrap gap-1">
           {getProductFeatures(product, lang).slice(0, 3).map((feature, idx) => (
@@ -82,7 +82,7 @@ export function ProductCard({ product, lang, viewDetailsText }: ProductCardProps
           ))}
         </div>
       </CardContent>
-      <div className="p-6 pt-0 mt-auto">
+      <div className="p-6 pt-0">
         <Link href={navPath(`/products/${product.id}`)}>
           <Button className="w-full">
             {viewDetailsText}
