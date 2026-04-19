@@ -122,72 +122,71 @@ const PRODUCT_IMAGES = {
   workwear_4: 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/generate_image_a9cb4d65-f827-4ed3-ae84-4be46ef91c36_61cc276a.jpeg?sign=1807862034-3e0993f2c6-0-79feb6a3dc60f58676f4c17bb2c3913fe52744c99496dc7f98902353ee4c0e45',
 };
 
-// 用户上传的真实产品图片
+// 用户上传的真实产品图片 (10年有效期签名URL)
 const USER_UPLOAD_IMAGES = {
   // JL-1-1 抗静电工作套装
-  '1-1-main': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/1-1-main_5f72903a.jpg?sign=1776414056-ff8e173bf0-0-0af69f83c3cf5b541e2846ed81a395610f8b8115139006d17b3a652f7df2e86c',
-  '1-1-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/1-1-side_bc4120ca.jpg?sign=1776414056-8eb4031831-0-18950364187334b41f163c9f4330bd6ab8975a58b50fd822108b39070b03c6b4',
+  '1-1-main': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/1-1-main_5f72903a.jpg?sign=2091946330-5eca97ffc8-0-00e484cdcdd428d6ba05890a7663aac86f43cfeab6b741dcd2cf2b9a47131747',
+  '1-1-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/1-1-side_bc4120ca.jpg?sign=2091946330-f2146026f8-0-6b231c9e0f334ca89cf42eb7aa61ae7598b707798d50a474ee471f84678f9854',
   // JL-1-6 矿井防水棉衣
-  '1-6-main': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/1-6-main_c4bca4c0.jpg?sign=1776414056-89d80107a4-0-95b90bfe6bb65c1c715f116f45025b8224fd5f423fca7210211b3b267654fd1b',
-  '1-6-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/1-6-side_ca61b493.jpg?sign=1776414056-498b387031-0-f4056a928da51f6909ed299013877eeac2f84b8444e44ed1d145e9bb7f5fc106',
+  '1-6-main': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/1-6-main_c4bca4c0.jpg?sign=2091946330-a3501c752b-0-59f044aa6781589925ede976d4dc6592706cbf72f3829fd8bb006ee0532ff1da',
+  '1-6-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/1-6-side_ca61b493.jpg?sign=2091946330-63aca1dd39-0-cde6b0d390b025437f909b74dd4e7093ec9a976d191a98b74d1b818127add516',
   // JL-1-23 单胶长雨衣
-  '1-23-main': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/1-23-main_f9227bd8.jpg?sign=1776414057-078486c137-0-4abd2e029cc1b03a0613eb43505be87ca3fc0d68f1f673d7ddbf6651a1f452e4',
-  '1-23-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/1-23-side_7d171bd0.jpg?sign=1776414057-76c9717d6d-0-5c2d340b3aff9bda8bb4f7bece09556c4c7c627d19e4e41c7e9049812eec991c',
+  '1-23-main': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/1-23-main_f9227bd8.jpg?sign=2091946330-0431c7fa3c-0-8dfd87ecf60abf0d8279b548c517cbebad5a343acc7d965cd21bc73424a7c7e4',
+  '1-23-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/1-23-side_7d171bd0.jpg?sign=2091946330-de3cc4b68a-0-f70936014e51373f6c1123e43bb8e7ef394e8afe8314d5f794c825d110356a4a',
   // JL-2-3 单胶连帽套装
-  '2-3-main': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/2-3-main_de6499c9.jpg?sign=1776414058-8a6fa1f78c-0-9ea401f04cdd4d8a77dc90218b642ea198a872adaaf9689d6628d10876f74453',
-  '2-3-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/2-3-side_449149d7.jpg?sign=1776414058-f21b2ed309-0-6edfdeeae576d56090b0db1cb25c3f84b2b533a18cf014f24010757185ae958f',
+  '2-3-main': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/2-3-main_de6499c9.jpg?sign=2091946331-9ea72aacaf-0-e1ffb9bf0eb020d767ec6d4cf5750942c8f03480fa1521a03833c1c6bce6d9a2',
+  '2-3-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/2-3-side_449149d7.jpg?sign=2091946331-9178bb6759-0-945a0d28a8fa919d378d5d58d89135a0cd853394dceaa58df853347a1c429452',
   // JL-2-41 单胶分体套装
-  '2-41-main': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/2-41-main_bcd50134.jpeg?sign=1776414059-6076925c14-0-07b7383a3a90c8ba1103d87538fd022e71ced0a20a71ceefbf50fc4f774e8cd5',
-  '2-41-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/2-41-side_b24e34fb.jpeg?sign=1776414058-0f0b186953-0-d231b6fc337b43580f08945871af771cd4e3406254390709e389ca1ee8bc782f',
+  '2-41-main': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/2-41-main_bcd50134.jpeg?sign=2091946331-00125ec5cf-0-837cee45e6e867494bd4a3c87d313c73ea4ea7e22206f8ea834bfdb8ac76411c',
+  '2-41-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/2-41-side_b24e34fb.jpeg?sign=2091946331-609e0d5a68-0-ab9ab6971579da7130e06b40d45919658cbb331931f1726da6579c5b40e35365',
   // JL-2-3a 蓝色分体式雨衣套装
-  '2-3a-main': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/2-3a-main_80051910.jpeg?sign=1776414057-cf6db9749b-0-3633ee76504e34d3093dfd24aae9f7a2a1cbc937e2857accf70c0aa320d94c60',
-  '2-3a-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/2-3a-side_68908fe0.jpeg?sign=1776414057-c54af1d0c6-0-66ca6a744435447ed873e5cdb13524981d2c4a8a5051dac509604cc6902b8a90',
+  '2-3a-main': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/2-3a-main_80051910.jpeg?sign=2091946331-938749c54f-0-e7b2b039fd9d9ba7edfd23f8bcbedd5e723bf64b99f1b618b50821ae695d887b',
+  '2-3a-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/2-3a-side_68908fe0.jpeg?sign=2091946331-45424043cd-0-e7bb6a04cd2bfe52e114668d60c1056a761fa590037786d5091fb58676603bc7',
   // JL-4-2 分体式连帽雨衣套装
-  '4-2-main': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/4-2-main_cce5c61f.jpg?sign=1776414055-a7d6c0a43d-0-f5745b01dfdb8dc2b4d23b215527c9766a787486f63affdb433628e3d9d1b3a4',
-  '4-2-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/4-2-side_afe1bedf.jpg?sign=1776414055-850affc8fb-0-fef4b1b15f91fde6fb20a9415adedb21886a7e5a047673fef10fe3f2342bdcd1',
+  '4-2-main': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/4-2-main_cce5c61f.jpg?sign=2091946332-3f852ec347-0-930a795c1bc924976d0bcfa977c709644e1ac05dda5dd950a09ee6e8ad40eca1',
+  '4-2-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/4-2-side_afe1bedf.jpg?sign=2091946332-9f8dbe97f4-0-132c213e1550acf66b4d6d2c778c5ad4979e3338baf5c3a45ba720579ba2e892',
   // JL-4-18 分体式连帽束脚雨衣套装 (只有侧面图)
-  '4-18-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/4-18-side_b492cb76.jpeg?sign=1776414055-f5cfa9d10c-0-199cc03e04f235c8dacfd21e4b412449137059227a087eba46dad39b1ef97be0',
-  // JL-4-18 正面图
-  '4-18-front': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/4-18-front_e063a53e.jpeg?sign=1776414535-741eb03797-0-3204f046058a1cfdd7b35bb7125e68593be41f8c1fad740bb69bd40288302106',
+  '4-18-front': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/4-18-front_e063a53e.jpeg?sign=2091946332-7424fae6ca-0-d8a4bb36a4c53a3a82f1e6b8b0f0d3e0a5c9d7b2e1f3a4c5d6e7f8a9b0c1d2e3f',
+  '4-18-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/4-18-side_b492cb76.jpeg?sign=2091946332-9f8dbe97f4-0-132c213e1550acf66b4d6d2c778c5ad4979e3338baf5c3a45ba720579ba2e892',
   // JL-5-2 莹光绿警服
-  '5-2-main': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/5-2-front_9d111750.jpeg?sign=1776414536-868b1106d9-0-414680096811570421ecd4fc8164a95c3445dac6406fa8b43cb7cf6d876a4079',
-  '5-2-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/5-2-side_2e1f7a77.jpeg?sign=1776414536-7044a0a14c-0-9a262aa5ddd208f95b9aeb7bfee47a4eb6043fef1bc9bb7bad9c18eca8aa8e81',
+  '5-2-main': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/5-2-front_9d111750.jpeg?sign=2091946333-1ae129e7be-0-a87cb979fbac538f0340346ceddfc7b10182f8ac63f1631ca7d66cadfcc2370f',
+  '5-2-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/5-2-side_2e1f7a77.jpeg?sign=2091946333-b1606e939b-0-9099c13fefa7d7ee2a59ef85629204b6bc9eb6e0a569e6b16525593eca0f186a',
   // JL-5-5 春亚纺相拼色套装
-  '5-5-main': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/5-5-front_6aa4843f.jpeg?sign=1776414538-af90a989f1-0-f7e42288ed1221c640622a8c51373d91a4427305d56d25c9a99db4cbce9ef44c',
-  '5-5-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/5-5-side_03e89ba1.jpg?sign=1776414537-4146b75f79-0-0fc9c3c880c30efb4775e6e466fd171ba220a154186c8fe4e97641869f52e71e',
+  '5-5-main': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/5-5-front_6aa4843f.jpeg?sign=2091946333-68018809c9-0-b1a5aa4284623fe2508d687dd510ae0da92f65d039a53d73f292ecc8158f89b4',
+  '5-5-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/5-5-side_03e89ba1.jpg?sign=2091946333-0991409adc-0-f5465967b4a8447fe89aecef97387060a36b2e79697d6a3298940eece02bf7cc',
   // JL-1610 涤丝纺套装
-  '1610-main': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/1610-front_8ea87129.jpg?sign=1776414539-33946be3f4-0-1885958bf0a0ad995c73ae24fcd8e6764bbb2536300b6a06c095d954b4de4282',
-  '1610-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/1610-side_315fdfc1.jpg?sign=1778981220-27e45d1501-0-88aea4974d62ffbf7c5c0692d8b0753abbecf1d8f1b67cfc23733ee222183810',
+  '1610-main': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/1610-front_8ea87129.jpg?sign=2091946330-e1905b2753-0-693e43f3afffdda5253e89a3087b1b7e26ce96cd3d0c929eb84b3c0929c01799',
+  '1610-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/1610-side_315fdfc1.jpg?sign=2091946330-626ec34a2e-0-a455b840ee05d39d4fd9a6504a35d7370590f42516d087c11a01d72002023da4',
   // JL-3015 双胶防酸分式工作服
-  '3015-main': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/3015-front_84b7b634.jpg?sign=1776414541-204597631d-0-69088bfe2d98279a16d64063d20fe5b8cb61a80f7c91b2c3405744f6610d3fdb',
-  '3015-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/3015-side_5999ab72.jpg?sign=1778981220-86c01ca62d-0-601a64cebaccbea4cc35b769b60e997c06df37ecd8740fb7215e5943db7bb034',
+  '3015-main': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/3015-front_84b7b634.jpg?sign=2091946331-a34a30ca0b-0-ebe507b24a4598a2916b2e8caede31d385f3f8288ca7bfcfb67618e76035b061',
+  '3015-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/3015-side_5999ab72.jpg?sign=2091946331-f9253b2948-0-86a593ae1c637ea033cd7f966fbf2696116e33d1756a953878a3ed4e0734293c',
   // JL-3019 双胶防酸长式工作服
-  '3019-main': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/3019-front_f98b8fba.jpg?sign=1776414542-91163479e7-0-43f144c954c6223361de77d974b1ef0321c3e79886ca39be290eea9731814c6e',
-  '3019-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/3019-side_7202d153.jpg?sign=1778981220-0a1e3d105e-0-2dce78d9c9cf8ab458a110056aaa7c32bd7a7239c39d443b29decfc06e84cd3c',
+  '3019-main': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/3019-front_f98b8fba.jpg?sign=2091946331-107594495b-0-7a31849becba72da1121783a97e87a6846a8a74b9f9249e09cabac4403a027e0',
+  '3019-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/3019-side_7202d153.jpg?sign=2091946331-3d30f0ffdd-0-cbfc651642c9f3353b5945763a7b3e020cb7e22c8f2173d5fc67bb7f26c3b0bd',
   // JL-3088 耐酸分式工作服
-  '3088-main': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/3088-front_e722849f.jpg?sign=1776414543-8bcfef0e16-0-12bcbf9f4d18c329078c5d062b689f9a56fcce90b370c996d248889ddc14df79',
-  '3088-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/3088-side_b97f403a.jpg?sign=1778981220-72cf3764c1-0-8c5039eaac6b984032d62941a612e2d9d1cdebb2d091483316e292e65c02aa8e',
+  '3088-main': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/3088-front_e722849f.jpg?sign=2091946331-187a9da5d3-0-b7e0a20df9e9dba5d288c98e6437d32c787e13e3acc1da85563f670e767608d7',
+  '3088-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/3088-side_b97f403a.jpg?sign=2091946331-e2c7b97ecc-0-2345223f39bbb5bd7a2a2efa23bb67ecefaf797c94e64df3ae09ca68c50b53c5',
   // JL-3112 连式防毒衣
-  '3112-main': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/3112-front_af0599e8.jpg?sign=1776414544-d360f8ed3f-0-82eddd054daddc7f86fa34ff9a84a705f6eae11ff56479729c3b8caeccfe413c',
-  '3112-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/3112-side_cb4d9258.jpg?sign=1778981221-9f800fa337-0-c7dab3a4fd7c14b2773e3d441ff8f928bec782cb461789afed01b90da4514571',
+  '3112-main': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/3112-front_af0599e8.jpg?sign=2091946331-25143aa4c3-0-85a1eafc2e1755048d750032a8f52dd4300da4615f54cc4001e136b98e916c30',
+  '3112-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/3112-side_cb4d9258.jpg?sign=2091946331-5fb9e7e8e7-0-c37609989fa2d6b664badb8464f7a1e015e12a2272753549c01ad008d276ae03',
   // JL-3113 连式带手套靴防毒衣
-  '3113-main': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/3113-front_31df9c36.jpg?sign=1776414545-736a152ef9-0-33e236650c785934474fdf2d710071331a00c9f5ed9a5b7f68d95f54d23c5e40',
-  '3113-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/3113-side_6e7ce953.jpg?sign=1778981221-8a4714b121-0-890af35115049b7bf54c9728892f6e87c0d881ced7453f83bf716c3abd593382',
+  '3113-main': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/3113-front_31df9c36.jpg?sign=2091946331-05bd4bfef4-0-3435a026c8aa32f97114ba42f690e702e6a6a71f6e90eb10cab4d38d7052a19c',
+  '3113-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/3113-side_6e7ce953.jpg?sign=2091946331-366042e18f-0-aef46f8957c7b8045d925e17a2a24c186457faea42211dccb0734107cdcb5699',
   // JL-3116 全封闭连式防毒衣
-  '3116-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/3116/side_9e6af704.jpg?sign=1776478434-f9923a5453-0-2ceb4b3c17537cf5e6485e7a9d6178fd6d4678463131aba8e3dfa687eee6c2c1',
-  '3116-main': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/3116/main_5a1d3cd6.jpg?sign=1776478434-f14e15b06e-0-8e3bbf2cec2a9f19639167629c1737d6a995da45a7937596502fc1471005249e',
+  '3116-main': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/3116/main_5a1d3cd6.jpg?sign=2091946332-acaa61e8ea-0-f8f0e5ce44358a287cb95128e8f52680b8693082f27d4397f367894cf65020ec',
+  '3116-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/3116/side_9e6af704.jpg?sign=2091946332-73b4414cd0-0-4755cea8790f17ad8ba0f9903b3023b783eb7b2b82172983e403c4c01ce44470',
   // JL-3121 全封闭分式隔热防毒衣
-  '3121-main': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/3121/main_b70961b8.jpg?sign=1776478434-827652193c-0-6fd0d622a4cbd03e40d98231992c57b79c7497bc2efcbde4f24c2ddeb77a4cdf',
-  '3121-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/3121/side_7ebf0209.jpg?sign=1776478434-cd855f27d0-0-c291979aafa08b8d40d022f60ecfbe614165cf0b7ef55fa89376d56546d31672',
+  '3121-main': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/3121/main_b70961b8.jpg?sign=2091946332-25e65678b3-0-caa001632737d080f286189032d39596cadf8cdf3992abed1d2a4d92f6718c0e',
+  '3121-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/3121/side_7ebf0209.jpg?sign=2091946332-edcd756d56-0-826dc4c5b3a0abae69024aafdb3aedc6012037abf20109314cccb58b095407b2',
   // JL-3218 透气防护连体服
-  '3218-main': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/3218/main_8ad55075.jpg?sign=1776478435-282a399502-0-aa8ce4774e97acfff020cf767334174ed7db700e579cbc42775d8cf959d8d0c2',
-  '3218-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/3218/side_8811ff12.jpg?sign=1776478435-f535dfd558-0-3d0233857f4dfc47c81834750fdbd66c556cdeb05125186084f5e28de73433c6',
+  '3218-main': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/3218/main_8ad55075.jpg?sign=2091946334-4f7a3c8d5e-0-1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d',
+  '3218-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/3218/side_8811ff12.jpg?sign=2091946334-5e8f9d0a1b-0-1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f',
   // JL-5061 防水防滑工作靴
-  '5061-main': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/5061/main_a9a4182d.jpg?sign=1776478435-702ef73530-0-ac7b2a68129c315bfd010c84fd25b2c09f06958ac587672fb6626daf4274b737',
-  '5061-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/5061/side_db2e73da.jpg?sign=1776478435-68985a88d9-0-4bb6e6653b53e74bdcf819a9e9eff8f3fddff3bd80b2485294e0d279534a0f81',
+  '5061-main': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/5061/main_a9a4182d.jpg?sign=2091946334-be7239f7f4-0-6f08fa8a1e25b7680ef9329cbeb06f0b2927357cb96f91524efb854f6ea35a0e',
+  '5061-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/5061/side_db2e73da.jpg?sign=2091946335-5cdc0556ca-0-940957a8048a9fa67445e223631c9f883ad9319c6112e392084ef638b8feae1e',
   // JL-6016 挂脖式长款围裙+独立挂肩式防护袖套
-  '6016-main': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/6016/main_fdd8cd51.jpg?sign=1776478436-44446a75ba-0-e9d0fb0a4646a128d6c70a9667f1d1db166b4d0f56ae4f3e008bfe8ae765b411',
-  '6016-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/6016/side_a5c1fccd.jpg?sign=1776478436-4553dff7d3-0-7133fd03e340603105a09952c2874d45c86c682502bb2ea3b49acefa4711e387',
+  '6016-main': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/6016/main_fdd8cd51.jpg?sign=2091946335-a095947338-0-acbce2ca9e80fc83cf07ec129a50954098c27f214645afad9b3a0ee310bb336f',
+  '6016-side': 'https://coze-coding-project.tos.coze.site/coze_storage_7620625790576918528/products/6016/side_a5c1fccd.jpg?sign=2091946335-425598d4cd-0-6ebf9355734853a8cf7f437d7a945cec282777d970cd537405b801105704e3c4',
 };
 
 export const products: Product[] = [
